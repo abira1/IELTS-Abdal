@@ -1,0 +1,244 @@
+import { getDatabase, ref, get, set, push, remove } from 'firebase/database';
+import { app } from '../firebase';
+import bcrypt from 'bcryptjs';
+import { batchService } from './batchService';
+
+export interface Student {
+  studentId: string;
+  password: string;
+  name: string;
+  email: string;
+  mobile: string;
+  batch: string;
+  batchId: string;
+  enrollmentDate: string;
+  status: 'active' | 'inactive';
+  createdAt: string;
+  updatedAt: string;
+  createdBy: string;
+  totalFee: number;
+  paid: number;
+  due: number;
+}
+
+const db = getDatabase(app);
+
+export const studentService = {
+  // Generate next student ID
+  async generateStudentId(): Promise<string> {
+    try {
+      const snapshot = await get(ref(db, 'students'));
+      const year = new Date().getFullYear();
+      
+      if (!snapshot.exists()) {
+        return `STU${year}00001`;
+      }
+
+      const students = snapshot.val();
+      const studentIds = Object.keys(students);
+      
+      // Filter IDs for current year
+      const currentYearIds = studentIds.filter(id => id.startsWith(`STU${year}`));
+      
+      if (currentYearIds.length === 0) {
+        return `STU${year}00001`;
+      }
+
+      // Get the highest number
+      const numbers = currentYearIds.map(id => {
+        const numPart = id.replace(`STU${year}`, '');
+        return parseInt(numPart, 10);
+      });
+      
+      const maxNum = Math.max(...numbers);
+      const nextNum = maxNum + 1;
+      
+      return `STU${year}${String(nextNum).padStart(5, '0')}`;
+    } catch (error) {
+      console.error('Error generating student ID:', error);
+      throw error;
+    }
+  },
+
+  // Generate random password (6-digit numeric)
+  generatePassword(): string {
+    // Generate 6-digit number between 000000 and 999999
+    const randomNum = Math.floor(Math.random() * 1000000);
+    // Pad with leading zeros to ensure 6 digits
+    return String(randomNum).padStart(6, '0');
+  },
+
+  // Create new student
+  async createStudent(data: {
+    name: string;
+    email: string;
+    mobile: string;
+    batch: string;
+    batchId: string;
+    status: 'active' | 'inactive';
+    createdBy: string;
+    totalFee: number;
+    paid: number;
+  }): Promise<{ success: boolean; studentId?: string; password?: string; error?: string }> {
+    try {
+      const studentId = await this.generateStudentId();
+      const plainPassword = this.generatePassword();
+      const hashedPassword = await bcrypt.hash(plainPassword, 10);
+
+      const student: Student = {
+        studentId,
+        password: hashedPassword,
+        name: data.name,
+        email: data.email,
+        mobile: data.mobile,
+        batch: data.batch,
+        batchId: data.batchId,
+        enrollmentDate: new Date().toISOString(),
+        status: data.status,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+        createdBy: data.createdBy,
+        totalFee: data.totalFee,
+        paid: data.paid,
+        due: data.totalFee - data.paid
+      };
+
+      await set(ref(db, `students/${studentId}`), student);
+
+      // Update batch student count
+      await batchService.updateStudentCount(data.batchId);
+
+      return {
+        success: true,
+        studentId,
+        password: plainPassword // Return plain password for display
+      };
+    } catch (error) {
+      console.error('Error creating student:', error);
+      return { success: false, error: 'Failed to create student' };
+    }
+  },
+
+  // Get all students
+  async getAllStudents(): Promise<Student[]> {
+    try {
+      const snapshot = await get(ref(db, 'students'));
+      
+      if (!snapshot.exists()) {
+        return [];
+      }
+
+      const studentsObj = snapshot.val();
+      return Object.values(studentsObj).map((student: any) => ({
+        ...student,
+        totalFee: student.totalFee || 0,
+        paid: student.paid || 0,
+        due: student.due || (student.totalFee || 0) - (student.paid || 0)
+      }));
+    } catch (error) {
+      console.error('Error getting students:', error);
+      return [];
+    }
+  },
+
+  // Get student by ID
+  async getStudentById(studentId: string): Promise<Student | null> {
+    try {
+      const snapshot = await get(ref(db, `students/${studentId}`));
+      
+      if (!snapshot.exists()) {
+        return null;
+      }
+
+      const studentData = snapshot.val();
+      
+      // Provide default values for financial fields if they don't exist (backward compatibility)
+      return {
+        ...studentData,
+        totalFee: studentData.totalFee || 0,
+        paid: studentData.paid || 0,
+        due: studentData.due || (studentData.totalFee || 0) - (studentData.paid || 0)
+      };
+    } catch (error) {
+      console.error('Error getting student:', error);
+      return null;
+    }
+  },
+
+  // Update student
+  async updateStudent(studentId: string, updates: Partial<Student>): Promise<boolean> {
+    try {
+      const student = await this.getStudentById(studentId);
+      
+      if (!student) {
+        return false;
+      }
+
+      const oldBatchId = student.batchId;
+      const updatedStudent = {
+        ...student,
+        ...updates,
+        updatedAt: new Date().toISOString()
+      };
+
+      await set(ref(db, `students/${studentId}`), updatedStudent);
+      
+      // Update student count for old batch
+      if (oldBatchId) {
+        await batchService.updateStudentCount(oldBatchId);
+      }
+      
+      // If batch changed, update new batch count too
+      if (updates.batchId && updates.batchId !== oldBatchId) {
+        await batchService.updateStudentCount(updates.batchId);
+      }
+      
+      return true;
+    } catch (error) {
+      console.error('Error updating student:', error);
+      return false;
+    }
+  },
+
+  // Delete student
+  async deleteStudent(studentId: string): Promise<boolean> {
+    try {
+      // Get student to find their batchId
+      const student = await this.getStudentById(studentId);
+      
+      await remove(ref(db, `students/${studentId}`));
+      
+      // Update batch student count
+      if (student?.batchId) {
+        await batchService.updateStudentCount(student.batchId);
+      }
+      
+      return true;
+    } catch (error) {
+      console.error('Error deleting student:', error);
+      return false;
+    }
+  },
+
+  // Reset password
+  async resetPassword(studentId: string): Promise<{ success: boolean; password?: string; error?: string }> {
+    try {
+      const student = await this.getStudentById(studentId);
+      
+      if (!student) {
+        return { success: false, error: 'Student not found' };
+      }
+
+      const plainPassword = this.generatePassword();
+      const hashedPassword = await bcrypt.hash(plainPassword, 10);
+
+      await set(ref(db, `students/${studentId}/password`), hashedPassword);
+      await set(ref(db, `students/${studentId}/updatedAt`), new Date().toISOString());
+
+      return { success: true, password: plainPassword };
+    } catch (error) {
+      console.error('Error resetting password:', error);
+      return { success: false, error: 'Failed to reset password' };
+    }
+  }
+};

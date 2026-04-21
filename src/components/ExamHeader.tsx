@@ -1,0 +1,308 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { ClockIcon, UserIcon, Volume2, VolumeX, Loader } from 'lucide-react';
+
+interface ExamHeaderProps {
+  trackName: string;
+  questionType: string;
+  timeRemaining: string;
+  studentName?: string;
+  studentId?: string;
+  isTimeWarning?: boolean;
+  isTimeCritical?: boolean;
+  audioURL?: string | null;
+  autoPlayAudio?: boolean;
+  trackType?: 'listening' | 'reading' | 'writing' | 'sicu';
+  preloadedAudio?: HTMLAudioElement | null;
+}
+
+export function ExamHeader({
+  trackName,
+  questionType,
+  timeRemaining,
+  studentName,
+  studentId,
+  isTimeWarning = false,
+  isTimeCritical = false,
+  audioURL = null,
+  autoPlayAudio = false,
+  trackType,
+  preloadedAudio = null
+}: ExamHeaderProps) {
+  const [audioRef, setAudioRef] = useState<HTMLAudioElement | null>(null);
+  const [volume, setVolume] = useState(1);
+  const [isMuted, setIsMuted] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [isBuffering, setIsBuffering] = useState(false);
+  const [bufferProgress, setBufferProgress] = useState(0);
+  const autoPlayAttempted = useRef(false);
+
+  // Use preloaded audio if available
+  useEffect(() => {
+    if (preloadedAudio && !audioRef) {
+      setAudioRef(preloadedAudio);
+      setDuration(preloadedAudio.duration || 0);
+    }
+  }, [preloadedAudio, audioRef]);
+
+  // Auto-play logic - runs in background, doesn't block exam
+  useEffect(() => {
+    if (audioRef && audioURL && autoPlayAudio && !autoPlayAttempted.current) {
+      autoPlayAttempted.current = true;
+      
+      // Wait a brief moment to ensure buffer is ready
+      const playTimeout = setTimeout(() => {
+        audioRef.play().catch(err => {
+          console.log("Auto-play failed (browser restriction or network issue):", err);
+          // Don't block exam - just log the error
+        });
+      }, 100);
+
+      return () => clearTimeout(playTimeout);
+    }
+  }, [audioRef, audioURL, autoPlayAudio]);
+
+  // Monitor buffering and progress
+  useEffect(() => {
+    if (!audioRef) return;
+
+    const handleTimeUpdate = () => setCurrentTime(audioRef.currentTime);
+    const handleLoadedMetadata = () => setDuration(audioRef.duration);
+    
+    const handleWaiting = () => setIsBuffering(true);
+    const handleCanPlay = () => setIsBuffering(false);
+    const handlePlaying = () => setIsBuffering(false);
+    
+    const handleProgress = () => {
+      if (audioRef.buffered.length > 0) {
+        const bufferedEnd = audioRef.buffered.end(audioRef.buffered.length - 1);
+        const duration = audioRef.duration;
+        if (duration > 0) {
+          const percent = Math.round((bufferedEnd / duration) * 100);
+          setBufferProgress(percent);
+        }
+      }
+    };
+
+    audioRef.addEventListener('timeupdate', handleTimeUpdate);
+    audioRef.addEventListener('loadedmetadata', handleLoadedMetadata);
+    audioRef.addEventListener('waiting', handleWaiting);
+    audioRef.addEventListener('canplay', handleCanPlay);
+    audioRef.addEventListener('playing', handlePlaying);
+    audioRef.addEventListener('progress', handleProgress);
+
+    return () => {
+      audioRef.removeEventListener('timeupdate', handleTimeUpdate);
+      audioRef.removeEventListener('loadedmetadata', handleLoadedMetadata);
+      audioRef.removeEventListener('waiting', handleWaiting);
+      audioRef.removeEventListener('canplay', handleCanPlay);
+      audioRef.removeEventListener('playing', handlePlaying);
+      audioRef.removeEventListener('progress', handleProgress);
+    };
+  }, [audioRef]);
+
+  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newVolume = parseFloat(e.target.value);
+    setVolume(newVolume);
+    if (audioRef) {
+      audioRef.volume = newVolume;
+      if (newVolume === 0) {
+        setIsMuted(true);
+      } else {
+        setIsMuted(false);
+      }
+    }
+  };
+
+  const toggleMute = () => {
+    if (!audioRef) return;
+    if (isMuted) {
+      audioRef.volume = volume || 0.5;
+      setVolume(volume || 0.5);
+      setIsMuted(false);
+    } else {
+      audioRef.volume = 0;
+      setIsMuted(true);
+    }
+  };
+
+  const formatTime = (seconds: number) => {
+    if (!seconds || isNaN(seconds)) return '0:00';
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  };
+
+  return (
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 py-3">
+        {/* Main Row: Logo + Title + Timer + Audio on Desktop, wraps to 2 rows on Mobile */}
+        <div className="flex flex-wrap items-center gap-3 lg:gap-4">
+          
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <img 
+              src="/abdal-ielts-academy-logo.png" 
+              alt="Abdal IELTS Academy" 
+              className="h-10 w-auto sm:h-12 lg:h-14 object-contain"
+            />
+          </div>
+
+          {/* Title/Track Name Section */}
+          <div className="flex-1 min-w-[200px]">
+            <h1 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 leading-tight">
+              {trackName}
+            </h1>
+            <div className="flex items-center gap-2 sm:gap-4 mt-0.5">
+              <p className="text-xs sm:text-sm text-gray-600">{questionType}</p>
+              {studentName && studentId && (
+                <div className="hidden sm:flex items-center gap-1.5 text-xs sm:text-sm text-gray-600">
+                  <UserIcon className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="font-medium">{studentName}</span>
+                  <span className="text-gray-400">•</span>
+                  <span>{studentId}</span>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Timer */}
+          <div 
+            className={`flex items-center gap-2 flex-shrink-0 px-3 py-1.5 rounded-lg border ${
+              isTimeCritical
+                ? 'bg-red-100 border-red-400 text-red-700 animate-pulse shadow-lg shadow-red-200' 
+                : isTimeWarning 
+                ? 'bg-red-50 border-red-300 text-red-600' 
+                : 'bg-gray-50 border-gray-200 text-gray-700'
+            }`} 
+            data-testid="exam-timer"
+          >
+            <ClockIcon className={`w-4 h-4 sm:w-5 sm:h-5 ${isTimeCritical ? 'animate-bounce' : ''}`} />
+            <span className="font-mono text-base sm:text-lg font-bold">{timeRemaining}</span>
+          </div>
+
+          {/* Audio Player Controls - Only show for listening tracks */}
+          {audioURL && (!trackType || trackType === 'listening') && (
+            <div className="flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg px-3 py-2 flex-shrink-0 w-full lg:flex-1 lg:min-w-[400px] xl:min-w-[500px]" data-testid="audio-player-bar">
+              <audio 
+                ref={setAudioRef} 
+                src={audioURL} 
+                preload="auto"
+                crossOrigin="anonymous"
+              />
+              
+              {/* Audio Icon with loading state */}
+              <div className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center bg-blue-600 text-white rounded-full flex-shrink-0">
+                {isBuffering ? (
+                  <Loader className="w-3 h-3 sm:w-4 sm:h-4 animate-spin" />
+                ) : (
+                  <Volume2 className="w-3 h-3 sm:w-4 sm:h-4" />
+                )}
+              </div>
+
+              {/* Time Display */}
+              <div className="text-xs font-mono text-gray-700 flex-shrink-0">
+                {formatTime(currentTime)} / {formatTime(duration)}
+              </div>
+
+              {/* Volume Control */}
+              <div className="flex items-center gap-2 flex-1 min-w-[100px]">
+                <button
+                  onClick={toggleMute}
+                  className="text-gray-600 hover:text-gray-900 transition-colors flex-shrink-0"
+                  title={isMuted ? 'Unmute' : 'Mute'}
+                  data-testid="audio-mute-button"
+                >
+                  {isMuted || volume === 0 ? (
+                    <VolumeX className="w-4 h-4" />
+                  ) : (
+                    <Volume2 className="w-4 h-4" />
+                  )}
+                </button>
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value={isMuted ? 0 : volume}
+                  onChange={handleVolumeChange}
+                  className="flex-1 h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer volume-slider"
+                  title="Volume"
+                  data-testid="audio-volume-slider"
+                />
+                <span className="text-xs font-medium text-gray-600 w-8 flex-shrink-0">
+                  {Math.round((isMuted ? 0 : volume) * 100)}%
+                </span>
+              </div>
+
+              {/* Playing Status Indicator - Hidden on small screens */}
+              <div className="hidden sm:flex items-center gap-2 flex-shrink-0">
+                {isBuffering ? (
+                  <>
+                    <Loader className="w-4 h-4 text-blue-600 animate-spin" />
+                    <span className="text-xs font-medium text-blue-700">
+                      Buffering...
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <div className="flex gap-0.5">
+                      <div className="w-1 h-3 bg-blue-600 rounded-full animate-pulse" style={{ animationDelay: '0s' }}></div>
+                      <div className="w-1 h-3 bg-blue-600 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                      <div className="w-1 h-3 bg-blue-600 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                    </div>
+                    <span className="text-xs font-medium text-blue-700">
+                      Playing
+                    </span>
+                  </>
+                )}
+              </div>
+
+              {/* Buffer progress indicator (subtle) */}
+              {bufferProgress < 100 && bufferProgress > 0 && (
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-200">
+                  <div 
+                    className="h-full bg-blue-500 transition-all duration-300"
+                    style={{ width: `${bufferProgress}%` }}
+                  />
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <style>{`
+        .volume-slider::-webkit-slider-thumb {
+          appearance: none;
+          width: 14px;
+          height: 14px;
+          background: #2563eb;
+          cursor: pointer;
+          border-radius: 50%;
+          border: 2px solid white;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        .volume-slider::-moz-range-thumb {
+          width: 14px;
+          height: 14px;
+          background: #2563eb;
+          cursor: pointer;
+          border-radius: 50%;
+          border: 2px solid white;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        .volume-slider::-webkit-slider-runnable-track {
+          background: linear-gradient(to right, #3b82f6 0%, #3b82f6 ${(isMuted ? 0 : volume) * 100}%, #bfdbfe ${(isMuted ? 0 : volume) * 100}%, #bfdbfe 100%);
+          height: 6px;
+          border-radius: 3px;
+        }
+        .volume-slider::-moz-range-track {
+          background: #bfdbfe;
+          height: 6px;
+          border-radius: 3px;
+        }
+      `}</style>
+    </header>
+  );
+}

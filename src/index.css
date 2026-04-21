@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --border: 214.3 31.8% 91.4%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --file-tree-bg: 0 0% 98%;
+    --file-tree-hover: 210 40% 96.1%;
+    --folder-icon: 43 74% 66%;
+
+    /* Forest & Slate Tokens */
+    --forest-deep: #0F3D2E;
+    --forest-medium: #1A7D52;
+    --midnight: #1F2A44;
+    --porcelain: #F5F3EF;
+    --sidebar-width: 280px;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --file-tree-bg: 222.2 84% 4.9%;
+    --file-tree-hover: 217.2 32.6% 17.5%;
+    --folder-icon: 43 74% 66%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--porcelain);
+    color: var(--midnight);
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  /* Zen Card - Signature rounded container */
+  .zen-card {
+    @apply bg-white rounded-zen p-6 md:p-8 shadow-zen transition-all duration-300;
+  }
+
+  .zen-card-hover:hover {
+    @apply shadow-zen-lg;
+    transform: scale(1.02);
+  }
+
+  /* Forest Button - Primary CTA */
+  .btn-forest {
+    @apply bg-forest-600 text-white font-semibold px-6 py-3 rounded-2xl 
+           hover:bg-forest-500 active:bg-forest-700 
+           transition-all duration-200 shadow-zen
+           flex items-center gap-2 justify-center;
+  }
+
+  .btn-forest:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px -4px rgba(15, 61, 46, 0.3);
+  }
+
+  /* Midnight Button */
+  .btn-midnight {
+    @apply bg-midnight-800 text-white font-semibold px-6 py-3 rounded-2xl 
+           hover:bg-midnight-700 active:bg-midnight-900 
+           transition-all duration-200 shadow-zen
+           flex items-center gap-2 justify-center;
+  }
+
+  /* Ghost Button */
+  .btn-ghost {
+    @apply bg-transparent text-midnight-800 font-medium px-4 py-2.5 rounded-2xl 
+           hover:bg-slate-75 active:bg-slate-100 
+           transition-all duration-200
+           flex items-center gap-2 justify-center border border-slate-200;
+  }
+
+  /* Zen Input */
+  .zen-input {
+    @apply w-full min-h-[52px] px-5 py-3 bg-slate-50 border border-slate-200 
+           rounded-2xl text-midnight-800 font-medium
+           focus:outline-none focus:ring-2 focus:ring-forest-200 focus:border-forest-500
+           placeholder:text-slate-400 transition-all duration-200;
+  }
+
+  .zen-input:focus {
+    background-color: white;
+  }
+
+  /* Zen Select */
+  .zen-select {
+    @apply w-full min-h-[52px] px-5 py-3 bg-slate-50 border border-slate-200 
+           rounded-2xl text-midnight-800 font-medium appearance-none
+           focus:outline-none focus:ring-2 focus:ring-forest-200 focus:border-forest-500
+           transition-all duration-200 cursor-pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236D7896' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+  }
+
+  /* Zen Label */
+  .zen-label {
+    @apply block text-sm font-bold text-midnight-800 mb-2 ml-1;
+  }
+
+  /* Status Pill */
+  .pill {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider;
+  }
+
+  .pill-emerald {
+    @apply pill bg-emerald-50 text-emerald-700;
+  }
+
+  .pill-orange {
+    @apply pill bg-orange-50 text-orange-700;
+  }
+
+  .pill-blue {
+    @apply pill bg-blue-50 text-blue-700;
+  }
+
+  .pill-red {
+    @apply pill bg-red-50 text-red-700;
+  }
+
+  .pill-slate {
+    @apply pill bg-slate-100 text-slate-600;
+  }
+
+  /* KPI Card */
+  .kpi-card {
+    @apply zen-card flex items-center gap-5;
+  }
+
+  .kpi-icon {
+    @apply w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0;
+  }
+
+  .kpi-value {
+    @apply text-2xl font-bold text-midnight-800 leading-tight;
+  }
+
+  .kpi-label {
+    @apply text-sm font-medium text-slate-500;
+  }
+
+  /* Zen Table */
+  .zen-table {
+    @apply w-full;
+  }
+
+  .zen-table thead {
+    @apply border-b border-slate-100;
+  }
+
+  .zen-table th {
+    @apply px-5 py-3.5 text-left text-xs font-medium text-slate-500 uppercase tracking-wider;
+  }
+
+  .zen-table td {
+    @apply px-5 py-4 text-sm;
+  }
+
+  .zen-table tbody tr {
+    @apply border-b border-slate-50 hover:bg-slate-25 transition-colors duration-150;
+  }
+
+  /* Zen Modal Overlay */
+  .zen-overlay {
+    @apply fixed inset-0 bg-midnight-900/40 backdrop-blur-sm z-50 
+           flex items-center justify-center p-4;
+  }
+
+  .zen-modal {
+    @apply bg-white rounded-zen max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-zen-xl;
+  }
+
+  /* Page transition */
+  .page-enter {
+    animation: fadeInUp 0.4s ease-out;
+  }
+
+  /* Sidebar styles */
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 
+           font-medium text-sm transition-all duration-200 cursor-pointer;
+  }
+
+  .sidebar-link:hover {
+    @apply bg-white/5 text-slate-300;
+  }
+
+  .sidebar-link.active {
+    @apply bg-forest-600 text-white shadow-lg;
+    box-shadow: 0 4px 16px -4px rgba(15, 61, 46, 0.4);
+  }
+
+  /* Stagger animation helpers */
+  .stagger-1 { animation-delay: 0.05s; }
+  .stagger-2 { animation-delay: 0.1s; }
+  .stagger-3 { animation-delay: 0.15s; }
+  .stagger-4 { animation-delay: 0.2s; }
+  .stagger-5 { animation-delay: 0.25s; }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Custom scrollbar */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(31, 42, 68, 0.15);
+    border-radius: 999px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(31, 42, 68, 0.25);
+  }
+
+  /* Glass effect */
+  .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
