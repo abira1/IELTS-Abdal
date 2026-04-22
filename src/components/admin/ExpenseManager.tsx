@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import {
   Plus,
   DollarSign,
@@ -12,10 +12,13 @@ import {
   CheckCircle,
   Clock,
   AlertCircle,
-  X
+  X,
+  CreditCard,
+  Wallet
 } from 'lucide-react';
 import { expenseService, Expense, ExpenseCategory } from '../../services/expenseService';
 import { staffService } from '../../services/staffService';
+import { studentService, Student } from '../../services/studentService';
 import { useAuth } from '../../contexts/AuthContext';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
@@ -334,6 +337,7 @@ export function ExpenseManager() {
   const { user } = useAuth();
   const [expenses, setExpenses] = useState<Expense[]>([]);
   const [filteredExpenses, setFilteredExpenses] = useState<Expense[]>([]);
+  const [students, setStudents] = useState<Student[]>([]);
   const [loading, setLoading] = useState(true);
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState(format(new Date(), 'yyyy-MM'));
@@ -344,7 +348,25 @@ export function ExpenseManager() {
   useEffect(() => {
     loadExpenses();
     loadStaffData();
+    loadStudentData();
   }, []);
+
+  const loadStudentData = async () => {
+    try {
+      const data = await studentService.getAllStudents();
+      setStudents(data);
+    } catch (error) {
+      console.error('Error loading students:', error);
+    }
+  };
+
+  const studentTotals = useMemo(() => {
+    return students.reduce((acc, student) => ({
+      paid: acc.paid + (student.paid || 0),
+      due: acc.due + (student.due || 0),
+      total: acc.total + (student.totalFee || 0)
+    }), { paid: 0, due: 0, total: 0 });
+  }, [students]);
 
   useEffect(() => {
     filterExpenses();
@@ -498,6 +520,47 @@ export function ExpenseManager() {
         </button>
       </div>
 
+      {/* Financial Overview Cards */}
+      <h2 className="text-lg font-bold text-gray-900 mb-2 mt-6">Student Finances (All Time)</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        <div className="bg-white p-6 rounded-lg shadow-sm border border-emerald-100">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-emerald-100 rounded-lg">
+              <Wallet className="w-6 h-6 text-emerald-600" />
+            </div>
+            <div>
+              <p className="text-sm text-gray-600">Total Payments Received</p>
+              <p className="text-2xl font-bold text-emerald-700">${studentTotals.paid.toFixed(2)}</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-sm border border-rose-100">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-rose-100 rounded-lg">
+              <AlertCircle className="w-6 h-6 text-rose-600" />
+            </div>
+            <div>
+              <p className="text-sm text-gray-600">Total Due</p>
+              <p className="text-2xl font-bold text-rose-700">${studentTotals.due.toFixed(2)}</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-100">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-blue-100 rounded-lg">
+              <CreditCard className="w-6 h-6 text-blue-600" />
+            </div>
+            <div>
+              <p className="text-sm text-gray-600">Total Course Fees</p>
+              <p className="text-2xl font-bold text-blue-700">${studentTotals.total.toFixed(2)}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 className="text-lg font-bold text-gray-900 mb-2">Expense Summary {selectedMonth ? `(${selectedMonth})` : '(All Time)'}</h2>
       {/* Statistics Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="bg-white p-6 rounded-lg shadow-sm border">
