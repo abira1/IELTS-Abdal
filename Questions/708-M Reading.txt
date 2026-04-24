@@ -143,15 +143,15 @@ F. Most Teach First teachers continue in a teaching career after two years.
 G. Most students want to achieve a good work/life balance.
 H. Most business students were concerned about working for an ethical company.
 
-(18) [Answer]
+(18) Select one correct statement from A-H
 
-(19) [Answer]
+(19) Select one correct statement from A-H
 
-(20) [Answer]
+(20) Select one correct statement from A-H
 
-(21) [Answer]
+(21) Select one correct statement from A-H
 
-(22) [Answer]
+(22) Select one correct statement from A-H
 
 
 Questions 23-24
@@ -184,7 +184,10 @@ A. often goes to universities to meet students.
 B. provides many scholarships for students.
 C. offers many opportunities to travel.
 
-(26) [Continuation of this section would include additional question]
+(26) Teach First's success in the survey was remarkable because
+A. it had been operating for many years.
+B. it is a large organisation with extensive recruitment networks.
+C. it had a very limited campus presence.
 
 
 ---

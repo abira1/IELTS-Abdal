@@ -10,16 +10,18 @@ import { track709Reading } from './track-709-reading';
 import { track710Reading } from './track-710-reading';
 import { track711Reading } from './track-711-reading';
 import { track712Reading } from './track-712-reading';
-import { track1MWriting } from './track-1m-writing';
-import { track2MWriting } from './track-2m-writing';
-import { track3MWriting } from './track-3m-writing';
-import { track4MWriting } from './track-4m-writing';
-import { track5MWriting } from './track-5m-writing';
-import { track6MWriting } from './track-6m-writing';
-import { track7MWriting } from './track-7m-writing';
-import { track8MWriting } from './track-8m-writing';
-import { track9MWriting } from './track-9m-writing';
-import { track10MWriting } from './track-10m-writing';
+
+import { track703Writing } from './track-703-writing';
+import { track705Writing } from './track-705-writing';
+import { track706Writing } from './track-706-writing';
+import { track707Writing } from './track-707-writing';
+import { track708Writing } from './track-708-writing';
+import { track7082Writing } from './track-708-2-writing';
+import { track709Writing } from './track-709-writing';
+import { track7092Writing } from './track-709-2-writing';
+import { track710Writing } from './track-710-writing';
+import { track7102Writing } from './track-710-2-writing';
+import { track711Writing } from './track-711-writing';
 import { track701Listening } from './track-701-listening';
 import { track702Listening } from './track-702-listening';
 import { track703Listening } from './track-703-listening';
@@ -55,17 +57,18 @@ export const allTracks: Track[] = [
   track710Reading,
   track711Reading,
   track712Reading,
-  // Writing Tracks
-  track1MWriting,
-  track2MWriting,
-  track3MWriting,
-  track4MWriting,
-  track5MWriting,
-  track6MWriting,
-  track7MWriting,
-  track8MWriting,
-  track9MWriting,
-  track10MWriting
+  // 700 Series Writing Tracks
+  track703Writing,
+  track705Writing,
+  track706Writing,
+  track707Writing,
+  track708Writing,
+  track7082Writing,
+  track709Writing,
+  track7092Writing,
+  track710Writing,
+  track7102Writing,
+  track711Writing
 ];
 
 // Helper function to get track by ID

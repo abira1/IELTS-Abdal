@@ -1,0 +1,66 @@
+===================================================================
+711-M Writing
+===================================================================
+
+Track name: 711-M Writing
+Track type: Writing
+Duration: 60 minutes
+Total Questions: 2
+
+===================================================================
+TASK 1
+===================================================================
+
+Title: Writing Task 1
+
+Type: writing-task-with-image
+
+Instruction:
+You should spend about 20 minutes on this task.
+
+Chart Description:
+The diagram shows the world production output from Asia, Europe, and the rest of the world in different years. It illustrates the distribution of global production across major geographic regions over time.
+
+Chart Image URL:
+https://i.postimg.cc/jS11nZwB/711.png
+
+Prompt:
+Summarize the information by selecting and reporting the main features, and make comparisons where relevant.
+
+Write at least 150 words.
+
+Minimum Words: 150
+
+
+---
+
+
+===================================================================
+TASK 2
+===================================================================
+
+Title: Writing Task 2
+
+Type: writing-task
+
+Instruction:
+You should spend about 40 minutes on this task.
+
+Topic Introduction:
+Write about the following topic:
+
+Prompt:
+Many adults nowadays prefer spending their free time playing computer games.
+
+Why do they do this?
+Is this a positive or negative development?
+
+Closing Instruction:
+Give reasons for your answer and include any relevant examples from your own knowledge or experience.
+
+Write at least 250 words.
+
+Minimum Words: 250
+
+
+===================================================================

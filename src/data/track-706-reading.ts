@@ -16,54 +16,53 @@ export const track706Reading: Track = {
       title: 'READING PASSAGE 1',
       passage: {
         title: 'Spot the Difference',
-        content: `Taxonomic history has been made this week, at least according to the World Wildlife Fund (WWF), a conservation group. Scientists have described a new species of clouded leopard from the tropical forests of Indonesia with spots (or "clouds", as they are poetically known) smaller than those of other clouded leopards, with fur a little darker and with a double as opposed to a "partial double" stripe down its back. However, no previously unknown beast has suddenly leapt out from the forest. Instead, some scientists have proposed a change in the official taxonomic accounting system of clouded leopards. Where there were four subspecies there will likely now be two species. A genetic analysis and a closer inspection of museum specimens' coats published in Current Biology has found no relevant difference between three subspecies described 50 years ago from continental Asia and from the Hainan and Taiwan islands. The 5,000-11,000 clouded leopards on Borneo, the 3,000-7,000 on Sumatra, and the remaining few on the nearby Batu islands can now, the authors say, claim a more elevated distinction as a species. What this actually means is fuzzy and whether it is scientifically important is questionable. In any case, biologists do not agree what species and subspecies are. Creatures are given Latin first and second names (corresponding to a genus and species) according to the convention of Carl von Linné, who was born 300 years ago this May. But Linnaeus, as he is more commonly known, thought of species as perfectly discrete units created by God. Darwinism has them as mutable things, generated gradually over time by natural selection. So, delineating when enough variation has evolved to justify a new category is largely a matter of taste.`
+        content: `**A.** Taxonomic history has been made this week, at least according to the World Wildlife Fund (WWF), a conservation group. Scientists have described a new species of clouded leopard from the tropical forests of Indonesia with spots (or "clouds", as they are poetically known) smaller than those of other clouded leopards, with fur a little darker and with a double as opposed to a "partial double" stripe down its back. **B.** However, no previously unknown beast has suddenly leapt out from the forest. Instead, some scientists have proposed a change in the official taxonomic accounting system of clouded leopards. Where there were four subspecies there will likely now be two species. A genetic analysis and a closer inspection of museum specimens' coats published in Current Biology has found no relevant difference between three subspecies described 50 years ago from continental Asia and from the Hainan and Taiwan islands. The 5,000-11,000 clouded leopards on Borneo, the 3,000-7,000 on Sumatra, and the remaining few on the nearby Batu islands can now, the authors say, claim a more elevated distinction as a species. **C.** What this actually means is fuzzy and whether it is scientifically important is questionable. In any case, biologists do not agree what species and subspecies are. Creatures are given Latin first and second names (corresponding to a genus and species) according to the convention of Carl von Linné, who was born 300 years ago this May. But Linnaeus, as he is more commonly known, thought of species as perfectly discrete units created by God. Darwinism has them as mutable things, generated gradually over time by natural selection. So, delineating when enough variation has evolved to justify a new category is largely a matter of taste. **D.** Take ants and butterflies. Ant experts have recently been waging a war against all types of species subdivision. Lepidopterists, on the other hand, cling to the double barrel second names from their discipline's 19th-century tradition, and categorise many local subclasses within species found over wide areas. Thus, it would be futile - if one were so inclined - to attempt to compare the diversity of ant and butterfly populations. **E.** The traditional way around the problem is to call a species all members of a group that share the same gene pool. They can mate together and produce fertile offspring. Whether Indonesian clouded leopards can make cubs with continental ones remains unknown but seems probable. Instead, the claim this week is that genetics and slight differences in fur patterning are enough to justify rebranding the clouded leopard as two significant types. Genetically, that makes sense if many DNA variations correlate perfectly between members of the two groups. The authors did find some correlation, but they looked for it in only three Indonesian animals. A larger sample would have been more difficult. **F.** One thing is abundantly clear: conservationists who are trying to stop the destruction of the leopards' habitat in Borneo and Sumatra see the announcement of a new species of big cat as a means to gain publicity and political capital. Upgrading subspecies to species is a strategy which James Mallet, of University College London, likes to call species inflation. It is a common by-product of genetic analysis, which can reveal differences between populations that the eye cannot. Creating ever more detailed genetic categories means creating smaller and increasingly restricted populations of more species. The trouble is that risks devaluing the importance of the term "species". **G.** The problem of redefining species by genetics is the creation of taxonomic confusion, a potentially serious difficulty for conservationists and others. The recent proposal to add the polar bear to the list of animals protected under America's Endangered Species Act is an example. That seems all well and good. However, study the genetics and it transpires that polar bears are closer to some brown bears than some brown bears are to each other. Go by the genes and it seems that the polar bear would not count as a species in its own right (and thus might not enjoy the protection afforded to species) but should be labelled a subspecies of the brown bear.`
       },
       questions: [
         {
           type: 'matching-headings',
           instruction: 'The passage has 7 paragraphs labeled A-G. Which paragraph contains each of the following pieces of information? Drag the letter to the answer box.',
-          passageTitle: 'Spot the Difference',
-          items: [
-            { questionNumber: 1, label: 'How it is generally accepted that different species are named' },
-            { questionNumber: 2, label: 'The reason conservationists are happy with the apparent discovery' },
-            { questionNumber: 3, label: 'How genes could cause a potential problem for conservationists' },
-            { questionNumber: 4, label: 'Some scientists want to change the classification system' }
+          headings: [
+            { label: 'How it is generally accepted that different species are named', value: 'Q1' },
+            { label: 'The reason conservationists are happy with the apparent discovery', value: 'Q2' },
+            { label: 'How genes could cause a potential problem for conservationists', value: 'Q3' },
+            { label: 'Some scientists want to change the classification system', value: 'Q4' }
           ],
-          headingOptions: [
+          paragraphs: [
             { 
-              label: 'A', 
-              value: 'A',
+              questionNumber: 1,
+              paragraphLabel: 'A',
               content: '**A.** Taxonomic history has been made this week, at least according to the World Wildlife Fund (WWF), a conservation group. Scientists have described a new species of clouded leopard from the tropical forests of Indonesia with spots (or "clouds", as they are poetically known) smaller than those of other clouded leopards, with fur a little darker and with a double as opposed to a "partial double" stripe down its back.'
             },
             { 
-              label: 'B', 
-              value: 'B',
+              questionNumber: 2,
+              paragraphLabel: 'B',
               content: '**B.** However, no previously unknown beast has suddenly leapt out from the forest. Instead, some scientists have proposed a change in the official taxonomic accounting system of clouded leopards. Where there were four subspecies there will likely now be two species. A genetic analysis and a closer inspection of museum specimens\' coats published in Current Biology has found no relevant difference between three subspecies described 50 years ago from continental Asia and from the Hainan and Taiwan islands. The 5,000-11,000 clouded leopards on Borneo, the 3,000-7,000 on Sumatra, and the remaining few on the nearby Batu islands can now, the authors say, claim a more elevated distinction as a species.'
             },
             { 
-              label: 'C', 
-              value: 'C',
-              content: '**C.** Creatures are given Latin first and second names (corresponding to a genus and species) according to the convention of Carl von Linné, who was born 300 years ago this May. But Linnaeus, as he is more commonly known, thought of species as perfectly discrete units created by God. Darwinism has them as mutable things, generated gradually over time by natural selection. So, delineating when enough variation has evolved to justify a new category is largely a matter of taste.'
+              questionNumber: 3,
+              paragraphLabel: 'C',
+              content: '**C.** What this actually means is fuzzy and whether it is scientifically important is questionable. In any case, biologists do not agree what species and subspecies are. Creatures are given Latin first and second names (corresponding to a genus and species) according to the convention of Carl von Linné, who was born 300 years ago this May. But Linnaeus, as he is more commonly known, thought of species as perfectly discrete units created by God. Darwinism has them as mutable things, generated gradually over time by natural selection. So, delineating when enough variation has evolved to justify a new category is largely a matter of taste.'
             },
             { 
-              label: 'D', 
-              value: 'D',
-              content: '**D.** The traditional way around the problem is to call a species all members of a group that share the same gene pool. They can mate together and produce fertile offspring. Whether Indonesian clouded leopards can make cubs with continental ones remains unknown but seems probable. Instead, the claim this week is that genetics and slight differences in fur patterning are enough to justify rebranding the clouded leopard as two significant types.'
+              questionNumber: 4,
+              paragraphLabel: 'D',
+              content: '**D.** Take ants and butterflies. Ant experts have recently been waging a war against all types of species subdivision. Lepidopterists, on the other hand, cling to the double barrel second names from their discipline\'s 19th-century tradition, and categorise many local subclasses within species found over wide areas. Thus, it would be futile - if one were so inclined - to attempt to compare the diversity of ant and butterfly populations.'
             },
             { 
-              label: 'E', 
-              value: 'E',
-              content: '**E.** One thing is abundantly clear: conservationists who are trying to stop the destruction of the leopards\' habitat in Borneo and Sumatra see the announcement of a new species of big cat as a means to gain publicity and political capital. Upgrading subspecies to species is a strategy which James Mallet, of University College London, likes to call species inflation. It is a common by-product of genetic analysis, which can reveal differences between populations that the eye cannot.'
+              questionNumber: 5,
+              paragraphLabel: 'E',
+              content: '**E.** The traditional way around the problem is to call a species all members of a group that share the same gene pool. They can mate together and produce fertile offspring. Whether Indonesian clouded leopards can make cubs with continental ones remains unknown but seems probable. Instead, the claim this week is that genetics and slight differences in fur patterning are enough to justify rebranding the clouded leopard as two significant types. Genetically, that makes sense if many DNA variations correlate perfectly between members of the two groups. The authors did find some correlation, but they looked for it in only three Indonesian animals. A larger sample would have been more difficult.'
             },
             { 
-              label: 'F', 
-              value: 'F',
-              content: '**F.** The problem of redefining species by genetics is the creation of taxonomic confusion, a potentially serious difficulty for conservationists and others. The recent proposal to add the polar bear to the list of animals protected under America\'s Endangered Species Act is an example. That seems all well and good. However, study the genetics and it transpires that polar bears are closer to some brown bears than some brown bears are to each other. Go by the genes and it seems that the polar bear would not count as a species in its own right (and thus might not enjoy the protection afforded to species) but should be labelled a subspecies of the brown bear.'
+              questionNumber: 6,
+              paragraphLabel: 'F',
+              content: '**F.** One thing is abundantly clear: conservationists who are trying to stop the destruction of the leopards\' habitat in Borneo and Sumatra see the announcement of a new species of big cat as a means to gain publicity and political capital. Upgrading subspecies to species is a strategy which James Mallet, of University College London, likes to call species inflation. It is a common by-product of genetic analysis, which can reveal differences between populations that the eye cannot. Creating ever more detailed genetic categories means creating smaller and increasingly restricted populations of more species. The trouble is that risks devaluing the importance of the term "species".'
             },
             { 
-              label: 'G', 
-              value: 'G',
-              content: '**G.** In conclusion, while taxonomic precision is important for scientific classification, the practical implications for conservation must also be considered. The balance between genetics-based and traditional species definitions remains a complex challenge for modern biology.'
+              questionNumber: 7,
+              paragraphLabel: 'G',
+              content: '**G.** The problem of redefining species by genetics is the creation of taxonomic confusion, a potentially serious difficulty for conservationists and others. The recent proposal to add the polar bear to the list of animals protected under America\'s Endangered Species Act is an example. That seems all well and good. However, study the genetics and it transpires that polar bears are closer to some brown bears than some brown bears are to each other. Go by the genes and it seems that the polar bear would not count as a species in its own right (and thus might not enjoy the protection afforded to species) but should be labelled a subspecies of the brown bear.'
             }
           ]
         },
@@ -91,49 +90,48 @@ export const track706Reading: Track = {
       title: 'READING PASSAGE 2',
       passage: {
         title: 'The Fertility Bust',
-        content: `Falling populations - the despair of state pension systems - are often regarded with calmness, even a secret satisfaction, by ordinary people. Europeans no longer need large families to gather the harvest or to look after parents. They have used their good fortune to have fewer children, thinking this will make their lives better. Much of Europe is too crowded as it is. Is this all that is going on? Germans have been agonising about recent European Union estimates suggesting that 30% of German women are, and will remain, childless. The number is a guess: Germany does not collect figures like this. Even if the share is 25%, as other surveys suggest, it is by far the highest in Europe. Germany is something of an oddity in this. In most countries with low fertility, young women have their first child late, and stop at one. In Germany, women with children often have two or three, but many have none at all. Germany is also odd in experiencing low fertility for such a long time. Europe is demographically polarised. Countries in the north and west saw fertility fall early, in the 1960s. Recently, they have seen it stabilise or rise back towards replacement level (i.e. 2.1 births per woman). Countries in the south and east, on the other hand, saw fertility rates fall much faster, more recently (often to below 1.3, a rate at which the population falls by half every 45 years). Germany combines both. Its fertility rate fell below 2 in 1971. However, it has stayed low and is still only just above 1.3.`
+        content: `**A.** Falling populations - the despair of state pension systems - are often regarded with calmness, even a secret satisfaction, by ordinary people. Europeans no longer need large families to gather the harvest or to look after parents. They have used their good fortune to have fewer children, thinking this will make their lives better. Much of Europe is too crowded as it is. Is this all that is going on? Germans have been agonising about recent European Union estimates suggesting that 30% of German women are, and will remain, childless. The number is a guess: Germany does not collect figures like this. Even if the share is 25%, as other surveys suggest, it is by far the highest in Europe. **B.** Germany is something of an oddity in this. In most countries with low fertility, young women have their first child late, and stop at one. In Germany, women with children often have two or three, but many have none at all. Germany is also odd in experiencing low fertility for such a long time. Europe is demographically polarised. Countries in the north and west saw fertility fall early, in the 1960s. Recently, they have seen it stabilise or rise back towards replacement level (i.e. 2.1 births per woman). Countries in the south and east, on the other hand, saw fertility rates fall much faster, more recently (often to below 1.3, a rate at which the population falls by half every 45 years). Germany combines both. Its fertility rate fell below 2 in 1971. However, it has stayed low and is still only just above 1.3. **C.** The list of explanations for why German fertility has not rebounded is long. Michael Teitelbaum, a demographer at the Sloan Foundation in New York ticks them off: poor childcare; unusually extended higher education; inflexible labour laws; high youth unemployment; and non-economic or cultural factors. One German writer, Gunter Grass, wrote a novel, "Headbirths", in 1982, about Harm and Dorte Peters, "a model couple" who disport themselves on the beaches of Asia rather than invest time and trouble in bringing up a baby. "They keep a cat," writes Mr. Grass, "and still have no child." The novel is subtitled "The Germans Are Dying Out". With the exception of this cultural factor, none of these features is peculiar to Germany. If social and economic explanations account for persistent low fertility there, then they may well produce the same persistence elsewhere. **D.** The reason for hoping otherwise is that the initial decline in southern and eastern Europe was drastic, and may be reversible. In the Mediterranean, demographic decline was associated with freeing young women from the constraints of traditional Catholicism, which encouraged large families. In eastern Europe, it was associated with the collapse in living standards and the ending of pro-birth policies. In both regions, as such temporary factors fade, fertility rates might, in principle, be expected to rise. Indeed, they may already be stabilising in Italy and Spain. Germany tells you that reversing these trends can be hard. There, and elsewhere, fertility rates did not merely fall; they went below what people said they wanted. In 1979, Eurobarometer asked Europeans how many children they would like. Almost everywhere, the answer was two: the traditional two-child ideal persisted even when people were not delivering it. This may have reflected old habits of mind. Or people may really be having fewer children than they claim to want. **E.** A recent paper suggests how this might come about. If women postpone their first child past their mid-30s, it may be too late to have a second even if they want one (the average age of first births in most of Europe is now 30). If everyone does the same, one child becomes the norm: a one-child policy by example rather than coercion, as it were. If women wait to start a family until they are established at work, they may end up postponing children longer than they might otherwise have chosen. When birth rates began to fall in Europe, this was said to be a simple matter of choice. That was true, but it is possible that fertility may overshoot below what people might naturally have chosen. For many years, politicians have argued that southern Europe will catch up from its fertility decline because women, having postponed their first child, will quickly have a second and third. The overshoot theory suggests there may be only partial recuperation. Postponement could permanently lower fertility, not just redistribute it across time. **F.** There is a twist. If people have fewer children than they claim to want, how they see the family may change, too. Research by Tomas Sobotka of the Vienna Institute of Demography suggests that, after decades of low fertility, a quarter of young German men and a fifth of young women say they have no intention of having children and think that this is fine. When Eurobarometer repeated its poll about ideal family size in 2001, support for the two-child model had fallen everywhere. Parts of Europe, then, may be entering a new demographic trap. People restrict family size from choice. Social, economic, and cultural factors then cause this natural fertility decline to overshoot. This changes expectations, to which people respond by having even fewer children. That does not necessarily mean that birth rates will fall even more: there may yet be some natural floor, but it could mean that recovery from very low fertility rates proves to be slow or even non-existent.`
       },
       questions: [
         {
           type: 'matching-headings',
           instruction: 'The passage has 6 paragraphs labeled A-F. Which paragraph best fits each of the following headings? Drag the letter to the answer box.',
-          passageTitle: 'The Fertility Bust',
-          items: [
-            { questionNumber: 14, label: 'Even further falls?' },
-            { questionNumber: 15, label: 'One-child policy' },
-            { questionNumber: 16, label: 'Germany differs' },
-            { questionNumber: 17, label: 'Possible reasons' }
+          headings: [
+            { label: 'Even further falls?', value: 'Q14' },
+            { label: 'One-child policy', value: 'Q15' },
+            { label: 'Germany differs', value: 'Q16' },
+            { label: 'Possible reasons', value: 'Q17' }
           ],
-          headingOptions: [
+          paragraphs: [
             { 
-              label: 'A', 
-              value: 'A',
-              content: '**A.** Falling populations - the despair of state pension systems - are often regarded with calmness, even a secret satisfaction, by ordinary people. Europeans no longer need large families to gather the harvest or to look after parents. They have used their good fortune to have fewer children, thinking this will make their lives better. Much of Europe is too crowded as it is. Is this all that is going on?'
+              questionNumber: 14,
+              paragraphLabel: 'A',
+              content: '**A.** Falling populations - the despair of state pension systems - are often regarded with calmness, even a secret satisfaction, by ordinary people. Europeans no longer need large families to gather the harvest or to look after parents. They have used their good fortune to have fewer children, thinking this will make their lives better. Much of Europe is too crowded as it is. Is this all that is going on? Germans have been agonising about recent European Union estimates suggesting that 30% of German women are, and will remain, childless. The number is a guess: Germany does not collect figures like this. Even if the share is 25%, as other surveys suggest, it is by far the highest in Europe.'
             },
             { 
-              label: 'B', 
-              value: 'B',
-              content: '**B.** Germans have been agonising about recent European Union estimates suggesting that 30% of German women are, and will remain, childless. The number is a guess: Germany does not collect figures like this. Even if the share is 25%, as other surveys suggest, it is by far the highest in Europe. Germany is something of an oddity in this. In most countries with low fertility, young women have their first child late, and stop at one. In Germany, women with children often have two or three, but many have none at all. Germany is also odd in experiencing low fertility for such a long time.'
+              questionNumber: 15,
+              paragraphLabel: 'B',
+              content: '**B.** Germany is something of an oddity in this. In most countries with low fertility, young women have their first child late, and stop at one. In Germany, women with children often have two or three, but many have none at all. Germany is also odd in experiencing low fertility for such a long time. Europe is demographically polarised. Countries in the north and west saw fertility fall early, in the 1960s. Recently, they have seen it stabilise or rise back towards replacement level (i.e. 2.1 births per woman). Countries in the south and east, on the other hand, saw fertility rates fall much faster, more recently (often to below 1.3, a rate at which the population falls by half every 45 years). Germany combines both. Its fertility rate fell below 2 in 1971. However, it has stayed low and is still only just above 1.3.'
             },
             { 
-              label: 'C', 
-              value: 'C',
-              content: '**C.** Europe is demographically polarised. Countries in the north and west saw fertility fall early, in the 1960s. Recently, they have seen it stabilise or rise back towards replacement level (i.e. 2.1 births per woman). Countries in the south and east, on the other hand, saw fertility rates fall much faster, more recently (often to below 1.3, a rate at which the population falls by half every 45 years). Germany combines both. Its fertility rate fell below 2 in 1971. However, it has stayed low and is still only just above 1.3.'
+              questionNumber: 16,
+              paragraphLabel: 'C',
+              content: '**C.** The list of explanations for why German fertility has not rebounded is long. Michael Teitelbaum, a demographer at the Sloan Foundation in New York ticks them off: poor childcare; unusually extended higher education; inflexible labour laws; high youth unemployment; and non-economic or cultural factors. One German writer, Gunter Grass, wrote a novel, "Headbirths", in 1982, about Harm and Dorte Peters, "a model couple" who disport themselves on the beaches of Asia rather than invest time and trouble in bringing up a baby. "They keep a cat," writes Mr. Grass, "and still have no child." The novel is subtitled "The Germans Are Dying Out". With the exception of this cultural factor, none of these features is peculiar to Germany. If social and economic explanations account for persistent low fertility there, then they may well produce the same persistence elsewhere.'
             },
             { 
-              label: 'D', 
-              value: 'D',
-              content: '**D.** China\'s one-child policy was introduced in 1980 as a population control measure. While this policy did reduce population growth, it has also created demographic imbalances and social consequences. The policy has been relaxed in recent years, but its long-term effects on fertility patterns continue to be studied.'
+              questionNumber: 17,
+              paragraphLabel: 'D',
+              content: '**D.** The reason for hoping otherwise is that the initial decline in southern and eastern Europe was drastic, and may be reversible. In the Mediterranean, demographic decline was associated with freeing young women from the constraints of traditional Catholicism, which encouraged large families. In eastern Europe, it was associated with the collapse in living standards and the ending of pro-birth policies. In both regions, as such temporary factors fade, fertility rates might, in principle, be expected to rise. Indeed, they may already be stabilising in Italy and Spain. Germany tells you that reversing these trends can be hard. There, and elsewhere, fertility rates did not merely fall; they went below what people said they wanted. In 1979, Eurobarometer asked Europeans how many children they would like. Almost everywhere, the answer was two: the traditional two-child ideal persisted even when people were not delivering it. This may have reflected old habits of mind. Or people may really be having fewer children than they claim to want.'
             },
             { 
-              label: 'E', 
-              value: 'E',
-              content: '**E.** Why have Germans decided to have fewer children? Several factors contribute to lower fertility rates. Economic pressures, changing social values, and the desire for personal freedom and career opportunities have led many women to delay or forgo motherhood. Educational opportunities for women and changing gender roles have also played a significant part in demographic shifts.'
+              questionNumber: 18,
+              paragraphLabel: 'E',
+              content: '**E.** A recent paper suggests how this might come about. If women postpone their first child past their mid-30s, it may be too late to have a second even if they want one (the average age of first births in most of Europe is now 30). If everyone does the same, one child becomes the norm: a one-child policy by example rather than coercion, as it were. If women wait to start a family until they are established at work, they may end up postponing children longer than they might otherwise have chosen. When birth rates began to fall in Europe, this was said to be a simple matter of choice. That was true, but it is possible that fertility may overshoot below what people might naturally have chosen. For many years, politicians have argued that southern Europe will catch up from its fertility decline because women, having postponed their first child, will quickly have a second and third. The overshoot theory suggests there may be only partial recuperation. Postponement could permanently lower fertility, not just redistribute it across time.'
             },
             { 
-              label: 'F', 
-              value: 'F',
-              content: '**F.** The demographic trap presents a serious challenge for European societies. With falling birth rates and aging populations, many countries face unsustainable pension systems and labour shortages. Policymakers must address these challenges through immigration, family support policies, and other innovative solutions to maintain economic stability and social welfare systems.'
+              questionNumber: 19,
+              paragraphLabel: 'F',
+              content: '**F.** There is a twist. If people have fewer children than they claim to want, how they see the family may change, too. Research by Tomas Sobotka of the Vienna Institute of Demography suggests that, after decades of low fertility, a quarter of young German men and a fifth of young women say they have no intention of having children and think that this is fine. When Eurobarometer repeated its poll about ideal family size in 2001, support for the two-child model had fallen everywhere. Parts of Europe, then, may be entering a new demographic trap. People restrict family size from choice. Social, economic, and cultural factors then cause this natural fertility decline to overshoot. This changes expectations, to which people respond by having even fewer children. That does not necessarily mean that birth rates will fall even more: there may yet be some natural floor, but it could mean that recovery from very low fertility rates proves to be slow or even non-existent.'
             }
           ]
         },
@@ -201,13 +199,26 @@ export const track706Reading: Track = {
       sectionNumber: 3,
       title: 'READING PASSAGE 3',
       passage: {
-        title: 'Teens Try to Change the World',
-        content: `When classes adjourn here at the Fayerweather Street School, eighth-graders ignore the mall down the street and go straight to the place they consider much cooler: the local natural-foods grocer's. There, they gather in groups of ten or more sometimes, smitten by a marketing atmosphere that links attractiveness to eating well. When time comes to buy something even as small as a chocolate treat, they feel good knowing a farmer somewhere probably received a good price. "Food is something you need to stay alive," says eighth-grader Emma Lewis. "Paying farmers well is really important because if we didn't have any unprocessed food, we'd all be living on candy." Eating morally, as some describe it, is becoming a priority for teenagers as well as adults in their early 20s. What began a decade ago as a concern on college campuses to shun clothing made in overseas sweatshops has given birth to a parallel phenomenon in the food and beverage industries. Here, youthful shoppers are leveraging their dollars in a bid to reduce pesticide usage, limit deforestation, and make sure farmers are not left with a pittance on payday. Once again, college campuses are setting the pace. Students at 30 colleges have helped persuade administrators to make sure all cafeteria coffee comes with a "Fair Trade" label, which means bean pickers in Latin America and Africa were paid higher than the going rates. Their peers on another 300 campuses are pushing to follow suit, according to Students United for Fair Trade in Washington, D.C.`
+        title: 'Teens Try to Change the World, One Purchase at a Time',
+        content: `When classes adjourn here at the Fayerweather Street School, eighth-graders ignore the mall down the street and go straight to the place they consider much cooler: the local natural-foods grocer's. There, they gather in groups of ten or more sometimes, smitten by a marketing atmosphere that links attractiveness to eating well. When time comes to buy something even as small as a chocolate treat, they feel good knowing a farmer somewhere probably received a good price. "Food is something you need to stay alive," says eighth-grader Emma Lewis. "Paying farmers well is really important because if we didn't have any unprocessed food, we'd all be living on candy."
+
+Eating morally, as some describe it, is becoming a priority for teenagers as well as adults in their early 20s. What began a decade ago as a concern on college campuses to shun clothing made in overseas sweatshops has given birth to a parallel phenomenon in the food and beverage industries. Here, youthful shoppers are leveraging their dollars in a bid to reduce pesticide usage, limit deforestation, and make sure farmers are not left with a pittance on payday. Once again, college campuses are setting the pace. Students at 30 colleges have helped persuade administrators to make sure all cafeteria coffee comes with a "Fair Trade" label, which means bean pickers in Latin America and Africa were paid higher than the going rates. Their peers on another 300 campuses are pushing to follow suit, according to Students United for Fair Trade in Washington, D.C.
+
+Coffee is just the beginning. Bon Appetit, an institutional food-service provider based in California, relies on organic and locally grown produce. In each year since 2001, more than 25 colleges have asked the company to bid on their food-service contracts. Though Bon Appetit intentionally limits its growth, its collegiate client list has grown from 58 to 71 in that period. "It's really just been in the last five years that we've seen students become concerned with where their food was coming from," says Maisie Ganzler, Bon Appetit's director of strategic initiatives. "Prior to that, students were excited to be getting sugared cereal."
+
+To reach a younger set that often does not drink coffee, Fair Trade importer Equal Exchange rolled our a line of cocoa in 2003 and chocolate bars in 2004. Profits in both sectors have justified the project, says Equal Exchange co-president Hob Everts. What is more, dozens of schools have contacted the firm to use its products in fundraisers and as classroom teaching, tools. "Kids often are the ones who agitate in the family'" for recycling and other eco-friendly practices, Mr. Everts says. "So, it's a ripe audience."
+
+Concerns of today's youthful food shoppers seem to reflect in some ways the idealism that inspired prior generations to join boycotts in solidarity with farm workers. Today's efforts are distinct in that youthful consumers say they do not want to make sacrifices. They want high-quality, competitively priced goods that do not require exploitation of workers or the environment. They will gladly reward companies that deliver. One activist who shares this sentiment and hears it repeatedly from her peers is Summer Rayne Oakes, a recent college graduate and fashion model who promotes stylish Fair Trade clothing. "I'm not going to buy something that can't stand on its own or looks bad just because it's socially responsible," Ms. Oakes says. "My generation has come to terms with the fact that we're all consumers, and we all buy something. So, if I do have to buy food, what are the consequences?"
+
+Wanting to ameliorate the world's big problems can be frustrating, especially for those who feel ineffective because they are young. Marketers are figuring out that teenagers resent this feeling of powerlessness and are pushing products that make young buyers feel as though they are making a difference, says Michael Wood, vice president of Teenage Research Unlimited. His example: Ethos Water from Starbucks, which contributes five cents from every bottle sold to water-purification centres in developing countries. "This is a very easy way for young people to contribute. All they have to do is buy bottled water," Mr. Wood says. "Buying products or supporting companies that give them ways to support global issues is one way for them to get involved, and they really appreciate that."
+
+Convenience is also driving consumer activism. Joe Curnow, national coordinator of United Students for Fair Trade, says she first got involved about five years ago as a high schooler when she spent time hanging out in cafes. Buying coffee with an eco-friendly label "was a very easy way for me to express what I believed in", she says. For young teens, consumption is their first foray into activism. At the Fayerweather Street School, Emma Lewis teamed up with classmates Kayla Kleinman and Therese LaRue to sell Fair Trade chocolate, cocoa, and other products at a school fundraiser in November. When the tally reached $8,000, they realised they were striking a chord.
+
+Some adults hasten to point out the limitations of ethical consumption as a tool for doing good deeds and personal growth. Gary Lindsay, director of Children's Ministries, encourages Fair Trade purchases, but he also organises children to collect toys for foster children and save coins for a playground construction project in Tanzania. He says it helps them learn to enjoy helping others even when they are not getting anything tangible in return. "When we're benefiting, how much are we really giving? Is it really sacrifice?" Mr. Lindsay asks. Of Fair Trade products, he says: "Those things are great when we're given opportunities like that once in a while, but I think for us to expect that we should get something out of everything we do is a very selfish attitude to have."`
       },
       questions: [
         {
           type: 'multiple-choice',
-          instruction: 'Choose the correct letter A, B, or C.',
           questionNumber: 27,
           question: 'Trying to change the world through purchases began with',
           options: [
@@ -218,7 +229,6 @@ export const track706Reading: Track = {
         },
         {
           type: 'multiple-choice',
-          instruction: 'Choose the correct letter A, B, or C.',
           questionNumber: 28,
           question: 'Bon Appetit had ___ colleges using its services in 2006.',
           options: [
@@ -229,7 +239,6 @@ export const track706Reading: Track = {
         },
         {
           type: 'multiple-choice',
-          instruction: 'Choose the correct letter A, B, or C.',
           questionNumber: 29,
           question: 'Buying Ethos Water helps provide money for',
           options: [
@@ -240,7 +249,6 @@ export const track706Reading: Track = {
         },
         {
           type: 'multiple-choice',
-          instruction: 'Choose the correct letter A, B, or C.',
           questionNumber: 30,
           question: 'Joe Curnow first got involved with consumer activism through buying',
           options: [

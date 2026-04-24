@@ -1,0 +1,49 @@
+// Track: 708-2-M Writing
+import { Track } from './track1';
+
+export const track7082Writing: Track = {
+  id: 'track-708-2-writing',
+  name: '708-2-M Writing',
+  shortName: '708-2MW',
+  description: 'IELTS Academic Writing Test - MBA Degree Survey Data (Task 1) and Child Discipline Essay (Task 2)',
+  duration: 60,
+  totalQuestions: 2,
+  trackType: 'writing',
+  audioURL: null,
+  sections: [
+    {
+      sectionNumber: 1,
+      title: 'Writing Task 1',
+      questions: [
+        {
+          type: 'writing-task-with-image',
+          taskNumber: 1,
+          title: 'Writing Task 1',
+          instruction: 'You should spend about 20 minutes on this task.',
+          chartDescription: 'The charts show survey results concerning why MBA graduates chose their degree, and employer\'s reasons for hiring them. The data presents a comparison between student motivations and employer preferences in recruitment.',
+          chartImageURL: 'https://i.postimg.cc/yNSbmccp/708-2.png',
+          prompt: 'Summarize the information by selecting and reporting the main features, and make comparisons where relevant.\n\nWrite at least 150 words.',
+          minWords: 150,
+          timeRecommended: 20
+        }
+      ]
+    },
+    {
+      sectionNumber: 2,
+      title: 'Writing Task 2',
+      questions: [
+        {
+          type: 'writing-task',
+          taskNumber: 2,
+          title: 'Writing Task 2',
+          instruction: 'You should spend about 40 minutes on this task.',
+          topicIntro: 'Write about the following topic:',
+          prompt: 'Some people say that the best way to teach children to behave well is to punish them. Others argue that rewarding and praising children is a better way to teach them the difference between right and wrong.\n\nDiscuss both views and give your own opinion.',
+          closingInstruction: 'Give reasons for your answer and include any relevant examples from your own knowledge or experience.\n\nWrite at least 250 words.',
+          minWords: 250,
+          timeRecommended: 40
+        }
+      ]
+    }
+  ]
+};
