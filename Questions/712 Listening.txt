@@ -1,0 +1,267 @@
+Track name: 712 Listening
+Track type: Listening
+Section: 4
+Question 40
+
+
+
+
+SECTION 1
+
+
+
+
+Questions 1-4
+Question type: Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+
+
+Instruction: Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.
+Table title: University Clubs
+
+
+
+
++-------------------+-------------------+-------------------+-------------------+
+| Name of club      | Monday            | Tuesday           | Wednesday         | 
++-------------------+-------------------+-------------------+-------------------+
+| Film              | climbing          | chess             |                   | 
++-------------------+-------------------+-------------------+-------------------+
+| Extra activities  | discussions       | (1)……………            | (2)……………            | 
++-------------------+-------------------+-------------------+-------------------+
+| Current number    | (3)……………            | 40                | 55                | 
+| of members        |                   |                   |                   | 
++-------------------+-------------------+-------------------+-------------------+
+| Contact           | Events organiser  | (4)……………            | Maths tutor       | 
++-------------------+-------------------+-------------------+-------------------+
+
+
+
+
+Detailed Description for Regeneration
+This table has 5 rows and 4 columns.
+* Total rows: 5
+* Total columns: 4
+
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Name of club | Column 2: Monday | Column 3: Tuesday | Column 4: Wednesday
+2. Row 2: Column 1: Film | Column 2: climbing | Column 3: chess | Column 4: (blank)
+3. Row 3: Column 1: Extra activities | Column 2: discussions | Column 3: (1)…………… | Column 4: (2)……………
+4. Row 4: Column 1: Current number of members | Column 2: (3)…………… | Column 3: 40 | Column 4: 55
+5. Row 5: Column 1: Contact | Column 2: Events organiser | Column 3: (4)…………… | Column 4: Maths tutor
+
+
+
+
+Questions 5-10
+Question type: Fill in the gaps sentence 
+{On this type it's rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+
+Instruction: Write NO MORE THAN THREE WORDS for each answer.
+
+
+Title: Details of climbing club
+
+
+Meets (5)……………
+
+
+Excursion to France in the (6)……………
+
+
+Subscriptions paid (7)……………
+
+
+Benefits:
+
+
+Discounts on (8)……………
+
+
+Annual (9)……………
+
+
+Free entrance to climbing (10)……………in Cardiff
+
+
+
+
+SECTION 2
+
+
+
+
+Questions 11-15
+Question type: Drag and drop
+{On this type have some questions and on side show some option draggable, student drag those options and drop i mean place on question}
+
+
+Instruction: Which features are available at the following halls of residence? Choose FIVE answers from the box and write the correct letter, A-G next to Questions 11-15.
+
+
+Questions:
+(11) Brown Hall
+(12) Blake Residence
+(13) Queens Building
+(14) Parkway Flats
+(15) Temple Rise
+
+
+Options: +---------------------------------------------+
+| A | cleaning included                           | 
++---------------------------------------------+
+| B | all meals included                          | 
++---------------------------------------------+
+| C | private showers                             | 
++---------------------------------------------+
+| D | modern building                             | 
++---------------------------------------------+
+| E | parking spaces                              | 
++---------------------------------------------+
+| F | single sex                                  | 
++---------------------------------------------+
+| G | sports facilities                           | 
++---------------------------------------------+
+
+
+
+
+Questions 16-20
+Question type: Drag and drop (Map Labeling)
+{On this type there show a image andshow some option A to G,  A to G point are draggable! And some question have dropbox, student should drag Letters and drop on boxes.}
+
+
+Instruction: Label the map below. Write the correct letter, A-G next to Questions 16-20.
+
+
+Image: https://i.postimg.cc/8C8wwR0k/Town-street-plan-diagram.png
+
+
+Questions:
+(16) Brown Hall
+(17) Blake Residence
+(18) Queens Building
+(19) Parkway Flats
+(20) Temple Rise
+
+
+SECTION 3
+
+Questions 21-24
+Question type: Fill in the gaps sentence 
+{On this type it's rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+
+Instruction: Write NO MORE THAN THREE WORDS OR A NUMBER for each answer.
+
+
+(21) Jenna and Marco must complete their project by ……………
+
+
+(22) The project will be a study of the increase in ……………
+
+
+(23) The project will be assessed by ……………
+
+
+(24) Jenna and Marco agree they need a ……………for the project.
+
+
+
+
+Questions 25-27
+Question type: Multiple choice Multiple 
+{This question type contains a single prompt with multiple answer options. Students are required to select exactly three options as their answers. Each selected option is counted as an individual question.}
+
+
+Instruction: Choose THREE letters, A-G.
+
+
+Question: What THREE things do Marco and Jenna have to do now for the project?
+
+
+Options: A. interview some people
+B. hand out questionnaires
+C. choose their subjects
+D. take photographs
+E. use statistical software
+F. do some work in the library
+G. contact some local companies
+
+
+
+
+Questions 28-30
+Question type: Multiple choice single one
+{On this type of question had a question and some options, student need to select one option from this options, and each question count as one question}
+
+
+Instruction: Choose the correct letter, A, B or C.
+
+
+(28) Why did Jenna and Marco agree to work together?
+A. because they both wanted to work with someone else
+B. because they each have different skills
+C. because they have worked together before
+
+
+(29) Why does Marco suggest that he writes the analysis?
+A. He needs more practice with his kind of writing
+B. He is better at English than Jenna
+C. He has more experience of this than Jenna
+
+
+(30) Why does Jenna offer to do the presentation?
+A. Her tutor wants her to do the presentation
+B. Marco is very nervous about giving presentation
+C. She wants do divide the work on the project fairly
+
+
+SECTION 4
+Questions 31-35
+Question type: Drop down
+{On this type each question has a dropdown menu with multiple options. Students need to select one option from the dropdown for each question.}
+
+
+Instruction: Write the correct letter, A, B or C next to Questions 31-35.
+
+
+Options: A. television
+B. internet
+C. the press
+
+
+Question: Of which US news source is each of the following statements true?
+
+
+(31) It is more popular at the weekend than during the week.
+
+
+(32) It has affected the popularity of local radio.
+
+
+(33) It has recently been able to expand internationally
+
+
+(34) It is offering more varied reporting than previously.
+
+
+(35) It has suffered from government intervention.
+
+
+
+
+Questions 36-40
+Question type: Fill in the gaps sentence 
+{On this type it's rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+
+Instruction: Write NO MORE THAN TWO WORDS for each answer.
+
+
+Title: Advertising and Newspapers
+
+
+In the USA, newspapers are being increasingly inventive about the way they attract advertisers and their (36)……………now exceeds that of other industries. Advertising has increased because of a good relationship with the (37)……………sector. In addition, newspapers now run more adverts which include (38)……………These have been found to raise readership of the papers and create more sales for the (39)……………There are also an increasing number of more expensive (40)……………adverts.

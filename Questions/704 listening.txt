@@ -1,0 +1,181 @@
+﻿Track name: 704 listening
+Track type: Listening
+Section: 4
+Question 40
+
+
+SECTION1
+Question: 1-4
+Question type: Short Answer
+{On this type each question has a writing box for short answer, students should write their short answer on this box. And each question count as each question} 
+Instruction: Write NO MORE THAN THREE WORDS for each answer. 
+
+
+Title:DVD Customer Profile
+Subtitle: Occupation: Student
+For example: Have you owned a DVD player before? No
+1 What is the maximum you want to spend on a DVD player?.........
+2 How often do you watch DVDs?...........
+3 What type of films do you enjoy?...........
+4 What other DVDs (non-film) do you watch?.............
+
+
+Questions 5-10 
+Question type:  Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+Instruction: Complete the table below. 
+
+
+
+
+
+
++----------------------+-------------------------+--------------------------+--------------------------+
+| Player               | Features                | Cost                     | After-sales service      | 
++----------------------+-------------------------+--------------------------+--------------------------+
+| DB 30                | basic                   | £69                      | 5…………….. only            | 
++----------------------+-------------------------+--------------------------+--------------------------+
+| XL 643               | can also 6…………..        | 7……………..                 | 8…………. at a reduced cost | 
++----------------------+-------------------------+--------------------------+--------------------------+
+| TriX 24              | Will also play 9…………….. | £ 94 including 10…………….. | Guaranteed for 3 years   | 
++----------------------+-------------------------+--------------------------+--------------------------+
+
+
+Detailed Description for Regeneration
+This table has 4 rows and 4 columns.
+* Total rows: 4
+* Total columns: 4
+
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Player | Column 2: Features | Column 3: Cost | Column 4: After-sales service
+2. Row 2: Column 1: DB 30 | Column 2: basic | Column 3: £69 | Column 4: 5…………….. only
+3. Row 3: Column 1: XL 643 | Column 2: can also 6………….. | Column 3: 7…………….. | Column 4: 8…………. at a reduced cost
+4. Row 4: Column 1: TriX 24 | Column 2: Will also play 9…………….. | Column 3: £ 94 including 10…………….. | Column 4: Guaranteed for 3 years
+
+
+
+
+SECTION 2
+Questions: 11-20 
+Question type: Fill in the gaps sentence 
+{On this type it’s rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Write NO MORE THAN TWO WORDS for each answer. 
+Sub-Title: Your home:
+(11). A quarter of break-ins are through the………………
+(12). The ……………..of the house should also be protected.
+(13). You should warn burglars your house is alarmed by putting a………………..in the window
+Sub-Title:The alarms:
+(14). The alarms show a constant ………………
+(15). The alarms can be set off by a…………………
+(16). The alarms are connected to the……………….
+Sub-Title:Installation:
+(17). The alarms are usually installed in …………………
+(18). The security code should be kept…………………
+(19). The alarms can be installed…………….at an additional cost.
+(20). Customers can pay………………for their alarm system.
+
+
+SECTION 3
+
+
+Question: 21-27 
+Question type: Fill in the gaps sentence 
+{On this type it’s rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Write NO MORE THAN TWO WORDS for each answer.
+
+
+Title: Essay Writing 
+
+
+Essay writing is simply the process of (21)………….. information and presenting your (22)……………You will need to use skills of analysis, (23)………………and expression. The more essays you write, the more you will develop these skills. The key to producing a good essay is in the (24)………………… Allow plenty of time to work out what you need to do. You will find several books in the library to help you with the particular (25)……………..of academic writing. When you have completed your essay you must remember to (26)…………… it carefully and take out anything irrelevant. Also, once you have received your mark, you should check your essay through as, by doing this, you can (27)…………… from it.
+
+
+Question: 28-30
+Question type: Multiple choice Multiple 
+{This question type contains a single prompt with multiple answer options. Students are required to select exactly two options as their answers. Each selected option is counted as an individual question.}
+Instruction: Choose THREE letters A-G 
+
+
+Question: Which THREE pieces of advice does the tutor give the student? 
+
+
+Options: 
+A. break the question down into smaller questions
+B. check the vocabulary in the question
+C. limit how much you read
+D. make sure you have good notes
+E. use only a few quotations
+F. ask a friend to read your essay
+G. try to be objective
+
+
+SECTION 4
+Question: 31-36
+Question type: Fill in the gaps (Flow chart)
+{In this type, a complete Flow-chart is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+
+Instruction: Write NO MORE THAN TWO WORDS for each answer 
+
+
+Title: Exchange Rate Project       
+
+
++--------------------------------------+
+| (31) __________ a currency           |
++--------------------------------------+
+                |
+                v
++--------------------------------------+
+| Imagine you need to (32) __________  |
+| £100                                 |
++--------------------------------------+
+                |
+                v
++--------------------------------------+
+| (33) __________ facts about the      |
+| state of your country's economy     |
++--------------------------------------+
+                |
+                v
++--------------------------------------+
+| Look at other students' notes on    |
+| their countries                     |
++--------------------------------------+
+                |
+                v
++--------------------------------------+
+| Decide what your exchange 'rate' is |
+| going to be against each currency   |
++--------------------------------------+
+                |
+                v
++--------------------------------------+
+| Try to (34) __________ your currency |
++--------------------------------------+
+                |
+                v
++--------------------------------------+
+| (35) __________ other currency      |
+| if you want                         |
++--------------------------------------+
+                |
+                v
++--------------------------------------+
+| (36) __________ your profit         |
++--------------------------------------+
+
+
+
+Questions 37-40 
+Question type: Short Answer
+{On this type each question has a writing box for short answer, students should write their short answer on this box. And each question count as each question} 
+Instruction: Write NO MORE THAN THREE WORDS for each answer. 
+
+
+(37). How many main trading partners does the UK have?
+(38). Which sector does the tutor want students to study?
+(39). What does the tutor want students to look at changes in?
+(40). When does the tutor want the project completed by?

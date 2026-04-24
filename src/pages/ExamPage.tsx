@@ -10,6 +10,7 @@ import { MultipleChoiceMultiSelectQuestion } from '../components/MultipleChoiceM
 import { SentenceCompletionQuestion } from '../components/SentenceCompletionQuestion';
 import { DropdownQuestion } from '../components/DropdownQuestion';
 import { DragAndDropQuestion } from '../components/DragAndDropQuestion';
+import { DragDropSummaryQuestion } from '../components/DragDropSummaryQuestion';
 import { FlowChartQuestion } from '../components/FlowChartQuestion';
 import { MapLabelingQuestion } from '../components/MapLabelingQuestion';
 import { DragDropTableQuestion } from '../components/DragDropTableQuestion';
@@ -620,7 +621,7 @@ export function ExamPage({
           }
           
           loadedTracks.push({ track, audioURL });
-          // Filter out 'sicu' tracks - only include listening, reading, writing, mock
+          // Only include listening, reading, writing tracks
           const validTrackTypes: Array<'listening' | 'reading' | 'writing'> = ['listening', 'reading', 'writing'];
           if (validTrackTypes.includes(track.trackType as any)) {
             order.push(track.trackType as 'listening' | 'reading' | 'writing');
@@ -1856,8 +1857,8 @@ export function ExamPage({
         <MatchingHeadings
           key={idx}
           instruction={question.instruction}
-          paragraphs={question.paragraphs}
-          headings={question.headings}
+          items={question.items || []}
+          headingOptions={question.headingOptions || []}
           answers={answers}
           onAnswerChange={(qNum, value) => !isLocked && handleAnswerChange(qNum, value)}
           disabled={isLocked}
@@ -1901,6 +1902,9 @@ export function ExamPage({
     }
     if (question.type === 'paragraph-gap') {
       return <ParagraphGapQuestion key={idx} instruction={question.instruction} paragraph={question.paragraph} questionNumbers={question.questionNumbers} answers={answers} onAnswerChange={(qNum, value) => !isLocked && handleAnswerChange(qNum, value)} disabled={isLocked} />;
+    }
+    if (question.type === 'drag-drop-summary') {
+      return <DragDropSummaryQuestion key={idx} instruction={question.instruction} paragraph={question.paragraph} questionNumbers={question.questionNumbers} optionsList={question.optionsList} answers={answers} onAnswerChange={(qNum, value) => !isLocked && handleAnswerChange(qNum, value)} disabled={isLocked} />;
     }
     return null;
   };
@@ -2015,9 +2019,9 @@ export function ExamPage({
     return <ExamInstructions examType={currentExamType} onStart={handleStartExam} />;
   }
 
-  // Cast trackType to handle 'sicu' values - default to 'reading' if not a valid type
+  // Get display track type
   const displayTrackType: 'listening' | 'reading' | 'writing' = 
-    currentTrack?.trackType === 'sicu' ? 'reading' : (currentTrack?.trackType || 'reading');
+    currentTrack?.trackType || 'reading';
   const trackInfo = getTrackIcon(displayTrackType);
 
   return (
@@ -2194,9 +2198,56 @@ export function ExamPage({
                   onPaste={(e) => e.preventDefault()}
                   style={{ userSelect: 'text', WebkitUserSelect: 'text' }}
                 >
-                  {examData[currentSection].passage.content.split('\n\n').map((para, idx) => (
-                    <p key={idx} className="mb-4 whitespace-pre-line">{para}</p>
-                  ))}
+                  {(() => {
+                    // Check if this section has matching-headings questions
+                    const hasMatchingHeadings = examData[currentSection].questions.some((q: any) => q.type === 'matching-headings');
+                    
+                    if (!hasMatchingHeadings) {
+                      // Original rendering for non-matching-headings sections
+                      return examData[currentSection].passage.content.split('\n\n').map((para: string, idx: number) => (
+                        <p key={idx} className="mb-4 whitespace-pre-line">{para}</p>
+                      ));
+                    }
+
+                    // Special rendering for matching-headings sections - use headingOptions
+                    const matchingHeadingsQuestions = examData[currentSection].questions.filter((q: any) => q.type === 'matching-headings');
+                    const headingOptions = matchingHeadingsQuestions.flatMap((q: any) => q.headingOptions || []);
+                    
+                    const isHeadingUsed = (label: string) => {
+                      return matchingHeadingsQuestions.some((q: any) => 
+                        (q.items || []).some((item: any) => answers[item.questionNumber] === label)
+                      );
+                    };
+
+                    // Render heading options with draggable boxes
+                    return headingOptions.map((headingOpt: any, idx: number) => {
+                      const label = headingOpt.label;
+                      const content = headingOpt.content || '';
+                      
+                      return (
+                        <div key={idx} className="mb-6">
+                          {label && (
+                            <div
+                              draggable={!isHeadingUsed(label)}
+                              onDragStart={(e) => {
+                                e.dataTransfer.effectAllowed = 'move';
+                                e.dataTransfer.setData('text/plain', label);
+                              }}
+                              className={`w-16 px-3 py-2 rounded font-bold text-lg mb-2 transition-all text-center ${
+                                isHeadingUsed(label)
+                                  ? 'bg-gray-400 border-2 border-gray-500 opacity-40 cursor-not-allowed'
+                                  : 'bg-orange-400 border-2 border-orange-600 cursor-move hover:bg-orange-500 shadow-md'
+                              }`}
+                              style={{ width: 'fit-content' }}
+                            >
+                              <span className="text-white">{label}</span>
+                            </div>
+                          )}
+                          <p className="whitespace-pre-line">{content}</p>
+                        </div>
+                      );
+                    });
+                  })()}
                 </div>
               </div>
             </div>

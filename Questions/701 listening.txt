@@ -1,0 +1,220 @@
+﻿Track name: 701 listening
+Track type: Listening
+Section: 4
+Question 40
+
+
+SECTION 1
+
+
+Questions 1-6
+Question type:  Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+
+
+Instruction: Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.
+Table title: Student Union Registration Form
+
+
++----------------------------------+----------------------+
+| Name                             | Stefan Unger         | 
++----------------------------------+----------------------+
+| Degree programme                 | (1)……….                | 
++----------------------------------+----------------------+
+| Department                       | (2)………..               | 
++----------------------------------+----------------------+
+| Leisure activities               | (3)………..               | 
++----------------------------------+----------------------+
+| Language(s) (apart from English) | (4)………..               | 
++----------------------------------+----------------------+
+| Type of accommodation            | (5)…………                | 
++----------------------------------+----------------------+
+| Contact number                   | (6)………..               | 
++----------------------------------+----------------------+
+
+
+Detailed Description for Regeneration
+This table has 7 rows and 2 columns.
+* Total rows: 7
+* Total columns: 2
+
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Name | Column 2: Stefan Unger
+2. Row 2: Column 1: Degree programme | Column 2: 1……….
+3. Row 3: Column 1: Department | Column 2: 2………..
+4. Row 4: Column 1: Leisure activities | Column 2: 3………..
+5. Row 5: Column 1: Language(s) (apart from English) | Column 2: 4………..
+6. Row 6: Column 1: Type of accommodation | Column 2: 5…………
+7. Row 7: Column 1: Contact number | Column 2: 6………..
+
+
+Questions 7-10
+Question type: Short Answer
+{On this type each question have writing box for short answer, student should write there short answer on this box. And each question count as each question} 
+Instruction: Write NO MORE THAN THREE WORDS for each answer.
+
+
+7.When can students use the photocopier?
+8.Where are events usually held?
+9.Which Union officer is responsible for van hire?
+10.What will Union members be able to get a discount on?
+
+
+
+
+SECTION 2
+Questions 11-15
+Question type: Map Lebeling Drag and Drop (Image)
+{On this type show a image and some option, student need to drag the option and drop on image where need to lebel!! When render please scan properly https://i.postimg.cc/6qyq3QZQ/Library-floor-plan-schematic-layout.png this image and make sure 11,12,13,14,15 should be dropable}
+Instruction: Choose FIVE answers from the box and write the correct letter A – G next to Questions 11 – 15. 
+Questions: https://i.postimg.cc/6qyq3QZQ/Library-floor-plan-schematic-layout.png
+
+Options: +----------------------+----------------------+
+| A                    | Arts section         | 
++----------------------+----------------------+
+| B                    | Computers            | 
++----------------------+----------------------+
+| C                    | Languages section    | 
++----------------------+----------------------+
+| D                    | Law                  | 
++----------------------+----------------------+
+| E                    | Magazines            | 
++----------------------+----------------------+
+| F                    | Science              | 
++----------------------+----------------------+
+| G                    | study desks          | 
++----------------------+----------------------+
+
+
+
+
+Questions 16-20
+Question type: Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+Instruction: Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.
+Table Title: Library system
+
++-----------------------------+--------------------------------+
+| Maximum borrowing period    | 16………………                       | 
++-----------------------------+--------------------------------+
+| Renew books in person or by | 17……………..                      | 
++-----------------------------+--------------------------------+
+| Overdue charge              | £18……………..                     | 
++-----------------------------+--------------------------------+
+| Unavailable books           | leave information in a 19…………. | 
++-----------------------------+--------------------------------+
+| Extra services              | 20……………..                      | 
++-----------------------------+--------------------------------+
+
+
+Detailed Description for Regeneration
+This table has 5 rows and 2 columns.
+* Total rows: 5
+* Total columns: 2
+
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Maximum borrowing period | Column 2: 16………………
+2. Row 2: Column 1: Renew books in person or by | Column 2: 17……………..
+3. Row 3: Column 1: Overdue charge | Column 2: £18……………..
+4. Row 4: Column 1: Unavailable books | Column 2: leave information in a 19………….
+5. Row 5: Column 1: Extra services | Column 2: 20……………..
+
+
+SECTION 3
+Question: 21-28
+Question type: Fill in the gaps (Flow chart)
+{In this type, a complete Flow-chart is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+
+Instruction: Write NO MORE THAN TWO WORDS for each answer 
+
+Title: To Submit a Paper for the Architecture Conference     
++------------------------------------------------------+
+| Find details of conference themes on (21) ...........  |
++------------------------------------------------------+
+                |
+                v
++------------------------------------------------------+
+| Check rules for submission, e.g. (22) ........... of paper |
++------------------------------------------------------+
+                |
+                v
++------------------------------------------------------+
+| Write paper on (23) ........... work                   |
++------------------------------------------------------+
+                |
+                v
++------------------------------------------------------+
+| Check any data is in a suitable (24)...........      |
++------------------------------------------------------+
+                |
+                v
++------------------------------------------------------+
+| Hand in paper to the (25) ........... for checking     |
++------------------------------------------------------+
+                |
+                v
++------------------------------------------------------+
+| Make any necessary (26) ..........., then submit paper |
++------------------------------------------------------+
+                |
+                v
++------------------------------------------------------+
+| If accepted, send in details of your (27) ........... |
+| requirements                                         |
++------------------------------------------------------+
+                |
+                v
++------------------------------------------------------+
+| Send conference organisers a personal profile for    |
+| the (28)...........                                 |
++------------------------------------------------------+
+
+
+Questions 29-30 
+Question type: Multiple choice Multiple 
+{This question type contains a single prompt with multiple answer options. Students are required to select exactly two options as their answers. Each selected option is counted as an individual question.}
+Instruction: Choose TWO letters, A-E.
+Which TWO things does Kirsten plan to do to prepare her conference paper? 
+A. read another student’s thesis 
+B. collect more data 
+C. talk to some postgraduates 
+D. contact a Professor at another university 
+E. inspect a building site 
+
+
+SECTION 4
+Questions 31-35 
+Question type: Fill in the gaps sentence 
+{On this type it’s rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Write NO MORE THAN TWO WORDS for each answer. 
+
+Title: Mobile phones now have the technology to
+Questions: 
+send (31)…………of where the sender is.
+watch (32)…………in real time.
+send (33)……….. with texts.
+inform students about lectures which are (34)………….
+transfer (35)………..to a computer.
+
+
+
+
+Question: 36-40
+Question type drop down
+{On this type have some question and dropdown ,student should select any option frop the drop down list}
+
+Instruction: Select the correct letter, A, B or C next to Questions 36–40. |
+
+Questions: 
+36…………To access information 37…………To stay in touch 38…………For business 39…………To store personal photos 40…………As a camera 
+
+Options:
+Title: Ways of Using Mobile Phones 
+
+
+A. women 
+B. men 
+C. men and women

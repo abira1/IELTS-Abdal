@@ -1,0 +1,199 @@
+Track name: 710 listening
+Track type: Listening
+Section: 4
+Question 40
+
+
+SECTION 1
+
+
+Questions 1-7
+Question type: Fill in the gaps sentence 
+{On this type it's rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.
+
+Title: Courses Available
+
+For example: Writing in first term
+
+(1)……………in second term
+
+(2)……………throughout the year
+
+(3)……………during long vacation
+
+Class sizes: (4)……………maximum
+
+Course costs often paid by the (5)……………
+
+Exams available in (6)……………
+
+Must enrol by (7)……………
+
+
+Questions 8-10
+Question type: Multiple choice Multiple 
+{This question type contains a single prompt with multiple answer options. Students are required to select exactly three options as their answers. Each selected option is counted as an individual question.}
+
+Instruction: Choose THREE letters, A-G.
+
+Question: Which THREE items does the student need to bring to the first class?
+
+Options: A. passport
+B. computer disk
+C. note from tutor
+D. notebook
+E. student identity card
+F. dictionary
+G. registration form
+
+
+SECTION 2
+
+
+Questions 11-15
+Question type: Drop down
+{On this type each question has a dropdown menu with multiple options. Students need to select one option from the dropdown for each question.}
+
+Instruction: Write the correct letter, A, B or C next to Questions 11-15.
+
+Options: A. tube
+B. train
+C. bus
+
+Question: Of which types of transport is the following true?
+
+Features of Transport
+
+(11) cheapest ……………
+
+(12) most convenient ……………
+
+(13) most comfortable ……………
+
+(14) fastest ……………
+
+(15) most frequent service ……………
+
+
+Questions 16-20
+Question type: Drag and drop (Map Labeling)
+{On this type there show a image and on image A to G point are draggable! And some question have dropbox, student should drag Letters from image and drop on boxes. Please scan this image and make A to G points draggable}
+
+Instruction: Label the map below. Write the correct letter, A-G, next to Questions 16-20.
+
+Image: https://i.postimg.cc/8C8wwR0k/Town-street-plan-diagram.png
+Options: A,B,C,D,E,F,G
+Questions:
+(16) bus stop
+(17) train station
+(18) tube entrance
+(19) transport ticket office
+(20) taxi rank
+
+
+SECTION 3
+
+
+Questions 21-23
+Question type: Drag and drop
+{On this type have some questions and on side show some option draggable, student drag those options and drop i mean place on question}
+
+Instruction: What is the advantage of each course? Choose THREE answers from the box and write the correct letter, A-E next to Questions 21-23.
+
+Questions:
+(21) Science and Ethics
+(22) Pharmacology Prelim
+(23) Reporting Test Results
+
+Options: +---------------------------------------------+
+| A | will be tested in the final exams          | 
++---------------------------------------------+
+| B | will be useful for a future job            | 
++---------------------------------------------+
+| C | will help with research skills             | 
++---------------------------------------------+
+| D | will improve writing skills                | 
++---------------------------------------------+
+| E | will support material already covered      | 
++---------------------------------------------+
+
+
+Questions 24-30
+Question type: Fill in the gaps sentence 
+{On this type it's rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Write NO MORE THAN TWO WORDS for each answer.
+
+(24) The Maths course will run in the……………
+
+(25) The tutor for Pharmacology is visiting from ……………
+
+(26) ……………for the project must be submitted by the end of January.
+
+(27) Resources for experiments are available in the……………
+
+(28) Extra……………will be held in December.
+
+(29) Students are allowed to do presentations in ……………
+
+(30) Course assessment will be based on……………
+
+
+SECTION 4
+
+
+Questions 31-37
+Question type: Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+
+Instruction: Write NO MORE THAN TWO WORDS for each answer.
+Table title: New City Features
+
+
++-------------------------------------------+-------------------------------------------+-------------------------------------------+
+| New Features                              | Size                                      | Problems                                  | 
++-------------------------------------------+-------------------------------------------+-------------------------------------------+
+| individual transport                      | levels of investment                      | (31)……………will be limited to outskirts   | 
++-------------------------------------------+-------------------------------------------+-------------------------------------------+
+|                                           | narrower roofs will have                  | (32)……………of (33)……………will be limited   | 
++-------------------------------------------+-------------------------------------------+-------------------------------------------+
+| commercial areas                          | (34)……………                               | to providing enough housing               | 
++-------------------------------------------+-------------------------------------------+-------------------------------------------+
+| For residential areas                     | homes made of 15,000                      | (35)……………                                | 
++-------------------------------------------+-------------------------------------------+-------------------------------------------+
+| energy sources                            | (36)……………will be an energy source         | noise and congestion will be smaller      | 
++-------------------------------------------+-------------------------------------------+-------------------------------------------+
+|                                           | energy plants                             | caused by (37)……………                      | 
++-------------------------------------------+-------------------------------------------+-------------------------------------------+
+
+
+Detailed Description for Regeneration
+This table has 7 rows and 3 columns.
+* Total rows: 7
+* Total columns: 3
+
+Row-by-row breakdown:
+1. Row 1: Column 1: New Features | Column 2: Size | Column 3: Problems
+2. Row 2: Column 1: individual transport | Column 2: levels of investment | Column 3: (31)……………will be limited to outskirts
+3. Row 3: Column 1: (blank) | Column 2: narrower roofs will have | Column 3: (32)……………of (33)……………will be limited
+4. Row 4: Column 1: commercial areas | Column 2: (34)…………… | Column 3: to providing enough housing
+5. Row 5: Column 1: For residential areas | Column 2: homes made of 15,000 | Column 3: (35)……………
+6. Row 6: Column 1: energy sources | Column 2: (36)……………will be an energy source | Column 3: noise and congestion will be smaller
+7. Row 7: Column 1: (blank) | Column 2: energy plants | Column 3: caused by (37)……………
+
+
+Questions 38-40
+Question type: Short Answer
+{On this type each question have writing box for short answer, student should write there short answer on this box. And each question count as each question}
+
+Instruction: Write NO MORE THAN TWO WORDS for each answer.
+
+Which three types of accommodation does the speaker say will increase in city centres?
+
+(38)……………
+
+(39)……………
+
+(40)……………

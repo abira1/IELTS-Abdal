@@ -1,25 +1,15 @@
 // Track Registry - All available exam tracks
 import { Track } from './track1';
-import { track5 } from './track5'; // 1-M Listening
-import { track6 } from './track6'; // 2-M Listening
-import { track3MListening } from './track-3m-listening';
-import { track4 } from './track4'; // 4-M Listening
-import { track5MListening } from './track-5m-listening';
-import { track6MListening } from './track-6m-listening';
-import { track7MListening } from './track-7m-listening';
-import { track8MListening } from './track-8m-listening';
-import { track9MListening } from './track-9m-listening';
-import { track10MListening } from './track-10m-listening';
-import { track1MReading } from './track-1m-reading';
-import { track2MReading } from './track-2m-reading';
-import { track3MReading } from './track-3m-reading';
-import { track4MReading } from './track-4m-reading';
-import { track5MReading } from './track-5m-reading';
-import { track6MReading } from './track-6m-reading';
-import { track7MReading } from './track-7m-reading';
-import { track8MReading } from './track-8m-reading';
-import { track9MReading } from './track-9m-reading';
-import { track10MReading } from './track-10m-reading';
+import { track703Reading } from './track-703-reading';
+import { track704Reading } from './track-704-reading';
+import { track705Reading } from './track-705-reading';
+import { track706Reading } from './track-706-reading';
+import { track707Reading } from './track-707-reading';
+import { track708Reading } from './track-708-reading';
+import { track709Reading } from './track-709-reading';
+import { track710Reading } from './track-710-reading';
+import { track711Reading } from './track-711-reading';
+import { track712Reading } from './track-712-reading';
 import { track1MWriting } from './track-1m-writing';
 import { track2MWriting } from './track-2m-writing';
 import { track3MWriting } from './track-3m-writing';
@@ -30,32 +20,41 @@ import { track7MWriting } from './track-7m-writing';
 import { track8MWriting } from './track-8m-writing';
 import { track9MWriting } from './track-9m-writing';
 import { track10MWriting } from './track-10m-writing';
-import { track1SICU } from './track-1-sicu';
+import { track701Listening } from './track-701-listening';
+import { track702Listening } from './track-702-listening';
+import { track703Listening } from './track-703-listening';
+import { track704Listening } from './track-704-listening';
+import { track706Listening } from './track-706-listening';
+import { track707Listening } from './track-707-listening';
+import { track708Listening } from './track-708-listening';
+import { track709Listening } from './track-709-listening';
+import { track710Listening } from './track-710-listening';
+import { track712Listening } from './track-712-listening';
 
 // Export all tracks as an array
 export const allTracks: Track[] = [
-  // Listening Tracks (organized by number: 1-M, 2-M, 3-M, 4-M, 5-M, 6-M, 7-M, 9-M, 10-M)
-  track5,           // 1-M Listening
-  track6,           // 2-M Listening
-  track3MListening, // 3-M Listening
-  track4,           // 4-M Listening
-  track5MListening, // 5-M Listening
-  track6MListening, // 6-M Listening
-  track7MListening, // 7-M Listening
-  track8MListening, // 8-M Listening
-  track9MListening, // 9-M Listening
-  track10MListening,// 10-M Listening
+  // Listening Tracks (700 series only)
+  track701Listening,// 701 Listening
+  track702Listening,// 702 Listening
+  track703Listening,// 703 Listening
+  track704Listening,// 704 Listening
+  track706Listening,// 706 Listening
+  track707Listening,// 707 Listening
+  track708Listening,// 708 Listening
+  track709Listening,// 709 Listening
+  track710Listening,// 710 Listening
+  track712Listening,// 712 Listening
   // Reading Tracks
-  track1MReading,
-  track2MReading,
-  track3MReading,
-  track4MReading,
-  track5MReading,
-  track6MReading,
-  track7MReading,
-  track8MReading,
-  track9MReading,
-  track10MReading,
+  track703Reading,
+  track704Reading,
+  track705Reading,
+  track706Reading,
+  track707Reading,
+  track708Reading,
+  track709Reading,
+  track710Reading,
+  track711Reading,
+  track712Reading,
   // Writing Tracks
   track1MWriting,
   track2MWriting,
@@ -66,9 +65,7 @@ export const allTracks: Track[] = [
   track7MWriting,
   track8MWriting,
   track9MWriting,
-  track10MWriting,
-  // SICU Tracks
-  track1SICU
+  track10MWriting
 ];
 
 // Helper function to get track by ID

@@ -1,0 +1,312 @@
+Track name: 709 listening
+Track type: Listening
+Section: 4
+Question 40
+
+
+SECTION 1
+
+
+Questions 1-8
+Question type: Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+
+Instruction: Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.
+Table title: Request for Special Leave
+
+
++-------------------------------------------+----------------------+
+| Item                                      | Information          | 
++-------------------------------------------+----------------------+
+| Name                                      | Angela Tung          | 
++-------------------------------------------+----------------------+
+| Student number (Example)                  | H5712                | 
++-------------------------------------------+----------------------+
+| Address                                   | (1)……………             | 
++-------------------------------------------+----------------------+
+| Course                                    | (2)……………             | 
++-------------------------------------------+----------------------+
+| Teacher's name                            | (3)……………             | 
++-------------------------------------------+----------------------+
+| Student visa expiry date                  | (4)……………             | 
++-------------------------------------------+----------------------+
+| I wish to request leave in Term           | (5)……………             | 
++-------------------------------------------+----------------------+
+| Dates of leave (from)                     | (6)……………             | 
++-------------------------------------------+----------------------+
+| Dates of leave (to)                       | (7)……………             | 
++-------------------------------------------+----------------------+
+| Number of working days missed             | (8)……………             | 
++-------------------------------------------+----------------------+
+
+
+Detailed Description for Regeneration
+This table has 9 rows and 2 columns.
+* Total rows: 9
+* Total columns: 2
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Item | Column 2: Information
+2. Row 2: Column 1: Name | Column 2: Angela Tung
+3. Row 3: Column 1: Student number (Example) | Column 2: H5712
+4. Row 4: Column 1: Address | Column 2: (1)……………
+5. Row 5: Column 1: Course | Column 2: (2)……………
+6. Row 6: Column 1: Teacher's name | Column 2: (3)……………
+7. Row 7: Column 1: Student visa expiry date | Column 2: (4)……………
+8. Row 8: Column 1: I wish to request leave in Term | Column 2: (5)……………
+9. Row 9: Column 1: Dates of leave (from) | Column 2: (6)……………
+10. Row 10: Column 1: Dates of leave (to) | Column 2: (7)……………
+11. Row 11: Column 1: Number of working days missed | Column 2: (8)……………
+
+
+Questions 9-12
+Question type: Multiple choice single one
+{On this type of question had a question and some options, student need to select one option from this options, and each question count as one question}
+
+Instruction: Choose the correct letter, A, B, C or D.
+
+(9) Why does Angela want to take leave?
+A. to visit her aunt and uncle
+B. to see the National Gallery
+C. to see the Southern Highlands
+D. to study more writing
+
+(10) Where is Angela going?
+A. Tamworth
+B. Brisbane
+C. Armidale
+D. Sydney
+
+(11) Who is going with Angela?
+A. her uncle
+B. her mother
+C. her aunt
+D. her father
+
+(12) When will Angela go home to her own country?
+A. in five years
+B. in twelve months
+C. in two months
+D. when her mother goes home
+
+
+SECTION 2
+
+
+Questions 13-18
+Question type: Drag and drop (Calendar)
+{On this type a calendar with empty date cells is displayed and options in a box are provided. Students drag options from the box and drop them into the correct calendar cells.}
+
+Instruction: Complete the calendar while you listen. Use words from the box. There are more words in the box than you need. Some words may be used more than once.
+
+Calendar:
++----------+----------+----------+----------+----------+----------+----------+
+| Sunday   | Monday   | Tuesday  | Wednesday| Thursday | Friday   | Saturday | 
++----------+----------+----------+----------+----------+----------+----------+
+|          | May 18   | May 19   | May 20   | May 21   | May 22   | May 23   | 
+| (13)..   |          |          |          |          |          |          | 
++----------+----------+----------+----------+----------+----------+----------+
+| May 24   | May 25   | May 26   | May 27   | May 28   | May 29   | May 30   | 
+|          | (14)..   |          |          |          | (15)..   |          | 
++----------+----------+----------+----------+----------+----------+----------+
+| May 31   | June 1   | June 2   | June 3   | June 4   | June 5   | June 6   | 
+|          | (16)..   |          | (17)..   |          | (18)..   |          | 
++----------+----------+----------+----------+----------+----------+----------+
+
+Options: +---------------------------------------------+
+| Cleaner                                     | 
++---------------------------------------------+
+| garbage                                     | 
++---------------------------------------------+
+| charity                                     | 
++---------------------------------------------+
+| paper                                       | 
++---------------------------------------------+
+| Filters                                     | 
++---------------------------------------------+
+| stove                                       | 
++---------------------------------------------+
+| gardener                                    | 
++---------------------------------------------+
+| water                                       | 
++---------------------------------------------+
+| dry cleaner                                 | 
++---------------------------------------------+
+| lift                                        | 
++---------------------------------------------+
+| library                                     | 
++---------------------------------------------+
+| electricity                                 | 
++---------------------------------------------+
+
+
+Questions 19-24
+Question type: Multiple choice single one
+{On this type of question had a question and some options, student need to select one option from this options, and each question count as one question}
+
+Instruction: Choose the correct letter, A, B, C or D.
+
+(19) Where has Martha gone?
+A. London
+B. Sydney
+C. New York
+D. Paris
+
+(20) Why is Martha away from home?
+A. She's visiting friends
+B. She's at a conference
+C. She's on business
+D. She's setting up a business
+
+(21) Who will Martha meet while she's away?
+A. an old school friend
+B. a friend of her mother's
+C. an old university friend
+D. an old teacher
+
+(22) What has Martha left for John?
+A. a letter
+B. a meal
+C. a book
+D. a bill
+
+(23) Who does Martha want John to telephone?
+A. the optometrist
+B. the telephone company
+C. the doctor
+D. the dentist
+
+(24) What is the code for Martha's alarm system?
+A. enter 2190
+B. 2190 enter
+C. 9120 enter
+D. enter 9120
+
+
+SECTION 3
+
+
+Questions 25-29
+Question type: Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+
+Instruction: Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.
+Table title: Language School Enrolment Form
+
+
++-------------------------------------------+----------------------+
+| Item                                      | Information          | 
++-------------------------------------------+----------------------+
+| Name of Applicant                         | Vijay Paresh         | 
++-------------------------------------------+----------------------+
+| Telephone number                          | 909 2467             | 
++-------------------------------------------+----------------------+
+| Language to be learned                    | (25)……………             | 
++-------------------------------------------+----------------------+
+| Location of class                         | (26)……………             | 
++-------------------------------------------+----------------------+
+| Time of class                             | (27)……………             | 
++-------------------------------------------+----------------------+
+| Name of class                             | (28)……………             | 
++-------------------------------------------+----------------------+
+| Date of commencement of class             | (29)……………             | 
++-------------------------------------------+----------------------+
+
+
+Detailed Description for Regeneration
+This table has 7 rows and 2 columns.
+* Total rows: 7
+* Total columns: 2
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Item | Column 2: Information
+2. Row 2: Column 1: Name of Applicant | Column 2: Vijay Paresh
+3. Row 3: Column 1: Telephone number | Column 2: 909 2467
+4. Row 4: Column 1: Language to be learned | Column 2: (25)……………
+5. Row 5: Column 1: Location of class | Column 2: (26)……………
+6. Row 6: Column 1: Time of class | Column 2: (27)……………
+7. Row 7: Column 1: Name of class | Column 2: (28)……………
+8. Row 8: Column 1: Date of commencement of class | Column 2: (29)……………
+
+
+Questions 30-32
+Question type: Multiple choice single one
+{On this type of question had a question and some options, student need to select one option from this options, and each question count as one question}
+
+Instruction: Choose the correct letter, A, B, C or D.
+
+(30) Anne is
+A. Vijay's friend
+B. Denise's friend
+C. Vijay's boss
+D. Denise's boss.
+
+(31) When Anne speaks she
+A. congratulates Denise
+B. ignores Denise
+C. criticises Denise
+D. praises Denise
+
+(32) When Denise replies she
+A. laughs at Anne
+B. sympathises with Anne
+C. argues with Anne
+D. apologises to Anne.
+
+
+Questions 33-36
+Question type: Drag and drop (Map Labeling)
+{On this type there show a image(https://i.postimg.cc/qRKK3npL/Robert-Street.png) and on image A to H point are draggable! And some question have dropbox, student should drag Letters from image and drop on boxes. Please scan this image and make A to H points draggable}
+
+Instruction: Listen to the directions and match the places to the appropriate letter A-H on the plan.
+
+Image: [https://i.postimg.cc/qRKK3npL/Robert-Street.png Floor plan with locations A-H marked]
+
+Questions:
+(33) Reception area, admissions
+(34) Fees office
+(35) Book and stationery supply
+(36) Travel agency
+
+
+SECTION 4
+
+
+Questions 37
+Question type: Multiple choice Multiple 
+{This question type contains a single prompt with multiple answer options. Students are required to select exactly five options as their answers. Each selected option is counted as an individual question.}
+
+Instruction: Choose FIVE letters A-K.
+
+Question: Which FIVE of the following have the characteristics described below?
+
+Table:
++------------------------------------------+------------------------------------------+
+| CITIES                                   | CHARACTERISTICS                          | 
++------------------------------------------+------------------------------------------+
+|                                          | Cities with old-structure problems        | 
+|                                          | Cities with good public transport         | 
++------------------------------------------+------------------------------------------+
+
+Options: A. Los Angeles
+B. London
+C. Bangkok
+D. Hong Kong
+E. New York
+F. Taipei
+G. Houston
+H. Sydney
+I. Paris
+J. Tokyo
+K. Dallas
+
+
+Questions 39-40
+Question type: Fill in the gaps sentence 
+{On this type it's rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Write NO MORE THAN THREE WORDS to complete the sentences.
+
+(39) The public transport available in Houston is……………
+
+(40) To reduce peak hour traffic jams, people can travel……………

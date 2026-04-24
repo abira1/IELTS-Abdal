@@ -1,0 +1,233 @@
+Track name: 710-M Reading
+Track type: Reading
+Section: 3 {On this type of track section called as part!! That means on this track has 3 part}
+Question: 40
+
+{In this reading track, the interface uses a two-column layout displayed side by side. The left panel contains all reading passages, while the right panel lists the related questions.
+Both panels are independently scrollable, allowing students to navigate the passage and questions separately without losing context.
+The reading passage includes built-in highlight and note-taking functionality. Default browser interactions such as copy, paste, and standard text selection are disabled. Instead, when a student selects text, it activates a highlight mode, allowing the selected content to be highlighted in yellow, similar to traditional exam-style marking.
+This feature helps students focus on key information without enabling content copying.}
+
+PART 1
+Title: READING PASSAGE 1
+Question: 1-13
+
+[ in Western Australia, is the brainchild of Dr. Ken Aplin. His work, as the curator of reptiles and frogs in the Western Australian Museum, involved long field trips and he wondered if a community-based frog-monitoring network could help him keep track of frogs. Through such a network, ordinary untrained members of the community could learn about frog habitats, observe the numbers and kinds of frogs in their local area, and report this information to the museum.
+
+Launched in 1995, Frogwatch recently gained its 3221st member, and many people say that this is the best thing the museum has ever done. Each participant receives a 'Frogwatch Kit' - a regular newsletter, an audio tape of frog calls and identification sheets. Recently, Frogwatch membership increased dramatically when a mysterious parasitic fungus disease began attacking frogs nationwide. Scientists suspect the fungus originated overseas, perhaps in South America, where frogs have died in catastrophic numbers from a fungus disease genetically similar to the Australian organism.
+
+Researchers in Western Australia needed to know how widespread the infection was in the state's frog populations. So Aplin sent an 'F-file' (frog fungus facts) alert to Frogwatch members, requesting their help. He asked them to deliver him dead or dying frogs. More than 2,000 frogs have now been examined, half from the museum's existing collection. Aplin once thought the fungus had arrived in Western Australia in only the past year or two, but tests now suggest it has been there since the late 1980s.
+
+Frogwatch has proved to be a perfect link to the public and Aplin has become a total convert to community participation. He's now aiming for a network of 15,000 Frogwatch members as the museum can't afford to use professional resources to monitor frog populations. Much of the frog habitat is on private land, and without community support, monitoring the frogs would be impossible.
+
+Not everyone is convinced by the 'feelgood' popularity of Frogwatch. While Aplin believes even tiny backyard ponds can help to significantly improve frog numbers, Dr. Dale Roberts isn't so sure. A senior zoology lecturer at the University of WA, Roberts agrees the program has tapped into the public's enthusiasm for frogs, but he warns that strong public awareness does not amount to sound science.
+
+Aplin's response is that increasing the number of frog-friendly habitats is important for the very reason that many Western Australian frog species are found in small, highly restricted locations. He argues that pesticide-free gardens and ponds can offer a greater chance of survival to animals battling habitat disturbance, environmental pollutants, climatic variations, and now fungal disease. Aplin's opinion is that they should use the precautionary principle in cases where they don't yet know enough about the situation.
+
+The nationwide spread of the chytrid fungus is being mapped by Dr. Rick Speare, a specialist in amphibian disease at James Cook University. Speare also tests the accuracy of Aplin's fungus diagnoses and says Frogwatch is 'an amazing and under-acknowledged system ... the best program in Australia for harnessing public interest in frog biology...']
+
+Questions 1-6
+Question type: Yes / No / Not Given
+
+{For each statement, students select one of three options: Yes, No, or Not Given by clicking their choice.}
+
+Instruction: Do the following statements reflect the claims of the writer of this passage? Write YES if the statement agrees with the views of the writer, NO if the statement contradicts the views of the writer, NOT GIVEN if it is impossible to say what the writer thinks about this.
+
+(1) Frogwatch members need a basic level of scientific training.
+(2) All Frogwatch members live in Western Australia.
+(3) Frogwatch has proved that frogs are disappearing because of a fungus.
+(4) Scientists in WA have examined about two thousand frogs collected by Frogwatch.
+(5) The frog fungus disease has been in Western Australia for more than ten years.
+(6) New species of frogs have been found in Western Australia recently.
+
+
+Questions 7-12
+Question type: Matching Researchers
+
+{In this question type, students are presented with a list of statements on the right side, and they must match each statement to the correct researcher (A-C). Multiple answers are possible.}
+
+Instruction: Match ONE of the researchers (A-C) to each of the statements (7-12) below. There may be more than one correct answer.
+
+A - Dr. Aplin
+B - Dr. Roberts
+C - Dr. Speare
+
+(7) Although the involvement of large numbers of people is encouraging, this does not guarantee scientifically valid data.
+(8) The development of frog-friendly backyards will help to conserve frog species.
+(9) Although it is possible that frogs will adapt to fungal problems in the long term, we should take precautions.
+(10) As there may be many other explanations for recent frog deaths, it is not worth spending a great deal of time studying this fungus.
+(11) Because of the unique geography of Western Australia, most frog species in this State are not in danger of extinction.
+(12) Frogwatch has greater potential for frog observation than is possible by the scientific community.
+
+
+Questions 13-13
+Question type: Multiple choice Single answer
+
+{Render each question separately on the RIGHT side. Each question has four options (A–D). Only ONE option can be selected. Each question counts as ONE question.}
+
+Instruction: Choose the correct letter A, B, C or D.
+
+(13) The main purpose of Frogwatch is...
+A. for people to collect and deliver dead or dying frogs to scientists.
+B. for people to observe and collect information about frog populations for scientists.
+C. for people to allow scientists onto their private land to look at frog habitats.
+D. for people to set up ponds in their gardens as habitat for frogs.
+
+---
+
+PART 2
+Title: READING PASSAGE 2
+Question: 14-28
+
+[ and fascinating process. A trance-like mental state is induced in one person by another, who appears to have the power to command that person to obey instructions without question. Hypnotic experiences were described by the ancient Egyptians and Greeks. In the mid-1700s, Franz Mesmer, an Austrian physician, developed his theory of 'animal magnetism', which was the belief that the cause of disease was the 'improper distribution of invisible magnetic fluids'. Mesmer used water tubs and magnetic wands to direct these supposed fluids to his patients. In 1784, a French commission studied Mesmer's claims, and concluded that these 'cures' were only imagined by the patients. However, people continued to believe in this process of 'mesmerism' and it was soon realised that successful results could be achieved, but without the need for magnets and water.
+
+B. The term hypnotism was first used by James Braid, a British physician who studied suggestion and hypnosis in the mid-1800s. He demonstrated that hypnosis differed from sleep, that it was a physiological response and not the result of secret powers. During this same period, James Esdaile, a Scottish doctor working in India, used hypnotism instead of anaesthetic in over 200 major surgical operations, including leg amputations. Later that century, a French neurologist, Jean Charcot, successfully experimented with hypnosis in his clinic for nervous disorders.
+
+C. Since then, scientists have shown that the state of hypnosis is a natural human behaviour, which can affect psychological, social and/or physical experiences. The effects of hypnotism depend on the ability, willingness and motivation of the person being hypnotised. Although hypnosis has been compared to dreaming and sleepwalking, it is not actually related to sleep. It involves a more active and intense mental concentration of the person being hypnotised. Hypnotised people can talk, write, and walk about and they are usually fully aware of what is being said and done.
+
+D. There are various techniques used to induce hypnosis. The best-known is a series of simple suggestions repeated continuously in the same tone of voice. The subject is instructed to focus their attention on an object or fixed point, while being told to relax, breathe deeply, and allow the eyelids to grow heavy and close. As the person responds, their state of attention changes, and this altered state often leads to other changes. For example, the person may experience different levels of awareness, consciousness, imagination, memory and reasoning or become more responsive to suggestions. Although these changes can occur with hypnosis, none of these experiences is unique to it. People who are very responsive to hypnosis are also more responsive to suggestions when they are not hypnotised. This responsiveness increases during hypnotism.
+
+E. It is a common misunderstanding that hypnotists are able to force people to perform criminal or any other acts against their will. In fact, subjects can resist suggestions, and they retain their ability to distinguish right from wrong. This misunderstanding is often the result of public performances where subjects perform ridiculous or highly embarrassing actions at the command of the hypnotist. The point to remember, however, is that these individuals chose to participate, and the success of hypnotism depends on the willingness of a person to be hypnotised.
+
+F. Interestingly, there are different levels of hypnosis achievable. Thus deep hypnosis can be induced to allow anaesthesia for surgery, childbirth or dentistry. This contrasts to a lighter state of hypnosis, which deeply relaxes the patient who will then follow simple directions. This latter state may be used to treat mental health problems, as it allows patients to feel calm while simultaneously thinking about distressing feelings or painful memories. Thus patients can learn new responses to situations or come up with solutions to problems. This can help recovery from psychological conditions such as anxiety, depression or phobias.
+
+G. Physicians also have made use of the ability of a hypnotised person to remain in a given position for long periods of time. In one case, doctors had to graft skin onto a patient's badly damaged foot. With hypnosis, the patient held his arm tightly in position over his abdomen for three weeks, then over his foot for four weeks. Even though these positions were unusual, the patient at no time felt uncomfortable!
+
+H. Hypnosis occasionally has been used with witnesses and victims of crime to enable people to remember important clues, such as a criminal's physical appearance or other significant details that might help to solve a crime. However, as people can both lie and make mistakes while hypnotised, the use of hypnotism in legal situations can cause serious problems. This was confirmed by the Council on Scientific Affairs of the American Medical Association, which in 1985 reported that memories refreshed through hypnosis may include inaccurate information, false memories, and confabulation (fact and fantasy combined).]
+
+Questions 14-18
+Question type: Matching Paragraph Headings
+
+{Each of the sections B-F needs to be matched with one heading from the list. Students read the sections and select the appropriate heading.}
+
+Instruction: The passage has 8 sections A-H. Choose the most suitable heading for sections B-F from the list (i-x) below. Write the appropriate heading letters or numbers.
+
+List of Headings: i. Use of hypnotism in criminal cases ii. The normality of hypnotised subjects' behaviour iii. Early medical experiments with hypnotism iv. Early association of hypnosis with psychology v. Dangers of hypnotism vi. How to hypnotise vii. Hypnosis and free will viii. Difference between mesmerism and hypnotism ix. Therapeutic uses of hypnosis x. Origins of hypnosis
+
+(14) Section B
+(15) Section C
+(16) Section D
+(17) Section E
+(18) Section F
+
+
+Questions 19-23
+Question type: Fill In the Gaps: Short Answer
+
+{Students see questions and type their answers into text boxes. Each answer must use NO MORE THAN THREE WORDS from the passage.}
+
+Instruction: Complete the following sentences using NO MORE THAN THREE WORDS from the text for each gap.
+
+(19) References to hypnotism can be found in both the Talmud and the...
+(20) Even when Mesmer's... were not used, successful results occurred without them.
+(21) Braid identified hypnosis as a natural... response, rather than magical or mystical.
+(22) Successful hypnosis requires the subject's active...
+(23) Consequently subjects can speak or move around and are... of their surroundings.
+
+
+Questions 24-28
+Question type: Multiple choice Single answer
+
+{Render each question separately on the RIGHT side. Each question has four options (A–D). Only ONE option can be selected. Each question counts as ONE question.}
+
+Instruction: Choose the correct letter A, B, C or D.
+
+(24) In order to induce hypnosis, the hypnotist will...
+A. encourage the person to relax using a repetitively even tone of voice.
+B. say a specific set of words in a special tone of voice.
+C. say any words but in a particular tone of voice.
+D. encourage the person to relax while focussing on a slowly moving object.
+
+(25) Hypnotised subjects can be instructed to...
+A. do something they have previously said is against their wishes.
+B. demonstrate physical strength they would normally not have.
+C. reveal confidential information against their will.
+D. do something that they would not normally be opposed to doing.
+
+(26) Past events are recalled under hypnosis...
+A. to entertain the hypnotist.
+B. to allow subjects to reassess them without distress.
+C. to help the subjects improve their memories.
+D. to make the subject feel younger.
+
+(27) After surgery, hypnosis may be used...
+A. to make drugs unnecessary.
+B. to keep the patient mobile.
+C. to make the patient forget to move.
+D. to minimise patient's discomfort while immobile.
+
+(28) The American Medical Association reported that...
+A. people lie when giving evidence under hypnosis.
+B. people should be hypnotised before giving evidence.
+C. evidence given when hypnotised may be unreliable.
+D. secret evidence can be obtained through hypnosis.
+
+---
+
+PART 3
+Title: READING PASSAGE 3
+Question: 29-40
+
+[ and Giovanni Notarnicola, describe the traditional spontaneous practice of sport by children - climbing trees, riding a bicycle along quiet roads, racing their friends across the fields - as an activity of freedom, a special activity of discovery and learning. In the case of free sporting activity, the child's time is given up entirely to the activity, as can be seen in the endless games of football young children play, which may then be followed by bicycle races and/or a swim in the river, for example.
+
+Today, however, children's discovery of sport has become very different. It is often parents who take their children, when they are very young, to the swimming pool or to the sports grounds or sports halls. Children's first experience of sport thus takes place as an organised activity, which they see as organisation of their free time. By organising sport for children, and often deciding for them, we unfortunately create an imbalance preventing them from managing their own play/sports time, thus denying them an opportunity of autonomy and independence as was possible in the past.
+
+A first possible reason for the imbalance in the practice of sport by children is therefore linked to the urban society we live in today. Sports grounds are often on the outskirts of cities, and are overcrowded and invariably enclosed, while recreational areas such as parks or hard-packed surfaces, are very few and far between. Marte and Notarnicola have shown that children who have experienced freedom were considered by sports trainers to be more capable when they joined organised sport aged 12-13. Their study concluded that no formal training, no matter how early in life it took place, could replace these first experiences.
+
+Measures which would reverse this imbalance include: increasing the number of sports facilities which encourage self-organisation by the children, and also setting up unstructured playing areas with little in the way of equipment. Children should be offered pre-school activity where they can discover different sports.
+
+For children, sport remains a special kind of discovery and learning, no matter how much adults limit and control the practice of early intensive training. Here is the second example of imbalance in children's sport. Today, sport is practised with early intensive training from the youngest possible age. Sometimes this is even before the age of six and is usually one specific sport within an organised framework. Many sports organisations claim that they are forced to do this type of training because of what is called 'the golden age' to acquire the physical skills.
+
+Why do very young children give up sport? The most common reason for leaving a sport is to change to another sport, which in itself is no bad thing. However, children may leave a sport because they believe that they have received too much criticism and too many negative assessments. We know that young children, up to the age of eleven or twelve, cannot assess their own level of competence. Young children are particularly sensitive to criticism from adults or peers. Trainers must therefore pay particular attention to this and avoid excessive criticism. It should be remembered that primary school children's main desire is to have fun and socialise. The desire to improve and become a good competitor will develop later.
+
+A third source of imbalance which threatens children and sport is parental attitudes. The American psychologist, Rainer Martens, emphasises that, 'too often children's joy of sports is destroyed by adults who want glory through victory.' Several studies have shown that parental pressure is high on the list of reasons why children leave sport. The presence of mothers and fathers can prevent children from considering sport as their own, where they can learn to master technical difficulties, manage interpersonal relations, and experience success and failure.
+
+If the children make the decisions, this ensures that they enjoy being a child in sport, and are relaxed with their development as human beings. Sport is included as something they want, and which they identify both as a means of release and as a form of self-expression. By acting as a route to self-discovery, sport gives children both the opportunity to know their limits, and to acquire tools which will allow them to surpass them.]
+
+Questions 29-36
+Question type: Fill in the Gaps: Summary
+
+{In this question type, the content is rendered as a block containing informational text with specific words or phrases intentionally removed. These missing elements appear as blank input fields where students must type their answers directly within the passage. Each blank represents a single question. Students must use NO MORE THAN TWO WORDS from the passage for each answer.}
+
+Instruction: Complete the summary below. Choose NO MORE THAN TWO WORDS from the passage for each answer.
+
+(29) Marte & Notarnicola define the spontaneous sporting games of children as activities of...
+(30) Because today sport is often decided and... by parents, children lose their autonomy.
+(31) Sports grounds are out of the city and often crowded, whilst there are a limited number of...
+(32) The second imbalance occurs because they start early... training very young and participate in only...
+(33) One specific...
+(34) Children often give up a sport because of negative...
+(35) It is important that trainers avoid excessive criticism of young children, who should have... at sporting activities.
+(36) Parents exert... on children to win rather than to enjoy sport.
+
+
+Questions 37-40
+Question type: Multiple choice Single answer
+
+{Render each question separately on the RIGHT side. Each question has four options (A–D). Only ONE option can be selected. Each question counts as ONE question.}
+
+Instruction: Choose the correct letter A, B, C or D.
+
+(37) Children's expression of this 'freedom' is important because...
+A. it allows them to be lazy.
+B. it means they can learn to swim and ride a bike.
+C. it puts them in charge of what they do and when they do it.
+D. it relieves the parents from transporting their children to sports.
+
+(38) Ways of allowing children to develop this 'freedom' include...
+A. making transport to sports clubs free.
+B. offering a range of different sports in each sports club.
+C. offering sporting tuition to pre-school children.
+D. making children play outside regularly.
+
+(39) To encourage young children to continue with sport, we should give them...
+A. accurate feedback about their ability at sport.
+B. experience of failure as well as success.
+C. experience of being reserves as well as first choice team members.
+D. the opportunity to mix socially with their peers at sport.
+
+(40) The author believes that...
+A. children's sport should not be organised by adults.
+B. playing sport is an important part of children's development.
+C. children need to learn that sport is about losing as well as winning.
+D. children can be psychologically and physiologically damaged by sport.

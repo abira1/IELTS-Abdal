@@ -1,0 +1,181 @@
+﻿Track name: 703 Listening
+Track type: Listening
+Section: 4
+Question 40
+
+SECTION 1
+Questions 1-4 
+Question type:  Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+Instruction: Complete the schedule below 
+
+Title: Class Schedule
+
+
++----------------------+----------------------------------------+
+| Chinese Level:       | Advanced                               | 
++----------------------+----------------------------------------+
+| Level:               | Advanced                               | 
++----------------------+----------------------------------------+
+| Days:                | 1…………… evenings                        | 
++----------------------+----------------------------------------+
+| Japanese             | Japanese                               | 
++----------------------+----------------------------------------+
+| Level:               | 2……………                                 | 
++----------------------+----------------------------------------+
+| Days:                | Tuesday and Thursday mornings          | 
++----------------------+----------------------------------------+
+| Level:               | 3………….                                 | 
++----------------------+----------------------------------------+
+| Days:                | Monday, Wednesday, and Friday mornings | 
++----------------------+----------------------------------------+
+| French               | French                                 | 
++----------------------+----------------------------------------+
+| Level:               | Intermediate                           | 
++----------------------+----------------------------------------+
+| Days:                | Friday 4…………..                         | 
++----------------------+----------------------------------------+
+
+
+Detailed Description for Regeneration
+This table has 11 rows and 2 columns.
+* Total rows: 11
+* Total columns: 2
+
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Chinese Level: | Column 2: Advanced
+2. Row 2: Column 1: Level: | Column 2: Advanced
+3. Row 3: Column 1: Days: | Column 2: 1…………… evenings
+4. Row 4: Column 1: Japanese | Column 2: Japanese
+5. Row 5: Column 1: Level: | Column 2: 2……………
+6. Row 6: Column 1: Days: | Column 2: Tuesday and Thursday mornings
+7. Row 7: Column 1: Level: | Column 2: 3………….
+8. Row 8: Column 1: Days: | Column 2: Monday, Wednesday, and Friday mornings
+9. Row 9: Column 1: French | Column 2: French
+10. Row 10: Column 1: Level: | Column 2: Intermediate
+11. Row 11: Column 1: Days: | Column 2: Friday 4…………..
+
+
+Questions 5-8 
+Question type: Fill in the gaps sentence 
+{On this type it’s rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Write NO MORE THAN TWO WORDS for each answer. 
+Title: Tuition information 
+Six weeks $ (5)…………….
+Four weeks $ (6)…………
+One week $ (7)………….
+Twelve weeks $ (8)………………
+
+
+Questions 9-10 
+Question type: Fill in the gaps sentence 
+{On this type it’s rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Write NO MORE THAN TWO WORDS for each answer. 
+
+
+Students can register for a class by visiting the (9)…………….. (10)…………….is in charge of student registration. 
+
+
+SECTION 2 
+Questions 11-15 
+Question type: Drag and drop (Map Lebeling)
+{On this type there show a image and on image A to I point are draggable! And some question have dropbox, student should drag Letters from image and drop on boxes, Please scan this image(https://i.postimg.cc/XJPvhyHk/City-shopping-district-map-schematic.png) and make this A to I points draggable}
+
+
+Instruction: Drop the correct letter; A—I, next to questions 11—15. 
+
+Image: https://i.postimg.cc/XJPvhyHk/City-shopping-district-map-schematic.png
+
+Questions: 
+(11)...............Harbor View Bookstore 
+(12)..............Pear Cafe 
+(13)..............Souvenir Store 
+(14)..............Art Gallery 
+(15)..............Harbor Park 
+
+
+Questions 16-20 
+Question type: Fill in the gaps sentence 
+{On this type it’s rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+Instruction: Write ONE WORD ONLY for each answer.
+Title: Harbor Park 
+The park was built in (16)………….A (17)………… stands in the center of the park. Take the path through the(18)…………In the middle of the garden is a(19)…………. A (20)…………. takes you down to the harbor and a view of the boats 
+
+
+SECTION 3
+Questions 21-24 
+Question type: Fill in the gaps sentence 
+{On this type it’s rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+Instruction: Write ONE WORD ONLY for each answer.
+Title: Welcome to City Archives 
+The following people may use the archives: 
+University students with a valid 21…………….. 
+City residents with payment of 22……………. 
+All others: Special permission from the director is required. 
+Hours: 
+Days: 23 …………… 
+Hours: 9:30 A.M. until 24 ……………P.M 
+Questions 25-30 
+Question type: Drag and drop 
+{On the left side, display all the questions, each containing an empty placeholder box. On the right side, show several answer options inside draggable boxes. Students must drag an option from the right side and place it into the empty box of the corresponding question.}
+
+
+Instruction: Choose FIVE answers from the box and write the correct letter, A-G, next to questions 25-30.
+Options: Title: CITY ARCHIVES 
+A- nineteenth-century documents 
+B-maps 
+C- personal papers 
+D- photographs 
+E- books about the city 
+F- newspapers 
+G- information about the woolen mill 
+Question: 
+(25)............basement 
+(26)............ground floor 
+(27)............second floor 
+(28)............third floor 
+(29)............fourth floor 
+(30)............fifth floor 
+SECTION 4
+Question: 31-40
+Question type:  Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+Instruction: Complete the chart below. Write NO MORE THAN TWO WORDS for each answer 
+
+
+
+
++--------------------------------------------------------------------+------------------------------------------------------+
+|                                                      Wind Power                                           | 
++--------------------------------------------------------------------+------------------------------------------------------+
+| Advantages                                                         | Disadvantages                                        | 
++--------------------------------------------------------------------+------------------------------------------------------+
+| Unlike oil and coal, wind power does not cause34………..              | The cost of the initial investment is high.          | 
++--------------------------------------------------------------------+------------------------------------------------------+
+| There are limited supplies of oil and coal, but wind is a 35……………. | The 36…………    of the wind is not constant.           | 
++--------------------------------------------------------------------+------------------------------------------------------+
+| It 37………..    to generate electricity with the wind                | Wind turbines are usually located far from 38…………….. | 
++--------------------------------------------------------------------+------------------------------------------------------+
+| Wind turbines do not take up much land                             | Wind turbines may spoil  39……………                     | 
++--------------------------------------------------------------------+------------------------------------------------------+
+|                                                                    | Wind turbines make as 40………. as a high-speed car.    | 
++--------------------------------------------------------------------+------------------------------------------------------+
+
+
+Detailed Description for Regeneration
+This table has 7 rows and 2 columns.
+* Total rows: 7
+* Total columns: 2
+
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Wind Power 
+2. Row 2: Column 1: Advantages | Column 2: Disadvantages
+3. Row 3: Column 1: Unlike oil and coal, wind power does not cause34…… | Column 2: The cost of the initial investment is high.
+4. Row 4: Column 1: There are limited supplies of oil and coal, but wi | Column 2: The 36…………    of the wind is not constant.
+5. Row 5: Column 1: It 37………..    to generate electricity with the win | Column 2: Wind turbines are usually located far from 38……………
+6. Row 6: Column 1: Wind turbines do not take up much land | Column 2: Wind turbines may spoil  39……………
+7. Row 7: Column 2: Wind turbines make as 40………. as a high-speed car.

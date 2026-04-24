@@ -1,0 +1,291 @@
+Track name: 706 listening
+Track type: Listening
+Section: 4
+Question 40
+
+
+SECTION 1
+
+
+Questions 1-8
+Question type: Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+
+
+Instruction: Write C for Cookery, S for Sports and T for Travel.
+Table title: Name of author
+
+
++----------------------------------+----------------------+
+| Name of author                   | Type                 | 
++----------------------------------+----------------------+
+| Peter Adams                      | (Example) S T        | 
++----------------------------------+----------------------+
+| Stephen Bau                      | (1)……………                 | 
++----------------------------------+----------------------+
+| Pam Campbell                     | (2)……………                 | 
++----------------------------------+----------------------+
+| C. Kezik                         | S                    | 
++----------------------------------+----------------------+
+| Ari Hussein                      | (3)……………                 | 
++----------------------------------+----------------------+
+| Sally Innes                      | S                    | 
++----------------------------------+----------------------+
+| Meg Jorgensen                    | (4)……………                 | 
++----------------------------------+----------------------+
+| Bruno Murray                     | (5)……………                 | 
++----------------------------------+----------------------+
+| Ruby Lee                         | (6)……………                 | 
++----------------------------------+----------------------+
+| Jim Wells                        | (7)……………                 | 
++----------------------------------+----------------------+
+| Helen Yeung                      | (8)……………                 | 
++----------------------------------+----------------------+
+
+
+Detailed Description for Regeneration
+This table has 11 rows and 2 columns.
+* Total rows: 11
+* Total columns: 2
+
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Name of author | Column 2: Type
+2. Row 2: Column 1: Peter Adams | Column 2: (Example) S T
+3. Row 3: Column 1: Stephen Bau | Column 2: (1)……………
+4. Row 4: Column 1: Pam Campbell | Column 2: (2)……………
+5. Row 5: Column 1: C. Kezik | Column 2: S
+6. Row 6: Column 1: Ari Hussein | Column 2: (3)……………
+7. Row 7: Column 1: Sally Innes | Column 2: S
+8. Row 8: Column 1: Meg Jorgensen | Column 2: (4)……………
+9. Row 9: Column 1: Bruno Murray | Column 2: (5)……………
+10. Row 10: Column 1: Ruby Lee | Column 2: (6)……………
+11. Row 11: Column 1: Jim Wells | Column 2: (7)……………
+12. Row 12: Column 1: Helen Yeung | Column 2: (8)……………
+
+
+SECTION 2
+
+
+Questions 9-14
+Question type: Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+
+
+Instruction: Tick (v) if the information is correct or write in the changes.
+Table title: Invitation to a Welcoming Lunch
+
+
++----------+-------------------------------------------+
+| Item     | Information                               | 
++----------+-------------------------------------------+
+| Example  | INVITATION TO A WELCOMING LUNCH           | 
+|          | Answer: _dance party_                     | 
++----------+-------------------------------------------+
+| Item 1   | AT BLACKWELL HOUSE                        | 
+|          | (9)……………                                | 
++----------+-------------------------------------------+
+| Item 2   | ON FRIDAY JUNE 15 AT 8 PM                 | 
+|          | (10)……………                              | 
++----------+-------------------------------------------+
+| Item 3   | FREE TRANSPORT TO THE STUDENT HOSTEL IS   | 
+|          | AVAILABLE LEAVING BLACKWELL HOUSE AT 10.30| 
+|          | (11)……………                              | 
++----------+-------------------------------------------+
+| Item 4   | OTHER STUDENTS MAY ATTEND                 | 
+|          | (12)……………                               | 
++----------+-------------------------------------------+
+| Item 5   | PLEASE BRING YOUR STUDENT IDENTIFICATION  | 
+|          | CARD                                      | 
+|          | (13)……………                              | 
++----------+-------------------------------------------+
+| Item 6   | PLEASE REPLY BY TUESDAY IF YOU CAN COME   | 
+|          | (14)……………                              | 
++----------+-------------------------------------------+
+
+
+Detailed Description for Regeneration
+This table has 7 rows and 2 columns.
+* Total rows: 7
+* Total columns: 2
+
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Example | Column 2: INVITATION TO A WELCOMING LUNCH - Answer: _dance party_
+2. Row 2: Column 1: Item 1 | Column 2: AT BLACKWELL HOUSE (9)…………..
+3. Row 3: Column 1: Item 2 | Column 2: ON FRIDAY JUNE 15 AT 8 PM (10)…………….
+4. Row 4: Column 1: Item 3 | Column 2: FREE TRANSPORT... (11)…………….
+5. Row 5: Column 1: Item 4 | Column 2: OTHER STUDENTS MAY ATTEND (12)……………
+6. Row 6: Column 1: Item 5 | Column 2: PLEASE BRING STUDENT IDENTIFICATION CARD (13)…………….
+7. Row 7: Column 1: Item 6 | Column 2: PLEASE REPLY BY TUESDAY (14)…………….
+
+
+Questions 15-18
+Question type: Fill in the gaps sentence 
+{On this type it's rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Write NO MORE THAN THREE WORDS for each answer.
+
+There is new road work on (15)……………
+
+Do not use Blackwell Street because workmen are (16)……………
+
+When you pass the roundabout, go along Brown Crescent into (17)……………
+
+It's wise to use the (18)……………
+
+
+SECTION 3
+
+
+Questions 19-23
+Question type: Drag and drop (Map Lebeling)
+{On this type there show a image and on image A to I point are draggable! And some question have dropbox, student should drag Letters from image and drop on boxes, Please scan this image(https://i.postimg.cc/7ZvrRNx3/Irrigation-system-technical-diagram.png) and make this A to I points draggable}
+
+
+Instruction: Label the parts of the lawn sprinkler. Choose words from the box below. There are more words in the box than you will need.
+
+Image: https://i.postimg.cc/7ZvrRNx3/Irrigation-system-technical-diagram.png
+
+Questions:https://i.postimg.cc/7ZvrRNx3/Irrigation-system-technical-diagram.png should dropable 19-23 gaps mark
+
+Options: +----------------------+----------------------+
+| holes               | base                 | 
++----------------------+----------------------+
+| crank               | hinge                | 
++----------------------+----------------------+
+| hose                | pipe                 | 
++----------------------+----------------------+
+| water wheel         | spray                | 
++----------------------+----------------------+
+| tube                | handle               | 
++----------------------+----------------------+
+| gears               | guide                | 
++----------------------+----------------------+
+| chain               | guard                | 
++----------------------+----------------------+
+| pulley              |                      | 
++----------------------+----------------------+
+
+
+Questions 24-29
+Question type: Multiple choice single one
+{On this type of question had a question and some options, student need to select one option from this options, and each question count as one question}
+
+Instruction: Choose the correct letter, A, B, C or D.
+
+(24) The last examinations will be held on
+A. November 26
+B. November 29
+C. December 2
+D. December 4
+
+(25) Scott is going to the United States
+A. to study
+B. to teach
+C. to travel
+D. to visit friends
+
+(26) The general science course in the United States is
+A. similar
+B. simple
+C. difficult
+D. different
+
+(27) Linda has had an extension to
+A. complete her assignment
+B. do more research
+C. study
+D. go on holiday
+
+(28) Communications and English will be examined on
+A. December 1 morning
+B. December 2 morning
+C. December 1 afternoon
+D. December 2 afternoon
+
+(29) Mark finds teaching this class
+A. boring
+B. tiring
+C. depressing
+D. stimulating
+
+
+SECTION 4
+
+
+Questions 30-40
+Question type: Fill in the gaps sentence 
+{On this type it's rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Complete the summary. Use words from the box. There are more words in the box than you need. Some words may be used more than once.
+
+Title: Causes of Headaches
+
+The most usual cause of headaches is (30)……………
+
+Headaches can also come as a result of excessive (31)……………
+
+Some people say they get a headache when they (32)……………
+
+This is probably because they get very (33)……………
+
+It may also be because they are working in poor light which makes them very (34)……………
+
+It is helpful if your reading material is on a bookrest at 35 degrees to the desk.
+
+It is also important to be (36)……………in bed.
+
+You may even get a headache because you (37)……………too hard.
+
+The best advice is to try to eat regular meals, get enough (38)……………and avoid (39)……………places.
+
+The smoke there may cause you terrible (40)……………damage.
+
+Options: +----------------------+
+| rest                 | 
++----------------------+
+| relaxed              | 
++----------------------+
+| angry                | 
++----------------------+
+| warm                 | 
++----------------------+
+| stress               | 
++----------------------+
+| work                 | 
++----------------------+
+| hunger               | 
++----------------------+
+| 45 degrees           | 
++----------------------+
+| chew                 | 
++----------------------+
+| exhaustion           | 
++----------------------+
+| desk                 | 
++----------------------+
+| 40 degrees           | 
++----------------------+
+| noise                | 
++----------------------+
+| tense                | 
++----------------------+
+| study                | 
++----------------------+
+| crowded              | 
++----------------------+
+| speak                | 
++----------------------+
+| smoky                | 
++----------------------+
+| relaxation           | 
++----------------------+
+| long-term            | 
++----------------------+
+| tired                | 
++----------------------+
+| exercise             | 
++----------------------+
+| raised               | 
++----------------------+

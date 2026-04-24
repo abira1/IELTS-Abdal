@@ -1,5 +1,5 @@
 import React from 'react';
-import { Headphones, BookOpen, PenTool, Clock, FileText, CheckSquare } from 'lucide-react';
+import { Headphones, BookOpen, PenTool, Clock, FileText, CheckSquare, ChevronRight } from 'lucide-react';
 
 interface ExamInstructionsProps {
   examType: 'listening' | 'reading' | 'writing';
@@ -7,327 +7,234 @@ interface ExamInstructionsProps {
 }
 
 export function ExamInstructions({ examType, onStart }: ExamInstructionsProps) {
-  const getIcon = () => {
+  const getConfig = () => {
     switch (examType) {
       case 'listening':
-        return <Headphones className="w-10 h-10 text-white" />;
+        return {
+          icon: <Headphones className="w-8 h-8 text-indigo-600" />,
+          title: 'Listening',
+          duration: '40 minutes',
+          color: 'indigo',
+          bgLight: 'bg-indigo-50',
+          borderLight: 'border-indigo-100',
+          textDark: 'text-indigo-900',
+          textMain: 'text-indigo-600',
+        };
       case 'reading':
-        return <BookOpen className="w-10 h-10 text-white" />;
+        return {
+          icon: <BookOpen className="w-8 h-8 text-forest-600" />,
+          title: 'Reading',
+          duration: '1 hour',
+          color: 'forest',
+          bgLight: 'bg-forest-50',
+          borderLight: 'border-forest-100',
+          textDark: 'text-forest-900',
+          textMain: 'text-forest-600',
+        };
       case 'writing':
-        return <PenTool className="w-10 h-10 text-white" />;
+        return {
+          icon: <PenTool className="w-8 h-8 text-amber-600" />,
+          title: 'Writing',
+          duration: '1 hour',
+          color: 'amber',
+          bgLight: 'bg-amber-50',
+          borderLight: 'border-amber-100',
+          textDark: 'text-amber-900',
+          textMain: 'text-amber-600',
+        };
     }
   };
 
-  const getTitle = () => {
-    switch (examType) {
-      case 'listening':
-        return 'Listening';
-      case 'reading':
-        return 'Reading';
-      case 'writing':
-        return 'Writing';
-    }
-  };
-
-  const getDuration = () => {
-    switch (examType) {
-      case 'listening':
-        return '40 minutes';
-      case 'reading':
-        return '1 hour';
-      case 'writing':
-        return '1 hour';
-    }
-  };
-
-  const getGradient = () => {
-    switch (examType) {
-      case 'listening':
-        return 'from-purple-500 to-indigo-600';
-      case 'reading':
-        return 'from-green-500 to-teal-600';
-      case 'writing':
-        return 'from-orange-500 to-red-600';
-    }
-  };
+  const config = getConfig();
 
   const renderListeningInstructions = () => (
     <>
-      <div className="bg-white rounded-xl shadow-md p-4 sm:p-6 border border-gray-200">
-        <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-2">
-          <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600 flex-shrink-0" />
-          <span>Official Instructions to Candidates</span>
+      <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+        <h3 className="text-lg font-bold text-midnight-900 mb-4 flex items-center gap-2">
+          <FileText className={`w-5 h-5 ${config.textMain}`} />
+          Official Instructions to Candidates
         </h3>
-        <ul className="space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>Do not open this question paper until you are told to do so.</span>
-          </li>
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>Write your name and candidate number in the spaces at the top of this page.</span>
-          </li>
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>Listen carefully to the instructions for each part of the test.</span>
-          </li>
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>Answer all the questions.</span>
-          </li>
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>While you are listening, write your answers on the question paper.</span>
-          </li>
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>You will have 10 minutes at the end of the test to transfer your answers to the answer sheet.</span>
-          </li>
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>Use a pencil.</span>
-          </li>
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>At the end of the test, hand in this question paper.</span>
-          </li>
+        <ul className="space-y-3 text-slate-700 text-sm">
+          {[
+            'Do not open this question paper until you are told to do so.',
+            'Write your name and candidate number in the spaces at the top of this page.',
+            'Listen carefully to the instructions for each part of the test.',
+            'Answer all the questions.',
+            'While you are listening, write your answers on the question paper.',
+            'You will have 10 minutes at the end of the test to transfer your answers to the answer sheet.',
+            'Use a pencil.',
+            'At the end of the test, hand in this question paper.'
+          ].map((text, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span className={`${config.textMain} font-bold mt-0.5`}>•</span>
+              <span>{text}</span>
+            </li>
+          ))}
         </ul>
       </div>
 
-      <div className="bg-purple-50 rounded-xl shadow-md p-4 sm:p-6 border border-purple-200">
-        <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-2">
-          <CheckSquare className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600 flex-shrink-0" />
-          <span>Information for Candidates</span>
+      <div className={`${config.bgLight} rounded-2xl p-6 border ${config.borderLight}`}>
+        <h3 className={`text-lg font-bold ${config.textDark} mb-4 flex items-center gap-2`}>
+          <CheckSquare className={`w-5 h-5 ${config.textMain}`} />
+          Information for Candidates
         </h3>
-        <ul className="space-y-2 sm:space-y-3 text-gray-700 text-sm sm:text-base">
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>The test consists of four parts.</span>
-          </li>
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>You will hear each part once only.</span>
-          </li>
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>There are 40 questions in total.</span>
-          </li>
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>Each question carries one mark.</span>
-          </li>
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>Before each part, you will have time to read the questions.</span>
-          </li>
-          <li className="flex items-start gap-2 sm:gap-3">
-            <span className="text-purple-600 font-bold mt-1 flex-shrink-0">•</span>
-            <span>After each part, you will have time to check your answers.</span>
-          </li>
+        <ul className={`space-y-3 ${config.textDark} text-sm opacity-90`}>
+          {[
+            'The test consists of four parts.',
+            'You will hear each part once only.',
+            'There are 40 questions in total.',
+            'Each question carries one mark.',
+            'Before each part, you will have time to read the questions.',
+            'After each part, you will have time to check your answers.'
+          ].map((text, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span className={`${config.textMain} font-bold mt-0.5`}>•</span>
+              <span>{text}</span>
+            </li>
+          ))}
         </ul>
-      </div>
-
-      <div className="bg-gray-50 rounded-lg p-3 sm:p-4 border border-gray-200">
-        <p className="text-xs sm:text-sm text-gray-600 italic">
-          <span className="font-semibold">Instruction Source:</span> British Council Listening Test Format
-        </p>
       </div>
     </>
   );
 
   const renderReadingInstructions = () => (
     <>
-      <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
-        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <FileText className="w-6 h-6 text-green-600" />
+      <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+        <h3 className="text-lg font-bold text-midnight-900 mb-4 flex items-center gap-2">
+          <FileText className={`w-5 h-5 ${config.textMain}`} />
           Official Instructions to Candidates
         </h3>
-        <ul className="space-y-3 text-gray-700">
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 font-bold mt-1">•</span>
-            <span>Do not open this question paper until you are told to do so.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 font-bold mt-1">•</span>
-            <span>Write your name and candidate number in the spaces at the top of this page.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 font-bold mt-1">•</span>
-            <span>Read the instructions for each section carefully.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 font-bold mt-1">•</span>
-            <span>Answer all the questions.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 font-bold mt-1">•</span>
-            <span>Write your answers on the answer sheet.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 font-bold mt-1">•</span>
-            <span>Use a pencil.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 font-bold mt-1">•</span>
-            <span>You must complete the test within the given time limit.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 font-bold mt-1">•</span>
-            <span>At the end of the test, hand in both the question paper and the answer sheet.</span>
-          </li>
+        <ul className="space-y-3 text-slate-700 text-sm">
+          {[
+            'Do not open this question paper until you are told to do so.',
+            'Write your name and candidate number in the spaces at the top of this page.',
+            'Read the instructions for each section carefully.',
+            'Answer all the questions.',
+            'Write your answers on the answer sheet.',
+            'Use a pencil.',
+            'You must complete the test within the given time limit.',
+            'At the end of the test, hand in both the question paper and the answer sheet.'
+          ].map((text, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span className={`${config.textMain} font-bold mt-0.5`}>•</span>
+              <span>{text}</span>
+            </li>
+          ))}
         </ul>
       </div>
 
-      <div className="bg-green-50 rounded-xl shadow-md p-6 border border-green-200">
-        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <CheckSquare className="w-6 h-6 text-green-600" />
+      <div className={`${config.bgLight} rounded-2xl p-6 border ${config.borderLight}`}>
+        <h3 className={`text-lg font-bold ${config.textDark} mb-4 flex items-center gap-2`}>
+          <CheckSquare className={`w-5 h-5 ${config.textMain}`} />
           Information for Candidates
         </h3>
-        <ul className="space-y-3 text-gray-700">
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 font-bold mt-1">•</span>
-            <span>There are 40 questions in total.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 font-bold mt-1">•</span>
-            <span>Each question carries one mark.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 font-bold mt-1">•</span>
-            <span>You must fill in the answer sheet.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-600 font-bold mt-1">•</span>
-            <span>To view the answer sheet, click <span className="font-semibold bg-green-100 px-2 py-1 rounded">VIEW ANSWER SHEET</span> at the bottom of the screen.</span>
-          </li>
+        <ul className={`space-y-3 ${config.textDark} text-sm opacity-90`}>
+          {[
+            'There are 40 questions in total.',
+            'Each question carries one mark.',
+            'You must fill in the answer sheet.',
+            <React.Fragment key="rs">To view the answer sheet, click <span className={`font-semibold bg-white px-2 py-0.5 rounded shadow-sm border ${config.borderLight}`}>VIEW ANSWER SHEET</span> at the bottom of the screen.</React.Fragment>
+          ].map((text, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span className={`${config.textMain} font-bold mt-0.5`}>•</span>
+              <span>{text}</span>
+            </li>
+          ))}
         </ul>
-      </div>
-
-      <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-        <p className="text-sm text-gray-600 italic">
-          <span className="font-semibold">Instruction Source:</span> British Council Reading Test Format
-        </p>
       </div>
     </>
   );
 
   const renderWritingInstructions = () => (
     <>
-      <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
-        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <FileText className="w-6 h-6 text-orange-600" />
+      <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+        <h3 className="text-lg font-bold text-midnight-900 mb-4 flex items-center gap-2">
+          <FileText className={`w-5 h-5 ${config.textMain}`} />
           Official Instructions to Candidates
         </h3>
-        <ul className="space-y-3 text-gray-700">
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>Do not open this question paper until you are told to do so.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>Write your name and candidate number in the spaces at the top of this page.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>Read the instructions for each task carefully.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>Answer both tasks.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>Write at least 150 words for Task 1.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>Write at least 250 words for Task 2.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>Write your answers in the answer booklet.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>Write clearly using pen or pencil.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>You may make corrections, but ensure your writing remains clear and readable.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>At the end of the test, hand in both the question paper and the answer booklet.</span>
-          </li>
+        <ul className="space-y-3 text-slate-700 text-sm">
+          {[
+            'Do not open this question paper until you are told to do so.',
+            'Write your name and candidate number in the spaces at the top of this page.',
+            'Read the instructions for each task carefully.',
+            'Answer both tasks.',
+            'Write at least 150 words for Task 1.',
+            'Write at least 250 words for Task 2.',
+            'Write your answers in the answer booklet.',
+            'Write clearly using pen or pencil.',
+            'You may make corrections, but ensure your writing remains clear and readable.',
+            'At the end of the test, hand in both the question paper and the answer booklet.'
+          ].map((text, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span className={`${config.textMain} font-bold mt-0.5`}>•</span>
+              <span>{text}</span>
+            </li>
+          ))}
         </ul>
       </div>
 
-      <div className="bg-orange-50 rounded-xl shadow-md p-6 border border-orange-200">
-        <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <CheckSquare className="w-6 h-6 text-orange-600" />
+      <div className={`${config.bgLight} rounded-2xl p-6 border ${config.borderLight}`}>
+        <h3 className={`text-lg font-bold ${config.textDark} mb-4 flex items-center gap-2`}>
+          <CheckSquare className={`w-5 h-5 ${config.textMain}`} />
           Information for Candidates
         </h3>
-        <ul className="space-y-3 text-gray-700">
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>There are two tasks on this paper.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>Task 2 contributes twice as much to the Writing score as Task 1.</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-orange-600 font-bold mt-1">•</span>
-            <span>Click <span className="font-semibold bg-orange-100 px-2 py-1 rounded">SUBMIT ESSAYS</span> after completing both tasks.</span>
-          </li>
+        <ul className={`space-y-3 ${config.textDark} text-sm opacity-90`}>
+          {[
+            'There are two tasks on this paper.',
+            'Task 2 contributes twice as much to the Writing score as Task 1.',
+            <React.Fragment key="ws">Click <span className={`font-semibold bg-white px-2 py-0.5 rounded shadow-sm border ${config.borderLight}`}>SUBMIT ESSAYS</span> after completing both tasks.</React.Fragment>
+          ].map((text, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span className={`${config.textMain} font-bold mt-0.5`}>•</span>
+              <span>{text}</span>
+            </li>
+          ))}
         </ul>
-      </div>
-
-      <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-        <p className="text-sm text-gray-600 italic">
-          <span className="font-semibold">Instruction Source:</span> British Council Writing Test Format
-        </p>
       </div>
     </>
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-6 sm:py-8 md:py-12 px-3 sm:px-4 md:px-6">
-      <div className="max-w-full sm:max-w-3xl md:max-w-4xl mx-auto">
+    <div className="min-h-screen bg-slate-50 py-8 px-4 sm:px-6">
+      <div className="max-w-3xl mx-auto space-y-6">
         {/* Header */}
-        <div className={`bg-gradient-to-r ${getGradient()} rounded-xl sm:rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 mb-6 sm:mb-8`}>
-          <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white/20 backdrop-blur rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0">
-              {getIcon()}
-            </div>
-            <div className="flex-1 min-w-0">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2 truncate">{getTitle()}</h1>
-              <div className="flex items-center gap-2 text-white/90">
-                <Clock className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                <span className="text-sm sm:text-base md:text-lg font-medium">Time: {getDuration()}</span>
-              </div>
+        <div className="bg-white rounded-zen shadow-sm border border-slate-100 p-6 md:p-8 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+          <div className={`w-16 h-16 ${config.bgLight} rounded-2xl flex items-center justify-center flex-shrink-0 border ${config.borderLight}`}>
+            {config.icon}
+          </div>
+          <div className="flex-1">
+            <h1 className="text-2xl md:text-3xl font-bold text-midnight-900 mb-2">
+              {config.title} Instructions
+            </h1>
+            <div className="flex items-center justify-center sm:justify-start gap-2 text-slate-600 font-medium bg-slate-50 w-max mx-auto sm:mx-0 px-3 py-1.5 rounded-lg border border-slate-200">
+              <Clock className="w-4 h-4 text-slate-500" />
+              <span>Time: {config.duration}</span>
             </div>
           </div>
         </div>
 
         {/* Instructions Content */}
-        <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+        <div className="space-y-6">
           {examType === 'listening' && renderListeningInstructions()}
           {examType === 'reading' && renderReadingInstructions()}
           {examType === 'writing' && renderWritingInstructions()}
+          
+          <div className="bg-slate-50 rounded-xl p-4 border border-slate-200 text-center">
+            <p className="text-xs text-slate-500 font-medium">
+              Source: British Council {config.title} Test Format
+            </p>
+          </div>
         </div>
 
         {/* Start Button */}
-        <div className="sticky bottom-4 sm:bottom-6">
+        <div className="pt-4 pb-8 sticky bottom-0 bg-gradient-to-t from-slate-50 via-slate-50 to-transparent">
           <button
             onClick={onStart}
             data-testid={`start-${examType}-test-button`}
-            className={`w-full bg-gradient-to-r ${getGradient()} hover:shadow-2xl text-white font-bold text-base sm:text-lg md:text-xl py-4 px-6 sm:py-5 sm:px-8 rounded-xl shadow-lg transform hover:scale-[1.02] transition-all duration-200 flex items-center justify-center gap-2 sm:gap-3`}
+            className="btn-forest w-full py-4 text-lg shadow-xl shadow-forest-900/10"
           >
-            <span>Start {getTitle()} Test</span>
-            <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
+            <span>Start {config.title} Test</span>
+            <ChevronRight className="w-5 h-5" />
           </button>
         </div>
       </div>

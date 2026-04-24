@@ -1,0 +1,210 @@
+﻿Track name: 702 listening
+Track type: Listening
+Section: 4
+Question 40
+
+
+SECTION 1
+Questions 1-5
+Question type:  Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+
+
+Instruction: Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.
+
+
++----------------------+----------------------+-------------------------+
+| Days                 | Class/Activity       | Age Group               | 
++----------------------+----------------------+-------------------------+
+| Wednesday. Saturday  | 1……………               | children, teens         | 
++----------------------+----------------------+-------------------------+
+| 2……………….             | Tennis               | 3………….                  | 
++----------------------+----------------------+-------------------------+
+| Tuesday, Thursday    | 4……………               | children, teens, adults | 
++----------------------+----------------------+-------------------------+
+| Friday               | Book club            | 5…………...                | 
++----------------------+----------------------+-------------------------+
+
+
+Detailed Description for Regeneration
+This table has 5 rows and 3 columns.
+* Total rows: 5
+* Total columns: 3
+
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Days | Column 2: Class/Activity | Column 3: Age Group
+2. Row 2: Column 1: Wednesday. Saturday | Column 2: 1…………… | Column 3: children, teens
+3. Row 3: Column 1: 2………………. | Column 2: Tennis | Column 3: 3………….
+4. Row 4: Column 1: Tuesday, Thursday | Column 2: 4…………… | Column 3: children, teens, adults
+5. Row 5: Column 1: Friday | Column 2: Book club | Column 3: 5…………...
+
+
+Questions 6-10
+Question type: Fill in the gaps sentence 
+{On this type it’s rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+Instruction: Write ONE WORD ONLY for each answer.
+Membership fees $ (6)………  (individual)  $ (7)……….         (family)Located at 107 (8)……….Street Parking is located (9)…………..The Center is closed on (10)………….
+
+
+
+
+SECTION 2
+
+Questions 11-15
+
+
+Question type: Multiple choice Multiple 
+{This question type contains a single prompt with multiple answer options. Students are required to select exactly two options as their answers. Each selected option is counted as an individual question.}
+Instruction: Choose FIVE  From letters, A-J.
+
+
+Questions: Which FIVE things should hikers take on the hiking trip? 
+Options: (A) sleeping bag                             
+(B) tent                                               
+(C) food                         
+(D) dishes            
+(E) hiking boots.                                 
+(F) backpack
+(G) walking poles
+(H) maps
+(I) jacket
+(J) first-aid kit
+
+
+Questions 16-20 
+Question type: Fill in the gaps sentence 
+{On this type it’s rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Write NO MORE THAN TWO WORDS for each answer.
+
+
+Title: Safety Rules for Hiking 
+
+
+Always stay ahead of the (16)………….
+Stop and wait at any (17)………….
+Don’t try to climb (18)………………
+Don’t  (19)…………..wild animals.
+Always carry (20)…………..with you.
+
+
+SECTION 3
+Questions 21-24 
+Question type: Multiple choice Multiple 
+{This question type contains a single prompt with multiple answer options. Students are required to select exactly two options as their answers. Each selected option is counted as an individual question.}
+Instruction: Choose Four From letters, A-G.
+
+
+Question: Which FOUR of the following are required of student teachers? 
+Options: 
+(A) weekly journal. 
+(B) sample lesson plans 
+(C) meetings with other student teachers 
+(D) observing other teachers 
+(E) evaluation from supervising teacher 
+(F) portfolio 
+(G) final exam 
+
+
+
+
+Question 25 
+Question type: Multiple choice single one
+{On this type of question had a question and some options, student need to select one option from this options, and each question count as one question}
+Instruction: Choose the correct letter, A, B or C.
+Question: (25) Who has to sign the agreement form? 
+Option: 
+(A).the student teacher
+(B).the supervising teacher
+(C).the advisor
+
+
+Questions 26-30 
+Question type: Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+Instruction: Write ONE WORD AND/OR A NUMBER for each answer.
+
++----------------------+----------------------+
+| First week           | 26…………..due          | 
++----------------------+----------------------+
+| Fourth week          | 27……………meeting       | 
++----------------------+----------------------+
+| Seventh week         | 28…………..             | 
++----------------------+----------------------+
+| Fourteenth week      | 29………….due           | 
++----------------------+----------------------+
+| Fifteenth week       | 30……………              | 
++----------------------+----------------------+
+
+
+Detailed Description for Regeneration
+This table has 5 rows and 2 columns.
+* Total rows: 5
+* Total columns: 2
+
+
+Row-by-row breakdown:
+1. Row 1: Column 1: First week | Column 2: 26…………..due
+2. Row 2: Column 1: Fourth week | Column 2: 27……………meeting
+3. Row 3: Column 1: Seventh week | Column 2: 28…………..
+4. Row 4: Column 1: Fourteenth week | Column 2: 29………….due
+5. Row 5: Column 1: Fifteenth week | Column 2: 30……………
+SECTION 4 
+Questions 31-35 
+Question type: Multiple choice single one
+{On this type of question had a question and some options, student need to select one option from this options, and each question count as one question}
+Instruction: Choose the correct letter, A, B or C.
+(31) Retailers place popular items 
+A. in the back of the store. 
+B. near the front entrance. 
+C. at the end of the aisle. 
+(32) Carpet patterns are used to 
+A. help shoppers feel comfortable. 
+B. appeal to shoppers’ decorative sense. 
+C. encourage shoppers to walk in certain directions 
+(33) Retailers can keep customers in the store longer by 
+A. providing places to sit. 
+B. keeping the doors closed. 
+C. lowering the prices. 
+(34) Music is used in stores to 
+A. entertain customers. 
+B. slow customers down. 
+C. make customers shop faster. 
+(35) The scent of vanilla has been used in 
+A. ice cream shops. 
+B. bakeries. 
+C. clothing stores. 
+Question: 36-40
+Question type: Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+Instruction: Write ONE WORD AND/OR A NUMBER for each answer.
+
++----------------------+---------------------------------------------+
+| Colors               | Effect                                      | 
++----------------------+---------------------------------------------+
+| Purple               | encourages people to 36…………                 | 
++----------------------+---------------------------------------------+
+| Orange               | makes restaurant customers 37………………________ | 
++----------------------+---------------------------------------------+
+| Orange               | conveys a sense of38………….                   | 
++----------------------+---------------------------------------------+
+| Bright colors        | appeal to 39……………                           | 
++----------------------+---------------------------------------------+
+| Soft colors          | appeal to 40……………                           | 
++----------------------+---------------------------------------------+
+
+
+Detailed Description for Regeneration
+This table has 6 rows and 2 columns.
+* Total rows: 6
+* Total columns: 2
+
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Colors | Column 2: Effect
+2. Row 2: Column 1: Purple | Column 2: encourages people to 36…………
+3. Row 3: Column 1: Orange | Column 2: makes restaurant customers 37………………________
+4. Row 4: Column 1: Orange | Column 2: conveys a sense of38………….
+5. Row 5: Column 1: Bright colors | Column 2: appeal to 39……………
+6. Row 6: Column 1: Soft colors | Column 2: appeal to 40……………

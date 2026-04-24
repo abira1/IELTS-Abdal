@@ -2,12 +2,8 @@ import { useState, useEffect, useMemo } from 'react';
 import {
   Plus,
   DollarSign,
-  Calendar,
   TrendingUp,
-  FileText,
-  Filter,
   Download,
-  Edit,
   Trash2,
   CheckCircle,
   Clock,
@@ -22,7 +18,7 @@ import { studentService, Student } from '../../services/studentService';
 import { useAuth } from '../../contexts/AuthContext';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
-import { format, startOfMonth, endOfMonth, eachMonthOfInterval, subMonths } from 'date-fns';
+import { format } from 'date-fns';
 
 const EXPENSE_CATEGORIES: ExpenseCategory[] = [
   'Office Rent',
@@ -334,7 +330,6 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
 }
 
 export function ExpenseManager() {
-  const { user } = useAuth();
   const [expenses, setExpenses] = useState<Expense[]>([]);
   const [filteredExpenses, setFilteredExpenses] = useState<Expense[]>([]);
   const [students, setStudents] = useState<Student[]>([]);
@@ -404,7 +399,7 @@ export function ExpenseManager() {
     if (selectedMonth) {
       const [year, month] = selectedMonth.split('-').map(Number);
       filtered = filtered.filter(expense => {
-        const expenseDate = new Date(expense.date);
+        const expenseDate = new Date(expense.date || '');
         return expenseDate.getFullYear() === year && expenseDate.getMonth() === month - 1;
       });
     }
@@ -471,7 +466,7 @@ export function ExpenseManager() {
 
     // Table
     const tableData = filteredExpenses.map(expense => [
-      format(new Date(expense.date), 'MMM dd, yyyy'),
+      format(new Date(expense.date || ''), 'MMM dd, yyyy'),
       expense.category === 'Other' && expense.customCategory
         ? expense.customCategory
         : expense.category,
@@ -692,7 +687,7 @@ export function ExpenseManager() {
                 filteredExpenses.map((expense) => (
                   <tr key={expense.id} className="hover:bg-gray-50">
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      {format(new Date(expense.date), 'MMM dd, yyyy')}
+                      {format(new Date(expense.date || ''), 'MMM dd, yyyy')}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                       {expense.category === 'Other' && expense.customCategory

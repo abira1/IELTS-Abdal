@@ -52,7 +52,7 @@ export function MultiColumnTableQuestion({
     // Handle text with embedded question number pattern like "text (31)........ more text"
     if (typeof content === 'string') {
       // Check if content contains question number patterns
-      const pattern = /\((\d+)\)[\s.]*\.+/g;
+      const pattern = /\((\d+)\)[\s]*\.+/g;
       const parts: (string | number)[] = [];
       let lastIndex = 0;
       let match;
@@ -73,7 +73,7 @@ export function MultiColumnTableQuestion({
       }
       
       // If we found patterns, render with inputs
-      if (parts.length > 1) {
+      if (parts.some(p => typeof p === 'number')) {
         return (
           <div className="inline-flex items-center gap-1 flex-wrap">
             {parts.map((part, index) => {

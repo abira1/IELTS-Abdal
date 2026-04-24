@@ -134,110 +134,99 @@ export function WaitingInterface({
   }, [remainingSeconds]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating Books */}
         <div className="absolute top-20 left-10 animate-float" style={{ animationDelay: '0s', animationDuration: '6s' }}>
-          <BookOpen className="w-16 h-16 text-blue-200 opacity-30" />
+          <BookOpen className="w-12 h-12 text-forest-200 opacity-20" />
         </div>
         <div className="absolute top-40 right-20 animate-float" style={{ animationDelay: '2s', animationDuration: '7s' }}>
-          <FileText className="w-20 h-20 text-indigo-200 opacity-20" />
+          <FileText className="w-16 h-16 text-midnight-200 opacity-10" />
         </div>
         <div className="absolute bottom-32 left-1/4 animate-float" style={{ animationDelay: '1s', animationDuration: '8s' }}>
-          <Edit3 className="w-14 h-14 text-purple-200 opacity-25" />
+          <Edit3 className="w-10 h-10 text-forest-300 opacity-20" />
         </div>
         <div className="absolute bottom-20 right-1/3 animate-float" style={{ animationDelay: '3s', animationDuration: '9s' }}>
-          <CheckSquare className="w-12 h-12 text-blue-200 opacity-30" />
+          <CheckSquare className="w-8 h-8 text-midnight-300 opacity-15" />
         </div>
       </div>
 
-      <div className="max-w-2xl w-full relative z-10">
-        <div className="bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-10 border border-gray-200/50">
+      <div className="max-w-md w-full relative z-10">
+        <div className="bg-white rounded-zen shadow-zen p-6 md:p-8 border border-slate-100">
           {isWaiting ? (
             <>
-              {/* Waiting State with Enhanced Animations */}
-              <div className="text-center space-y-8">
+              {/* Waiting State */}
+              <div className="text-center space-y-6">
                 {/* Animated Illustration Area */}
                 <div className="flex justify-center relative">
-                  <div className="relative w-48 h-48">
+                  <div className="relative w-32 h-32">
                     {/* Outer rotating circle */}
-                    <div className="absolute inset-0 border-4 border-transparent border-t-blue-400 border-r-blue-300 rounded-full animate-spin" style={{ animationDuration: '3s' }}></div>
+                    <div className="absolute inset-0 border-4 border-transparent border-t-forest-400 border-r-forest-300 rounded-full animate-spin" style={{ animationDuration: '3s' }}></div>
                     <div
-                      className="absolute inset-3 border-4 border-transparent border-b-indigo-400 border-l-indigo-300 rounded-full animate-spin"
+                      className="absolute inset-2 border-4 border-transparent border-b-midnight-400 border-l-midnight-300 rounded-full animate-spin"
                       style={{ animationDirection: 'reverse', animationDuration: '4s' }}
-                    ></div>
-                    <div
-                      className="absolute inset-6 border-4 border-transparent border-t-purple-300 border-r-purple-200 rounded-full animate-spin"
-                      style={{ animationDuration: '5s' }}
                     ></div>
                     
                     {/* Center animated illustration */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="relative">
                         {/* Pulsing background */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full animate-pulse blur-xl"></div>
+                        <div className="absolute inset-0 bg-forest-50 rounded-full animate-pulse blur-xl"></div>
                         {/* Main icon */}
-                        <div className="relative bg-gradient-to-br from-blue-500 to-indigo-600 p-6 rounded-2xl shadow-lg transform hover:scale-110 transition-transform">
-                          <FileText className="w-16 h-16 text-white animate-pulse" />
-                        </div>
-                        {/* Floating mini icons */}
-                        <div className="absolute -top-2 -right-2 bg-green-500 p-2 rounded-full shadow-lg animate-bounce" style={{ animationDelay: '0.5s' }}>
-                          <CheckSquare className="w-4 h-4 text-white" />
-                        </div>
-                        <div className="absolute -bottom-2 -left-2 bg-yellow-500 p-2 rounded-full shadow-lg animate-bounce" style={{ animationDelay: '1s' }}>
-                          <Edit3 className="w-4 h-4 text-white" />
+                        <div className="relative bg-forest-600 p-4 rounded-2xl shadow-sm transform hover:scale-105 transition-transform">
+                          <FileText className="w-8 h-8 text-white animate-pulse" />
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full">
-                    <Clock className="w-5 h-5 text-blue-600 animate-pulse" />
-                    <span className="text-sm font-semibold text-blue-900">Please Wait</span>
+                <div className="space-y-3">
+                  <div className="inline-flex items-center justify-center gap-1.5 px-3 py-1 bg-slate-50 rounded-full border border-slate-200">
+                    <Clock className="w-3.5 h-3.5 text-forest-600 animate-pulse" />
+                    <span className="text-xs font-semibold text-midnight-800">Please Wait</span>
                   </div>
                   
-                  <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 mb-3">
+                  <h1 className="text-2xl font-bold text-midnight-900 mb-1">
                     Ready for Your Exam?
                   </h1>
                   
-                  <p className="text-gray-700 text-lg font-medium mb-2">
+                  <p className="text-slate-600 text-sm font-medium">
                     {waitMessage}
                   </p>
                 </div>
 
-                {/* Student Info Card with Enhanced Design */}
-                <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-xl p-6 border-2 border-blue-200/50 shadow-lg">
+                {/* Student Info Card */}
+                <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
                   <div className="text-left space-y-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-                        <span className="text-white font-bold text-lg">👤</span>
+                      <div className="w-8 h-8 bg-midnight-100 rounded-lg flex items-center justify-center">
+                        <span className="text-midnight-600 font-bold text-sm">👤</span>
                       </div>
                       <div className="flex-1">
-                        <div className="text-xs text-gray-600 mb-1">Student Name</div>
-                        <div className="font-bold text-gray-900 text-lg">{studentName}</div>
+                        <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-0.5">Student Name</div>
+                        <div className="font-bold text-midnight-900 text-sm">{studentName}</div>
                       </div>
                     </div>
                     
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-indigo-500 rounded-lg flex items-center justify-center">
-                        <span className="text-white font-bold text-lg">🎫</span>
+                      <div className="w-8 h-8 bg-forest-50 rounded-lg flex items-center justify-center">
+                        <span className="text-forest-600 font-bold text-sm">🎫</span>
                       </div>
                       <div className="flex-1">
-                        <div className="text-xs text-gray-600 mb-1">Student ID</div>
-                        <div className="font-bold text-gray-900 font-mono text-lg">{studentId}</div>
+                        <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-0.5">Student ID</div>
+                        <div className="font-bold text-midnight-900 font-mono text-sm">{studentId}</div>
                       </div>
                     </div>
                     
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center">
-                        <FileText className="w-5 h-5 text-white" />
+                      <div className="w-8 h-8 bg-slate-200 rounded-lg flex items-center justify-center">
+                        <FileText className="w-4 h-4 text-midnight-600" />
                       </div>
-                      <div className="flex-1">
-                        <div className="text-xs text-gray-600 mb-1">Exam</div>
-                        <div className="font-bold text-gray-900 text-lg">{currentExamName}</div>
+                      <div className="flex-1 min-w-0">
+                        <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-0.5">Exam</div>
+                        <div className="font-bold text-midnight-900 text-sm truncate" title={currentExamName}>{currentExamName}</div>
                       </div>
                     </div>
                   </div>
@@ -245,107 +234,84 @@ export function WaitingInterface({
 
                 {/* Show duration if available */}
                 {examDurationMinutes !== null && (
-                  <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl border border-amber-200">
-                    <Clock className="w-5 h-5 text-amber-600" />
-                    <span className="text-sm text-gray-700">
-                      <span className="font-bold text-amber-900">Duration:</span> {examDurationMinutes} minute{examDurationMinutes > 1 ? 's' : ''}
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 rounded-xl border border-amber-200">
+                    <Clock className="w-4 h-4 text-amber-600" />
+                    <span className="text-xs text-amber-900 font-medium">
+                      Duration: {examDurationMinutes} min
                     </span>
                   </div>
                 )}
 
                 {/* Enhanced Waiting Animation */}
-                <div className="flex justify-center items-center gap-2">
-                  <div className="flex gap-1.5">
-                    <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full animate-bounce shadow-lg" style={{ animationDelay: '0s' }}></div>
-                    <div className="w-3 h-3 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full animate-bounce shadow-lg" style={{ animationDelay: '0.2s' }}></div>
-                    <div className="w-3 h-3 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full animate-bounce shadow-lg" style={{ animationDelay: '0.4s' }}></div>
-                  </div>
-                </div>
-
-                <div className="bg-blue-50 rounded-xl p-4 border border-blue-100">
-                  <p className="text-sm text-blue-900 font-medium flex items-center justify-center gap-2">
-                    <Loader className="w-4 h-4 animate-spin" />
-                    Verifying your exam details...
-                  </p>
+                <div className="flex justify-center items-center gap-1.5 pt-2">
+                  <div className="w-2 h-2 bg-forest-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+                  <div className="w-2 h-2 bg-midnight-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
                 </div>
               </div>
             </>
           ) : (
             <>
               {/* Enhanced Countdown State */}
-              <div className="text-center space-y-8">
+              <div className="text-center space-y-6">
                 {/* Countdown Circle Animation */}
                 <div className="flex justify-center">
-                  <div className="relative w-56 h-56">
+                  <div className="relative w-40 h-40">
                     {/* Animated rings */}
-                    <div className="absolute inset-0 border-8 border-blue-200 rounded-full"></div>
+                    <div className="absolute inset-0 border-4 border-slate-100 rounded-full"></div>
                     <div 
-                      className="absolute inset-0 border-8 border-transparent border-t-blue-500 rounded-full animate-spin" 
+                      className="absolute inset-0 border-4 border-transparent border-t-forest-500 rounded-full animate-spin" 
                       style={{ animationDuration: '1s' }}
                     ></div>
                     <div 
-                      className="absolute inset-4 border-8 border-transparent border-t-indigo-500 rounded-full animate-spin" 
+                      className="absolute inset-2 border-4 border-transparent border-t-midnight-500 rounded-full animate-spin" 
                       style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}
                     ></div>
                     
                     {/* Countdown number */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
-                        <div className="text-8xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 animate-pulse drop-shadow-2xl">
+                        <div className="text-6xl font-black text-midnight-900 animate-pulse">
                           {countdown}
                         </div>
-                        <div className="text-sm font-bold text-gray-500 mt-2 uppercase tracking-wider">
+                        <div className="text-xs font-bold text-slate-500 mt-1 uppercase tracking-wider">
                           seconds
                         </div>
                       </div>
                     </div>
-
-                    {/* Pulsing outer glow */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full animate-ping" style={{ animationDuration: '1s' }}></div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full shadow-lg animate-pulse">
-                    <CheckSquare className="w-5 h-5 text-white" />
-                    <span className="text-white font-bold">Get Ready!</span>
+                <div className="space-y-3">
+                  <div className="inline-flex items-center justify-center gap-1.5 px-4 py-1.5 bg-forest-600 rounded-full shadow-sm animate-pulse">
+                    <CheckSquare className="w-4 h-4 text-white" />
+                    <span className="text-white text-xs font-bold uppercase tracking-wider">Get Ready</span>
                   </div>
                   
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                    Exam Starting Soon!
+                  <h2 className="text-2xl font-bold text-midnight-900 mb-1">
+                    Starting Soon!
                   </h2>
                   
-                  <p className="text-gray-600 text-lg">
-                    Your exam begins in <span className="font-bold text-blue-600">{countdown}</span> second{countdown !== 1 ? 's' : ''}
+                  <p className="text-slate-600 text-sm">
+                    Exam begins in <span className="font-bold text-forest-600">{countdown}</span> s
                   </p>
                   
                   {remainingSeconds !== null && (
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-lg border border-blue-200">
-                      <Clock className="w-4 h-4 text-blue-600" />
-                      <span className="text-sm text-gray-700">
-                        <span className="font-semibold">Total Time:</span> {String(Math.floor(remainingSeconds / 60)).padStart(2, '0')}:{String(remainingSeconds % 60).padStart(2, '0')}
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-50 rounded-lg border border-slate-200 mt-2">
+                      <Clock className="w-3.5 h-3.5 text-midnight-600" />
+                      <span className="text-xs text-midnight-800 font-medium">
+                        Time: {String(Math.floor(remainingSeconds / 60)).padStart(2, '0')}:{String(remainingSeconds % 60).padStart(2, '0')}
                       </span>
                     </div>
                   )}
                 </div>
 
                 {/* Audio notification */}
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border-2 border-blue-200">
-                  <div className="flex items-center justify-center gap-3">
-                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
-                      <Volume2 className="w-5 h-5 text-white" />
-                    </div>
-                    <span className="text-sm font-semibold text-blue-900">
-                      Audio will play automatically when exam starts
-                    </span>
-                  </div>
-                </div>
-
-                {/* Motivational message */}
-                <div className="flex items-center justify-center gap-2 text-gray-600">
-                  <span className="text-2xl">📝</span>
-                  <span className="text-sm font-medium">Stay focused and do your best!</span>
-                  <span className="text-2xl">💪</span>
+                <div className="bg-slate-50 rounded-xl p-3 border border-slate-200 flex items-center justify-center gap-2">
+                  <Volume2 className="w-4 h-4 text-forest-600 animate-pulse" />
+                  <span className="text-xs font-medium text-midnight-800">
+                    Audio plays automatically
+                  </span>
                 </div>
               </div>
             </>
@@ -360,7 +326,7 @@ export function WaitingInterface({
             transform: translateY(0px) rotate(0deg);
           }
           50% {
-            transform: translateY(-20px) rotate(5deg);
+            transform: translateY(-10px) rotate(5deg);
           }
         }
         .animate-float {

@@ -1,0 +1,254 @@
+// Track: 703-M Reading
+import { Track } from './track1';
+
+export const track703Reading: Track = {
+  id: 'track-703-reading',
+  name: '703-M Reading',
+  shortName: '703MR',
+  description: 'IELTS Reading Practice Test - Academic Reading with 3 parts and 40 questions',
+  duration: 60,
+  totalQuestions: 40,
+  trackType: 'reading',
+  audioURL: null,
+  sections: [
+    {
+      sectionNumber: 1,
+      title: 'READING PASSAGE 1',
+      passage: {
+        title: 'Wolves, Dogs and Humans',
+        content: `You should spend about 20 minutes on Questions 1-14 which are based on Reading Passage 1 below.
+
+There is no doubt that dogs are the oldest of all species tamed by humans and their domestication was based on a mutually beneficial relationship with man. The conventional view is that the domestication of wolves began between 10,000 and 20,000 years ago. However, a recent groundbreaking paper by a group of international geneticists has pushed this date back by a factor of 10. Led by Dr. Robert Wayne, at the University of California, Los Angeles, the team showed that all dog breeds had only one ancestor, the wolf. They did this by analysing the genetic history through the DNA of 162 wolves from around the world and 140 domestic dogs representing 67 breeds. The research also confirms, for the first time, that dogs are descended only from wolves and do not share DNA with coyotes or jackals. The fact that our companionship with dogs now appears to go back at least 100,000 years means that this partnership may have played an important part in the development of human hunting techniques that developed 70,000 to 90,000 years ago. It also may even have affected the brain development in both species.
+
+The Australian veterinarian David Paxton suggests that in that period of first contact, people did not so much domesticate wolves as wolves domesticated people. Wolves may have started living at the edge of human settlements as scavengers, eating scraps of food and waste. Some learned to live with human beings in a mutually helpful way and gradually evolved into dogs. At the very least, they would have protected human settlements, and given warnings by barking at anything approaching. The wolves that evolved into dogs have been enormously successful in evolutionary terms. They are found everywhere in the inhabited world, hundreds of millions of them. The descendants of the wolves that remained wolves are now sparsely distributed, often in endangered populations.
+
+In return for companionship and food, the early ancestor of the dog assisted humans in tracking, hunting, guarding and a variety of other activities. Eventually humans began to selectively breed these animals for specific traits. Physical characteristics changed and individual breeds began to take shape. As humans wandered across Asia and Europe, they took their dogs along, using them for additional tasks and further breeding them for selected qualities that would better enable them to perform specific duties.
+
+According to Dr. Colin Groves, of the Department of Archaeology and Anthropology at Australian National University, early humans came to rely on dogs' keen ability to hear, smell and see - allowing certain areas of the human brain to shrink in size relative to other areas. Dogs acted as humans' alarm systems, trackers and hunting aids, garbage disposal facilities, hot-water bottles and children's guardians and playmates. Humans provided dogs with food and security. This symbiotic relationship was stable for over 100,000 years and intensified into mutual domestication. In his opinion, humans domesticated dogs and dogs domesticated humans.
+
+Dr. Groves repeated an assertion made as early as 1914 that humans have some of the same physical characteristics as domesticated animals, the most notable being decreased brain size. The horse experienced a 16 percent reduction in brain size after domestication while pigs' brains shrank by as much as 34 percent. The estimated brain-size reduction in domesticated dogs varies from 30 percent to 10 percent. Only in the last decade have archaeologists uncovered enough fossil evidence to establish that brain capacity in humans declined in Europe and Africa by at least 10 percent beginning about 10,000 years ago. Dr. Groves believes this reduction may have taken place as the relationship between humans and dogs intensified. The close interaction between the two species allowed for the diminishing of certain human brain functions like smell and hearing.`
+      },
+      questions: [
+        {
+          type: 'yes-no-not-given',
+          instruction: 'Do the following statements agree with the views of the writer of the passage? Write YES if the statement agrees with the views of the writer, NO if the statement contradicts the views of the writer, NOT GIVEN if it is impossible to say what the writer thinks about this.',
+          statements: [
+            { questionNumber: 1, statement: 'The co-existence of wolves and humans began 10,000 years ago.' },
+            { questionNumber: 2, statement: 'Dogs, wolves, jackals and coyotes share a common ancestor.' },
+            { questionNumber: 3, statement: 'Wolves are a protected species in most parts of the world.' },
+            { questionNumber: 4, statement: 'Dogs evolved from wolves which chose to live with humans.' },
+            { questionNumber: 5, statement: 'Dogs probably influenced the development of human hunting skills.' }
+          ]
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 6,
+          question: 'How do we know that dogs have been more successful in evolutionary terms than wolves?',
+          options: [
+            { label: 'Dogs can be trained more easily than wolves.', value: 'A' },
+            { label: 'Wolves are stronger than dogs.', value: 'B' },
+            { label: 'Humans prefer dogs to wolves.', value: 'C' },
+            { label: 'There are more dogs than wolves today.', value: 'D' }
+          ]
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 7,
+          question: 'As a result of domestication, the size of the human brain has...',
+          options: [
+            { label: 'Increased.', value: 'A' },
+            { label: 'Decreased.', value: 'B' },
+            { label: 'Stayed the same.', value: 'C' },
+            { label: 'Become more complex.', value: 'D' }
+          ]
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 8,
+          question: 'What can we infer from the studies of brain size and domestication?',
+          options: [
+            { label: 'Domestic life is less demanding than surviving in the wild.', value: 'A' },
+            { label: 'Animals like living with humans.', value: 'B' },
+            { label: 'Domestication has made animals physically weaker.', value: 'C' },
+            { label: 'Pigs are less intelligent than dogs.', value: 'D' }
+          ]
+        },
+        {
+          type: 'paragraph-gap',
+          instruction: 'Choose TWO WORDS from the passage for the answer.',
+          paragraph: 'There are many different types of dogs today, because, in early times humans began to (9)...',
+          questionNumbers: [9]
+        },
+        {
+          type: 'dropdown',
+          instruction: 'Match one of the researchers (A-C) to each of the findings (10-14) below.',
+          items: [
+            { questionNumber: 10, statement: 'studied the brain size of domesticated animals' },
+            { questionNumber: 11, statement: 'claims that wolves chose to interact with humans' },
+            { questionNumber: 12, statement: 'established a new time frame for domestication of wolves' },
+            { questionNumber: 13, statement: 'believes that dogs and humans domesticated each other' },
+            { questionNumber: 14, statement: 'studied the DNA of wolves and dogs' }
+          ],
+          options: [
+            { label: 'Dr. Wayne', value: 'A' },
+            { label: 'Dr. Paxton', value: 'B' },
+            { label: 'Dr. Groves', value: 'C' }
+          ]
+        }
+      ]
+    },
+    {
+      sectionNumber: 2,
+      title: 'READING PASSAGE 2',
+      passage: {
+        title: 'Crop Circles',
+        content: `You should spend about 20 minutes on Questions 15-27 which are based on Reading Passage 2 below.
+
+The crop circle phenomenon has puzzled and mystified humanity for many years. The designs just appear, placed carefully in fields of food grains. Some are larger than football fields and highly complex in design and construction. Others are smaller and more primitive. We call them crop circles, but many of them are not circular. Some are elongated abstract designs, a few resemble insects or other known forms, and some are mixtures of lines, circles, and other shapes melded into intricate patterns. Most become visible overnight, though it has been claimed that a few have appeared within a half-hour in broad daylight.
+
+Crop circles have appeared all over the world. About 10,000 instances from various countries have been reported in recent years. The first modern rash of crop circles appeared in Australia in December of 1973. A strange circular imprint appeared in a wheat field near Wokurna, a community southeast of Adelaide. Soon seven swirled circles up to 14 feet in diameter appeared in an oatfield nearby. In December of 1989, an amazing set of circles, ranging from a few inches to a few feet in diameter appeared in the wheat belt west of Melbourne. As many as 90 crop circles were found. The best documented and largest modern spread of crop circles began in southern England during the summer of 1980. By the end of 1988, 112 new circles had been formed. At that time circles were being reported worldwide, 305 by the end of 1989. The total grew to an outstanding 1,000 newly formed circles in 1990. In 1991, 200 to 300 circles were reported. Crop circles have been documented in over 30 countries, including Canada, the former Soviet Union, Japan and the United States.
+
+Nine out of ten circles remained simple with broken stems flattened to the ground and swirled. The stalks around the circles remained completely erect. But over the years, crop circles have become much more geometrically intricate. Patterns involved multiple circles, bars, triangles, rings and spurs. Pictorial imagery also appeared. Reliable eyewitnesses have reported seeing unusual lights and hearing unidentifiable sounds while on an early-morning walk in the countryside where a crop circle showed later that day. High-pitched, warbling, noises have been recorded at the site of some crop circles. On several occasions a strange glow or a darker colouring has been seen in the sky over a crop circle. And in more than one instance, the electrical power of small planes flying overhead has been cut off abruptly. While the causal energies do not seem to harm animals, or even insects as far as we can tell, wild creatures tend to avoid the circles. Flocks of birds have been seen to split apart and fly around the perimeter rather than go directly over a crop circle formation.
+
+Researchers have spent a great deal of time investigating different aspects of crop circles. They try to detect traces of human involvement in the circle-making, test the area of the circle itself for geophysical anomalies, and analyze the field's grain both from within and outside the circles, searching for differences. Dr. W. C. Levengood of BLT Research in Cambridge, Massachusetts, has analyzed many grain samples and confirmed, time after time, significant changes at the cellular level of crop circle plants. The plants from the circles have elongated cells and blown-out growth nodes. Seeds from the circle plants often show accelerated growth rates when they are sown, and in some instances, quite different-looking plants result. In many instances it appears that a vortex-like energy causes the plants to swirl down, flattening the design into the land. Whatever this energy is, it does not generally inhibit the plants' growth. They continue to show normal response to the sun, raising upward over several days following the appearance of the circle.
+
+Michael Chorost of Duke University found occasions of short-lived radionuclides in the top layer of soil in some of the formations. A British government laboratory found diminished nitrogen and decreased nematode populations as well as decreased water content in the soil of a formation. Researchers have discovered other anomalies as well, such as curious embedded magnetic particles and charred tissue. Some of the plant stalks within the circles show evidence of being exposed to rapid microwave heating.
+
+Scientists have attempted to explain crop circles as a result of natural processes. One popular theory accepted by many mainstream scientists and academics, is known as 'Plasma Vortex Theory'. Developed by Dr. Terence Mearden, it theorizes that electrified air (plasma), on the side of hills, becomes mini-tornadoes and screws down onto the ground, creating the circles. The theory also holds that the electrified air would cause a light to appear above the circle and therefore account for UFO sightings. Although this theory still has considerable support, it has come under fire because of the highly intricate and complex crop circle patterns that have appeared since 1991. Another theory is that the circles are all hoaxes or practical jokes. Major support came to this theory when, on September 9, 1991, two Englishmen claimed to have created approximately 250 crop circles. However, those circles were more rugged than others, and many were already suspect. It is irrational to believe that all crop circles are fake for publicity or other reasons. Many crop circles appeared long before the phenomenon gained large recognition from the public and press. Too many circles and patterns are formed each year in too many countries for them to have been hoaxes. Many crop circles show strange mathematical trails when analyzed. The crop circle phenomenon is an enigma. Many dollars have been spent by researchers and their associations in an attempt to find a solution to this intriguing puzzle which will continue to haunt humanity until an explanation is found.`
+      },
+      questions: [
+        {
+          type: 'yes-no-not-given',
+          instruction: 'Do the following statements reflect the claims of the writer of this passage? Write YES if the statement agrees with the views of the writer, NO if the statement contradicts the views of the writer, NOT GIVEN if it is impossible to say what the writer thinks about this.',
+          statements: [
+            { questionNumber: 15, statement: 'Crop circles only appear in wheat fields.' },
+            { questionNumber: 16, statement: 'Crop circles have never been documented in tropical countries.' },
+            { questionNumber: 17, statement: 'The largest number of crop circle reportings in a single year occurred in 1990.' },
+            { questionNumber: 18, statement: 'The patterns of crop circles have become increasingly complex over the years.' },
+            { questionNumber: 19, statement: 'All crop circles are hoaxes.' }
+          ]
+        },
+        {
+          type: 'paragraph-gap',
+          instruction: 'Complete the summary below. Choose NO MORE THAN THREE WORDS from the passage for each answer.',
+          paragraph: 'Since the early 1970s, over ten thousand crop circles have been reported around the world, the greatest number in (20)..., where in a single year, over one hundred circles appeared. Phenomena such as the appearance of strange lights and unusual (21)... sometimes occur around the sites of crop circles. (22)... are not affected but it has been observed that birds (23)... flying over a formation.',
+          questionNumbers: [20, 21, 22, 23]
+        },
+        {
+          type: 'dropdown',
+          instruction: 'Use the information in the text to match one scientist (A-C) with each area of study (24-27) listed below.',
+          items: [
+            { questionNumber: 24, statement: 'Changes in the structure of soil within crop circles' },
+            { questionNumber: 25, statement: 'Accelerated growth of seeds from crop circles' },
+            { questionNumber: 26, statement: 'Electrical charges in the air around crop circles' },
+            { questionNumber: 27, statement: 'Changes in cell structure of plants found in crop circles' }
+          ],
+          options: [
+            { label: 'Dr. Mearden', value: 'A' },
+            { label: 'Dr. Levengood', value: 'B' },
+            { label: 'Michael Chorost', value: 'C' }
+          ]
+        }
+      ]
+    },
+    {
+      sectionNumber: 3,
+      title: 'READING PASSAGE 3',
+      passage: {
+        title: 'Are These Two Reporters on the Same Planet?',
+        content: `You should spend about 20 minutes on Questions 28-40 which are based on Reading Passage 3 below.
+
+A number of books, articles and television programs have disputed the reality of the claimed hazards of global warming, overpopulation, deforestation and ozone depletion. Two newspaper commentaries show the profound differences of opinion on critical issues affecting the planet.
+
+The first, by Robert Kaplan, has generated both fear and denial. Entitled The Coming Anarchy, the report paints a horrifying picture of the future for humanity. The author suggests that the terrible consequences of the conjunction between exploding human population and surrounding environmental degradation are already visible in Africa and parts of Southeast Asia. As society is destabilised by the AIDS epidemic, government control evaporates, national borders crumble beneath the pressure of environmental refugees and local populations revert to tribalism to settle old scores or defend against fleeing masses and bands of stateless nomads on the move. Kaplan believes what he has seen in Africa and Southeast Asia is the beginning of a global pattern of disintegration of social, political and economic infrastructure under the impact of ecological degradation, population pressure and disease. As ecosystems collapse, this scenario could sweep the planet, first in Eastern Europe and then the industrialised countries. It is a frightening scenario, built on a serious attempt to project the aftermath of ecological destruction. It comes from a core recognition that the planet is finite and consumption has vast social, political and economic ramifications.
+
+Marcus Gee pronounces Kaplan's vision 'dead wrong' in a major article headlined Apocalypse Deferred. Attacking the 'doomsayers', Gee counters with the statistics favoured by believers in the limitless benefits and potential of economic growth. Citing the spectacular improvements in human health, levels of education and literacy, availability of food and length of life even in the developing world, Gee pronounces the fivefold increase in the world economy since 1950 as the cause of this good news. He does concede that immense problems remain, from ethnic nationalism to tropical deforestation to malnutrition to cropland losses but concludes that Kaplan has exaggerated many of the crises and thus missed the broad pattern of progress. Focusing on statistics of the decline in child mortality and the rise in longevity, food production and adult literacy, Gee reaches the conclusion that things have never been better. Economic indicators, such as the rise in gross world product and total exports show 'remarkable sustained and dramatic progress'. Life for the majority of the world's citizens is getting steadily better in almost every category.
+
+Gee's conclusions rest heavily on economic indicators. He points out the annual 3.9 percent rise in the global economy and the more than doubling of the gross output per person, that has occurred for the past thirty years. World trade has done even better, growing by 6 percent of a product's price in 1947 to 5 percent today. Gee skips lightly over such facts as third world debt and the daily toll of 22,000 child deaths from easily preventable disease. He also fails to mention that during this period the gulf between rich and poor countries has increased. He does acknowledge the threats of loss of topsoil and forests, pollution of the air and contamination of water. However, he concludes that there is little evidence they are serious enough to halt or even reverse human progress. Gee challenges the notion of a population crisis since there have never been as many people so well off. Furthermore, he suggests there will never be a limit to population because more people means more Einsteins to keep making life better.
+
+Gee's outlook rests on a tiny minority of scientists who have faith in the boundless potential of science and technology to overcome the physical constraints of air, water and soil so that a much larger population can be sustained. His final proof? - the general rise in living standards along with population growth. But the relationship between changes in living standards and population is a correlation, not proof of causal connection. Gee is ignoring basic economic as well as scientific reality. If we inherit a bank account with a thousand dollars that earns 5% interest annually, we could withdraw fifty dollars or less each year forever. However, suppose we start to increase our withdrawals, say up to sixty dollars, then seventy dollars and more each year. For many years the account would yield cash. But it would be foolish to conclude that we could keep drawing more from the account indefinitely. Yet that is what Gee believes. As ocean fisheries around the world show, we are using up the ecological capital of the planet (biodiversity, air, water, soil) rather than living off the interest. It is a dangerous deception to believe that the human-created artifice called economies can keep the indicators rising as the life support systems of the planet continue to decline. The value system that dominates most of the popular media promotes the delusion that resources and the economy can continue to expand indefinitely. It also blinds the public to the urgency and credibility of warnings that an environmental crisis confronts us.`
+      },
+      questions: [
+        {
+          type: 'dropdown',
+          instruction: 'Use the information in the passage to match the people (A-C) with the opinions (28-33) listed below. There may be more than one correct answer.',
+          items: [
+            { questionNumber: 28, statement: 'Our patterns of consumption are using up the ecological capital of the planet.' },
+            { questionNumber: 29, statement: 'Crises beginning in the Third World will spread to developed countries.' },
+            { questionNumber: 30, statement: 'Scientific progress will enable the planet to sustain increased population.' },
+            { questionNumber: 31, statement: 'Social and political infrastructure worldwide could collapse.' },
+            { questionNumber: 32, statement: 'Earth\'s life support systems are at critical risk.' },
+            { questionNumber: 33, statement: 'Environmental problems are not a threat to progress.' }
+          ],
+          options: [
+            { label: 'R. Kaplan', value: 'A' },
+            { label: 'M. Gee', value: 'B' },
+            { label: 'D. Suzuki', value: 'C' }
+          ]
+        },
+        {
+          type: 'dropdown',
+          instruction: 'Choose ONE phrase from the list below (A-G) to complete each of the following sentences. There are more phrases than questions so you will not use all of them.',
+          items: [
+            { questionNumber: 34, statement: 'The growth of world trade' },
+            { questionNumber: 35, statement: 'The relationship between population and standard of living' },
+            { questionNumber: 36, statement: 'Natural resources and the economy' }
+          ],
+          options: [
+            { label: 'have most benefited developing countries', value: 'A' },
+            { label: 'has led to a drop in the standard of living generally', value: 'B' },
+            { label: 'cannot continue to expand indefinitely', value: 'C' },
+            { label: 'have decreased third world debt', value: 'D' },
+            { label: 'shows a correlation, not cause and effect', value: 'E' },
+            { label: 'pose a threat to human progress', value: 'F' },
+            { label: 'has been accompanied by a fall in tariffs', value: 'G' }
+          ]
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 37,
+          question: 'Which of the following is a factor to potential global destabilization NOT stated by Kaplan as a key contributing factor?',
+          options: [
+            { label: 'Political corruption', value: 'A' },
+            { label: 'Collapse of ecosystems', value: 'B' },
+            { label: 'Population explosion', value: 'C' },
+            { label: 'Malnutrition and disease', value: 'D' }
+          ]
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 38,
+          question: 'What is the main source of Gee\'s optimism?',
+          options: [
+            { label: 'Scientific and technological advances', value: 'A' },
+            { label: 'Decreasing Third World debt', value: 'B' },
+            { label: 'The rise in the standard of living worldwide', value: 'C' },
+            { label: 'Economic growth', value: 'D' }
+          ]
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 39,
+          question: 'Which of the following can we infer about the views of the author of this passage?',
+          options: [
+            { label: 'He disagrees with both Gee and Kaplan.', value: 'A' },
+            { label: 'He supports the views of Gee.', value: 'B' },
+            { label: 'His views are closer to those of Kaplan.', value: 'C' },
+            { label: 'He thinks both Gee and Kaplan are right.', value: 'D' }
+          ]
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 40,
+          question: 'The main purpose of the author in this passage is...',
+          options: [
+            { label: 'To alert us to an environmental crisis.', value: 'A' },
+            { label: 'To educate the media.', value: 'B' },
+            { label: 'To create uncertainty about the future.', value: 'C' },
+            { label: 'To challenge current economic thinking.', value: 'D' }
+          ]
+        }
+      ]
+    }
+  ]
+};

@@ -26,7 +26,7 @@ import { app } from '../../firebase';
 import { useNavigate } from 'react-router-dom';
 
 type TestType = 'partial' | 'mock';
-type TrackType = 'listening' | 'reading' | 'writing' | 'sicu';
+type TrackType = 'listening' | 'reading' | 'writing';
 
 export function ExamControlPage() {
   const navigate = useNavigate();
@@ -552,22 +552,6 @@ export function ExamControlPage() {
                   >
                     <PenTool className="w-5 h-5" />
                     <span className="font-medium">Writing</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setPartialTrackType('sicu');
-                      setPartialSelectedTrack('');
-                      setGeneratedExamCode('');
-                    }}
-                    className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg border-2 transition-all ${
-                      partialTrackType === 'sicu'
-                        ? 'border-slate-500 bg-slate-50 text-slate-700'
-                        : 'border-gray-300 bg-white text-gray-700 hover:border-slate-300'
-                    }`}
-                  >
-                    <Layers className="w-5 h-5" />
-                    <span className="font-medium">SICU</span>
                   </button>
                 </div>
               </div>

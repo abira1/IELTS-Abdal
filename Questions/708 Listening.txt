@@ -1,0 +1,244 @@
+Track name: 708 Listening
+Track type: Listening
+Section: 4
+Question 40
+
+
+SECTION 1
+
+
+Questions 1-4
+Question type: Multiple choice single one (Image)
+{On this type students listen and need to select one image from visual options A, B, C, D. Each question is one image selection.}
+
+Instruction: Put a circle around the letter of the item they choose.
+
+(1) Listen Audio Carefully and Select one image from visual options
+A. https://i.postimg.cc/2yCsZQ4k/1-A.png
+B. https://i.postimg.cc/sx3khYps/1-B.png
+C. https://i.postimg.cc/j2Rp7Hzb/1-C.png
+D. https://i.postimg.cc/Y0t5W61w/1-D.png
+
+(2) Listen Audio Carefully and Select one image from visual options
+A. https://i.postimg.cc/LXkd5CZp/2-A.png
+B. https://i.postimg.cc/gJy9jSL1/2-B.png
+C. https://i.postimg.cc/MT0kHPfL/2-C.png
+D. https://i.postimg.cc/ydhqxQ3v/2-D.png
+
+(3) Listen Audio Carefully and Select one image from visual options
+A. https://i.postimg.cc/PxbGJ3vW/3-A.png
+B. https://i.postimg.cc/JnCV1V0x/3-B.png
+C. https://i.postimg.cc/50Wdxdy3/3-C.png
+D. https://i.postimg.cc/76r8x8hM/3-D.png
+
+(4) Listen Audio Carefully and Select one image from visual options
+A. https://i.postimg.cc/vmVwFHYc/4-A.png
+B. https://i.postimg.cc/JhkCV4rs/4-B.png
+C. https://i.postimg.cc/j5Y0s02S/4-C.png
+D. https://i.postimg.cc/nLDfbcFM/4-D.png
+
+
+Questions 5-10
+Question type: Short Answer
+{On this type each question have writing box for short answer, student should write there short answer on this box. And each question count as each question}
+
+Instruction: Write NO MORE THAN THREE WORDS for each answer.
+
+(5) Where will Mary go now?
+
+(6) Who is waiting for Tom?
+
+(7) What time does Mary expect to come home?
+
+(8) Where is Mary's office?
+
+(9) What TV program does Tom plan to watch tonight?
+
+(10) Where does Tom have to go tomorrow?
+
+
+SECTION 2
+
+
+Questions 11-17
+Question type: Fill in the gaps in table 
+{In this type, a complete table is displayed with certain gaps (e.g., ()...........) that need to be filled. Students are required to write the correct answers in each gap. Each gap is counted as one question.}
+
+Instruction: Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.
+Table title: Request to Terminate or Transfer Classes
+
+
++-------------------------------------------+----------------------+
+| Item                                      | Information          | 
++-------------------------------------------+----------------------+
+| Department                                | (11)……………             | 
++-------------------------------------------+----------------------+
+| Message for                               | (12)……………             | 
++-------------------------------------------+----------------------+
+| Student's family name                     | (13)……………             | 
++-------------------------------------------+----------------------+
+| Student's first name                      | (14)……………             | 
++-------------------------------------------+----------------------+
+| Student number                            | (15)……………             | 
++-------------------------------------------+----------------------+
+| Teacher's name                            | (16)……………             | 
++-------------------------------------------+----------------------+
+| Student's address                         | (17)……………             | 
++-------------------------------------------+----------------------+
+
+
+Detailed Description for Regeneration
+This table has 8 rows and 2 columns.
+* Total rows: 8
+* Total columns: 2
+
+Row-by-row breakdown:
+1. Row 1: Column 1: Item | Column 2: Information
+2. Row 2: Column 1: Department | Column 2: (11)……………
+3. Row 3: Column 1: Message for | Column 2: (12)……………
+4. Row 4: Column 1: Student's family name | Column 2: (13)……………
+5. Row 5: Column 1: Student's first name | Column 2: (14)……………
+6. Row 6: Column 1: Student number | Column 2: (15)……………
+7. Row 7: Column 1: Teacher's name | Column 2: (16)……………
+8. Row 8: Column 1: Student's address | Column 2: (17)……………
+
+
+Questions 18-22
+Question type: Multiple choice single one
+{On this type of question had a question and some options, student need to select one option from this options, and each question count as one question}
+
+Instruction: Choose the correct letter, A, B, C or D.
+
+(18) May wants to change classes because
+A. she doesn't like her teacher
+B. too many students share a language
+C. she can't understand the work
+D. the class is too large.
+
+(19) In the evening class most students' first language is
+A. English
+B. Italian
+C. Spanish
+D. Japanese
+
+(20) There is room in the new class because two students
+A. went home
+B. dropped the course
+C. transferred
+D. graduated
+
+(21) May prefers the evening class because it is
+A. in the same room
+B. in the room next door
+C. in the same building
+D. in the building next door
+
+(22) May wants Mrs Brooks to leave a message at
+A. the library
+B. her work
+C. her friend's house
+D. her home.
+
+
+SECTION 3
+
+
+Questions 23-27
+Question type: Drag and drop (Table Matching)
+{On this type a table with empty cells is displayed and options in a box are provided. Students drag options from the box and drop them into the correct table cells.}
+
+Instruction: Complete the table showing the students' opinions. Choose answers from the box. You may use any of the words more than once. There are more words than spaces so you will not use them all.
+
+Table:
++-----------------------------------+-----------------------------------+-----------------------------------+
+| Student                           | favourite instrument              | favourite style of music          | 
++-----------------------------------+-----------------------------------+-----------------------------------+
+| Example                           | drums                             | classical                         | 
++-----------------------------------+-----------------------------------+-----------------------------------+
+| Greg                              |                                   |                                   | 
++-----------------------------------+-----------------------------------+-----------------------------------+
+| Alexandri                         | guitar                            | (23)……………                        | 
++-----------------------------------+-----------------------------------+-----------------------------------+
+| Katja                             | (24)……………                        | rock                              | 
++-----------------------------------+-----------------------------------+-----------------------------------+
+| Rachel                            | violin                            | (25)……………                        | 
++-----------------------------------+-----------------------------------+-----------------------------------+
+| Harry                             | (26)……………                        | opera                             | 
++-----------------------------------+-----------------------------------+-----------------------------------+
+| Emiko                             | flute                             | (27)……………                        | 
++-----------------------------------+-----------------------------------+-----------------------------------+
+
+
+Options: +-----------------------------------+-----------------------------------+
+| INSTRUMENT                        | STYLE OF MUSIC                    | 
++-----------------------------------+-----------------------------------+
+| guitar                            | ballet                            | 
++-----------------------------------+-----------------------------------+
+| violin                            | music                             | 
++-----------------------------------+-----------------------------------+
+| pipa                              | rap                               | 
++-----------------------------------+-----------------------------------+
+| organ                             | classical                         | 
++-----------------------------------+-----------------------------------+
+| flute                             | heavy metal                       | 
++-----------------------------------+-----------------------------------+
+| bouzouki                          | opera                             | 
++-----------------------------------+-----------------------------------+
+| piano                             | jazz                              | 
++-----------------------------------+-----------------------------------+
+| drums                             | rock                              | 
++-----------------------------------+-----------------------------------+
+| harp                              | be-bop                            | 
++-----------------------------------+-----------------------------------+
+|                                   | country                           | 
++-----------------------------------+-----------------------------------+
+
+
+Questions 28-31
+Question type: Fill in the gaps sentence 
+{On this type it's rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Write NO MORE THAN THREE WORDS to complete the sentences.
+
+Stimulating music speeds up our (28)……………
+
+Calming music reduces our (29)……………
+
+(30)……………music has very predictable rhythms.
+
+Research may show if people of different (31)……………perceive music differently
+
+
+SECTION 4
+
+
+Questions 32-36
+Question type: Short Answer
+{On this type each question have writing box for short answer, student should write there short answer on this box. And each question count as each question}
+
+Instruction: Using NO MORE THAN THREE WORDS, answer the following questions.
+
+(32) Who should take charge of the patient's health?
+
+(33) What, in the speaker's opinion, is the single greatest threat to health?
+
+(34) Which group in the study was most at risk of early death?
+
+(35) Which environmental hazard does the speaker find most under-rated?
+
+(36) What will be improved by an education campaign?
+
+
+Questions 37-40
+Question type: Fill in the gaps sentence 
+{On this type it's rendered like a list of notes with information fill but some of the information has gaps!! Students fill in the gasp where they show a blank box for type! Every gap count as one question.}
+
+Instruction: Write NO MORE THAN THREE WORDS to complete the sentences.
+
+Statistics quoted show that (37)……………would prevent many illnesses.
+
+Exercise should be (38)……………, so find someone to join you in your activity.
+
+One important way of preventing sports injury is by adequate (39)……………
+
+Injuries can also be reduced by using (40)……………techniques.

@@ -9,7 +9,7 @@ interface TrackWithAudio extends Track {
   loadedAudioURL?: string | null;
 }
 
-type TrackTypeTab = 'listening' | 'reading' | 'writing' | 'sicu';
+type TrackTypeTab = 'listening' | 'reading' | 'writing';
 
 export function TrackManagement() {
   const [tracks, setTracks] = useState<TrackWithAudio[]>([]);
@@ -180,8 +180,6 @@ export function TrackManagement() {
         return { icon: BookOpen, color: 'green', label: 'Reading' };
       case 'writing':
         return { icon: PenTool, color: 'orange', label: 'Writing' };
-      case 'sicu':
-        return { icon: Layers, color: 'slate', label: 'SICU' };
     }
   };
 
@@ -202,14 +200,14 @@ export function TrackManagement() {
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Track Management</h2>
-          <p className="text-gray-600 mt-1">Manage tracks across four exam types</p>
+          <p className="text-gray-600 mt-1">Manage tracks across three exam types</p>
         </div>
       </div>
 
       {/* Tab Navigation */}
       <div className="border-b border-gray-200">
         <nav className="flex gap-8" aria-label="Track types">
-          {(['listening', 'reading', 'writing', 'sicu'] as TrackTypeTab[]).map((type) => {
+          {(['listening', 'reading', 'writing'] as TrackTypeTab[]).map((type) => {
             const tabInfo = getTabInfo(type);
             const Icon = tabInfo.icon;
             const isActive = activeTab === type;
@@ -225,10 +223,6 @@ export function TrackManagement() {
               writing: {
                 active: 'border-orange-600 text-orange-600',
                 inactive: 'border-transparent text-gray-500 hover:text-orange-600 hover:border-orange-300'
-              },
-              sicu: {
-                active: 'border-slate-600 text-slate-600',
-                inactive: 'border-transparent text-gray-500 hover:text-slate-600 hover:border-slate-300'
               }
             };
             
@@ -348,22 +342,6 @@ export function TrackManagement() {
           </div>
         )}
 
-        {activeTab === 'sicu' && (
-          <div className="bg-white p-6 rounded-lg border border-gray-200">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center">
-                <Layers className="w-5 h-5 text-slate-600" />
-              </div>
-              <div>
-                <div className="text-sm text-gray-600">Mixed Skills</div>
-                <div className="text-2xl font-bold text-gray-900">
-                  {filteredTracks.reduce((sum, t) => sum + t.totalQuestions, 0)}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
         <div className="bg-white p-6 rounded-lg border border-gray-200">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -386,20 +364,17 @@ export function TrackManagement() {
             <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 ${
               activeTab === 'listening' ? 'bg-blue-100' :
               activeTab === 'reading' ? 'bg-green-100' :
-              activeTab === 'writing' ? 'bg-orange-100' :
-              'bg-slate-100'
+              'bg-orange-100'
             }`}>
               {activeTab === 'listening' && <Headphones className="w-8 h-8 text-blue-600" />}
               {activeTab === 'reading' && <BookOpen className="w-8 h-8 text-green-600" />}
               {activeTab === 'writing' && <PenTool className="w-8 h-8 text-orange-600" />}
-              {activeTab === 'sicu' && <Layers className="w-8 h-8 text-slate-600" />}
             </div>
             <p className="text-gray-600 text-lg font-medium mb-2">No {getTabInfo(activeTab).label} Tracks</p>
             <p className="text-gray-500 text-sm">
               {activeTab === 'listening' && 'No listening tracks are currently available.'}
               {activeTab === 'reading' && 'No reading tracks are currently available.'}
               {activeTab === 'writing' && 'No writing tracks are currently available.'}
-              {activeTab === 'sicu' && 'No SICU tracks are currently available.'}
             </p>
           </div>
         ) : (
@@ -569,9 +544,6 @@ export function TrackManagement() {
           )}
           {activeTab === 'writing' && (
             'Writing tracks contain Task 1 (report/description) and Task 2 (essay) with word count requirements. No audio required.'
-          )}
-          {activeTab === 'sicu' && (
-            'SICU (Specialized Integrated Class Unit) tracks can contain any combination of Listening, Reading, or Writing questions for specialized class tests. These tracks are used exclusively for Partial Tests and will not appear in Mock Test workflows.'
           )}
         </p>
       </div>

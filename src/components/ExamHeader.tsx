@@ -11,7 +11,7 @@ interface ExamHeaderProps {
   isTimeCritical?: boolean;
   audioURL?: string | null;
   autoPlayAudio?: boolean;
-  trackType?: 'listening' | 'reading' | 'writing' | 'sicu';
+  trackType?: 'listening' | 'reading' | 'writing';
   preloadedAudio?: HTMLAudioElement | null;
 }
 

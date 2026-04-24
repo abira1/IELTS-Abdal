@@ -66,12 +66,12 @@ export function Sidebar({ isOpen, onClose, role, activeTab, onTabChange }: Sideb
     if (link.path) {
       navigate(link.path);
     }
-    if (link.tab && onTabChange) {
-      // Navigate to admin dashboard first if not there
+    if (link.tab) {
       if (location.pathname !== '/admin/dashboard') {
-        navigate('/admin/dashboard');
+        navigate('/admin/dashboard', { state: { activeTab: link.tab } });
+      } else if (onTabChange) {
+        onTabChange(link.tab);
       }
-      onTabChange(link.tab);
     }
     if (link.section) {
       // Scroll to section
