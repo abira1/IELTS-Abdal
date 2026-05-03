@@ -69,20 +69,20 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+      <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
         {/* Non-printable controls */}
-        <div className="print:hidden bg-gray-100 p-4 flex justify-between items-center border-b sticky top-0 z-10">
-          <h2 className="text-lg font-bold text-gray-800">Print Preview</h2>
+        <div className="print:hidden bg-[#F5F3EF] p-4 flex justify-between items-center border-b border-[#0F3D2E]/20 sticky top-0 z-10">
+          <h2 className="text-lg font-bold text-[#1F2A44]">Print Preview</h2>
           <div className="flex gap-3">
             <button
               onClick={handlePrint}
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              className="px-6 py-2 bg-[#0F3D2E] text-white rounded-xl hover:bg-[#0a2a1f] transition-colors font-semibold"
             >
               🖨️ Print Result
             </button>
             <button
               onClick={onClose}
-              className="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors font-semibold"
+              className="px-6 py-2 bg-slate-500 text-white rounded-xl hover:bg-slate-600 transition-colors font-semibold"
             >
               Close
             </button>
@@ -90,25 +90,25 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
         </div>
 
         {/* Printable content */}
-        <div className="p-8 bg-white" id="printable-result">
+        <div className="p-8 bg-[#F5F3EF]" id="printable-result">
           {/* Header with Logo */}
-          <div className="flex items-start justify-between mb-4 pb-4 border-b-4 border-gray-900">
+          <div className="flex items-start justify-between mb-6 pb-6 border-b-4 border-[#0F3D2E]">
             <div className="flex items-center gap-4">
               <img
                 src="/abdal-ielts-academy-logo.png"
-                alt="Abdal IELTS Academy"
+                alt="IELTS Abdal"
                 className="h-20 w-20 object-contain print-logo"
               />
               <div>
-                <h1 className="text-3xl font-bold text-gray-900 uppercase tracking-wide print-title">Abdal IELTS Academy</h1>
-                <p className="text-lg text-gray-700 font-semibold print-subtitle">Student Performance Report</p>
-                <p className="text-sm text-gray-600 mt-1 uppercase tracking-wider">Official Exam Results</p>
+                <h1 className="text-3xl font-bold text-[#1F2A44] uppercase tracking-wide print-title">IELTS Abdal</h1>
+                <p className="text-lg text-[#0F3D2E] font-bold print-subtitle">Student Performance Report</p>
+                <p className="text-sm text-slate-600 mt-1 uppercase tracking-wider">Official Exam Results</p>
               </div>
             </div>
             <div className="text-right">
-              <div className="bg-gray-100 px-4 py-2 rounded border-2 border-gray-900">
-                <p className="text-xs text-gray-700 mb-1 uppercase tracking-wider font-semibold">Report Date</p>
-                <p className="text-sm font-bold text-gray-900">
+              <div className="bg-white px-4 py-3 rounded-xl border-2 border-[#0F3D2E]">
+                <p className="text-xs text-slate-700 mb-2 uppercase tracking-wider font-bold">Report Date</p>
+                <p className="text-sm font-bold text-[#1F2A44]">
                   {new Date().toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
@@ -120,39 +120,39 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
           </div>
 
           {/* Student Information */}
-          <div className="grid grid-cols-2 gap-4 mb-4 info-section">
-            <div className="bg-white p-3 rounded border-2 border-gray-900">
-              <h3 className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wider border-b border-gray-400 pb-1">Student Information</h3>
-              <div className="space-y-1">
+          <div className="grid grid-cols-2 gap-4 mb-6 info-section">
+            <div className="bg-white p-4 rounded-xl border-2 border-[#0F3D2E]">
+              <h3 className="text-sm font-bold text-[#1F2A44] mb-3 uppercase tracking-wider border-b-2 border-[#0F3D2E] pb-2">Student Information</h3>
+              <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-700 font-semibold">Student ID:</span>
-                  <span className="text-sm font-bold text-gray-900">{submission.studentId}</span>
+                  <span className="text-sm text-slate-700 font-semibold">Student ID:</span>
+                  <span className="text-sm font-bold text-[#1F2A44]">{submission.studentId}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-700 font-semibold">Name:</span>
-                  <span className="text-sm font-bold text-gray-900">{submission.studentName}</span>
+                  <span className="text-sm text-slate-700 font-semibold">Name:</span>
+                  <span className="text-sm font-bold text-[#1F2A44]">{submission.studentName}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-700 font-semibold">Batch:</span>
-                  <span className="text-sm font-bold text-gray-900">{submission.batchId || 'N/A'}</span>
+                  <span className="text-sm text-slate-700 font-semibold">Batch:</span>
+                  <span className="text-sm font-bold text-[#1F2A44]">{submission.batchId || 'N/A'}</span>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-3 rounded border-2 border-gray-900">
-              <h3 className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wider border-b border-gray-400 pb-1">Exam Information</h3>
-              <div className="space-y-1">
+            <div className="bg-white p-4 rounded-xl border-2 border-[#0F3D2E]">
+              <h3 className="text-sm font-bold text-[#1F2A44] mb-3 uppercase tracking-wider border-b-2 border-[#0F3D2E] pb-2">Exam Information</h3>
+              <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-700 font-semibold">Exam Code:</span>
-                  <span className="text-sm font-bold text-gray-900">{submission.examCode || 'N/A'}</span>
+                  <span className="text-sm text-slate-700 font-semibold">Exam Code:</span>
+                  <span className="text-sm font-bold text-[#1F2A44]">{submission.examCode || 'N/A'}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-700 font-semibold">Track:</span>
-                  <span className="text-sm font-bold text-gray-900">{track?.name || submission.trackName}</span>
+                  <span className="text-sm text-slate-700 font-semibold">Track:</span>
+                  <span className="text-sm font-bold text-[#1F2A44]">{track?.name || submission.trackName}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-700 font-semibold">Date:</span>
-                  <span className="text-sm font-bold text-gray-900">
+                  <span className="text-sm text-slate-700 font-semibold">Date:</span>
+                  <span className="text-sm font-bold text-[#1F2A44]">
                     {new Date(submission.submittedAt).toLocaleDateString()}
                   </span>
                 </div>
@@ -164,17 +164,17 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
           {isMockTest ? (
             <>
               {/* Mock Test Band Score Display */}
-              <div className="bg-white p-6 rounded-lg border-4 border-gray-900 mb-4 overall-band-section">
+              <div className="bg-white p-6 rounded-2xl border-4 border-[#0F3D2E] mb-6 overall-band-section">
                 <div className="text-center">
-                  <h3 className="text-xl font-bold mb-3 text-gray-900 uppercase tracking-wide">IELTS Mock Test Result</h3>
-                  <div className="mb-2 py-4 border-y-2 border-gray-300">
-                    <p className="text-sm text-gray-600 mb-2 uppercase tracking-wider">Overall Band Score</p>
-                    <div className="text-9xl font-bold mb-1 text-gray-900 overall-band-score">
+                  <h3 className="text-xl font-bold mb-4 text-[#1F2A44] uppercase tracking-wide">IELTS Mock Test Result</h3>
+                  <div className="mb-4 py-6 border-y-2 border-[#0F3D2E]/20">
+                    <p className="text-sm text-slate-700 mb-3 uppercase tracking-wider font-semibold">Overall Band Score</p>
+                    <div className="text-9xl font-bold mb-2 text-[#0F3D2E] overall-band-score">
                       {submission.overallBand!.toFixed(1)}
                     </div>
                   </div>
-                  <div className="mt-3">
-                    <p className="text-sm text-gray-700 italic">
+                  <div className="mt-4">
+                    <p className="text-sm text-slate-700 italic">
                       {getBandInterpretation(submission.overallBand!)}
                     </p>
                   </div>
@@ -182,59 +182,59 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
               </div>
 
               {/* Section Band Scores */}
-              <div className="mb-4 section-bands">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3 pb-1 border-b-2 border-gray-900 uppercase tracking-wide">
+              <div className="mb-6 section-bands">
+                <h3 className="text-lg font-semibold text-[#1F2A44] mb-4 pb-2 border-b-2 border-[#0F3D2E] uppercase tracking-wide">
                   Section Band Scores
                 </h3>
                 <div className="grid grid-cols-4 gap-3">
-                  <div className="bg-white border-2 border-gray-900 rounded-lg p-3 text-center">
-                    <h4 className="text-xs font-bold text-gray-700 mb-2 uppercase tracking-wider">Listening</h4>
-                    <div className="text-5xl font-bold text-gray-900 py-2 section-band-value">
+                  <div className="bg-white border-2 border-[#0F3D2E] rounded-xl p-4 text-center">
+                    <h4 className="text-xs font-bold text-slate-700 mb-3 uppercase tracking-wider">Listening</h4>
+                    <div className="text-5xl font-bold text-[#0F3D2E] py-2 section-band-value">
                       {submission.sectionScores?.listening?.toFixed(1) || '--'}
                     </div>
-                    <p className="text-xs text-gray-600 uppercase tracking-wider">Band Score</p>
+                    <p className="text-xs text-slate-600 uppercase tracking-wider">Band Score</p>
                   </div>
 
-                  <div className="bg-white border-2 border-gray-900 rounded-lg p-3 text-center">
-                    <h4 className="text-xs font-bold text-gray-700 mb-2 uppercase tracking-wider">Reading</h4>
-                    <div className="text-5xl font-bold text-gray-900 py-2 section-band-value">
+                  <div className="bg-white border-2 border-[#0F3D2E] rounded-xl p-4 text-center">
+                    <h4 className="text-xs font-bold text-slate-700 mb-3 uppercase tracking-wider">Reading</h4>
+                    <div className="text-5xl font-bold text-[#0F3D2E] py-2 section-band-value">
                       {submission.sectionScores?.reading?.toFixed(1) || '--'}
                     </div>
-                    <p className="text-xs text-gray-600 uppercase tracking-wider">Band Score</p>
+                    <p className="text-xs text-slate-600 uppercase tracking-wider">Band Score</p>
                   </div>
 
-                  <div className="bg-white border-2 border-gray-900 rounded-lg p-3 text-center">
-                    <h4 className="text-xs font-bold text-gray-700 mb-2 uppercase tracking-wider">Writing</h4>
-                    <div className="text-5xl font-bold text-gray-900 py-2 section-band-value">
+                  <div className="bg-white border-2 border-[#0F3D2E] rounded-xl p-4 text-center">
+                    <h4 className="text-xs font-bold text-slate-700 mb-3 uppercase tracking-wider">Writing</h4>
+                    <div className="text-5xl font-bold text-[#0F3D2E] py-2 section-band-value">
                       {submission.sectionScores?.writing?.toFixed(1) || '--'}
                     </div>
-                    <p className="text-xs text-gray-600 uppercase tracking-wider">Band Score</p>
+                    <p className="text-xs text-slate-600 uppercase tracking-wider">Band Score</p>
                   </div>
 
-                  <div className="bg-white border-2 border-gray-900 rounded-lg p-3 text-center">
-                    <h4 className="text-xs font-bold text-gray-700 mb-2 uppercase tracking-wider">Speaking</h4>
-                    <div className="text-5xl font-bold text-gray-900 py-2 section-band-value">
+                  <div className="bg-white border-2 border-[#0F3D2E] rounded-xl p-4 text-center">
+                    <h4 className="text-xs font-bold text-slate-700 mb-3 uppercase tracking-wider">Speaking</h4>
+                    <div className="text-5xl font-bold text-[#0F3D2E] py-2 section-band-value">
                       {submission.sectionScores?.speaking?.toFixed(1) || '--'}
                     </div>
-                    <p className="text-xs text-gray-600 uppercase tracking-wider">Band Score</p>
+                    <p className="text-xs text-slate-600 uppercase tracking-wider">Band Score</p>
                   </div>
                 </div>
               </div>
 
               {/* Performance Indicator - Simplified */}
-              <div className="bg-gray-100 p-3 rounded-lg border-2 border-gray-400 mb-4 performance-section">
-                <h4 className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wider">
+              <div className="bg-white p-4 rounded-xl border-2 border-[#0F3D2E] mb-6 performance-section">
+                <h4 className="text-sm font-bold text-[#1F2A44] mb-3 uppercase tracking-wider">
                   Performance Level
                 </h4>
-                <div className="bg-white rounded h-4 overflow-hidden border-2 border-gray-900">
+                <div className="bg-[#F5F3EF] rounded-lg h-4 overflow-hidden border-2 border-[#0F3D2E]">
                   <div
-                    className="h-full bg-gray-900"
+                    className="h-full bg-[#0F3D2E]"
                     style={{ width: `${(submission.overallBand! / 9) * 100}%` }}
                   ></div>
                 </div>
-                <div className="flex justify-between text-xs text-gray-700 mt-2 font-semibold">
+                <div className="flex justify-between text-xs text-slate-700 mt-2 font-semibold">
                   <span>0.0</span>
-                  <span className="text-base">Band {submission.overallBand!.toFixed(1)}</span>
+                  <span className="text-base text-[#0F3D2E] font-bold">Band {submission.overallBand!.toFixed(1)}</span>
                   <span>9.0</span>
                 </div>
               </div>
@@ -274,9 +274,9 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
                 }
 
                 return (
-                  <div className="bg-white p-4 rounded-lg border-4 border-gray-900 mb-4 partial-test-section">
+                  <div className="bg-white p-6 rounded-2xl border-4 border-[#0F3D2E] mb-6 partial-test-section">
                     <div className="text-center">
-                      <h3 className="text-lg font-bold text-gray-900 mb-4 uppercase tracking-wide">{testLabel}</h3>
+                      <h3 className="text-lg font-bold text-[#1F2A44] mb-4 uppercase tracking-wide">{testLabel}</h3>
 
                       {displayType === 'band' && bandScore !== null ? (
                         <>
@@ -284,28 +284,28 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
                           {isWriting && (
                             <>
                               {/* Final Band Score */}
-                              <div className="mb-6 pb-6 border-b border-gray-300">
-                                <p className="text-sm text-gray-700 mb-4 uppercase tracking-wider font-bold">Final IELTS Band Score</p>
-                                <div className="text-8xl font-bold text-gray-900 mb-2">
+                              <div className="mb-6 pb-6 border-b border-[#0F3D2E]/20">
+                                <p className="text-sm text-slate-700 mb-4 uppercase tracking-wider font-bold">Final IELTS Band Score</p>
+                                <div className="text-8xl font-bold text-[#0F3D2E] mb-2">
                                   {bandScore!.toFixed(1)}
                                 </div>
                               </div>
 
                               {/* Grading Information */}
                               <div>
-                                <p className="text-sm text-gray-700 mb-3 uppercase tracking-wider font-bold">Grading Information</p>
+                                <p className="text-sm text-slate-700 mb-3 uppercase tracking-wider font-bold">Grading Information</p>
                                 <div className="space-y-2">
-                                  <div className="flex justify-between items-center bg-gray-50 p-3 rounded border border-gray-300">
-                                    <span className="text-sm text-gray-700 font-semibold">Graded By:</span>
-                                    <span className="text-sm font-bold text-gray-900">N/A</span>
+                                  <div className="flex justify-between items-center bg-[#F5F3EF] p-3 rounded-lg border border-[#0F3D2E]/20">
+                                    <span className="text-sm text-slate-700 font-semibold">Graded By:</span>
+                                    <span className="text-sm font-bold text-[#1F2A44]">N/A</span>
                                   </div>
-                                  <div className="flex justify-between items-center bg-gray-50 p-3 rounded border border-gray-300">
-                                    <span className="text-sm text-gray-700 font-semibold">Total Questions:</span>
-                                    <span className="text-sm font-bold text-gray-900">{totalQs}</span>
+                                  <div className="flex justify-between items-center bg-[#F5F3EF] p-3 rounded-lg border border-[#0F3D2E]/20">
+                                    <span className="text-sm text-slate-700 font-semibold">Total Questions:</span>
+                                    <span className="text-sm font-bold text-[#1F2A44]">{totalQs}</span>
                                   </div>
-                                  <div className="flex justify-between items-center bg-gray-50 p-3 rounded border border-gray-300">
-                                    <span className="text-sm text-gray-700 font-semibold">Correct Answers:</span>
-                                    <span className="text-sm font-bold text-gray-900">{stats.correct}</span>
+                                  <div className="flex justify-between items-center bg-[#F5F3EF] p-3 rounded-lg border border-[#0F3D2E]/20">
+                                    <span className="text-sm text-slate-700 font-semibold">Correct Answers:</span>
+                                    <span className="text-sm font-bold text-[#1F2A44]">{stats.correct}</span>
                                   </div>
                                 </div>
                               </div>
@@ -317,28 +317,28 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
                             <>
                               <div className="flex items-center justify-center gap-6 mb-4">
                                 <div>
-                                  <div className="text-6xl font-bold text-gray-900 mb-1 raw-score">
-                                    {stats.correct}<span className="text-3xl text-gray-600">/{totalQs}</span>
+                                  <div className="text-6xl font-bold text-[#0F3D2E] mb-1 raw-score">
+                                    {stats.correct}<span className="text-3xl text-slate-600">/{totalQs}</span>
                                   </div>
-                                  <p className="text-sm text-gray-700 uppercase tracking-wider">
+                                  <p className="text-sm text-slate-700 uppercase tracking-wider">
                                     Correct Answers
                                   </p>
                                 </div>
-                                <div className="h-16 w-px bg-gray-400"></div>
+                                <div className="h-16 w-px bg-[#0F3D2E]/30"></div>
                                 <div>
-                                  <div className="text-6xl font-bold text-gray-900 mb-1 percentage-score">
-                                    {percentage}<span className="text-3xl text-gray-600">%</span>
+                                  <div className="text-6xl font-bold text-[#0F3D2E] mb-1 percentage-score">
+                                    {percentage}<span className="text-3xl text-slate-600">%</span>
                                   </div>
-                                  <p className="text-sm text-gray-700 uppercase tracking-wider">Percentage</p>
+                                  <p className="text-sm text-slate-700 uppercase tracking-wider">Percentage</p>
                                 </div>
                               </div>
 
-                              <div className="border-t-4 border-gray-900 pt-4 mb-4">
-                                <p className="text-sm text-gray-700 mb-2 uppercase tracking-wider font-bold">IELTS Band Score</p>
-                                <div className="text-8xl font-bold text-gray-900 mb-1 partial-band-score">
+                              <div className="border-t-4 border-[#0F3D2E] pt-4 mb-4">
+                                <p className="text-sm text-slate-700 mb-2 uppercase tracking-wider font-bold">IELTS Band Score</p>
+                                <div className="text-8xl font-bold text-[#0F3D2E] mb-1 partial-band-score">
                                   {bandScore!.toFixed(1)}
                                 </div>
-                                <p className="text-sm text-gray-700 uppercase tracking-wider">
+                                <p className="text-sm text-slate-700 uppercase tracking-wider">
                                   Official IELTS Band Score
                                 </p>
                               </div>
@@ -350,18 +350,18 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
                           {isWriting ? (
                             <>
                               {/* Writing test with no band scores - show message */}
-                              <p className="text-lg text-gray-700 mb-4">Pending grading from instructor...</p>
-                              <div className="mb-4 pb-4 border-b border-gray-300">
-                                <p className="text-sm text-gray-600 mb-2 uppercase tracking-wider font-semibold">Task Submissions</p>
+                              <p className="text-lg text-slate-700 mb-4">Pending grading from instructor...</p>
+                              <div className="mb-4 pb-4 border-b border-[#0F3D2E]/20">
+                                <p className="text-sm text-slate-600 mb-3 uppercase tracking-wider font-semibold">Task Submissions</p>
                                 <div className="flex items-center justify-center gap-6">
                                   <div>
-                                    <div className="text-2xl font-bold text-gray-900">✓</div>
-                                    <p className="text-xs text-gray-600 uppercase mt-1">Task 1 Submitted</p>
+                                    <div className="text-2xl font-bold text-[#0F3D2E]">✓</div>
+                                    <p className="text-xs text-slate-600 uppercase mt-1">Task 1 Submitted</p>
                                   </div>
-                                  <div className="text-gray-400">+</div>
+                                  <div className="text-[#0F3D2E]/40">+</div>
                                   <div>
-                                    <div className="text-2xl font-bold text-gray-900">✓</div>
-                                    <p className="text-xs text-gray-600 uppercase mt-1">Task 2 Submitted</p>
+                                    <div className="text-2xl font-bold text-[#0F3D2E]">✓</div>
+                                    <p className="text-xs text-slate-600 uppercase mt-1">Task 2 Submitted</p>
                                   </div>
                                 </div>
                               </div>
@@ -371,19 +371,19 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
                               {/* Fallback: Show Raw Score and Percentage for L/R tests */}
                               <div className="flex items-center justify-center gap-6 mb-4">
                                 <div>
-                                  <div className="text-6xl font-bold text-gray-900 mb-1 raw-score">
-                                    {stats.correct}<span className="text-3xl text-gray-600">/{totalQs}</span>
+                                  <div className="text-6xl font-bold text-[#0F3D2E] mb-1 raw-score">
+                                    {stats.correct}<span className="text-3xl text-slate-600">/{totalQs}</span>
                                   </div>
-                                  <p className="text-sm text-gray-700 uppercase tracking-wider">
+                                  <p className="text-sm text-slate-700 uppercase tracking-wider">
                                     Correct Answers
                                   </p>
                                 </div>
-                                <div className="h-16 w-px bg-gray-400"></div>
+                                <div className="h-16 w-px bg-[#0F3D2E]/30"></div>
                                 <div>
-                                  <div className="text-6xl font-bold text-gray-900 mb-1 percentage-score">
-                                    {percentage}<span className="text-3xl text-gray-600">%</span>
+                                  <div className="text-6xl font-bold text-[#0F3D2E] mb-1 percentage-score">
+                                    {percentage}<span className="text-3xl text-slate-600">%</span>
                                   </div>
-                                  <p className="text-sm text-gray-700 uppercase tracking-wider">Percentage</p>
+                                  <p className="text-sm text-slate-700 uppercase tracking-wider">Percentage</p>
                                 </div>
                               </div>
                             </>
@@ -393,13 +393,13 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
 
                       {/* Performance Band */}
                       <div className="mt-4">
-                        <div className="bg-white rounded-full h-3 overflow-hidden border-2 border-gray-900">
+                        <div className="bg-[#F5F3EF] rounded-lg h-3 overflow-hidden border-2 border-[#0F3D2E]">
                           <div
-                            className="h-full bg-gray-900"
+                            className="h-full bg-[#0F3D2E]"
                             style={{ width: `${displayType === 'band' && bandScore !== null ? (bandScore / 9) * 100 : percentage}%` }}
                           ></div>
                         </div>
-                        <p className="text-sm text-gray-800 mt-2 font-semibold">
+                        <p className="text-sm text-[#1F2A44] mt-2 font-semibold">
                           Performance: {
                             displayType === 'band' && bandScore !== null
                               ? bandScore >= 8.5 ? 'Excellent' :
@@ -424,8 +424,8 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
 
           {/* Section-wise Breakdown - Only for Partial Listening/Reading Tests */}
           {!isMockTest && submission.trackType !== 'writing' && (
-            <div className="mb-4 section-breakdown">
-              <h3 className="text-base font-bold text-gray-900 mb-3 pb-1 border-b-2 border-gray-900 uppercase tracking-wide">
+            <div className="mb-6 section-breakdown">
+              <h3 className="text-base font-bold text-[#1F2A44] mb-4 pb-2 border-b-2 border-[#0F3D2E] uppercase tracking-wide">
                 Section-wise Performance
               </h3>
               <div className="grid grid-cols-4 gap-3">
@@ -435,15 +435,15 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
                   { title: 'Section 3', range: 'Q21-30', score: stats.section3 },
                   { title: 'Section 4', range: 'Q31-40', score: stats.section4 }
                 ].map((section, idx) => (
-                  <div key={idx} className="bg-white border-2 border-gray-900 rounded-lg p-2 text-center">
-                    <h4 className="text-xs font-bold text-gray-900 mb-1 uppercase tracking-wider">{section.title}</h4>
-                    <p className="text-xs text-gray-600 mb-2">{section.range}</p>
-                    <div className="text-2xl font-bold text-gray-900 section-score">
-                      {section.score}<span className="text-sm text-gray-600">/10</span>
+                  <div key={idx} className="bg-white border-2 border-[#0F3D2E] rounded-xl p-3 text-center">
+                    <h4 className="text-xs font-bold text-[#1F2A44] mb-1 uppercase tracking-wider">{section.title}</h4>
+                    <p className="text-xs text-slate-600 mb-2">{section.range}</p>
+                    <div className="text-2xl font-bold text-[#0F3D2E] section-score">
+                      {section.score}<span className="text-sm text-slate-600">/10</span>
                     </div>
-                    <div className="mt-1 bg-white rounded-full h-1.5 overflow-hidden border border-gray-900">
+                    <div className="mt-2 bg-[#F5F3EF] rounded-full h-1.5 overflow-hidden border border-[#0F3D2E]">
                       <div
-                        className="bg-gray-900 h-full"
+                        className="bg-[#0F3D2E] h-full"
                         style={{ width: `${(section.score / 10) * 100}%` }}
                       ></div>
                     </div>
@@ -455,8 +455,8 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
 
           {/* Task-wise Breakdown - Only for Writing Tests */}
           {!isMockTest && submission.trackType === 'writing' && (
-            <div className="mb-4 section-breakdown">
-              <h3 className="text-base font-bold text-gray-900 mb-3 pb-1 border-b-2 border-gray-900 uppercase tracking-wide">
+            <div className="mb-6 section-breakdown">
+              <h3 className="text-base font-bold text-[#1F2A44] mb-4 pb-2 border-b-2 border-[#0F3D2E] uppercase tracking-wide">
                 Task-wise Performance
               </h3>
               <div className="grid grid-cols-2 gap-3">
@@ -472,16 +472,16 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
                     band: typeof submission.marks?.['task2'] === 'number' ? submission.marks['task2'].toFixed(1) : '--'
                   }
                 ].map((task, idx) => (
-                  <div key={idx} className="bg-white border-2 border-gray-900 rounded-lg p-3 text-center">
-                    <h4 className="text-xs font-bold text-gray-900 mb-1 uppercase tracking-wider">{task.title}</h4>
-                    <p className="text-xs text-gray-600 mb-2">{task.description}</p>
-                    <div className="text-3xl font-bold text-gray-900 section-score">
+                  <div key={idx} className="bg-white border-2 border-[#0F3D2E] rounded-xl p-4 text-center">
+                    <h4 className="text-xs font-bold text-[#1F2A44] mb-1 uppercase tracking-wider">{task.title}</h4>
+                    <p className="text-xs text-slate-600 mb-3">{task.description}</p>
+                    <div className="text-3xl font-bold text-[#0F3D2E] section-score">
                       {task.band}
                     </div>
-                    <p className="text-xs text-gray-600 mt-1">Band Score</p>
-                    <div className="mt-2 bg-white rounded-full h-2 overflow-hidden border border-gray-900">
+                    <p className="text-xs text-slate-600 mt-1">Band Score</p>
+                    <div className="mt-2 bg-[#F5F3EF] rounded-lg h-2 overflow-hidden border border-[#0F3D2E]">
                       <div
-                        className="bg-gray-900 h-full"
+                        className="bg-[#0F3D2E] h-full"
                         style={{ width: task.band !== '--' ? `${(parseFloat(task.band) / 9) * 100}%` : '0%' }}
                       ></div>
                     </div>
@@ -492,21 +492,21 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
           )}
 
           {/* Additional Information */}
-          <div className="grid grid-cols-2 gap-4 mb-4 additional-info">
-            <div className="bg-white p-3 rounded border-2 border-gray-900">
-              <h4 className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wider border-b border-gray-400 pb-1">Submission Details</h4>
-              <div className="space-y-1 text-sm">
-                <p className="text-gray-700">
-                  <span className="font-semibold">Time Spent:</span> <span className="font-bold text-gray-900">{submission.timeSpent || 'N/A'}</span>
+          <div className="grid grid-cols-2 gap-4 mb-6 additional-info">
+            <div className="bg-white p-4 rounded-xl border-2 border-[#0F3D2E]">
+              <h4 className="text-sm font-bold text-[#1F2A44] mb-3 uppercase tracking-wider border-b-2 border-[#0F3D2E] pb-2">Submission Details</h4>
+              <div className="space-y-2 text-sm">
+                <p className="text-slate-700">
+                  <span className="font-semibold">Time Spent:</span> <span className="font-bold text-[#1F2A44]">{submission.timeSpent || 'N/A'}</span>
                 </p>
-                <p className="text-gray-700">
-                  <span className="font-semibold">Status:</span> <span className="font-bold text-gray-900">
+                <p className="text-slate-700">
+                  <span className="font-semibold">Status:</span> <span className="font-bold text-[#1F2A44]">
                     {submission.resultPublished ? 'Published' : 'Pending'}
                   </span>
                 </p>
                 {submission.publishedAt && (
-                  <p className="text-gray-700">
-                    <span className="font-semibold">Published:</span> <span className="font-bold text-gray-900">
+                  <p className="text-slate-700">
+                    <span className="font-semibold">Published:</span> <span className="font-bold text-[#1F2A44]">
                       {new Date(submission.publishedAt).toLocaleDateString()}
                     </span>
                   </p>
@@ -514,28 +514,28 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
               </div>
             </div>
 
-            <div className="bg-white p-3 rounded border-2 border-gray-900">
-              <h4 className="text-sm font-bold text-gray-900 mb-2 uppercase tracking-wider border-b border-gray-400 pb-1">Grading Information</h4>
-              <div className="space-y-1 text-sm">
-                <p className="text-gray-700">
-                  <span className="font-semibold">Graded By:</span> <span className="font-bold text-gray-900">{submission.markedBy || 'N/A'}</span>
+            <div className="bg-white p-4 rounded-xl border-2 border-[#0F3D2E]">
+              <h4 className="text-sm font-bold text-[#1F2A44] mb-3 uppercase tracking-wider border-b-2 border-[#0F3D2E] pb-2">Grading Information</h4>
+              <div className="space-y-2 text-sm">
+                <p className="text-slate-700">
+                  <span className="font-semibold">Graded By:</span> <span className="font-bold text-[#1F2A44]">{submission.markedBy || 'N/A'}</span>
                 </p>
                 {isMockTest ? (
                   <>
-                    <p className="text-gray-700">
-                      <span className="font-semibold">Test Type:</span> <span className="font-bold text-gray-900">IELTS Mock Test</span>
+                    <p className="text-slate-700">
+                      <span className="font-semibold">Test Type:</span> <span className="font-bold text-[#1F2A44]">IELTS Mock Test</span>
                     </p>
-                    <p className="text-gray-700">
-                      <span className="font-semibold">Overall Band:</span> <span className="font-bold text-gray-900">{submission.overallBand?.toFixed(1)}</span>
+                    <p className="text-slate-700">
+                      <span className="font-semibold">Overall Band:</span> <span className="font-bold text-[#1F2A44]">{submission.overallBand?.toFixed(1)}</span>
                     </p>
                   </>
                 ) : (
                   <>
-                    <p className="text-gray-700">
-                      <span className="font-semibold">Total Questions:</span> <span className="font-bold text-gray-900">40</span>
+                    <p className="text-slate-700">
+                      <span className="font-semibold">Total Questions:</span> <span className="font-bold text-[#1F2A44]">40</span>
                     </p>
-                    <p className="text-gray-700">
-                      <span className="font-semibold">Correct Answers:</span> <span className="font-bold text-gray-900">{stats.correct}</span>
+                    <p className="text-slate-700">
+                      <span className="font-semibold">Correct Answers:</span> <span className="font-bold text-[#1F2A44]">{stats.correct}</span>
                     </p>
                   </>
                 )}
@@ -544,37 +544,37 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
           </div>
 
           {/* Signature Section */}
-          <div className="mt-8 pt-6 border-t-4 border-gray-900 signature-section">
+          <div className="mt-8 pt-6 border-t-4 border-[#0F3D2E] signature-section">
             <div className="grid grid-cols-3 gap-8 text-center">
               <div>
-                <div className="border-t-2 border-gray-900 pt-3 mt-12">
-                  <p className="text-sm font-bold text-gray-900 uppercase tracking-wider">Teacher Signature</p>
-                  <p className="text-xs text-gray-700 mt-1 font-semibold">
+                <div className="border-t-2 border-[#0F3D2E] pt-3 mt-12">
+                  <p className="text-sm font-bold text-[#1F2A44] uppercase tracking-wider">Teacher Signature</p>
+                  <p className="text-xs text-slate-700 mt-1 font-semibold">
                     {submission.markedBy || 'Examiner'}
                   </p>
                 </div>
               </div>
               <div>
-                <div className="border-t-2 border-gray-900 pt-3 mt-12">
-                  <p className="text-sm font-bold text-gray-900 uppercase tracking-wider">Date</p>
-                  <p className="text-xs text-gray-700 mt-1 font-semibold">
+                <div className="border-t-2 border-[#0F3D2E] pt-3 mt-12">
+                  <p className="text-sm font-bold text-[#1F2A44] uppercase tracking-wider">Date</p>
+                  <p className="text-xs text-slate-700 mt-1 font-semibold">
                     {new Date().toLocaleDateString()}
                   </p>
                 </div>
               </div>
               <div>
-                <div className="border-t-2 border-gray-900 pt-3 mt-12">
-                  <p className="text-sm font-bold text-gray-900 uppercase tracking-wider">Administrator</p>
-                  <p className="text-xs text-gray-700 mt-1 font-semibold">Abdal IELTS Academy</p>
+                <div className="border-t-2 border-[#0F3D2E] pt-3 mt-12">
+                  <p className="text-sm font-bold text-[#1F2A44] uppercase tracking-wider">Administrator</p>
+                  <p className="text-xs text-slate-700 mt-1 font-semibold">IELTS Abdal</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Footer */}
-          <div className="mt-6 text-center text-xs text-gray-700 border-t-2 border-gray-900 pt-4 footer-section">
-            <p className="mb-1 font-semibold uppercase tracking-wider">This is an official result document from Abdal IELTS Academy</p>
-            <p className="text-gray-600">Generated on {new Date().toLocaleString()}</p>
+          <div className="mt-6 text-center text-xs text-slate-700 border-t-2 border-[#0F3D2E] pt-4 footer-section">
+            <p className="mb-1 font-semibold uppercase tracking-wider">This is an official result document from IELTS Abdal</p>
+            <p className="text-slate-600">Generated on {new Date().toLocaleString()}</p>
           </div>
         </div>
       </div>
@@ -840,6 +840,28 @@ export const PrintableResult: React.FC<PrintableResultProps> = ({ submission, on
           }
           #printable-result .border-2 {
             border-width: 1px !important;
+          }
+
+          /* Update colors for print compatibility */
+          #printable-result {
+            background-color: #F5F3EF !important;
+          }
+          #printable-result .bg-white {
+            background-color: #FFFFFF !important;
+          }
+          #printable-result .border-\[\#0F3D2E\],
+          #printable-result [class*="border-\[#0F3D2E\]"] {
+            border-color: #0F3D2E !important;
+          }
+          #printable-result .text-\[\#1F2A44\],
+          #printable-result .text-\[\#0F3D2E\],
+          #printable-result [class*="text-\[#1F2A44\]"],
+          #printable-result [class*="text-\[#0F3D2E\]"] {
+            color: inherit !important;
+          }
+          #printable-result .bg-\[\#F5F3EF\],
+          #printable-result [class*="bg-\[#F5F3EF\]"] {
+            background-color: #F5F3EF !important;
           }
         }
       `}</style>

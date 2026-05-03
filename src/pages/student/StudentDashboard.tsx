@@ -11,6 +11,7 @@ import { getDatabase, ref, onValue } from 'firebase/database';
 import { app } from '../../firebase';
 import { CountdownPopup } from '../../components/CountdownPopup';
 import { AppLayout } from '../../components/layout/AppLayout';
+import { DashboardFooter } from '../../components/DashboardFooter';
 
 export function StudentDashboard() {
   const { user } = useAuth();
@@ -594,6 +595,9 @@ export function StudentDashboard() {
           <span className="font-bold">💡 Tip:</span> Check this dashboard regularly for upcoming exams and published results.
         </p>
       </div>
+
+      {/* Footer */}
+      <DashboardFooter />
     </AppLayout>
   );
 }

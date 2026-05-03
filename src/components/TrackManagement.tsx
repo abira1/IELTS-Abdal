@@ -185,10 +185,10 @@ export function TrackManagement() {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center py-12">
+      <div className="flex items-center justify-center py-20">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading tracks...</p>
+          <div className="w-12 h-12 border-4 border-forest-200 border-t-forest-600 rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-slate-600 font-medium">Loading tracks...</p>
         </div>
       </div>
     );
@@ -197,52 +197,58 @@ export function TrackManagement() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">Track Management</h2>
-          <p className="text-gray-600 mt-1">Manage tracks across three exam types</p>
-        </div>
+      <div className="animate-fadeInUp">
+        <h1 className="text-3xl font-bold text-midnight-800">Track Management</h1>
+        <p className="text-slate-500 mt-1">Manage tracks across exam types and configure audio</p>
       </div>
 
+      {/* Messages */}
+      {successMessage && (
+        <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 flex items-start gap-3 animate-fadeIn">
+          <CheckCircle className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+          <p className="text-emerald-900 text-sm font-medium">{successMessage}</p>
+        </div>
+      )}
+
+      {errorMessage && (
+        <div className="bg-red-50 border border-red-200 rounded-2xl p-4 flex items-start gap-3 animate-fadeIn">
+          <AlertCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
+          <p className="text-red-900 text-sm font-medium">{errorMessage}</p>
+        </div>
+      )}
+
       {/* Tab Navigation */}
-      <div className="border-b border-gray-200">
-        <nav className="flex gap-8" aria-label="Track types">
+      <div className="zen-card !p-0 overflow-hidden border-b border-slate-100">
+        <nav className="flex gap-1 px-6 md:px-8 overflow-x-auto scrollbar-thin" aria-label="Track types">
           {(['listening', 'reading', 'writing'] as TrackTypeTab[]).map((type) => {
             const tabInfo = getTabInfo(type);
             const Icon = tabInfo.icon;
             const isActive = activeTab === type;
-            const colorClasses = {
-              listening: {
-                active: 'border-blue-600 text-blue-600',
-                inactive: 'border-transparent text-gray-500 hover:text-blue-600 hover:border-blue-300'
-              },
-              reading: {
-                active: 'border-green-600 text-green-600',
-                inactive: 'border-transparent text-gray-500 hover:text-green-600 hover:border-green-300'
-              },
-              writing: {
-                active: 'border-orange-600 text-orange-600',
-                inactive: 'border-transparent text-gray-500 hover:text-orange-600 hover:border-orange-300'
-              }
+            const trackCount = tracks.filter(t => t.trackType === type).length;
+            
+            const colorMap = {
+              listening: { active: 'border-blue-600 text-blue-600 bg-blue-50', inactive: 'border-transparent text-slate-500 hover:text-blue-600 hover:bg-slate-50' },
+              reading: { active: 'border-emerald-600 text-emerald-600 bg-emerald-50', inactive: 'border-transparent text-slate-500 hover:text-emerald-600 hover:bg-slate-50' },
+              writing: { active: 'border-orange-600 text-orange-600 bg-orange-50', inactive: 'border-transparent text-slate-500 hover:text-orange-600 hover:bg-slate-50' }
             };
             
             return (
               <button
                 key={type}
                 onClick={() => setActiveTab(type)}
-                className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
-                  isActive ? colorClasses[type].active : colorClasses[type].inactive
+                className={`flex items-center gap-2 py-4 px-4 border-b-2 font-semibold text-sm transition-all whitespace-nowrap ${
+                  isActive ? colorMap[type].active : colorMap[type].inactive
                 }`}
                 data-testid={`tab-${type}`}
               >
                 <Icon className="w-5 h-5" />
                 {tabInfo.label}
-                <span className={`ml-1 px-2 py-0.5 rounded-full text-xs font-semibold ${
+                <span className={`ml-1 px-2.5 py-0.5 rounded-full text-xs font-bold ${
                   isActive 
-                    ? `bg-${tabInfo.color}-100 text-${tabInfo.color}-700` 
-                    : 'bg-gray-100 text-gray-600'
+                    ? type === 'listening' ? 'bg-blue-200 text-blue-700' : type === 'reading' ? 'bg-emerald-200 text-emerald-700' : 'bg-orange-200 text-orange-700'
+                    : 'bg-slate-100 text-slate-600'
                 }`}>
-                  {tracks.filter(t => t.trackType === type).length}
+                  {trackCount}
                 </span>
               </button>
             );
@@ -250,196 +256,181 @@ export function TrackManagement() {
         </nav>
       </div>
 
-      {/* Messages */}
-      {successMessage && (
-        <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-start gap-3">
-          <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-          <p className="text-green-900 text-sm font-medium">{successMessage}</p>
-        </div>
-      )}
-
-      {errorMessage && (
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start gap-3">
-          <AlertCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-          <p className="text-red-900 text-sm font-medium">{errorMessage}</p>
-        </div>
-      )}
-
-      {/* Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className={`bg-white p-6 rounded-lg border-2 ${
-          activeTab === 'listening' ? 'border-blue-200 bg-blue-50' :
-          activeTab === 'reading' ? 'border-green-200 bg-green-50' :
-          activeTab === 'writing' ? 'border-orange-200 bg-orange-50' :
-          'border-slate-200 bg-slate-50'
-        }`}>
+      {/* Stats KPI Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className={`zen-card !p-5 animate-fadeInUp stagger-1 ${
+          activeTab === 'listening' ? 'border-l-4 border-l-blue-600 bg-blue-50/50' :
+          activeTab === 'reading' ? 'border-l-4 border-l-emerald-600 bg-emerald-50/50' :
+          activeTab === 'writing' ? 'border-l-4 border-l-orange-600 bg-orange-50/50' :
+          'border-l-4 border-l-slate-300'
+        }`} style={{ animationFillMode: 'both' }}>
           <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+            <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
               activeTab === 'listening' ? 'bg-blue-100' :
-              activeTab === 'reading' ? 'bg-green-100' :
+              activeTab === 'reading' ? 'bg-emerald-100' :
               activeTab === 'writing' ? 'bg-orange-100' :
               'bg-slate-100'
             }`}>
-              <ListIcon className={`w-5 h-5 ${
+              <ListIcon className={`w-6 h-6 ${
                 activeTab === 'listening' ? 'text-blue-600' :
-                activeTab === 'reading' ? 'text-green-600' :
+                activeTab === 'reading' ? 'text-emerald-600' :
                 activeTab === 'writing' ? 'text-orange-600' :
                 'text-slate-600'
               }`} />
             </div>
             <div>
-              <div className="text-sm text-gray-600">{getTabInfo(activeTab).label} Tracks</div>
-              <div className="text-2xl font-bold text-gray-900">{filteredTracks.length}</div>
+              <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">{getTabInfo(activeTab).label} Tracks</p>
+              <p className="text-2xl font-bold text-midnight-800">{filteredTracks.length}</p>
             </div>
           </div>
         </div>
 
         {activeTab === 'listening' && (
-          <div className="bg-white p-6 rounded-lg border border-gray-200">
+          <div className="zen-card !p-5 animate-fadeInUp stagger-2 border-l-4 border-l-green-600 bg-green-50/50" style={{ animationFillMode: 'both' }}>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                <Music className="w-5 h-5 text-green-600" />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-green-100">
+                <Music className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <div className="text-sm text-gray-600">With Audio</div>
-                <div className="text-2xl font-bold text-gray-900">
-                  {filteredTracks.filter(t => t.loadedAudioURL).length}
-                </div>
+                <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">With Audio</p>
+                <p className="text-2xl font-bold text-midnight-800">{filteredTracks.filter(t => t.loadedAudioURL).length}</p>
               </div>
             </div>
           </div>
         )}
 
         {activeTab === 'reading' && (
-          <div className="bg-white p-6 rounded-lg border border-gray-200">
+          <div className="zen-card !p-5 animate-fadeInUp stagger-2 border-l-4 border-l-purple-600 bg-purple-50/50" style={{ animationFillMode: 'both' }}>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                <FileText className="w-5 h-5 text-green-600" />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-purple-100">
+                <FileText className="w-6 h-6 text-purple-600" />
               </div>
               <div>
-                <div className="text-sm text-gray-600">Total Questions</div>
-                <div className="text-2xl font-bold text-gray-900">
-                  {filteredTracks.reduce((sum, t) => sum + t.totalQuestions, 0)}
-                </div>
+                <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">Total Questions</p>
+                <p className="text-2xl font-bold text-midnight-800">{filteredTracks.reduce((sum, t) => sum + t.totalQuestions, 0)}</p>
               </div>
             </div>
           </div>
         )}
 
         {activeTab === 'writing' && (
-          <div className="bg-white p-6 rounded-lg border border-gray-200">
+          <div className="zen-card !p-5 animate-fadeInUp stagger-2 border-l-4 border-l-purple-600 bg-purple-50/50" style={{ animationFillMode: 'both' }}>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                <Clock className="w-5 h-5 text-orange-600" />
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-purple-100">
+                <Clock className="w-6 h-6 text-purple-600" />
               </div>
               <div>
-                <div className="text-sm text-gray-600">Total Duration</div>
-                <div className="text-2xl font-bold text-gray-900">
-                  {filteredTracks.reduce((sum, t) => sum + t.duration, 0)} min
-                </div>
+                <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">Total Duration</p>
+                <p className="text-2xl font-bold text-midnight-800">{filteredTracks.reduce((sum, t) => sum + t.duration, 0)} min</p>
               </div>
             </div>
           </div>
         )}
 
-        <div className="bg-white p-6 rounded-lg border border-gray-200">
+        <div className="zen-card !p-5 animate-fadeInUp stagger-3 border-l-4 border-l-forest-600 bg-forest-50/50" style={{ animationFillMode: 'both' }}>
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-              <CheckCircle className="w-5 h-5 text-purple-600" />
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-forest-100">
+              <CheckCircle className="w-6 h-6 text-forest-600" />
             </div>
             <div>
-              <div className="text-sm text-gray-600">Active Track</div>
-              <div className="text-sm font-semibold text-gray-900">
-                {activeTrackId ? tracks.find(t => t.id === activeTrackId)?.name.substring(0, 20) + '...' : 'None'}
-              </div>
+              <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">Active Track</p>
+              <p className="text-sm font-bold text-midnight-800 truncate">
+                {activeTrackId ? tracks.find(t => t.id === activeTrackId)?.name.substring(0, 18) + '...' : 'None'}
+              </p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Track List */}
-      <div className="grid grid-cols-1 gap-6">
+      <div className="space-y-4">
         {filteredTracks.length === 0 ? (
-          <div className="bg-white rounded-lg border-2 border-dashed border-gray-300 p-12 text-center">
+          <div className="zen-card p-12 text-center border-2 border-dashed border-slate-200">
             <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 ${
               activeTab === 'listening' ? 'bg-blue-100' :
-              activeTab === 'reading' ? 'bg-green-100' :
+              activeTab === 'reading' ? 'bg-emerald-100' :
               'bg-orange-100'
             }`}>
               {activeTab === 'listening' && <Headphones className="w-8 h-8 text-blue-600" />}
-              {activeTab === 'reading' && <BookOpen className="w-8 h-8 text-green-600" />}
+              {activeTab === 'reading' && <BookOpen className="w-8 h-8 text-emerald-600" />}
               {activeTab === 'writing' && <PenTool className="w-8 h-8 text-orange-600" />}
             </div>
-            <p className="text-gray-600 text-lg font-medium mb-2">No {getTabInfo(activeTab).label} Tracks</p>
-            <p className="text-gray-500 text-sm">
+            <p className="text-midnight-800 font-semibold mb-1">No {getTabInfo(activeTab).label} Tracks</p>
+            <p className="text-slate-500 text-sm">
               {activeTab === 'listening' && 'No listening tracks are currently available.'}
               {activeTab === 'reading' && 'No reading tracks are currently available.'}
               {activeTab === 'writing' && 'No writing tracks are currently available.'}
             </p>
           </div>
         ) : (
-          filteredTracks.map((track) => {
+          filteredTracks.map((track, idx) => {
             const tabInfo = getTabInfo(track.trackType);
             const Icon = tabInfo.icon;
             
             return (
               <div
                 key={track.id}
-                className={`bg-white rounded-lg border-2 p-6 transition-all ${
+                className={`zen-card animate-fadeInUp ${
                   track.id === activeTrackId
-                    ? 'border-green-500 bg-green-50'
-                    : 'border-gray-200'
+                    ? 'border-2 border-emerald-500 bg-emerald-50/30'
+                    : 'border border-slate-200'
                 }`}
+                style={{ animationFillMode: 'both', animationDelay: `${idx * 50}ms` }}
                 data-testid={`track-card-${track.id}`}
               >
-                <div className={track.trackType === 'listening' ? 'grid md:grid-cols-2 gap-6' : ''}>
+                <div className={track.trackType === 'listening' ? 'grid lg:grid-cols-3 gap-6' : ''}>
                   {/* Left: Track Info */}
-                  <div className={track.trackType !== 'listening' ? 'w-full' : ''}>
+                  <div className={track.trackType !== 'listening' ? '' : 'lg:col-span-1'}>
                     <div className="flex items-start justify-between mb-4">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                            track.trackType === 'listening' ? 'bg-blue-100' :
-                            track.trackType === 'reading' ? 'bg-green-100' :
-                            track.trackType === 'writing' ? 'bg-orange-100' :
-                            'bg-slate-100'
-                          }`}>
-                            <Icon className={`w-4 h-4 ${
-                              track.trackType === 'listening' ? 'text-blue-600' :
-                              track.trackType === 'reading' ? 'text-green-600' :
-                              track.trackType === 'writing' ? 'text-orange-600' :
-                              'text-slate-600'
-                            }`} />
-                          </div>
-                          <h3 className="font-bold text-gray-900 text-lg">
-                            {track.name}
-                          </h3>
+                      <div className="flex-1 flex items-start gap-3">
+                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                          track.trackType === 'listening' ? 'bg-blue-100' :
+                          track.trackType === 'reading' ? 'bg-emerald-100' :
+                          track.trackType === 'writing' ? 'bg-orange-100' :
+                          'bg-slate-100'
+                        }`}>
+                          <Icon className={`w-5 h-5 ${
+                            track.trackType === 'listening' ? 'text-blue-600' :
+                            track.trackType === 'reading' ? 'text-emerald-600' :
+                            track.trackType === 'writing' ? 'text-orange-600' :
+                            'text-slate-600'
+                          }`} />
                         </div>
-                        {track.id === activeTrackId && (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-green-600 text-white text-xs font-medium rounded-full">
-                            ● Active
-                          </span>
-                        )}
+                        <div>
+                          <div className="flex items-center gap-2 mb-1">
+                            <h3 className="font-bold text-midnight-800">
+                              {track.name}
+                            </h3>
+                            <span className="text-xs font-mono font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
+                              {track.id.split('-').slice(1).join('-')}
+                            </span>
+                          </div>
+                          {track.id === activeTrackId && (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-600 text-white text-xs font-bold rounded-full">
+                              ● Active
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
 
-                    <p className="text-sm text-gray-600 mb-4">
+                    <p className="text-sm text-slate-600 mb-4 line-clamp-2">
                       {track.description}
                     </p>
 
-                    <div className="space-y-2 mb-4">
-                      <div className="flex items-center gap-2 text-sm text-gray-700">
-                        <Clock className="w-4 h-4 text-gray-400" />
-                        <span>{track.duration} minutes</span>
+                    <div className="flex flex-wrap gap-3 text-xs">
+                      <div className="flex items-center gap-1.5 text-slate-600 bg-slate-50 px-2.5 py-1.5 rounded-lg">
+                        <Clock className="w-3.5 h-3.5 text-slate-400" />
+                        <span className="font-medium">{track.duration} min</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-gray-700">
-                        <FileText className="w-4 h-4 text-gray-400" />
-                        <span>{track.totalQuestions} {track.trackType === 'writing' ? 'tasks' : 'questions'}</span>
+                      <div className="flex items-center gap-1.5 text-slate-600 bg-slate-50 px-2.5 py-1.5 rounded-lg">
+                        <FileText className="w-3.5 h-3.5 text-slate-400" />
+                        <span className="font-medium">{track.totalQuestions} {track.trackType === 'writing' ? 'tasks' : 'Q'}</span>
                       </div>
                       {track.trackType === 'listening' && (
-                        <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <Music className={`w-4 h-4 ${track.loadedAudioURL ? 'text-green-500' : 'text-gray-400'}`} />
-                          <span>{track.loadedAudioURL ? 'Has Audio' : 'No Audio'}</span>
+                        <div className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg ${track.loadedAudioURL ? 'bg-green-50 text-green-600' : 'bg-slate-50 text-slate-600'}`}>
+                          <Music className={`w-3.5 h-3.5 ${track.loadedAudioURL ? 'text-green-500' : 'text-slate-400'}`} />
+                          <span className="font-medium text-xs">{track.loadedAudioURL ? 'Has Audio' : 'No Audio'}</span>
                         </div>
                       )}
                     </div>
@@ -447,43 +438,43 @@ export function TrackManagement() {
 
                   {/* Right: Audio Management (Only for Listening tracks) */}
                   {track.trackType === 'listening' && (
-                    <div className="border-l border-gray-200 pl-6">
-                      <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                    <div className={`lg:col-span-2 border-t lg:border-t-0 lg:border-l border-slate-200 pt-4 lg:pt-0 lg:pl-6`}>
+                      <h4 className="font-semibold text-midnight-800 mb-4 flex items-center gap-2">
                         <Link className="w-4 h-4 text-blue-600" />
-                        Audio Upload by URL
+                        Audio Configuration
                       </h4>
 
                       {/* Current Audio Display */}
                       {track.loadedAudioURL ? (
-                        <div className="mb-4 bg-blue-50 border border-blue-200 rounded-lg p-4">
-                          <p className="text-xs text-gray-600 mb-2">Current Audio URL:</p>
-                          <p className="text-xs text-blue-700 break-all mb-3 font-mono">
+                        <div className="mb-4 bg-blue-50 border border-blue-200 rounded-xl p-4">
+                          <p className="text-xs font-semibold text-slate-600 mb-2 uppercase tracking-wider">Current Audio URL</p>
+                          <p className="text-xs text-blue-700 break-all mb-3 font-mono bg-white px-2 py-1.5 rounded border border-blue-100">
                             {track.loadedAudioURL}
                           </p>
                           <audio
                             controls
                             className="w-full mb-3"
                             src={track.loadedAudioURL}
-                            style={{ height: '40px' }}
+                            style={{ height: '32px' }}
                           >
                             Your browser does not support the audio element.
                           </audio>
                           <button
                             onClick={() => handleDeleteAudioURL(track.id)}
                             disabled={savingTrackId === track.id}
-                            className="w-full px-3 py-2 bg-red-50 text-red-600 rounded-lg hover:bg-red-100 transition-colors text-sm font-medium disabled:opacity-50"
+                            className="w-full px-3 py-2 bg-red-50 text-red-600 hover:bg-red-100 rounded-lg transition-colors text-sm font-semibold disabled:opacity-50 border border-red-200"
                           >
                             {savingTrackId === track.id ? 'Removing...' : 'Remove Audio'}
                           </button>
                         </div>
                       ) : (
-                        <p className="text-sm text-gray-500 mb-3 italic">No audio uploaded yet</p>
+                        <p className="text-sm text-slate-500 mb-3 italic bg-slate-50 p-3 rounded-lg">No audio configured yet</p>
                       )}
 
                       {/* Audio URL Input */}
-                      <div className="space-y-3">
+                      <div className="space-y-2.5">
                         <div>
-                          <label className="block text-xs font-medium text-gray-700 mb-2">
+                          <label className="block text-xs font-semibold text-slate-600 mb-2 uppercase tracking-wider">
                             {track.loadedAudioURL ? 'Update Audio URL' : 'Enter Audio URL'}
                           </label>
                           <input
@@ -491,14 +482,14 @@ export function TrackManagement() {
                             value={audioURLInputs[track.id] || ''}
                             onChange={(e) => handleAudioURLChange(track.id, e.target.value)}
                             placeholder="https://example.com/audio.mp3"
-                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                            className="w-full px-3 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest-500 focus:border-transparent text-sm placeholder-slate-400"
                             disabled={savingTrackId === track.id}
                           />
                         </div>
                         <button
                           onClick={() => handleSaveAudioURL(track.id)}
                           disabled={savingTrackId === track.id || !audioURLInputs[track.id]?.trim()}
-                          className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-forest-600 text-white rounded-lg hover:bg-forest-700 transition-colors text-sm font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                           {savingTrackId === track.id ? (
                             <>
@@ -508,7 +499,7 @@ export function TrackManagement() {
                           ) : (
                             <>
                               <Save className="w-4 h-4" />
-                              {track.loadedAudioURL ? 'Update Audio URL' : 'Save Audio URL'}
+                              {track.loadedAudioURL ? 'Update' : 'Save'} Audio
                             </>
                           )}
                         </button>
@@ -523,19 +514,19 @@ export function TrackManagement() {
       </div>
 
       {/* Info Box */}
-      <div className={`border rounded-lg p-4 ${
-        activeTab === 'listening' ? 'bg-blue-50 border-blue-200' :
-        activeTab === 'reading' ? 'bg-green-50 border-green-200' :
-        activeTab === 'writing' ? 'bg-orange-50 border-orange-200' :
-        'bg-slate-50 border-slate-200'
-      }`}>
-        <p className={`text-sm ${
+      <div className={`zen-card p-5 border-l-4 animate-fadeInUp ${
+        activeTab === 'listening' ? 'border-l-blue-600 bg-blue-50/50' :
+        activeTab === 'reading' ? 'border-l-emerald-600 bg-emerald-50/50' :
+        activeTab === 'writing' ? 'border-l-orange-600 bg-orange-50/50' :
+        'border-l-slate-300 bg-slate-50/50'
+      }`} style={{ animationFillMode: 'both' }}>
+        <p className={`text-sm font-medium ${
           activeTab === 'listening' ? 'text-blue-900' :
-          activeTab === 'reading' ? 'text-green-900' :
+          activeTab === 'reading' ? 'text-emerald-900' :
           activeTab === 'writing' ? 'text-orange-900' :
           'text-slate-900'
         }`}>
-          <span className="font-semibold">💡 Info:</span>{' '}
+          <span className="font-bold">💡 Info:</span>{' '}
           {activeTab === 'listening' && (
             'Listening tracks contain audio-based questions. Upload audio files by providing a direct URL to the audio file (MP3, WAV, etc.).'
           )}

@@ -57,7 +57,7 @@ export function ImportantNotice({ onAccept }: ImportantNoticeProps) {
         {/* Footer */}
         <div className="bg-slate-50 px-6 py-4 border-t border-slate-100">
           <p className="text-center text-xs font-medium text-slate-500">
-            Abdal IELTS Academy - Practice Test Platform
+            IELTS Abdal - Practice Test Platform
           </p>
         </div>
       </div>

@@ -103,12 +103,12 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg p-6 w-full max-w-md">
-        <h2 className="text-xl font-bold mb-4">Add New Expense</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="bg-white rounded-2xl p-8 w-full max-w-md shadow-xl border-2 border-[#0F3D2E]/20">
+        <h2 className="text-2xl font-bold text-[#1F2A44] mb-6 uppercase tracking-wider">📝 Add New Expense</h2>
+        <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Category *
+            <label className="block text-sm font-bold text-[#1F2A44] mb-2 uppercase tracking-wider">
+              Category <span className="text-red-500">*</span>
             </label>
             <select
               value={formData.category}
@@ -116,7 +116,7 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
                 ...prev,
                 category: e.target.value as ExpenseCategory
               }))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
               required
             >
               <option value="">Select Category</option>
@@ -128,8 +128,8 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
 
           {formData.category === 'Other' && (
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Custom Category *
+              <label className="block text-sm font-bold text-[#1F2A44] mb-2 uppercase tracking-wider">
+                Custom Category <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -138,7 +138,7 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
                   ...prev,
                   customCategory: e.target.value
                 }))}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
                 placeholder="Enter custom category"
                 required
               />
@@ -148,8 +148,8 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
           {formData.category === 'Staff Salaries' && (
             <>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Staff Name *
+                <label className="block text-sm font-bold text-[#1F2A44] mb-2 uppercase tracking-wider">
+                  Staff Name <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
                   <input
@@ -160,7 +160,7 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
                       staffName: e.target.value
                     }))}
                     list="staff-names"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 pr-8"
+                    className="w-full px-4 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium pr-10"
                     placeholder="Enter or select staff name"
                     required
                   />
@@ -183,7 +183,7 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
                           }
                         }
                       }}
-                      className="absolute right-2 top-1/2 transform -translate-y-1/2 text-red-500 hover:text-red-700"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-red-600 hover:text-red-800 transition-colors"
                       title="Delete this staff name"
                     >
                       <X className="w-4 h-4" />
@@ -193,8 +193,8 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Role *
+                <label className="block text-sm font-bold text-[#1F2A44] mb-2 uppercase tracking-wider">
+                  Role <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
                   <input
@@ -205,7 +205,7 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
                       role: e.target.value
                     }))}
                     list="staff-roles"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 pr-8"
+                    className="w-full px-4 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium pr-10"
                     placeholder="Enter or select role"
                     required
                   />
@@ -228,7 +228,7 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
                           }
                         }
                       }}
-                      className="absolute right-2 top-1/2 transform -translate-y-1/2 text-red-500 hover:text-red-700"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-red-600 hover:text-red-800 transition-colors"
                       title="Delete this role"
                     >
                       <X className="w-4 h-4" />
@@ -240,8 +240,8 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
           )}
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Amount *
+            <label className="block text-sm font-bold text-[#1F2A44] mb-2 uppercase tracking-wider">
+              Amount <span className="text-red-500">*</span>
             </label>
             <input
               type="number"
@@ -250,7 +250,7 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
                 ...prev,
                 amount: e.target.value
               }))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
               placeholder="0.00"
               step="0.01"
               min="0"
@@ -259,8 +259,8 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Date *
+            <label className="block text-sm font-bold text-[#1F2A44] mb-2 uppercase tracking-wider">
+              Date <span className="text-red-500">*</span>
             </label>
             <input
               type="date"
@@ -269,14 +269,14 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
                 ...prev,
                 date: e.target.value
               }))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Status *
+            <label className="block text-sm font-bold text-[#1F2A44] mb-2 uppercase tracking-wider">
+              Status <span className="text-red-500">*</span>
             </label>
             <select
               value={formData.status}
@@ -284,7 +284,7 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
                 ...prev,
                 status: e.target.value as 'Paid' | 'Pending'
               }))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
             >
               <option value="Pending">Pending</option>
               <option value="Paid">Paid</option>
@@ -292,8 +292,8 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Type *
+            <label className="block text-sm font-bold text-[#1F2A44] mb-2 uppercase tracking-wider">
+              Type <span className="text-red-500">*</span>
             </label>
             <select
               value={formData.type}
@@ -301,24 +301,24 @@ function AddExpenseModal({ isOpen, onClose, onAdd, staffNames, staffRoles, onSta
                 ...prev,
                 type: e.target.value as 'One-Time Payment' | 'Recurring'
               }))}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
             >
               <option value="One-Time Payment">One-Time Payment</option>
               <option value="Recurring">Recurring</option>
             </select>
           </div>
 
-          <div className="flex gap-3 pt-4">
+          <div className="flex gap-3 pt-6 border-t-2 border-[#0F3D2E]/10">
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50"
+              className="flex-1 px-4 py-3 border-2 border-[#0F3D2E]/30 rounded-xl text-[#1F2A44] font-bold hover:bg-[#F5F3EF] transition-colors uppercase tracking-wider"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+              className="flex-1 px-4 py-3 bg-[#0F3D2E] text-white rounded-xl font-bold hover:bg-[#0F3D2E]/90 transition-colors uppercase tracking-wider"
             >
               Add Expense
             </button>
@@ -499,145 +499,147 @@ export function ExpenseManager() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Expense Manager</h1>
-          <p className="text-gray-600">Track and manage organizational expenses</p>
+          <h1 className="text-3xl font-bold text-[#1F2A44] uppercase tracking-wider">💰 Expense Manager</h1>
+          <p className="text-slate-600 font-medium mt-2">Track and manage organizational expenses</p>
         </div>
         <button
           onClick={() => setIsAddModalOpen(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="flex items-center gap-2 px-5 py-3 bg-[#0F3D2E] text-white rounded-xl hover:bg-[#0F3D2E]/90 transition-all font-bold uppercase tracking-wider hover:scale-105 active:scale-95"
         >
-          <Plus className="w-4 h-4" />
+          <Plus className="w-5 h-5" />
           Add Expense
         </button>
       </div>
 
       {/* Financial Overview Cards */}
-      <h2 className="text-lg font-bold text-gray-900 mb-2 mt-6">Student Finances (All Time)</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow-sm border border-emerald-100">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-emerald-100 rounded-lg">
-              <Wallet className="w-6 h-6 text-emerald-600" />
-            </div>
-            <div>
-              <p className="text-sm text-gray-600">Total Payments Received</p>
-              <p className="text-2xl font-bold text-emerald-700">${studentTotals.paid.toFixed(2)}</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-sm border border-rose-100">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-rose-100 rounded-lg">
-              <AlertCircle className="w-6 h-6 text-rose-600" />
-            </div>
-            <div>
-              <p className="text-sm text-gray-600">Total Due</p>
-              <p className="text-2xl font-bold text-rose-700">${studentTotals.due.toFixed(2)}</p>
+      <div>
+        <h2 className="text-lg font-bold text-[#1F2A44] mb-4 uppercase tracking-wider">👥 Student Finances (All Time)</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="bg-white p-6 rounded-2xl shadow-lg border-2 border-emerald-100 hover:shadow-xl transition-all">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-emerald-100 rounded-xl">
+                <Wallet className="w-6 h-6 text-emerald-600" />
+              </div>
+              <div>
+                <p className="text-sm text-slate-600 font-medium uppercase tracking-wider">Total Payments Received</p>
+                <p className="text-2xl font-bold text-emerald-700 mt-1">${studentTotals.paid.toFixed(2)}</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-sm border border-blue-100">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-blue-100 rounded-lg">
-              <CreditCard className="w-6 h-6 text-blue-600" />
+          <div className="bg-white p-6 rounded-2xl shadow-lg border-2 border-rose-100 hover:shadow-xl transition-all">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-rose-100 rounded-xl">
+                <AlertCircle className="w-6 h-6 text-rose-600" />
+              </div>
+              <div>
+                <p className="text-sm text-slate-600 font-medium uppercase tracking-wider">Total Due</p>
+                <p className="text-2xl font-bold text-rose-700 mt-1">${studentTotals.due.toFixed(2)}</p>
+              </div>
             </div>
-            <div>
-              <p className="text-sm text-gray-600">Total Course Fees</p>
-              <p className="text-2xl font-bold text-blue-700">${studentTotals.total.toFixed(2)}</p>
+          </div>
+
+          <div className="bg-white p-6 rounded-2xl shadow-lg border-2 border-blue-100 hover:shadow-xl transition-all">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-blue-100 rounded-xl">
+                <CreditCard className="w-6 h-6 text-blue-600" />
+              </div>
+              <div>
+                <p className="text-sm text-slate-600 font-medium uppercase tracking-wider">Total Course Fees</p>
+                <p className="text-2xl font-bold text-blue-700 mt-1">${studentTotals.total.toFixed(2)}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <h2 className="text-lg font-bold text-gray-900 mb-2">Expense Summary {selectedMonth ? `(${selectedMonth})` : '(All Time)'}</h2>
+      <h2 className="text-lg font-bold text-[#1F2A44] mt-8 uppercase tracking-wider">📊 Expense Summary {selectedMonth ? `(${selectedMonth})` : '(All Time)'}</h2>
       {/* Statistics Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white p-6 rounded-lg shadow-sm border">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="bg-white p-6 rounded-2xl shadow-lg border-2 border-[#0F3D2E]/20 hover:shadow-xl transition-all">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-blue-100 rounded-lg">
-              <DollarSign className="w-6 h-6 text-blue-600" />
+            <div className="p-3 bg-[#0F3D2E]/10 rounded-xl">
+              <DollarSign className="w-6 h-6 text-[#0F3D2E]" />
             </div>
             <div>
-              <p className="text-sm text-gray-600">Monthly Total</p>
-              <p className="text-2xl font-bold text-gray-900">${totals.total.toFixed(2)}</p>
+              <p className="text-xs text-slate-600 font-bold uppercase tracking-wider">Monthly Total</p>
+              <p className="text-2xl font-bold text-[#1F2A44] mt-1">${totals.total.toFixed(2)}</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-sm border">
+        <div className="bg-white p-6 rounded-2xl shadow-lg border-2 border-green-100 hover:shadow-xl transition-all">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-green-100 rounded-lg">
+            <div className="p-3 bg-green-100 rounded-xl">
               <TrendingUp className="w-6 h-6 text-green-600" />
             </div>
             <div>
-              <p className="text-sm text-gray-600">Recurring</p>
-              <p className="text-2xl font-bold text-gray-900">${totals.recurring.toFixed(2)}</p>
+              <p className="text-xs text-slate-600 font-bold uppercase tracking-wider">Recurring</p>
+              <p className="text-2xl font-bold text-[#1F2A44] mt-1">${totals.recurring.toFixed(2)}</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-sm border">
+        <div className="bg-white p-6 rounded-2xl shadow-lg border-2 border-emerald-100 hover:shadow-xl transition-all">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-purple-100 rounded-lg">
-              <CheckCircle className="w-6 h-6 text-purple-600" />
+            <div className="p-3 bg-emerald-100 rounded-xl">
+              <CheckCircle className="w-6 h-6 text-emerald-600" />
             </div>
             <div>
-              <p className="text-sm text-gray-600">Paid</p>
-              <p className="text-2xl font-bold text-gray-900">${totals.paid.toFixed(2)}</p>
-              <p className="text-xs text-gray-500">{totals.paidCount} expenses</p>
+              <p className="text-xs text-slate-600 font-bold uppercase tracking-wider">Paid</p>
+              <p className="text-2xl font-bold text-[#1F2A44] mt-1">${totals.paid.toFixed(2)}</p>
+              <p className="text-xs text-slate-500 mt-1">{totals.paidCount} expenses</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-sm border">
+        <div className="bg-white p-6 rounded-2xl shadow-lg border-2 border-orange-100 hover:shadow-xl transition-all">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-orange-100 rounded-lg">
+            <div className="p-3 bg-orange-100 rounded-xl">
               <Clock className="w-6 h-6 text-orange-600" />
             </div>
             <div>
-              <p className="text-sm text-gray-600">Pending</p>
-              <p className="text-2xl font-bold text-gray-900">${totals.pending.toFixed(2)}</p>
-              <p className="text-xs text-gray-500">{totals.pendingCount} expenses</p>
+              <p className="text-xs text-slate-600 font-bold uppercase tracking-wider">Pending</p>
+              <p className="text-2xl font-bold text-[#1F2A44] mt-1">${totals.pending.toFixed(2)}</p>
+              <p className="text-xs text-slate-500 mt-1">{totals.pendingCount} expenses</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Filters and Actions */}
-      <div className="bg-white p-4 rounded-lg shadow-sm border">
-        <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-          <div className="flex gap-4 items-center">
+      <div className="bg-white p-6 rounded-2xl shadow-lg border-2 border-[#0F3D2E]/20">
+        <div className="flex flex-col sm:flex-row gap-5 items-end justify-between">
+          <div className="flex flex-col sm:flex-row gap-5 items-end w-full sm:w-auto">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Month</label>
+              <label className="block text-sm font-bold text-[#1F2A44] mb-2 uppercase tracking-wider">Month</label>
               <input
                 type="month"
                 value={selectedMonth}
                 onChange={(e) => setSelectedMonth(e.target.value)}
-                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="px-4 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Search</label>
+            <div className="w-full sm:w-auto">
+              <label className="block text-sm font-bold text-[#1F2A44] mb-2 uppercase tracking-wider">Search</label>
               <input
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search categories..."
-                className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
               />
             </div>
           </div>
           <button
             onClick={generatePDF}
-            className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+            className="flex items-center gap-2 px-5 py-3 bg-emerald-600 text-white rounded-xl hover:bg-emerald-700 transition-all font-bold uppercase tracking-wider hover:scale-105 active:scale-95 w-full sm:w-auto justify-center"
           >
-            <Download className="w-4 h-4" />
+            <Download className="w-5 h-5" />
             Export PDF
           </button>
         </div>
@@ -645,13 +647,13 @@ export function ExpenseManager() {
 
       {/* Category Breakdown */}
       {Object.keys(categoryBreakdown).length > 0 && (
-        <div className="bg-white p-6 rounded-lg shadow-sm border">
-          <h3 className="text-lg font-semibold mb-4">Category Breakdown</h3>
+        <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#0F3D2E]/20">
+          <h3 className="text-xl font-bold text-[#1F2A44] mb-6 uppercase tracking-wider">📂 Category Breakdown</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {Object.entries(categoryBreakdown).map(([category, amount]) => (
-              <div key={category} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                <span className="font-medium">{category}</span>
-                <span className="text-lg font-bold text-gray-900">${amount.toFixed(2)}</span>
+              <div key={category} className="flex justify-between items-center p-4 bg-[#F5F3EF] rounded-xl border-2 border-[#0F3D2E]/20 hover:shadow-md transition-all">
+                <span className="font-bold text-[#1F2A44]">{category}</span>
+                <span className="text-lg font-bold text-[#0F3D2E]">${amount.toFixed(2)}</span>
               </div>
             ))}
           </div>
@@ -659,59 +661,59 @@ export function ExpenseManager() {
       )}
 
       {/* Expenses Table */}
-      <div className="bg-white rounded-lg shadow-sm border overflow-hidden">
-        <div className="px-6 py-4 border-b border-gray-200">
-          <h3 className="text-lg font-semibold">Expenses ({filteredExpenses.length})</h3>
+      <div className="bg-white rounded-2xl shadow-lg border-2 border-[#0F3D2E]/20 overflow-hidden">
+        <div className="px-8 py-5 border-b-2 border-[#0F3D2E]/20 bg-[#F5F3EF]">
+          <h3 className="text-xl font-bold text-[#1F2A44] uppercase tracking-wider">📋 Expenses ({filteredExpenses.length})</h3>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-gray-50">
+            <thead className="bg-[#F5F3EF] border-b-2 border-[#0F3D2E]/20">
               <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Staff Info</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Date</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Category</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Staff Info</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Amount</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Status</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Type</th>
+                <th className="px-6 py-4 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white divide-y divide-[#0F3D2E]/10">
               {filteredExpenses.length === 0 ? (
                 <tr>
-                  <td colSpan={7} className="px-6 py-12 text-center text-gray-500">
+                  <td colSpan={7} className="px-6 py-12 text-center text-slate-600 font-medium">
                     No expenses found for the selected period
                   </td>
                 </tr>
               ) : (
                 filteredExpenses.map((expense) => (
-                  <tr key={expense.id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                  <tr key={expense.id} className="hover:bg-[#F5F3EF] transition-colors">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-700 font-medium">
                       {format(new Date(expense.date || ''), 'MMM dd, yyyy')}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-[#1F2A44]">
                       {expense.category === 'Other' && expense.customCategory
                         ? expense.customCategory
                         : expense.category}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-700 font-medium">
                       {expense.category === 'Staff Salaries' && expense.staffName && expense.role
                         ? `${expense.staffName} (${expense.role})`
                         : '-'}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-[#0F3D2E]">
                       ${expense.amount.toFixed(2)}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
+                      <span className={`inline-flex px-3 py-1 text-xs font-bold rounded-full uppercase tracking-wider ${
                         expense.status === 'Paid'
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-orange-100 text-orange-800'
+                          ? 'bg-emerald-100 text-emerald-700'
+                          : 'bg-orange-100 text-orange-700'
                       }`}>
                         {expense.status}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-700">
                       {expense.type}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
@@ -721,10 +723,10 @@ export function ExpenseManager() {
                             expense.id,
                             expense.status === 'Paid' ? 'Pending' : 'Paid'
                           )}
-                          className={`p-1 rounded ${
+                          className={`p-2 rounded-lg transition-all font-bold ${
                             expense.status === 'Paid'
                               ? 'text-orange-600 hover:bg-orange-50'
-                              : 'text-green-600 hover:bg-green-50'
+                              : 'text-emerald-600 hover:bg-emerald-50'
                           }`}
                           title={`Mark as ${expense.status === 'Paid' ? 'Pending' : 'Paid'}`}
                         >
@@ -732,7 +734,7 @@ export function ExpenseManager() {
                         </button>
                         <button
                           onClick={() => handleDeleteExpense(expense.id)}
-                          className="p-1 text-red-600 hover:bg-red-50 rounded"
+                          className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-all font-bold"
                           title="Delete expense"
                         >
                           <Trash2 className="w-4 h-4" />

@@ -429,30 +429,30 @@ export function ExamControlPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       {/* Messages */}
       {error && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">
-          <AlertCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-          <p className="text-red-900 text-sm">{error}</p>
+        <div className="p-5 bg-red-50 border-l-4 border-red-600 rounded-xl flex items-start gap-4">
+          <AlertCircle className="w-6 h-6 text-red-600 mt-0.5 flex-shrink-0" />
+          <p className="text-red-800 font-semibold">{error}</p>
         </div>
       )}
 
       {success && (
-        <div className="p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3">
-          <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-          <p className="text-green-900 text-sm">{success}</p>
+        <div className="p-5 bg-emerald-50 border-l-4 border-emerald-600 rounded-xl flex items-start gap-4">
+          <CheckCircle className="w-6 h-6 text-emerald-600 mt-0.5 flex-shrink-0" />
+          <p className="text-emerald-800 font-semibold">{success}</p>
         </div>
       )}
 
       {/* Create New Exam Session */}
-      <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-6">📝 Create New Exam Session</h2>
+      <div className="bg-white rounded-2xl shadow-lg border-2 border-[#0F3D2E]/20 p-8">
+        <h2 className="text-2xl font-bold text-[#1F2A44] mb-8">📝 Create New Exam Session</h2>
 
-        <div className="space-y-6">
+        <div className="space-y-8">
           {/* Test Type Selection */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-3">
+            <label className="block text-sm font-bold text-[#1F2A44] mb-4 uppercase tracking-wider">
               Test Type <span className="text-red-500">*</span>
             </label>
             <div className="flex gap-4">
@@ -467,9 +467,9 @@ export function ExamControlPage() {
                     setGeneratedExamCode('');
                     setIsDurationManuallySet(false);
                   }}
-                  className="w-4 h-4 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                  className="w-4 h-4 text-[#0F3D2E] focus:ring-2 focus:ring-[#0F3D2E]"
                 />
-                <span className="text-sm font-medium text-gray-700">Partial Test (Single Track)</span>
+                <span className="text-sm font-semibold text-slate-700">Partial Test (Single Track)</span>
               </label>
               <label className="flex items-center gap-3 cursor-pointer">
                 <input
@@ -484,12 +484,12 @@ export function ExamControlPage() {
                     // Reset customization flags when switching to mock test
                     setMockDurationsCustomized({ listening: false, reading: false, writing: false });
                   }}
-                  className="w-4 h-4 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                  className="w-4 h-4 text-[#0F3D2E] focus:ring-2 focus:ring-[#0F3D2E]"
                 />
-                <span className="text-sm font-medium text-gray-700">Mock Test (Full Test)</span>
+                <span className="text-sm font-semibold text-slate-700">Mock Test (Full Test)</span>
               </label>
             </div>
-            <p className="text-xs text-gray-500 mt-2">
+            <p className="text-xs text-slate-600 mt-3 font-medium">
               {testType === 'partial' 
                 ? 'Select one track from any type (Listening, Reading, or Writing)'
                 : 'Select one track from each type (Listening + Reading + Writing)'}
@@ -498,13 +498,13 @@ export function ExamControlPage() {
 
           {/* Partial Test: Track Type Selection + Track Dropdown */}
           {testType === 'partial' && (
-            <div className="space-y-4">
+            <div className="space-y-6 border-t-2 border-[#0F3D2E]/20 pt-8">
               {/* Track Type Selection */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-3">
+                <label className="block text-sm font-bold text-[#1F2A44] mb-4 uppercase tracking-wider">
                   Track Type <span className="text-red-500">*</span>
                 </label>
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-3 gap-4">
                   <button
                     type="button"
                     onClick={() => {
@@ -512,14 +512,14 @@ export function ExamControlPage() {
                       setPartialSelectedTrack('');
                       setGeneratedExamCode('');
                     }}
-                    className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg border-2 transition-all ${
+                    className={`flex items-center justify-center gap-2 px-5 py-3 rounded-xl border-2 font-bold transition-all uppercase tracking-wider ${
                       partialTrackType === 'listening'
-                        ? 'border-blue-500 bg-blue-50 text-blue-700'
-                        : 'border-gray-300 bg-white text-gray-700 hover:border-blue-300'
+                        ? 'border-[#0F3D2E] bg-[#0F3D2E]/10 text-[#0F3D2E]'
+                        : 'border-[#0F3D2E]/30 bg-white text-slate-700 hover:border-[#0F3D2E]'
                     }`}
                   >
                     <Headphones className="w-5 h-5" />
-                    <span className="font-medium">Listening</span>
+                    <span>Listening</span>
                   </button>
                   <button
                     type="button"
@@ -528,14 +528,14 @@ export function ExamControlPage() {
                       setPartialSelectedTrack('');
                       setGeneratedExamCode('');
                     }}
-                    className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg border-2 transition-all ${
+                    className={`flex items-center justify-center gap-2 px-5 py-3 rounded-xl border-2 font-bold transition-all uppercase tracking-wider ${
                       partialTrackType === 'reading'
-                        ? 'border-green-500 bg-green-50 text-green-700'
-                        : 'border-gray-300 bg-white text-gray-700 hover:border-green-300'
+                        ? 'border-[#0F3D2E] bg-[#0F3D2E]/10 text-[#0F3D2E]'
+                        : 'border-[#0F3D2E]/30 bg-white text-slate-700 hover:border-[#0F3D2E]'
                     }`}
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span className="font-medium">Reading</span>
+                    <span>Reading</span>
                   </button>
                   <button
                     type="button"
@@ -544,21 +544,21 @@ export function ExamControlPage() {
                       setPartialSelectedTrack('');
                       setGeneratedExamCode('');
                     }}
-                    className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg border-2 transition-all ${
+                    className={`flex items-center justify-center gap-2 px-5 py-3 rounded-xl border-2 font-bold transition-all uppercase tracking-wider ${
                       partialTrackType === 'writing'
-                        ? 'border-orange-500 bg-orange-50 text-orange-700'
-                        : 'border-gray-300 bg-white text-gray-700 hover:border-orange-300'
+                        ? 'border-[#0F3D2E] bg-[#0F3D2E]/10 text-[#0F3D2E]'
+                        : 'border-[#0F3D2E]/30 bg-white text-slate-700 hover:border-[#0F3D2E]'
                     }`}
                   >
                     <PenTool className="w-5 h-5" />
-                    <span className="font-medium">Writing</span>
+                    <span>Writing</span>
                   </button>
                 </div>
               </div>
 
               {/* Track Selection Dropdown */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-bold text-[#1F2A44] mb-3 uppercase tracking-wider">
                   Select {partialTrackType.charAt(0).toUpperCase() + partialTrackType.slice(1)} Track <span className="text-red-500">*</span>
                 </label>
                 <select
@@ -567,7 +567,7 @@ export function ExamControlPage() {
                     setPartialSelectedTrack(e.target.value);
                     setIsDurationManuallySet(false); // Reset flag when track changes
                   }}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-5 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
                   data-testid="partial-track-selector"
                 >
                   <option value="">-- Select a track --</option>
@@ -578,7 +578,7 @@ export function ExamControlPage() {
                   ))}
                 </select>
                 {partialSelectedTrack && (
-                  <p className="text-xs text-gray-500 mt-2">
+                  <p className="text-xs text-slate-600 mt-2 font-medium">
                     ℹ️ Default duration: {allTracks.find(t => t.id === partialSelectedTrack)?.duration} minutes (You can customize it below)
                   </p>
                 )}
@@ -588,11 +588,11 @@ export function ExamControlPage() {
 
           {/* Mock Test: Three Separate Dropdowns */}
           {testType === 'mock' && (
-            <div className="space-y-4">
+            <div className="space-y-6 border-t-2 border-[#0F3D2E]/20 pt-8">
               {/* Listening Track */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
-                  <Headphones className="w-4 h-4 text-blue-600" />
+                <label className="block text-sm font-bold text-[#1F2A44] mb-3 uppercase tracking-wider flex items-center gap-2">
+                  <Headphones className="w-5 h-5 text-[#0F3D2E]" />
                   Listening Track <span className="text-red-500">*</span>
                 </label>
                 <select
@@ -606,7 +606,7 @@ export function ExamControlPage() {
                       setMockDurationsCustomized(prev => ({ ...prev, listening: false }));
                     }
                   }}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-5 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
                   data-testid="mock-listening-selector"
                 >
                   <option value="">-- Select listening track --</option>
@@ -617,8 +617,8 @@ export function ExamControlPage() {
                   ))}
                 </select>
                 {mockTracks.listening && (
-                  <div className="mt-2">
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Duration (minutes)</label>
+                  <div className="mt-3">
+                    <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wider">Duration (minutes)</label>
                     <input
                       type="number"
                       min={1}
@@ -627,7 +627,7 @@ export function ExamControlPage() {
                         setMockDurations(prev => ({ ...prev, listening: Number(e.target.value) }));
                         setMockDurationsCustomized(prev => ({ ...prev, listening: true }));
                       }}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border-2 border-[#0F3D2E]/30 rounded-lg focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] text-[#1F2A44] font-medium"
                       data-testid="mock-listening-duration"
                     />
                   </div>
@@ -636,8 +636,8 @@ export function ExamControlPage() {
 
               {/* Reading Track */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
-                  <BookOpen className="w-4 h-4 text-green-600" />
+                <label className="block text-sm font-bold text-[#1F2A44] mb-3 uppercase tracking-wider flex items-center gap-2">
+                  <BookOpen className="w-5 h-5 text-[#0F3D2E]" />
                   Reading Track <span className="text-red-500">*</span>
                 </label>
                 <select
@@ -651,7 +651,7 @@ export function ExamControlPage() {
                       setMockDurationsCustomized(prev => ({ ...prev, reading: false }));
                     }
                   }}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-5 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
                   data-testid="mock-reading-selector"
                 >
                   <option value="">-- Select reading track --</option>
@@ -662,8 +662,8 @@ export function ExamControlPage() {
                   ))}
                 </select>
                 {mockTracks.reading && (
-                  <div className="mt-2">
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Duration (minutes)</label>
+                  <div className="mt-3">
+                    <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wider">Duration (minutes)</label>
                     <input
                       type="number"
                       min={1}
@@ -672,7 +672,7 @@ export function ExamControlPage() {
                         setMockDurations(prev => ({ ...prev, reading: Number(e.target.value) }));
                         setMockDurationsCustomized(prev => ({ ...prev, reading: true }));
                       }}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border-2 border-[#0F3D2E]/30 rounded-lg focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] text-[#1F2A44] font-medium"
                       data-testid="mock-reading-duration"
                     />
                   </div>
@@ -681,8 +681,8 @@ export function ExamControlPage() {
 
               {/* Writing Track */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
-                  <PenTool className="w-4 h-4 text-orange-600" />
+                <label className="block text-sm font-bold text-[#1F2A44] mb-3 uppercase tracking-wider flex items-center gap-2">
+                  <PenTool className="w-5 h-5 text-[#0F3D2E]" />
                   Writing Track <span className="text-red-500">*</span>
                 </label>
                 <select
@@ -696,7 +696,7 @@ export function ExamControlPage() {
                       setMockDurationsCustomized(prev => ({ ...prev, writing: false }));
                     }
                   }}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full px-5 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
                   data-testid="mock-writing-selector"
                 >
                   <option value="">-- Select writing track --</option>
@@ -707,8 +707,8 @@ export function ExamControlPage() {
                   ))}
                 </select>
                 {mockTracks.writing && (
-                  <div className="mt-2">
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Duration (minutes)</label>
+                  <div className="mt-3">
+                    <label className="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-wider">Duration (minutes)</label>
                     <input
                       type="number"
                       min={1}
@@ -717,7 +717,7 @@ export function ExamControlPage() {
                         setMockDurations(prev => ({ ...prev, writing: Number(e.target.value) }));
                         setMockDurationsCustomized(prev => ({ ...prev, writing: true }));
                       }}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border-2 border-[#0F3D2E]/30 rounded-lg focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] text-[#1F2A44] font-medium"
                       data-testid="mock-writing-duration"
                     />
                   </div>
@@ -726,25 +726,34 @@ export function ExamControlPage() {
 
               {/* Duration Info for Mock Test */}
               {mockTracks.listening && mockTracks.reading && mockTracks.writing && (
-                <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
-                  <p className="text-sm text-blue-800 mb-2">
-                    <strong>Total Duration:</strong> {duration} minutes
+                <div className="bg-gradient-to-r from-[#0F3D2E]/5 to-emerald-50 p-5 rounded-xl border-2 border-[#0F3D2E]/30">
+                  <p className="text-sm text-[#1F2A44] font-bold mb-3">
+                    <span className="text-[#0F3D2E]">📊 Total Duration:</span> {duration} minutes
                     {(mockDurationsCustomized.listening || mockDurationsCustomized.reading || mockDurationsCustomized.writing) && (
-                      <span className="ml-2 text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded">CUSTOM DURATIONS</span>
+                      <span className="ml-3 text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full font-bold">CUSTOM DURATIONS</span>
                     )}
                   </p>
-                  <div className="text-xs text-blue-700 space-y-1">
-                    <div>
-                      • Listening: {mockDurations.listening} minutes
-                      {mockDurationsCustomized.listening && <span className="ml-1 text-orange-600">(custom)</span>}
+                  <div className="text-sm text-slate-700 space-y-2 font-medium">
+                    <div className="flex justify-between">
+                      <span>🎧 Listening:</span>
+                      <span className="font-bold text-[#0F3D2E]">
+                        {mockDurations.listening} min
+                        {mockDurationsCustomized.listening && <span className="ml-2 text-xs text-emerald-600">(custom)</span>}
+                      </span>
                     </div>
-                    <div>
-                      • Reading: {mockDurations.reading} minutes
-                      {mockDurationsCustomized.reading && <span className="ml-1 text-orange-600">(custom)</span>}
+                    <div className="flex justify-between">
+                      <span>📖 Reading:</span>
+                      <span className="font-bold text-[#0F3D2E]">
+                        {mockDurations.reading} min
+                        {mockDurationsCustomized.reading && <span className="ml-2 text-xs text-emerald-600">(custom)</span>}
+                      </span>
                     </div>
-                    <div>
-                      • Writing: {mockDurations.writing} minutes
-                      {mockDurationsCustomized.writing && <span className="ml-1 text-orange-600">(custom)</span>}
+                    <div className="flex justify-between">
+                      <span>✍️ Writing:</span>
+                      <span className="font-bold text-[#0F3D2E]">
+                        {mockDurations.writing} min
+                        {mockDurationsCustomized.writing && <span className="ml-2 text-xs text-emerald-600">(custom)</span>}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -754,16 +763,16 @@ export function ExamControlPage() {
 
           {/* Exam Code Display */}
           {generatedExamCode && (
-            <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+            <div className="bg-gradient-to-r from-[#0F3D2E]/5 to-emerald-50 p-6 rounded-xl border-2 border-[#0F3D2E]/30">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">Generated Exam Code</p>
-                  <p className="text-xl font-bold text-blue-600">{generatedExamCode}</p>
+                  <p className="text-xs text-slate-600 font-bold uppercase tracking-wider mb-2">Generated Exam Code</p>
+                  <p className="text-3xl font-bold text-[#0F3D2E]">{generatedExamCode}</p>
                 </div>
                 <button
                   onClick={generateExamCode}
                   disabled={isGenerating}
-                  className="px-3 py-2 text-sm bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50"
+                  className="px-5 py-2 text-sm font-bold bg-white border-2 border-[#0F3D2E] rounded-lg hover:bg-[#F5F3EF] disabled:opacity-50 text-[#0F3D2E] uppercase tracking-wider transition-colors"
                 >
                   {isGenerating ? 'Generating...' : 'Regenerate'}
                 </button>
@@ -772,55 +781,55 @@ export function ExamControlPage() {
           )}
 
           {/* Date and Time */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t-2 border-[#0F3D2E]/20 pt-8">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
+              <label className="block text-sm font-bold text-[#1F2A44] mb-3 uppercase tracking-wider flex items-center gap-2">
+                <Calendar className="w-5 h-5 text-[#0F3D2E]" />
                 Date <span className="text-red-500">*</span>
               </label>
               <input
                 type="date"
                 value={examDate}
                 onChange={(e) => setExamDate(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-5 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
-                <Clock className="w-4 h-4" />
+              <label className="block text-sm font-bold text-[#1F2A44] mb-3 uppercase tracking-wider flex items-center gap-2">
+                <Clock className="w-5 h-5 text-[#0F3D2E]" />
                 Start Time <span className="text-red-500">*</span>
               </label>
               <input
                 type="time"
                 value={startTime}
                 onChange={(e) => setStartTime(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-5 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
               />
             </div>
           </div>
 
           {/* Duration */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+          <div className="border-t-2 border-[#0F3D2E]/20 pt-8">
+            <label className="block text-sm font-bold text-[#1F2A44] mb-4 uppercase tracking-wider">
               Duration (minutes) <span className="text-red-500">*</span>
             </label>
             {testType === 'mock' ? (
-              <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+              <div className="bg-gradient-to-r from-[#0F3D2E]/5 to-emerald-50 p-5 rounded-xl border-2 border-[#0F3D2E]/30">
                 {(mockDurationsCustomized.listening || mockDurationsCustomized.reading || mockDurationsCustomized.writing) ? (
-                  <p className="text-sm text-orange-600 mb-1 font-medium">
+                  <p className="text-sm text-emerald-700 mb-2 font-bold">
                     ⚙️ Custom durations are set for this mock test
                   </p>
                 ) : (
-                  <p className="text-sm text-gray-600 mb-1">
+                  <p className="text-sm text-slate-700 mb-2 font-medium">
                     Duration is automatically calculated based on selected tracks
                   </p>
                 )}
-                <p className="text-2xl font-bold text-gray-900">{duration} minutes</p>
+                <p className="text-3xl font-bold text-[#0F3D2E]">{duration} minutes</p>
               </div>
             ) : (
               <>
-                <div className="flex gap-2 mb-3">
+                <div className="flex flex-wrap gap-3 mb-4">
                   {[30, 45, 60, 90].map((m) => (
                     <button
                       key={m}
@@ -829,10 +838,10 @@ export function ExamControlPage() {
                         setDuration(m);
                         setIsDurationManuallySet(true);
                       }}
-                      className={`px-4 py-2 rounded-md text-sm font-medium border ${
+                      className={`px-5 py-2 rounded-lg text-sm font-bold border-2 uppercase tracking-wider transition-all ${
                         duration === m
-                          ? 'bg-blue-600 text-white border-blue-600'
-                          : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+                          ? 'bg-[#0F3D2E] text-white border-[#0F3D2E]'
+                          : 'bg-white text-[#1F2A44] border-[#0F3D2E]/30 hover:border-[#0F3D2E]'
                       }`}
                     >
                       {m}m
@@ -847,10 +856,10 @@ export function ExamControlPage() {
                     setDuration(Number(e.target.value));
                     setIsDurationManuallySet(true);
                   }}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-5 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
                   placeholder="Enter custom duration in minutes"
                 />
-                <p className="text-xs text-gray-500 mt-2">
+                <p className="text-xs text-slate-600 mt-3 font-medium">
                   💡 You can customize the duration for this exam session
                 </p>
               </>
@@ -858,33 +867,33 @@ export function ExamControlPage() {
           </div>
 
           {/* Allowed Batches */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2 flex items-center gap-2">
-              <Users className="w-4 h-4" />
+          <div className="border-t-2 border-[#0F3D2E]/20 pt-8">
+            <label className="block text-sm font-bold text-[#1F2A44] mb-4 uppercase tracking-wider flex items-center gap-2">
+              <Users className="w-5 h-5 text-[#0F3D2E]" />
               Allowed Batches <span className="text-red-500">*</span>
             </label>
-            <div className="border border-gray-300 rounded-lg p-4 space-y-2 max-h-48 overflow-y-auto">
+            <div className="border-2 border-[#0F3D2E]/30 rounded-xl p-5 space-y-3 max-h-64 overflow-y-auto bg-white">
               {batches.length === 0 ? (
-                <p className="text-sm text-gray-500">No batches available</p>
+                <p className="text-sm text-slate-600 font-medium">No batches available</p>
               ) : (
                 batches.map((batch) => (
-                  <label key={batch.batchId} className="flex items-center gap-2 cursor-pointer hover:bg-gray-50 p-2 rounded">
+                  <label key={batch.batchId} className="flex items-center gap-3 cursor-pointer hover:bg-[#F5F3EF] p-3 rounded-lg transition-colors">
                     <input
                       type="checkbox"
                       checked={selectedBatches.includes(batch.batchId)}
                       onChange={() => toggleBatchSelection(batch.batchId)}
-                      className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+                      className="w-5 h-5 text-[#0F3D2E] rounded focus:ring-2 focus:ring-[#0F3D2E]"
                     />
-                    <span className="text-sm text-gray-700">
-                      {batch.batchName} ({batch.totalStudents || 0} students)
+                    <span className="text-sm font-medium text-slate-700">
+                      {batch.batchName} <span className="text-xs text-slate-600">({batch.totalStudents || 0} students)</span>
                     </span>
                   </label>
                 ))
               )}
             </div>
             {selectedBatches.length > 0 && (
-              <p className="text-sm text-gray-600 mt-2">
-                {selectedBatches.length} batch{selectedBatches.length > 1 ? 'es' : ''} selected
+              <p className="text-sm font-semibold text-[#0F3D2E] mt-3">
+                ✓ {selectedBatches.length} batch{selectedBatches.length > 1 ? 'es' : ''} selected
               </p>
             )}
           </div>
@@ -900,33 +909,33 @@ export function ExamControlPage() {
                 data-testid="countdown-toggle"
               />
               <div className="flex-1">
-                <span className="text-sm font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
+                <span className="text-sm font-bold text-[#1F2A44] group-hover:text-[#0F3D2E] transition-colors">
                   ⏱️ Start with Countdown Delay
                 </span>
-                <p className="text-xs text-gray-500 mt-0.5">
+                <p className="text-xs text-slate-600 mt-1 font-medium">
                   Show a full-screen countdown to all students before exam starts
                 </p>
               </div>
             </label>
 
             {useCountdown && (
-              <div className="mt-4 ml-8 space-y-4">
+              <div className="mt-6 ml-8 space-y-5 bg-[#F5F3EF] p-5 rounded-xl border-2 border-[#0F3D2E]/20">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-bold text-[#1F2A44] mb-4 uppercase tracking-wider">
                     Countdown Duration
                   </label>
                   
                   {/* Quick Select Buttons */}
-                  <div className="flex gap-2 mb-3">
+                  <div className="flex flex-wrap gap-3 mb-5">
                     {[30, 60, 120, 180].map((seconds) => (
                       <button
                         key={seconds}
                         type="button"
                         onClick={() => setCountdownSeconds(seconds)}
-                        className={`px-4 py-2 rounded-md text-sm font-medium border transition-colors ${
+                        className={`px-5 py-2 rounded-lg text-sm font-bold border-2 uppercase tracking-wider transition-all ${
                           countdownSeconds === seconds
-                            ? 'bg-blue-600 text-white border-blue-600'
-                            : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+                            ? 'bg-[#0F3D2E] text-white border-[#0F3D2E]'
+                            : 'bg-white text-[#1F2A44] border-[#0F3D2E]/30 hover:border-[#0F3D2E]'
                         }`}
                         data-testid={`countdown-preset-${seconds}`}
                       >
@@ -936,7 +945,7 @@ export function ExamControlPage() {
                   </div>
 
                   {/* Custom Input */}
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-4">
                     <input
                       type="number"
                       min={10}
@@ -944,20 +953,20 @@ export function ExamControlPage() {
                       step={10}
                       value={countdownSeconds}
                       onChange={(e) => setCountdownSeconds(Math.max(10, Math.min(300, Number(e.target.value))))}
-                      className="w-32 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="flex-1 px-4 py-2 border-2 border-[#0F3D2E]/30 rounded-lg focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
                       data-testid="countdown-custom-input"
                     />
-                    <span className="text-sm text-gray-600">seconds</span>
-                    <span className="text-sm text-gray-500">
+                    <span className="text-sm font-semibold text-slate-700">seconds</span>
+                    <span className="text-sm text-slate-600 font-medium">
                       ({Math.floor(countdownSeconds / 60)}m {countdownSeconds % 60}s)
                     </span>
                   </div>
                 </div>
 
                 {/* Info Box */}
-                <div className="bg-blue-50 p-3 rounded-lg border border-blue-200">
-                  <p className="text-xs text-blue-800">
-                    <strong>ℹ️ How it works:</strong> When you click "Start with Countdown", 
+                <div className="bg-white p-4 rounded-lg border-2 border-[#0F3D2E]/20">
+                  <p className="text-xs text-[#1F2A44] font-semibold leading-relaxed">
+                    <span className="font-bold text-[#0F3D2E]">ℹ️ How it works:</span> When you click "Start with Countdown", 
                     all logged-in students in the selected batches will immediately see a 
                     full-screen countdown popup. The exam will automatically start when the 
                     countdown reaches zero.
@@ -968,7 +977,7 @@ export function ExamControlPage() {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex gap-3 pt-4 border-t">
+          <div className="flex flex-col md:flex-row gap-4 pt-8 border-t-2 border-[#0F3D2E]/20">
             <button
               onClick={() => handleCreateSession(false)}
               disabled={
@@ -977,7 +986,7 @@ export function ExamControlPage() {
                 (testType === 'partial' && !partialSelectedTrack) ||
                 (testType === 'mock' && (!mockTracks.listening || !mockTracks.reading || !mockTracks.writing))
               }
-              className="flex-1 px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 px-6 py-3 bg-[#0F3D2E] hover:bg-[#0F3D2E]/90 disabled:bg-slate-400 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider hover:scale-105 active:scale-95"
               data-testid="create-schedule-button"
             >
               {isCreating ? (
@@ -1003,7 +1012,7 @@ export function ExamControlPage() {
                 (testType === 'partial' && !partialSelectedTrack) ||
                 (testType === 'mock' && (!mockTracks.listening || !mockTracks.reading || !mockTracks.writing))
               }
-              className="flex-1 px-6 py-3 bg-green-600 hover:bg-green-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="flex-1 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-400 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider hover:scale-105 active:scale-95"
               data-testid="create-start-button"
             >
               {isCreating ? (
@@ -1030,7 +1039,7 @@ export function ExamControlPage() {
                   (testType === 'partial' && !partialSelectedTrack) ||
                   (testType === 'mock' && (!mockTracks.listening || !mockTracks.reading || !mockTracks.writing))
                 }
-                className="flex-1 px-6 py-3 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="flex-1 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-400 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2 uppercase tracking-wider hover:scale-105 active:scale-95"
                 data-testid="create-start-countdown-button"
               >
                 {isCreating ? (
@@ -1049,26 +1058,27 @@ export function ExamControlPage() {
           </div>
 
           {activeExams.length > 0 && (
-            <p className="text-sm text-orange-600">
+            <div className="p-4 rounded-xl border-l-4 border-red-600 bg-red-50 text-red-700 font-semibold text-sm">
               ⚠️ Cannot start new exam - another exam is currently active
-            </p>
+            </div>
           )}
         </div>
       </div>
 
       {/* Active Exam Sessions */}
-      <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          🟢 Active Exam Sessions
+      <div className="bg-white rounded-2xl shadow-lg border-2 border-[#0F3D2E]/20 p-8">
+        <h2 className="text-2xl font-bold text-[#1F2A44] mb-6 flex items-center gap-2 uppercase tracking-wider">
+          <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+          Active Exam Sessions
         </h2>
 
         {isLoadingSessions ? (
-          <div className="text-center py-8">
-            <Loader className="w-8 h-8 animate-spin mx-auto text-gray-400" />
+          <div className="text-center py-12">
+            <Loader className="w-8 h-8 animate-spin mx-auto text-[#0F3D2E]" />
           </div>
         ) : activeExams.length === 0 ? (
-          <div className="text-center py-8">
-            <p className="text-gray-500">No active exams</p>
+          <div className="text-center py-12">
+            <p className="text-slate-600 font-medium">No active exams</p>
           </div>
         ) : (
           <div className="space-y-3">
@@ -1078,35 +1088,37 @@ export function ExamControlPage() {
                 className="border border-green-200 bg-green-50 rounded-lg p-4 flex items-center justify-between"
               >
                 <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="font-mono font-bold text-green-700">{exam.examCode}</span>
-                    <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded">ACTIVE</span>
+                  <div className="flex items-center gap-3 mb-3 flex-wrap">
+                    <span className="font-mono font-bold text-emerald-700 text-lg">{exam.examCode}</span>
+                    <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full uppercase tracking-wider">ACTIVE</span>
                     {exam.testType && (
-                      <span className={`px-2 py-1 text-xs font-medium rounded ${
+                      <span className={`px-3 py-1 text-xs font-bold rounded-full uppercase tracking-wider ${
                         exam.testType === 'mock' 
-                          ? 'bg-purple-100 text-purple-700' 
+                          ? 'bg-indigo-100 text-indigo-700' 
                           : 'bg-blue-100 text-blue-700'
                       }`}>
                         {exam.testType === 'mock' ? 'MOCK TEST' : 'PARTIAL TEST'}
                       </span>
                     )}
                   </div>
-                  <p className="text-sm text-gray-700 mb-1">
-                    <FileText className="w-4 h-4 inline mr-1" />
-                    {exam.trackName}
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    <Clock className="w-4 h-4 inline mr-1" />
-                    Started: {format(new Date(exam.startedAt || exam.createdAt), 'MMM d, h:mm a')} • {exam.duration} mins
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    <Users className="w-4 h-4 inline mr-1" />
-                    Batches: {exam.allowedBatches.join(', ')}
-                  </p>
+                  <div className="space-y-2 text-sm text-slate-700 font-medium">
+                    <p>
+                      <FileText className="w-4 h-4 inline mr-2 text-[#0F3D2E]" />
+                      {exam.trackName}
+                    </p>
+                    <p>
+                      <Clock className="w-4 h-4 inline mr-2 text-[#0F3D2E]" />
+                      Started: {format(new Date(exam.startedAt || exam.createdAt), 'MMM d, h:mm a')} • {exam.duration} mins
+                    </p>
+                    <p>
+                      <Users className="w-4 h-4 inline mr-2 text-[#0F3D2E]" />
+                      Batches: {exam.allowedBatches.join(', ')}
+                    </p>
+                  </div>
                 </div>
                 <button
                   onClick={() => handleStopExam(exam.examCode)}
-                  className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+                  className="px-5 py-2 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-all flex items-center gap-2 uppercase tracking-wider hover:scale-105 active:scale-95"
                 >
                   <Square className="w-4 h-4" />
                   Stop Exam
@@ -1118,41 +1130,41 @@ export function ExamControlPage() {
       </div>
 
       {/* Scheduled Exams */}
-      <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+      <div className="bg-white rounded-2xl shadow-lg border-2 border-[#0F3D2E]/20 p-8">
+        <h2 className="text-2xl font-bold text-[#1F2A44] mb-6 flex items-center gap-2 uppercase tracking-wider">
           📅 Scheduled Exams
         </h2>
 
         {isLoadingSessions ? (
-          <div className="text-center py-8">
-            <Loader className="w-8 h-8 animate-spin mx-auto text-gray-400" />
+          <div className="text-center py-12">
+            <Loader className="w-8 h-8 animate-spin mx-auto text-[#0F3D2E]" />
           </div>
         ) : scheduledExams.length === 0 ? (
-          <div className="text-center py-8">
-            <p className="text-gray-500">No scheduled exams</p>
+          <div className="text-center py-12">
+            <p className="text-slate-600 font-medium">No scheduled exams</p>
           </div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-gray-50 border-b">
+              <thead className="bg-[#F5F3EF] border-b-2 border-[#0F3D2E]/20">
                 <tr>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Exam Code</th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Track</th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Date & Time</th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Batches</th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+                  <th className="px-4 py-3 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Exam Code</th>
+                  <th className="px-4 py-3 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Track</th>
+                  <th className="px-4 py-3 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Date & Time</th>
+                  <th className="px-4 py-3 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Batches</th>
+                  <th className="px-4 py-3 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y">
+              <tbody className="divide-y divide-[#0F3D2E]/10">
                 {scheduledExams.map((exam) => (
-                  <tr key={exam.examCode} className="hover:bg-gray-50">
+                  <tr key={exam.examCode} className="hover:bg-[#F5F3EF] transition-colors">
                     <td className="px-4 py-3">
-                      <div className="flex flex-col gap-1">
-                        <span className="font-mono font-semibold text-gray-900">{exam.examCode}</span>
+                      <div className="flex flex-col gap-2">
+                        <span className="font-mono font-bold text-[#0F3D2E]">{exam.examCode}</span>
                         {exam.testType && (
-                          <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded w-fit ${
+                          <span className={`inline-block px-2 py-0.5 text-xs font-bold rounded-full w-fit uppercase tracking-wider ${
                             exam.testType === 'mock' 
-                              ? 'bg-purple-100 text-purple-700' 
+                              ? 'bg-indigo-100 text-indigo-700' 
                               : 'bg-blue-100 text-blue-700'
                           }`}>
                             {exam.testType === 'mock' ? 'Mock' : 'Partial'}
@@ -1160,11 +1172,11 @@ export function ExamControlPage() {
                         )}
                       </div>
                     </td>
-                    <td className="px-4 py-3 text-sm text-gray-700">{exam.trackName}</td>
-                    <td className="px-4 py-3 text-sm text-gray-600">
+                    <td className="px-4 py-3 text-sm font-semibold text-slate-700">{exam.trackName}</td>
+                    <td className="px-4 py-3 text-sm text-slate-700 font-medium">
                       {format(new Date(exam.date), 'MMM d, yyyy')} • {exam.startTime}
                     </td>
-                    <td className="px-4 py-3 text-sm text-gray-600">
+                    <td className="px-4 py-3 text-sm text-slate-700 font-medium">
                       {exam.allowedBatches.length} batch{exam.allowedBatches.length > 1 ? 'es' : ''}
                     </td>
                     <td className="px-4 py-3">
@@ -1172,14 +1184,14 @@ export function ExamControlPage() {
                         <button
                           onClick={() => handleStartExam(exam.examCode)}
                           disabled={activeExams.length > 0}
-                          className="px-3 py-1 bg-green-600 hover:bg-green-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white text-sm font-medium rounded transition-colors"
+                          className="px-3 py-1 bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-400 disabled:cursor-not-allowed text-white text-xs font-bold rounded-lg transition-colors uppercase tracking-wider"
                           title={activeExams.length > 0 ? 'Another exam is active' : 'Start exam'}
                         >
                           Start
                         </button>
                         <button
                           onClick={() => handleDeleteSession(exam.examCode)}
-                          className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded transition-colors"
+                          className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-lg transition-colors uppercase tracking-wider"
                           title="Delete exam"
                         >
                           Delete
@@ -1195,41 +1207,41 @@ export function ExamControlPage() {
       </div>
 
       {/* Completed Exams */}
-      <div className="bg-white rounded-lg shadow-md border border-gray-200 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+      <div className="bg-white rounded-2xl shadow-lg border-2 border-[#0F3D2E]/20 p-8">
+        <h2 className="text-2xl font-bold text-[#1F2A44] mb-6 flex items-center gap-2 uppercase tracking-wider">
           ✅ Recently Completed Exams
         </h2>
 
         {isLoadingSessions ? (
-          <div className="text-center py-8">
-            <Loader className="w-8 h-8 animate-spin mx-auto text-gray-400" />
+          <div className="text-center py-12">
+            <Loader className="w-8 h-8 animate-spin mx-auto text-[#0F3D2E]" />
           </div>
         ) : completedExams.length === 0 ? (
-          <div className="text-center py-8">
-            <p className="text-gray-500">No completed exams</p>
+          <div className="text-center py-12">
+            <p className="text-slate-600 font-medium">No completed exams</p>
           </div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-gray-50 border-b">
+              <thead className="bg-[#F5F3EF] border-b-2 border-[#0F3D2E]/20">
                 <tr>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Exam Code</th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Track</th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Date</th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Submissions</th>
-                  <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+                  <th className="px-4 py-3 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Exam Code</th>
+                  <th className="px-4 py-3 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Track</th>
+                  <th className="px-4 py-3 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Date</th>
+                  <th className="px-4 py-3 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Submissions</th>
+                  <th className="px-4 py-3 text-left text-xs font-bold text-[#1F2A44] uppercase tracking-wider">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y">
+              <tbody className="divide-y divide-[#0F3D2E]/10">
                 {completedExams.map((exam) => (
-                  <tr key={exam.examCode} className="hover:bg-gray-50">
+                  <tr key={exam.examCode} className="hover:bg-[#F5F3EF] transition-colors">
                     <td className="px-4 py-3">
-                      <div className="flex flex-col gap-1">
-                        <span className="font-mono font-semibold text-gray-900">{exam.examCode}</span>
+                      <div className="flex flex-col gap-2">
+                        <span className="font-mono font-bold text-[#0F3D2E]">{exam.examCode}</span>
                         {exam.testType && (
-                          <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded w-fit ${
+                          <span className={`inline-block px-2 py-0.5 text-xs font-bold rounded-full w-fit uppercase tracking-wider ${
                             exam.testType === 'mock' 
-                              ? 'bg-purple-100 text-purple-700' 
+                              ? 'bg-indigo-100 text-indigo-700' 
                               : 'bg-blue-100 text-blue-700'
                           }`}>
                             {exam.testType === 'mock' ? 'Mock' : 'Partial'}
@@ -1237,11 +1249,11 @@ export function ExamControlPage() {
                         )}
                       </div>
                     </td>
-                    <td className="px-4 py-3 text-sm text-gray-700">{exam.trackName}</td>
-                    <td className="px-4 py-3 text-sm text-gray-600">
+                    <td className="px-4 py-3 text-sm font-semibold text-slate-700">{exam.trackName}</td>
+                    <td className="px-4 py-3 text-sm text-slate-700 font-medium">
                       {format(new Date(exam.date), 'MMM d, yyyy')}
                     </td>
-                    <td className="px-4 py-3 text-sm text-gray-600">
+                    <td className="px-4 py-3 text-sm text-slate-700 font-medium">
                       {exam.totalSubmissions} total • {exam.gradedResults} graded
                     </td>
                     <td className="px-4 py-3">
@@ -1249,7 +1261,7 @@ export function ExamControlPage() {
                         onClick={() => {
                           navigate(`/admin/submissions?examCode=${exam.examCode}`);
                         }}
-                        className="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded transition-colors flex items-center gap-1"
+                        className="px-3 py-1 bg-[#0F3D2E] hover:bg-[#0F3D2E]/90 text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-1 uppercase tracking-wider"
                         data-testid={`view-submissions-${exam.examCode}`}
                       >
                         <Eye className="w-4 h-4" />

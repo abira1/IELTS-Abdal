@@ -6,86 +6,188 @@ const storage = getStorage(app);
 const database = getDatabase(app);
 
 const AUDIO_DB_PATH = "exam/audio";
+const AUDIO_CACHE_DB = "AudioCache";
+const AUDIO_CACHE_STORE = "audios";
 
-// Audio preloader with retry logic and progress tracking
-class AudioPreloader {
-  private audioElement: HTMLAudioElement | null = null;
-  private retryCount = 0;
-  private maxRetries = 3;
-  private retryDelay = 1000; // Start with 1 second
-  
-  async preloadAudio(url: string, onProgress?: (percent: number) => void): Promise<HTMLAudioElement> {
+// IndexedDB Audio Cache Manager
+class AudioCacheManager {
+  private dbName = AUDIO_CACHE_DB;
+  private storeName = AUDIO_CACHE_STORE;
+  private db: IDBDatabase | null = null;
+
+  async init(): Promise<void> {
     return new Promise((resolve, reject) => {
-      const audio = new Audio();
-      audio.preload = 'auto';
-      audio.crossOrigin = 'anonymous';
-      
-      let progressInterval: NodeJS.Timeout | null = null;
-      
-      // Monitor loading progress
-      const handleProgress = () => {
-        if (audio.buffered.length > 0) {
-          const bufferedEnd = audio.buffered.end(audio.buffered.length - 1);
-          const duration = audio.duration;
-          if (duration > 0) {
-            const percent = Math.round((bufferedEnd / duration) * 100);
-            onProgress?.(percent);
-          }
+      const request = indexedDB.open(this.dbName, 1);
+
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        this.db = request.result;
+        resolve();
+      };
+
+      request.onupgradeneeded = (event) => {
+        const db = (event.target as IDBOpenDBRequest).result;
+        if (!db.objectStoreNames.contains(this.storeName)) {
+          db.createObjectStore(this.storeName, { keyPath: "url" });
         }
       };
-      
-      const handleCanPlayThrough = () => {
-        if (progressInterval) clearInterval(progressInterval);
-        onProgress?.(100);
-        this.audioElement = audio;
-        resolve(audio);
-      };
-      
-      const handleError = async () => {
-        if (progressInterval) clearInterval(progressInterval);
-        
-        if (this.retryCount < this.maxRetries) {
-          this.retryCount++;
-          const delay = this.retryDelay * Math.pow(2, this.retryCount - 1); // Exponential backoff
-          console.log(`Audio load failed, retrying in ${delay}ms (attempt ${this.retryCount}/${this.maxRetries})`);
-          
-          await new Promise(resolve => setTimeout(resolve, delay));
-          
-          try {
-            const retryAudio = await this.preloadAudio(url, onProgress);
-            resolve(retryAudio);
-          } catch (err) {
-            reject(err);
-          }
-        } else {
-          reject(new Error('Failed to load audio after multiple attempts'));
-        }
-      };
-      
-      audio.addEventListener('canplaythrough', handleCanPlayThrough, { once: true });
-      audio.addEventListener('error', handleError, { once: true });
-      audio.addEventListener('progress', handleProgress);
-      
-      // Start periodic progress check
-      progressInterval = setInterval(handleProgress, 500);
-      
-      audio.src = url;
-      audio.load();
     });
   }
-  
-  getAudioElement(): HTMLAudioElement | null {
-    return this.audioElement;
+
+  async cacheAudio(url: string, blob: Blob, metadata: { fileName: string; size: number }): Promise<void> {
+    if (!this.db) await this.init();
+
+    return new Promise((resolve, reject) => {
+      const transaction = this.db!.transaction([this.storeName], "readwrite");
+      const store = transaction.objectStore(this.storeName);
+
+      const data = {
+        url,
+        blob,
+        metadata,
+        cachedAt: Date.now(),
+      };
+
+      const request = store.put(data);
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => resolve();
+    });
   }
-  
-  reset() {
+
+  async getCachedAudio(url: string): Promise<{ blob: Blob; metadata: { fileName: string; size: number } } | null> {
+    if (!this.db) await this.init();
+
+    return new Promise((resolve, reject) => {
+      const transaction = this.db!.transaction([this.storeName], "readonly");
+      const store = transaction.objectStore(this.storeName);
+      const request = store.get(url);
+
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => {
+        const result = request.result;
+        if (result) {
+          resolve({ blob: result.blob, metadata: result.metadata });
+        } else {
+          resolve(null);
+        }
+      };
+    });
+  }
+
+  async clearCache(): Promise<void> {
+    if (!this.db) await this.init();
+
+    return new Promise((resolve, reject) => {
+      const transaction = this.db!.transaction([this.storeName], "readwrite");
+      const store = transaction.objectStore(this.storeName);
+      const request = store.clear();
+
+      request.onerror = () => reject(request.error);
+      request.onsuccess = () => resolve();
+    });
+  }
+}
+
+// Audio downloader with progress tracking
+class AudioDownloader {
+  private cacheManager = new AudioCacheManager();
+  private retryCount = 0;
+  private maxRetries = 3;
+
+  async downloadAudio(
+    url: string,
+    onProgress?: (percent: number) => void,
+    onStatusChange?: (status: string) => void
+  ): Promise<Blob> {
+    try {
+      onStatusChange?.("Downloading audio...");
+
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const contentLength = response.headers.get("content-length");
+      const total = parseInt(contentLength || "0", 10);
+
+      if (total === 0) {
+        // If content-length not available, download without progress
+        const blob = await response.blob();
+        onProgress?.(100);
+        onStatusChange?.("Download complete");
+        return blob;
+      }
+
+      const reader = response.body!.getReader();
+      const chunks: Uint8Array[] = [];
+      let loaded = 0;
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        chunks.push(value);
+        loaded += value.length;
+        const percent = Math.round((loaded / total) * 100);
+        onProgress?.(percent);
+      }
+
+      const blob = new Blob(chunks);
+      onProgress?.(100);
+      onStatusChange?.("Download complete");
+      return blob;
+    } catch (error) {
+      console.error("Audio download error:", error);
+
+      if (this.retryCount < this.maxRetries) {
+        this.retryCount++;
+        const delay = 1000 * this.retryCount;
+        onStatusChange?.(`Retrying... (${this.retryCount}/${this.maxRetries})`);
+
+        await new Promise((resolve) => setTimeout(resolve, delay));
+        return this.downloadAudio(url, onProgress, onStatusChange);
+      }
+
+      throw error;
+    }
+  }
+
+  async getCachedOrDownload(
+    url: string,
+    metadata: { fileName: string; size: number },
+    onProgress?: (percent: number) => void,
+    onStatusChange?: (status: string) => void
+  ): Promise<Blob> {
+    // Check cache first
+    const cached = await this.cacheManager.getCachedAudio(url);
+    if (cached) {
+      onStatusChange?.("Loading from cache...");
+      onProgress?.(100);
+      return cached.blob;
+    }
+
+    // Download if not in cache
+    const blob = await this.downloadAudio(url, onProgress, onStatusChange);
+
+    // Store in cache
+    try {
+      await this.cacheManager.cacheAudio(url, blob, metadata);
+      onStatusChange?.("Cached successfully");
+    } catch (err) {
+      console.warn("Failed to cache audio:", err);
+    }
+
+    return blob;
+  }
+
+  resetRetries() {
     this.retryCount = 0;
-    this.audioElement = null;
   }
 }
 
 export const audioService = {
-  preloader: new AudioPreloader(),
+  downloader: new AudioDownloader(),
   
   // Upload audio file to Firebase Storage
   async uploadAudio(file: File): Promise<string> {
@@ -149,17 +251,49 @@ export const audioService = {
     }
   },
 
-  // Preload audio in background with progress tracking
-  async preloadAudioInBackground(url: string, onProgress?: (percent: number) => void): Promise<HTMLAudioElement> {
+  // Download and cache audio, returns blob URL for playback
+  async downloadAndCacheAudio(
+    url: string,
+    onProgress?: (percent: number) => void,
+    onStatusChange?: (status: string) => void
+  ): Promise<string> {
     try {
-      return await this.preloader.preloadAudio(url, onProgress);
+      const metadata = await this.getAudioMetadata();
+      const blob = await this.downloader.getCachedOrDownload(
+        url,
+        {
+          fileName: metadata?.fileName || "audio",
+          size: metadata?.size || 0,
+        },
+        onProgress,
+        onStatusChange
+      );
+
+      // Create blob URL for playback (no streaming, no buffering)
+      const blobUrl = URL.createObjectURL(blob);
+      return blobUrl;
+    } catch (error) {
+      console.error("Error downloading and caching audio:", error);
+      throw error;
+    }
+  },
+
+  // Preload audio in background (downloads to cache)
+  async preloadAudioInBackground(
+    url: string,
+    onProgress?: (percent: number) => void,
+    onStatusChange?: (status: string) => void
+  ): Promise<void> {
+    try {
+      this.downloader.resetRetries();
+      await this.downloadAndCacheAudio(url, onProgress, onStatusChange);
     } catch (error) {
       console.error("Error preloading audio:", error);
       throw error;
     }
   },
 
-  // Delete audio from storage and database
+  // Delete audio from storage and cache
   async deleteAudio(): Promise<void> {
     try {
       const snapshot = await get(dbRef(database, AUDIO_DB_PATH));
@@ -188,6 +322,10 @@ export const audioService = {
         // Delete from database
         await set(dbRef(database, AUDIO_DB_PATH), null);
       }
+
+      // Clear cache
+      const cacheManager = new AudioCacheManager();
+      await cacheManager.clearCache();
     } catch (error) {
       console.error("Error deleting audio:", error);
       throw error;

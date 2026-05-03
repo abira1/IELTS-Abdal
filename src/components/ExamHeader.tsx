@@ -143,7 +143,7 @@ export function ExamHeader({
           <div className="flex-shrink-0">
             <img 
               src="/abdal-ielts-academy-logo.png" 
-              alt="Abdal IELTS Academy" 
+              alt="IELTS Abdal" 
               className="h-10 w-auto sm:h-12 lg:h-14 object-contain"
             />
           </div>

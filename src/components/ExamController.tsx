@@ -180,43 +180,44 @@ export function ExamController() {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md border border-gray-200 p-8">
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Exam Control</h2>
-        <p className="text-gray-600">Manage exam start/stop for all waiting students</p>
+    <div className="bg-[#F5F3EF] rounded-2xl shadow-lg border border-[#0F3D2E]/10 p-8">
+      {/* Header */}
+      <div className="mb-8">
+        <h2 className="text-3xl font-bold text-[#1F2A44] mb-2">Exam Control</h2>
+        <p className="text-slate-600 text-lg">Manage exam start/stop for all waiting students</p>
       </div>
 
-      {/* Exam Info */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 mb-6 border border-blue-200">
-        <div className="space-y-3">
+      {/* Exam Info Status Card */}
+      <div className="bg-white rounded-2xl shadow-md border-2 border-[#0F3D2E] p-8 mb-8">
+        <div className="space-y-5">
           <div>
-            <p className="text-sm text-gray-600 mb-1">
-              {isExamRunning ? 'Currently Running Exam' : 'Exam Status'}
+            <p className="text-sm text-slate-600 font-semibold uppercase tracking-wider mb-2">
+              {isExamRunning ? '🟢 Currently Running Exam' : '⚪ Exam Status'}
             </p>
-            <p className="text-2xl font-bold text-gray-900">
+            <p className="text-3xl font-bold text-[#1F2A44]">
               {isExamRunning && currentExamTimes.trackName 
                 ? currentExamTimes.trackName 
                 : 'No exam running'}
             </p>
           </div>
           <div className="flex items-center gap-3">
-            <div className={`w-3 h-3 rounded-full ${isExamRunning ? 'bg-green-500 animate-pulse' : 'bg-gray-400'}`}></div>
-            <p className="text-sm font-medium text-gray-700">
-              Status: <span className={isExamRunning ? 'text-green-600 font-semibold' : 'text-gray-600'}>
-                {isExamRunning ? 'RUNNING - Students taking exam' : 'NOT STARTED - Select and start exam'}
+            <div className={`w-4 h-4 rounded-full ${isExamRunning ? 'bg-emerald-500 animate-pulse' : 'bg-slate-400'}`}></div>
+            <p className="text-sm font-semibold text-slate-700">
+              <span className={isExamRunning ? 'text-emerald-600' : 'text-slate-600'}>
+                {isExamRunning ? '✓ RUNNING - Students taking exam' : '○ NOT STARTED - Select and start exam'}
               </span>
             </p>
           </div>
           {isExamRunning && currentExamTimes.startTime && currentExamTimes.endTime && (
-            <div className="mt-4 pt-4 border-t border-blue-200">
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div>
-                  <p className="text-gray-600 mb-1">Start Time</p>
-                  <p className="font-semibold text-gray-900">{formatDateTime(currentExamTimes.startTime)}</p>
+            <div className="mt-6 pt-6 border-t-2 border-[#0F3D2E]/10">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-[#F5F3EF] rounded-xl p-4 border border-[#0F3D2E]/10">
+                  <p className="text-xs text-slate-600 font-semibold uppercase tracking-wider mb-2">Start Time</p>
+                  <p className="font-bold text-[#1F2A44] text-lg">{formatDateTime(currentExamTimes.startTime)}</p>
                 </div>
-                <div>
-                  <p className="text-gray-600 mb-1">End Time</p>
-                  <p className="font-semibold text-gray-900">{formatDateTime(currentExamTimes.endTime)}</p>
+                <div className="bg-[#F5F3EF] rounded-xl p-4 border border-[#0F3D2E]/10">
+                  <p className="text-xs text-slate-600 font-semibold uppercase tracking-wider mb-2">End Time</p>
+                  <p className="font-bold text-[#1F2A44] text-lg">{formatDateTime(currentExamTimes.endTime)}</p>
                 </div>
               </div>
             </div>
@@ -226,30 +227,30 @@ export function ExamController() {
 
       {/* Messages */}
       {error && (
-        <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start gap-3">
-          <AlertCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
-          <p className="text-red-900 text-sm">{error}</p>
+        <div className="mb-8 p-5 bg-red-50 border-l-4 border-red-600 rounded-xl flex items-start gap-4">
+          <AlertCircle className="w-6 h-6 text-red-600 mt-0.5 flex-shrink-0" />
+          <p className="text-red-800 font-semibold">{error}</p>
         </div>
       )}
 
       {success && (
-        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3">
-          <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-          <p className="text-green-900 text-sm">{success}</p>
+        <div className="mb-8 p-5 bg-emerald-50 border-l-4 border-emerald-600 rounded-xl flex items-start gap-4">
+          <CheckCircle className="w-6 h-6 text-emerald-600 mt-0.5 flex-shrink-0" />
+          <p className="text-emerald-800 font-semibold">{success}</p>
         </div>
       )}
 
       {/* Track Selection and Duration */}
       {!isExamRunning && (
-        <div className="bg-white rounded-lg border border-gray-300 p-6 mb-6 space-y-6">
+        <div className="bg-white rounded-2xl border-2 border-[#0F3D2E]/20 p-8 mb-8 space-y-8">
           {/* Track Selection */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-              <List className="w-5 h-5 text-blue-600" />
+            <h3 className="text-xl font-bold text-[#1F2A44] mb-5 flex items-center gap-3">
+              <List className="w-6 h-6 text-[#0F3D2E]" />
               Select Exam Track
             </h3>
             
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-slate-700 mb-3 uppercase tracking-wider">
               Choose which exam students will take
             </label>
             <select
@@ -261,7 +262,7 @@ export function ExamController() {
                   setDurationMinutes(String(track.duration));
                 }
               }}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+              className="w-full px-5 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] bg-white text-[#1F2A44] font-medium"
               data-testid="track-selector"
             >
               {availableTracks.map((track) => (
@@ -273,45 +274,48 @@ export function ExamController() {
           </div>
 
           {/* Duration Selection */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-              <Clock className="w-5 h-5 text-blue-600" />
+          <div className="border-t-2 border-[#0F3D2E]/10 pt-8">
+            <h3 className="text-xl font-bold text-[#1F2A44] mb-5 flex items-center gap-3">
+              <Clock className="w-6 h-6 text-[#0F3D2E]" />
               Set Exam Duration
             </h3>
 
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Duration (minutes)</label>
-              <div className="flex gap-2 mb-3">
+            <div className="mb-6">
+              <label className="block text-sm font-semibold text-slate-700 mb-4 uppercase tracking-wider">Quick Select (minutes)</label>
+              <div className="flex flex-wrap gap-3 mb-6">
                 {[30, 40, 45, 60].map((m) => (
                   <button
                     key={m}
                     type="button"
                     onClick={() => setDurationMinutes(String(m))}
-                    className={`px-3 py-1 rounded-md text-sm font-medium border ${String(m) === durationMinutes ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
+                    className={`px-4 py-2 rounded-lg text-sm font-bold uppercase tracking-wider transition-all ${String(m) === durationMinutes ? 'bg-[#0F3D2E] text-white shadow-lg border-2 border-[#0F3D2E]' : 'bg-[#F5F3EF] text-[#1F2A44] border-2 border-[#0F3D2E]/30 hover:border-[#0F3D2E]'}`}
                   >
                     {m}m
                   </button>
                 ))}
               </div>
 
-              <div className="flex gap-3 items-center">
-                <input
-                  type="number"
-                  min={1}
-                  step={1}
-                  value={durationMinutes}
-                  onChange={(e) => setDurationMinutes(e.target.value)}
-                  className="w-36 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  data-testid="exam-duration-input"
-                />
-                <div className="text-sm text-gray-600">minutes</div>
+              <div className="flex gap-4 items-center mb-6">
+                <div className="flex-1">
+                  <label className="block text-sm font-semibold text-slate-700 mb-2 uppercase tracking-wider">Custom Duration</label>
+                  <input
+                    type="number"
+                    min={1}
+                    step={1}
+                    value={durationMinutes}
+                    onChange={(e) => setDurationMinutes(e.target.value)}
+                    className="w-full px-4 py-3 border-2 border-[#0F3D2E]/30 rounded-xl focus:ring-2 focus:ring-[#0F3D2E] focus:border-[#0F3D2E] text-[#1F2A44] font-semibold"
+                    data-testid="exam-duration-input"
+                  />
+                </div>
+                <div className="text-sm font-bold text-[#1F2A44] mt-7">minutes</div>
               </div>
             </div>
 
             {durationMinutes && (
-              <div className="bg-blue-50 rounded-lg p-3 border border-blue-200">
-                <p className="text-sm text-blue-900">
-                  <span className="font-semibold">Exam Duration:</span> {calculateDuration()}
+              <div className="bg-gradient-to-r from-[#0F3D2E]/5 to-emerald-50 rounded-xl p-5 border-2 border-[#0F3D2E]/30">
+                <p className="text-sm font-bold text-[#1F2A44]">
+                  <span className="text-[#0F3D2E]">⏱️ Exam Duration:</span> {calculateDuration()}
                 </p>
               </div>
             )}
@@ -320,18 +324,18 @@ export function ExamController() {
       )}
 
       {/* Controls */}
-      <div className="space-y-3">
+      <div className="space-y-4 mb-8">
         {!isExamRunning ? (
           <button
             onClick={startExam}
             disabled={isLoading}
-            className="w-full bg-green-600 hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-all transform hover:scale-105 flex items-center justify-center gap-3 shadow-lg uppercase tracking-wider"
             data-testid="start-exam-button"
           >
             {isLoading ? (
-              <Loader className="w-5 h-5 animate-spin" />
+              <Loader className="w-6 h-6 animate-spin" />
             ) : (
-              <Play className="w-5 h-5" />
+              <Play className="w-6 h-6" />
             )}
             {isLoading ? 'Starting...' : 'Start Exam for All Students'}
           </button>
@@ -339,23 +343,24 @@ export function ExamController() {
           <button
             onClick={stopExam}
             disabled={isLoading}
-            className="w-full bg-red-600 hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-medium py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+            className="w-full bg-red-600 hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-all transform hover:scale-105 flex items-center justify-center gap-3 shadow-lg uppercase tracking-wider"
             data-testid="stop-exam-button"
           >
             {isLoading ? (
-              <Loader className="w-5 h-5 animate-spin" />
+              <Loader className="w-6 h-6 animate-spin" />
             ) : (
-              <Square className="w-5 h-5" />
+              <Square className="w-6 h-6" />
             )}
             {isLoading ? 'Stopping...' : 'Stop Exam'}
           </button>
         )}
       </div>
 
-      {/* Info */}
-      <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-        <p className="text-sm text-blue-900">
-          <span className="font-semibold">💡 Tip:</span> Students can only start the exam at or after the scheduled start time. The exam will automatically end at the specified end time. In the last 5 minutes, the countdown timer will turn red.
+      {/* Info Tip */}
+      <div className="p-6 bg-gradient-to-r from-[#0F3D2E]/10 to-emerald-50 border-2 border-[#0F3D2E]/30 rounded-xl">
+        <p className="text-sm text-[#1F2A44] font-semibold leading-relaxed">
+          <span className="text-lg mr-2">💡</span>
+          <span className="font-bold text-[#0F3D2E]">How it works:</span> Students can only start the exam at or after the scheduled start time. The exam will automatically end at the specified end time. In the last 5 minutes, the countdown timer will turn red.
         </p>
       </div>
     </div>

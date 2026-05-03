@@ -1,11 +1,11 @@
-// Track: 707-M Reading
+// Track: 707-AC Reading
 import { Track } from './track1';
 
 export const track707Reading: Track = {
   id: 'track-707-reading',
-  name: '707-M Reading',
-  shortName: '707MR',
-  description: 'IELTS Reading Practice Test - Academic Reading with 3 parts and 40 questions',
+  name: '707-AC Reading',
+  shortName: '707-AC',
+  description: 'IELTS Reading Academic - 3 parts with 40 questions',
   duration: 60,
   totalQuestions: 40,
   trackType: 'reading',
@@ -15,43 +15,90 @@ export const track707Reading: Track = {
       sectionNumber: 1,
       title: 'READING PASSAGE 1',
       passage: {
-        title: 'Money Transfers and Mobile Phones in Kenya',
-        content: `In Kenya, a technological innovation is changing the way people transfer money. Safaricom, the largest mobile phone operator in the East African nation, has partnered with various banks and money transfer organizations to create a simple payment system called M-Pesa. The system allows people to send and receive money using text messages on their mobile phones. Users register at authorized retail outlets and are given an ID code that links them to their phone number. To send money, a user simply texts their recipient's phone number and the amount, and the money is instantly transferred to the recipient's account. The recipient can then collect the cash from any authorized outlet. This system has revolutionized money transfer in Kenya, where access to traditional banking services is limited in many rural areas. The M-Pesa system has attracted over 2 million users within its first year of operation. The system charges a small fee for each transaction, which varies depending on the amount being sent. For example, sending 1000 Kenyan shillings costs 38 shillings in fees, while sending 35000 shillings costs 398 shillings. Despite the fees, the system remains popular because it is much faster and cheaper than traditional money transfer methods. The system has also had an unexpected social benefit. Previously, many people in rural Kenya were unable to access the financial system. Now, through M-Pesa, people who do not have bank accounts can save money and participate in the financial system. Women, who make up a significant portion of M-Pesa users, have benefited particularly, gaining greater financial independence and the ability to start small businesses. The success of M-Pesa has led to the introduction of similar systems in other East African countries and has attracted the interest of mobile phone operators around the world. Several African countries are now exploring the implementation of similar services, and the system is being studied as a model for developing nations seeking to provide financial services to their populations.`
+        title: 'Money Transfers by Mobile',
+        content: `A. The ping of a text message has never sounded so sweet. In what is being touted as a world-first, Kenya's biggest mobile operator is allowing subscribers to send cash to other phone users by SMS. Known as M-Pesa, or mobile money, the service is expected to revolutionise banking in a country where more than 80% of people are excluded from the formal financial sector. Apart from transferring cash - a service much in demand among urban Kenyans supporting relatives in rural areas - customers of the Safaricom network will be able to keep up to 50,000 shillings (£370) in a "virtual account" on their handsets.
+
+B. Developed by Vodafone, which holds a 35% share in Safaricom, M-Pesa was formally launched in Kenya two weeks ago. More than 10,000 people have signed up for the service, with around 8 million shillings transferred so far, mostly in tiny denominations. Safaricom's executives are confident that growth will be strong in Kenya, and later across Africa. "We are effectively giving people ATM cards without them ever having to open a real bank account," said Michael Joseph, chief executive of Safaricom, who called the money transfer concept the "next big thing" in mobile telephony.
+
+C. M-Pesa's model is simple. There is no need for a new handset or SIM card. To send money, you hand over the cash to a registered agent - typically a retailer - who credits your virtual account. You then send between 100 shillings (74p) and 35,000 shillings (£259) via text message to the desired recipient - even someone on a different mobile network - who cashes it at an agent by entering a secret code and showing ID. A commission of up to 170 shillings (£1.25) is paid by the recipient but it compares favourably with fees levied by the major banks, whose services are too expensive for most of the population.
+
+D. Mobile phone growth in Kenya, as in most of Africa, has been remarkable, even among the rural poor. In June 1999, Kenya had 15,000 mobile subscribers. Today, it has nearly 8 million out of a population of 35 million, and the two operators' networks are as extensive as the access to banks is limited. Safaricom says it is not so much competing with financial services companies as filling a void. In time, M-Pesa will allow people to borrow and repay money, and make purchases. Companies will be able to pay salaries directly into workers' phones - something that has already attracted the interest of larger employers, such as the tea companies, whose workers often have to be paid in cash as they do not have bank accounts. There are concerns about security, but Safaricom insists that even if someone's phone is stolen, the PIN system prevents unauthorised withdrawals. Mr. Joseph said the only danger is sending cash to the wrong mobile number and the recipient redeeming it straight away.
+
+E. The project is being watched closely by mobile operators around the world as a way of targeting the multibillion pound international cash transfer industry long dominated by companies such as Western Union and Moneygram. Remittances sent from nearly 200 million migrant workers to developing countries totalled £102 billion last year, according to the World Bank. The GSM Association, which represents more than 700 mobile operators worldwide, believes this could quadruple by 2012 if transfers by SMS become the norm. Vodafone has entered a partnership with Citigroup that will soon allow Kenyans in the UK to send money home via text message. The charge for sending £50 is expected to be about £3, less than a third of what some traditional services charge.`
       },
       questions: [
         {
-          type: 'drag-and-drop',
-          instruction: 'Choose the most suitable heading for each section.',
-          items: [
-            { questionNumber: 1, label: 'Section A' },
-            { questionNumber: 2, label: 'Section B' },
-            { questionNumber: 3, label: 'Section C' },
-            { questionNumber: 4, label: 'Section D' }
-          ],
-          options: [
-            { label: 'How the System Works', value: 'i' },
-            { label: 'Wide Reaching Impact', value: 'ii' },
-            { label: 'A New Innovation in Kenya', value: 'iii' },
-            { label: 'Cost and Speed Advantages', value: 'iv' },
-            { label: 'Future Expansion', value: 'v' }
-          ]
+          type: 'matching-paragraph',
+          questionNumber: 1,
+          statement: 'A possible security problem',
+          instruction: 'Which paragraph (A-E) contains this information?'
         },
         {
-          type: 'paragraph-gap',
-          instruction: 'Complete with words from the text (MAX 3 words).',
-          paragraph: 'Users of M-Pesa register at (5)... and receive (6)... that links to their phone. To send money, users text (7)... and the amount. The system charges (8)... for each transaction. The system benefits (9)... particularly.',
-          questionNumbers: [5, 6, 7, 8, 9]
+          type: 'matching-paragraph',
+          questionNumber: 2,
+          statement: 'The cost of M-Pesa',
+          instruction: 'Which paragraph (A-E) contains this information?'
+        },
+        {
+          type: 'matching-paragraph',
+          questionNumber: 3,
+          statement: 'An international service similar to M-Pesa',
+          instruction: 'Which paragraph (A-E) contains this information?'
+        },
+        {
+          type: 'matching-paragraph',
+          questionNumber: 4,
+          statement: 'The fact that most Kenyans do not have a bank account',
+          instruction: 'Which paragraph (A-E) contains this information?'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 5,
+          statement: 'Safaricom is the',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 6,
+          statement: 'An M-Pesa account needs to be credited by',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 7,
+          statement: 'Companies are particularly interested in using M-Pesa.',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 8,
+          statement: 'Companies like Moneygram and Western Union have',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
         },
         {
           type: 'true-false-not-given',
-          instruction: 'Do the statements agree with the information?',
-          statements: [
-            { questionNumber: 10, statement: 'All people in Kenya have access to banking services.' },
-            { questionNumber: 11, statement: 'M-Pesa allows users to transfer money using text messages.' },
-            { questionNumber: 12, statement: 'The system charges the same fee regardless of the amount sent.' },
-            { questionNumber: 13, statement: 'Women have become more financially independent through M-Pesa.' },
-            { questionNumber: 14, statement: 'M-Pesa is only available in Kenya.' }
-          ]
+          questionNumber: 9,
+          statement: 'Most Kenyans working in urban areas have relatives in rural areas.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 10,
+          statement: 'So far, most of the people using M-Pesa have used it to send small amounts of money.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 11,
+          statement: 'M-Pesa can only be used by people using one phone network.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 12,
+          statement: 'M-Pesa can be used to buy products and services.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 13,
+          statement: 'The GSM Association is a consumer organisation.'
         }
       ]
     },
@@ -59,54 +106,109 @@ export const track707Reading: Track = {
       sectionNumber: 2,
       title: 'READING PASSAGE 2',
       passage: {
-        title: 'Parking in Modern Cities',
-        content: `Parking has become one of the most pressing challenges in modern urban centers. As cities grow and automobile ownership increases, finding a parking space has become a time-consuming and frustrating task for many drivers. Studies show that drivers in major cities spend an average of 30 minutes searching for a parking space, and this inefficiency contributes significantly to traffic congestion, pollution, and wasted fuel. One innovative approach to solving the parking problem is the implementation of smart parking systems. These systems use sensors and real-time information technology to help drivers find available parking spaces quickly and efficiently. Smart parking systems can reduce the time spent searching for parking by up to 30%, according to recent studies. Some cities have implemented dynamic pricing for parking, where the cost of parking varies depending on demand. In areas with high demand, parking is more expensive, while in areas with low demand, it is cheaper. This approach encourages drivers to park in less congested areas and distributes parking demand more evenly throughout the city. Other solutions include the development of multi-story parking facilities and the promotion of alternative transportation methods such as public transit and cycling. Additionally, some cities have restricted vehicle access to certain areas, creating car-free zones that encourage walking and the use of alternative transportation. The most successful approach to addressing the parking crisis likely involves a combination of these strategies, tailored to the specific needs and characteristics of each city.`
+        title: 'Park the Car Permanently',
+        content: `A. More than a million people are likely to be disappointed by their experience of the Government's attempts to improve the democratic process. They may have signed an online petition against road pricing, but ministers are determined to push ahead with plans to make it more expensive to drive. The Government is convinced that this is the only way to reduce congestion and the environmental damage caused by motoring.
+
+B. Why wait until you are forced off the road by costly charges? You may enjoy the convenience of your car, but the truth is that for huge numbers of people, owning a car makes little financial sense. You'd be far better off giving it up and relying on other forms of transport. "I'm 47 and I've never owned a car, despite having a job that requires me to travel all over the South-East to visit clients," says Donnachadh McCarthy, an environmental expert who specialises in advising people how to be greener. "A car is a huge financial commitment, as well as being a psychological addiction. Not owning a vehicle is far more practical than most people realise."
+
+C. It may seem as if cars have never been cheaper. After all, it is now possible to buy a brand new car for less than £4,800 - the Perodua Kelisa, if you're interested. There are plenty of decent vehicles you can buy straight from the showroom for between £5,000 and £7,000. Of course, if you buy second-hand, the prices will be even lower. However, the falling purchase price of cars masks the fact that it has never been more expensive to own and run a vehicle. The estimate is that the cost of running a car rose by more than ten per cent last year alone. The annual cost of running your own vehicle is put at an average of £5,539, or £107 a week. While drivers who do less or more than the average mileage each year will spend correspondingly less or more, many of the costs of car ownership are fixed - and therefore unavoidable.
+
+D. Depreciation - the fact that your vehicle loses a large chunk of its resale value each year - is one problem, accounting for £2,420 a year. The cost of finance packages, which most people have to resort to to pay for at least part of the price of a new car, has also been rising - to an average of £1,040 a year. Then there's insurance, maintenance, tax, and breakdown insurance, all of which will cost you broadly the same amount, however many miles you do. Only fuel costs are truly variable. While petrol prices are the most visible indicator of the cost of running a car, for the typical driver they account for less than one fifth of the real costs each year. In other words, leaving aside all the practical and psychological barriers to giving up your car, in financial terms, doing so makes sense for many people.
+
+E. Take the cost of public transport, for example. In London, the most expensive city in the UK, the most expensive annual travel card, allowing travel in any zone at any time, costs just over £1,700. You could give up your car and still have thousands of pounds to spare to spend on occasional car hire. In fact, assuming that you have the most expensive travel card in London, you could hire a cheap car from a company, such as easyCar for about 30 weeks a year, and still be better off overall than if you own your own vehicle. Not that car hire is necessarily the most cost-effective option for people who are prepared to do without a car but may still need to drive occasionally.
+
+F. Streetcar, one of several "car clubs" with growing numbers of members, reckons that using its vehicles twice a week, every week, for a year, would cost you just £700. Streetcar's model works very similarly to those of its main rivals, Citycarclub and Whizzgo. These three companies, which now operate in 20 of Britain's towns and cities, charge their members a refundable deposit - £150 at Streetcar - and then provide them with an electronic smart card. This enables members to get into the vehicles, which are left parked in set locations, and the keys are then found in the glove compartment. Members pay an hourly rate for the car - £4.95 is the cost at Streetcar - and return it to the same spot, or to a different designated parking place.
+
+G. Car sharing is an increasingly popular option for people making the same journeys regularly - to and from work, for example. Many companies run schemes that help colleagues who live near to each other and work in the same place to contact each other so they can share the journey to work. Liftshare and Carshare are two national organisations that maintain online databases of people who would be prepared to team up. Other people may be able to replace part or all of their journey to work - or any journeys, for that matter - with low-cost transport such as a bicycle, or even by just walking. The more you can reduce your car use, however you gain access to it, the more you will save.`
       },
       questions: [
         {
-          type: 'multiple-choice',
-          instruction: 'Choose the correct letter A, B, C or D.',
+          type: 'matching-paragraph',
+          questionNumber: 14,
+          statement: 'Don\'t wait!',
+          instruction: 'Which paragraph (A-G) best fits this heading?'
+        },
+        {
+          type: 'matching-paragraph',
           questionNumber: 15,
-          question: 'According to the passage, drivers spend on average ___ searching for parking.',
+          statement: 'Team up',
+          instruction: 'Which paragraph (A-G) best fits this heading?'
+        },
+        {
+          type: 'matching-paragraph',
+          questionNumber: 16,
+          statement: 'Join a club',
+          instruction: 'Which paragraph (A-G) best fits this heading?'
+        },
+        {
+          type: 'matching-paragraph',
+          questionNumber: 17,
+          statement: 'Use public transport',
+          instruction: 'Which paragraph (A-G) best fits this heading?'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 18,
+          statement: 'McCarthy claims people can become addicted to using cars.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 19,
+          statement: 'The cost of using a car rose by over ten per cent last year.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 20,
+          statement: 'Most British people borrow money to help buy cars.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 21,
+          statement: 'Many people need cars to drive in London occasionally.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 22,
+          statement: 'Streetcar operates in over 20 cities in Britain.'
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 23,
+          question: 'The government has decided',
           options: [
-            { label: '20 minutes', value: 'A' },
-            { label: '30 minutes', value: 'B' },
-            { label: '40 minutes', value: 'C' },
-            { label: '50 minutes', value: 'D' }
+            { label: 'not to follow protestors\' suggestions.', value: 'A' },
+            { label: 'to become more democratic.', value: 'B' },
+            { label: 'to go ahead with charging drivers to use roads.', value: 'C' }
           ]
         },
         {
           type: 'multiple-choice',
-          instruction: 'Choose the correct letter A, B, C or D.',
-          questionNumber: 16,
-          question: 'Smart parking systems can reduce search time by',
+          questionNumber: 24,
+          question: 'Cars are often',
           options: [
-            { label: 'up to 20%', value: 'A' },
-            { label: 'up to 30%', value: 'B' },
-            { label: 'up to 40%', value: 'C' },
-            { label: 'up to 50%', value: 'D' }
+            { label: 'relatively cheap in Britain.', value: 'A' },
+            { label: 'relatively expensive to operate in Britain.', value: 'B' },
+            { label: 'sold second-hand in Britain.', value: 'C' }
           ]
         },
         {
-          type: 'paragraph-gap',
-          instruction: 'Complete with words from the text (MAX 2 words).',
-          paragraph: 'Dynamic pricing encourages drivers to park in areas with (17)... demand. Multi-story parking facilities and (18)... are alternative solutions. Car-free zones encourage (19)... and alternative transportation. The most successful approach likely involves (20)... of different strategies.',
-          questionNumbers: [17, 18, 19, 20]
+          type: 'multiple-choice',
+          questionNumber: 25,
+          question: 'Fuel costs',
+          options: [
+            { label: 'make up about 20% of the cost of running a car.', value: 'A' },
+            { label: 'are related to the amount drivers pay for their cars.', value: 'B' },
+            { label: 'depend on how far you drive.', value: 'C' }
+          ]
         },
         {
-          type: 'drag-and-drop',
-          instruction: 'Match each solution with its benefit.',
-          items: [
-            { questionNumber: 21, label: 'Smart parking systems' },
-            { questionNumber: 22, label: 'Dynamic pricing' },
-            { questionNumber: 23, label: 'Car-free zones' },
-            { questionNumber: 24, label: 'Alternative transportation' }
-          ],
+          type: 'multiple-choice',
+          questionNumber: 26,
+          question: 'Using public transport',
           options: [
-            { label: 'Reduces search time', value: 'A' },
-            { label: 'Distributes parking demand', value: 'B' },
-            { label: 'Encourages walking', value: 'C' },
-            { label: 'Reduces traffic congestion', value: 'D' }
+            { label: 'will save money for British motorists, except in London.', value: 'A' },
+            { label: 'and renting a car part of the time can save money.', value: 'B' },
+            { label: 'costs Londoners about £1,700 a year.', value: 'C' }
           ]
         }
       ]
@@ -115,50 +217,112 @@ export const track707Reading: Track = {
       sectionNumber: 3,
       title: 'READING PASSAGE 3',
       passage: {
-        title: 'LED Technology and Energy Efficiency',
-        content: `LED (Light-Emitting Diode) technology represents a significant advancement in lighting solutions, offering numerous advantages over traditional incandescent and fluorescent bulbs. LEDs are highly energy-efficient, consuming approximately 75% less energy than incandescent bulbs while producing the same amount of light. This energy efficiency translates to lower electricity bills for consumers and reduced environmental impact. Another major advantage of LED technology is its longevity. LED bulbs can last up to 25 times longer than incandescent bulbs, with some lasting up to 50,000 hours of use. This extended lifespan means fewer replacements and reduced waste. Additionally, LED bulbs generate less heat than traditional bulbs, making them safer to handle and reducing cooling costs in buildings. LEDs are also available in various colors and can be dimmed, allowing for greater flexibility in lighting design. The declining cost of LED technology has made it increasingly affordable for consumers. The price of LED bulbs has dropped significantly over the past decade, making them more competitive with traditional lighting solutions. Many governments have implemented LED lighting initiatives and incentives to encourage their adoption. For example, some countries offer rebates or tax credits for consumers who switch to LED lighting. Furthermore, LED technology is being integrated into various applications beyond general lighting, including automotive lighting, display screens, and medical devices. The transition to LED lighting is part of a broader global movement toward sustainability and energy efficiency. As more consumers and businesses adopt LED technology, the environmental benefits will continue to accumulate.`
+        title: 'Low-Cost Lamps Light Rural India',
+        content: `Until three months ago, life in this humble village without electricity would come to a halt after sunset. Inside his mud-and-clay home, Ganpat Jadhav's three children used to study in the dim, smoky glow of a kerosene lamp. When their monthly fuel quota of four litres dried up in just a fortnight, they had to strain their eyes using the light from a cooking fire. That all changed with the installation of low-cost, energy-efficient lamps that are powered entirely by the sun. The lights were installed by the Grameen Surya Bijli Foundation (GSBF), an Indian non-governmental organisation focused on bringing light to rural India. Some 100,000 Indian villages do not yet have electricity. The GSBF lamps use LEDs - light emitting diodes - that are four times more efficient than a normal bulb. After a $55 installation cost, solar energy lights the lamp free of charge. LED lighting, like cell phones, is another example of a technology whose low cost could allow the rural poor to leap into the 21st century.
+
+As many as 1.5 billion people - nearly 80 million in India alone - light their houses using kerosene as the primary lighting media. The fuel is dangerous, dirty, and - despite being subsidised - consumes nearly four per cent of a typical rural Indian household's budget. A recent report by the Intermediate Technology Development Group suggests that indoor air pollution from such lighting media results in 1.6 million deaths worldwide every year. LED lamps, or more specifically white LEDs, are believed to produce nearly 200 times more useful light than a kerosene lamp and almost 50 times the amount of useful light of a conventional bulb. "This technology can light an entire rural village with less energy than that used by a single conventional 100-watt light bulb," says Dave Irvine-Halliday, a professor of electrical engineering at the University of Calgary, Canada and the founder of Light up the World Foundation (LUTW). Founded in 1997, LUTW has used LED technology to bring light to nearly 10,000 homes in remote and disadvantaged corners of some 27 countries like India, Nepal, Sri Lanka, Bolivia, and the Philippines.
+
+The technology, which is not yet widely known in India, faces some scepticism here. "LED systems are revolutionising rural lighting, but this isn't a magic solution to the world's energy problems," says Ashok Jhunjhunwala, head of the electrical engineering department at the Indian Institute of Technology, Madras. In a scenario in which nearly 60 per cent of India's rural population uses 180 million tons of biomass per year for cooking via primitive wood stoves - which are smoky and provide only 10-15 per cent efficiency in cooking - Jhunjhunwala emphasises the need for a clean energy source, not just for lighting but for other domestic purposes as well. The Indian government in April launched an ambitious project to bring electricity to 112,000 rural villages in the next decade. However, the remote locations of the villages will make reaching this goal difficult. A. K. Lakhina, the chairman of India's Rural Electrification Corporation, says the Indian government recognises the potential of LED lighting powered by solar technology, but expressed reservations about its high costs. "If only LEDs weren't imported but manufactured locally," he says, "and in bulk."
+
+The lamps installed in nearly 300 homes by GSBF cost nearly half the price of other solar lighting systems. Jasjeet Singh Chaddha, the founder of the NGO, currently imports his LEDs from China. He wants to set up an LED manufacturing unit and a solar panel manufacturing unit in India. If manufactured locally, the cost of his LED lamp could plummet to $22, as they will not incur heavy import duties. "We need close to $5 million for this," he says. Mr. Chaddha says he has also asked the government to exempt the lamps from such duties, but to no avail. An entrepreneur who made his money in plastics, Chaddha has poured his own money into the project, providing the initial installations free of charge. As he looks to make the project self-sustainable, he recognises that it is only urban markets - which have also shown an avid interest in LED lighting - that can pay. The rural markets in India cannot afford it, he says, until the prices are brought down. The rural markets would be able to afford it, says Mr. Irvine-Halliday, if they had access to microcredit. He says that in Tembisa, a shanty town in Johannesburg, he found that almost 10,000 homes spent more than $60 each on candles and paraffin every year. As calculations revealed, these families can afford to purchase a solid state lighting system in just over a year of paying per week what they would normally spend on candles and paraffin - if they have access to microcredit. LUTW is in the process of creating such a microcredit facility for South Africa.
+
+In villages near Khadakwadi, the newly installed LED lamps are a subject of envy, even for those connected to the grid. Those connected to the grid have to face power cuts up to 6 or 7 hours a day. Constant energy shortages and blackouts are a common problem due to a lack of power plants, transmission, and distribution losses caused by old technology and illegal stealing of electricity from the grid. LED systems require far less maintenance, a longer life, and as villagers jokingly say, "no electricity bills". The lamps provided by GSBF have enough power to provide just four hours of light a day. However, that is enough for people to get their work done in the early hours of the night, and is more reliable than light generated off India's electrical grid. Villagers are educated by GSBF officials to make the most of the new lamps. An official from GSBF instructs Jadhav and his family to clean the lamp regularly. "Its luminosity and life will diminish if you let the dust settle on it," he warns them.`
       },
       questions: [
         {
           type: 'multiple-choice',
-          instruction: 'Choose the correct letter A, B, C or D.',
-          questionNumber: 25,
-          question: 'LED bulbs consume approximately ___ less energy than incandescent bulbs.',
+          questionNumber: 27,
+          question: 'The GSBF lamps',
           options: [
-            { label: '50%', value: 'A' },
-            { label: '60%', value: 'B' },
-            { label: '75%', value: 'C' },
-            { label: '90%', value: 'D' }
+            { label: 'provide light for 100,000 Indian villages.', value: 'A' },
+            { label: 'are very expensive to install.', value: 'B' },
+            { label: 'are powered by the sun.', value: 'C' }
           ]
         },
         {
           type: 'multiple-choice',
-          instruction: 'Choose the correct letter A, B, C or D.',
-          questionNumber: 26,
-          question: 'LED bulbs can last up to ___ times longer than incandescent bulbs.',
+          questionNumber: 28,
+          question: 'More than half of India\'s population uses',
           options: [
-            { label: '10', value: 'A' },
-            { label: '15', value: 'B' },
-            { label: '20', value: 'C' },
-            { label: '25', value: 'D' }
+            { label: 'kerosene as a cooking fuel.', value: 'A' },
+            { label: 'biomass as a cooking fuel.', value: 'B' },
+            { label: 'solar power as a cooking fuel.', value: 'C' }
           ]
         },
         {
-          type: 'paragraph-gap',
-          instruction: 'Complete with words from the text (MAX 2 words).',
-          paragraph: 'LEDs consume significantly (27)... energy than traditional bulbs. LED bulbs generate (28)... heat and can be (29)... Various (30)... have encouraged LED adoption through rebates and tax credits. LED technology is being integrated into (31)...',
-          questionNumbers: [27, 28, 29, 30, 31]
+          type: 'multiple-choice',
+          questionNumber: 29,
+          question: 'In India, the GSBF lamps are too expensive for most people',
+          options: [
+            { label: 'in rural areas.', value: 'A' },
+            { label: 'in urban areas.', value: 'B' },
+            { label: 'in all areas.', value: 'C' }
+          ]
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 30,
+          question: 'The GSBF lamps',
+          options: [
+            { label: 'are not as reliable as electricity from the national power grid.', value: 'A' },
+            { label: 'require skill to use.', value: 'B' },
+            { label: 'only provide four hours of light a day.', value: 'C' }
+          ]
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 31,
+          statement: 'Another example of cheap technology helping poor people in the countryside is',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 32,
+          statement: 'Kerosene lamps and conventional bulbs give off less',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 33,
+          statement: 'It is unlikely that the Indian government will achieve its aim of connecting 112,000 villages to electricity because many villages are',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 34,
+          statement: 'GSBF lamps would be cheaper if it weren\'t for',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 35,
+          statement: 'Users need to wipe',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
         },
         {
           type: 'true-false-not-given',
-          instruction: 'Do the statements agree with the information?',
-          statements: [
-            { questionNumber: 32, statement: 'LED bulbs are more expensive than all traditional lighting solutions.' },
-            { questionNumber: 33, statement: 'LED technology has applications beyond general lighting.' },
-            { questionNumber: 34, statement: 'LED bulbs generate more heat than incandescent bulbs.' },
-            { questionNumber: 35, statement: 'Most consumers have already switched to LED lighting.' },
-            { questionNumber: 36, statement: 'LED technology is environmentally friendly.' }
-          ]
+          questionNumber: 36,
+          statement: 'Ganpat Jadhav\'s monthly ration of kerosene was insufficient.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 37,
+          statement: 'Kerosene causes many fires in homes in developing countries.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 38,
+          statement: 'LED systems could solve the world\'s energy problems.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 39,
+          statement: 'Chaddha has so far funded the GSBF lamp project himself.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 40,
+          statement: 'Microcredit would help to get more people to use LED lamps.'
         }
       ]
     }

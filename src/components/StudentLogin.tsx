@@ -122,11 +122,23 @@ export function StudentLogin() {
           <div className="mt-6 pt-6 border-t border-slate-100">
             <button
               onClick={() => navigate('/')}
-              className="text-sm text-forest-600 hover:text-forest-500 font-semibold flex items-center gap-1.5 transition-colors"
+              className="text-sm text-forest-600 hover:text-forest-500 font-semibold flex items-center gap-1.5 transition-colors mb-4"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
             </button>
+            
+            <div className="text-center">
+              <p className="text-xs text-slate-600">
+                Are you a staff member?{' '}
+                <button
+                  onClick={() => navigate('/staff-login')}
+                  className="text-forest-600 hover:text-forest-700 font-semibold transition-colors underline"
+                >
+                  Click here
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </div>

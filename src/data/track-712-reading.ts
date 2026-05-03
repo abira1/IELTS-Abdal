@@ -1,11 +1,11 @@
-// Track: 712-M Reading
+// Track: 712-AC Reading
 import { Track } from './track1';
 
 export const track712Reading: Track = {
   id: 'track-712-reading',
-  name: '712-M Reading',
-  shortName: '712MR',
-  description: 'IELTS Reading Practice Test - Academic Reading with 3 parts and 40 questions',
+  name: '712-AC Reading',
+  shortName: '712-AC',
+  description: 'IELTS Reading Academic - 3 parts with 40 questions',
   duration: 60,
   totalQuestions: 40,
   trackType: 'reading',
@@ -15,43 +15,130 @@ export const track712Reading: Track = {
       sectionNumber: 1,
       title: 'READING PASSAGE 1',
       passage: {
-        title: 'On-Hold Music and Customer Experience',
-        content: `Waiting on hold while listening to music is a nearly universal experience in modern customer service. However, the choice of music and audio experience during hold time has significant implications for customer satisfaction and business perception. Research in behavioral psychology and customer experience has revealed that on-hold music can significantly influence how long customers perceive they have waited and their satisfaction with the service. Studies show that customers' perception of wait time is subjective and can be substantially influenced by the presence of music. When placed on hold without any audio, customers typically perceive wait times as longer than they actually are. Conversely, appropriate music can make waiting feel less tedious and reduce the perception of time passage. The tempo and style of on-hold music can significantly affect customer psychology. Slow-tempo music can feel more soothing and help reduce customer frustration during wait periods. However, music tempo that is too slow can actually increase perceived wait time. Moderate tempo music, typically between 60 and 80 beats per minute, has been shown to create a balanced experience that is both soothing and engaging. The choice of music genre also influences customer experience. Instrumental music or soft pop typically performs better than rock or hip-hop in hold-time scenarios. Classical music, in particular, has been associated with reduced customer stress levels. Some companies have moved beyond traditional music to offer personalized hold experiences, including company jingles, brand-related audio, or informative content about products and services. These customized audio experiences can strengthen brand recognition and provide value to waiting customers. Despite the benefits of well-chosen on-hold music, many businesses continue to use default music provided by phone systems, which often lacks optimization for customer psychology. Investing in appropriate hold-time audio experiences can improve customer satisfaction, reduce perceived wait time, and enhance overall brand perception.`
+        title: 'PLEASE HOLD THE LINE',
+        content: `Nearly all of us know what it's like to be put on 'musical hold'. Call almost any customer service number, and you can expect to hear at least a few bars of boring elevator music before an operator picks up. The question is: do you hang up or do you keep holding? That may depend on your gender and what type of music is playing, according to research reported by University of Cincinnati Associate Professor of Marketing, James Kellaris.
+
+Kellaris, who has studied the effects of music on consumers for more than 12 years, teamed with Sigma Research Management Group to evaluate the effects of 'hold music' for a company that operates a customer service line.
+
+The researchers tested four types of 'on-hold' music with 71 of the company's clients, 30 of them women. Light jazz, classical, rock and the company's current format of adult alternative (a mix of contemporary styles) were all tested. The sample included individual consumers, small business and large business segments. Participants were asked to imagine calling a customer assistance line and being placed on hold. They were then exposed to 'on-hold' music via headsets and asked to estimate how long it played. Their reactions and comments were also solicited and quantified by the researchers.
+
+Service providers, of course don't want you to have to wait on hold, but if you do, they want it to be a pleasant experience for you. But Kellaris' conclusions may hold some distressing news for companies. No matter what music was played, the time spent 'on hold' was generally overestimated. The actual wait in the study was 6 minutes, but the average estimate was 7 minutes and 6 seconds.
+
+He did find some good news for the client who hired him. The kind of music they're playing now, alternative, is probably their best choice. Two things made it a good choice. First, it did not produce significantly more positive or negative reactions in people. Second, males and females were less polarised in their reactions to this type of music.
+
+Kellaris' other findings, however, make the state of musical hold a little less firm: time spent 'on hold' seemed slightly shorter when light jazz was played, but the effect of music format differed for men and women. Among the males, the wait seemed shortest when classical music was played. Among the females, the wait seemed longest when classical music was played. This may be related to differences in attention levels and musical preferences.
+
+In general, classical music evoked the most positive reactions among males; light jazz evoked the most positive reactions (and shortest waiting time estimates) among females. Rock was the least preferred across both gender groups and produced the longest waiting time estimates. 'The rock music's driving beat kind of aggravates people calling customer assistance with a problem,' said Kellaris. 'The more positive the reaction to the music, the shorter the waiting time seemed to be. So maybe time does tend to fly when you're having fun, even if you're on musical hold,' Kellaris joked.
+
+But unfortunately for companies operating on-hold lines, men and women have different ideas about what music is 'fun'. 'The possible solution,' Kellaris joked, 'might be for the recorded message to say: if you're a male, please press one; if you're a female, please press two. If you are in a bad mood, please hang up and try later.'`
       },
       questions: [
         {
-          type: 'drag-and-drop',
-          instruction: 'Choose the most suitable heading for each section.',
-          items: [
-            { questionNumber: 1, label: 'Section A' },
-            { questionNumber: 2, label: 'Section B' },
-            { questionNumber: 3, label: 'Section C' },
-            { questionNumber: 4, label: 'Section D' }
-          ],
+          type: 'multiple-choice',
+          questionNumber: 1,
+          question: 'The researchers concluded that ...',
           options: [
-            { label: 'Music Tempo and Perception', value: 'i' },
-            { label: 'The Importance of On-Hold Audio', value: 'ii' },
-            { label: 'Genre Selection and Psychology', value: 'iii' },
-            { label: 'Personalized Audio Experiences', value: 'iv' },
-            { label: 'Business Benefits', value: 'v' }
+            { label: 'subjects underestimated the time spent \'on hold\'.', value: 'A' },
+            { label: 'it is better for companies not to use any \'on-hold\' music.', value: 'B' },
+            { label: 'light jazz was the most acceptable music overall.', value: 'C' },
+            { label: 'both gender and type of music influence callers\' reaction.', value: 'D' }
           ]
         },
         {
-          type: 'paragraph-gap',
-          instruction: 'Complete with words from the text (MAX 3 words).',
-          paragraph: 'Music on hold influences customers\' (5)... of wait time. Waiting without (6)... makes time seem longer. Moderate tempo music is between (7)... beats per minute. (8)... music performs better than rock. Personalized audio can (9)...',
-          questionNumbers: [5, 6, 7, 8, 9]
+          type: 'multiple-choice',
+          questionNumber: 2,
+          question: 'The researchers recommended that ...',
+          options: [
+            { label: 'their client continue to play alternative music.', value: 'A' },
+            { label: 'four types of music should be offered to people \'on hold\'.', value: 'B' },
+            { label: 'advertising is preferable to music.', value: 'C' },
+            { label: 'women can be kept waiting for longer than men.', value: 'D' }
+          ]
+        },
+        {
+          type: 'dropdown',
+          questionNumber: 3,
+          statement: 'music preferred by men',
+          options: [
+            { label: 'light jazz', value: 'A' },
+            { label: 'alternative', value: 'B' },
+            { label: 'classical', value: 'C' },
+            { label: 'rock', value: 'D' }
+          ]
+        },
+        {
+          type: 'dropdown',
+          questionNumber: 4,
+          statement: 'longest waiting time estimate (both sexes)',
+          options: [
+            { label: 'light jazz', value: 'A' },
+            { label: 'alternative', value: 'B' },
+            { label: 'classical', value: 'C' },
+            { label: 'rock', value: 'D' }
+          ]
+        },
+        {
+          type: 'dropdown',
+          questionNumber: 5,
+          statement: 'music to avoid on telephone hold',
+          options: [
+            { label: 'light jazz', value: 'A' },
+            { label: 'alternative', value: 'B' },
+            { label: 'classical', value: 'C' },
+            { label: 'rock', value: 'D' }
+          ]
+        },
+        {
+          type: 'dropdown',
+          questionNumber: 6,
+          statement: 'music to use if clients are mostly women',
+          options: [
+            { label: 'light jazz', value: 'A' },
+            { label: 'alternative', value: 'B' },
+            { label: 'classical', value: 'C' },
+            { label: 'rock', value: 'D' }
+          ]
+        },
+        {
+          type: 'dropdown',
+          questionNumber: 7,
+          statement: 'best choice of \'on-hold\' music overall',
+          options: [
+            { label: 'light jazz', value: 'A' },
+            { label: 'alternative', value: 'B' },
+            { label: 'classical', value: 'C' },
+            { label: 'rock', value: 'D' }
+          ]
         },
         {
           type: 'true-false-not-given',
-          instruction: 'Do the statements agree with the information?',
-          statements: [
-            { questionNumber: 10, statement: 'Customers accurately perceive wait time without music.' },
-            { questionNumber: 11, statement: 'Slow-tempo music is ideal for on-hold situations.' },
-            { questionNumber: 12, statement: 'Classical music reduces customer stress levels.' },
-            { questionNumber: 13, statement: 'Most businesses use optimized hold-time audio.' },
-            { questionNumber: 14, statement: 'Appropriate on-hold audio can improve brand perception.' }
-          ]
+          questionNumber: 8,
+          statement: 'Businesses want to minimise the time spent \'on hold\'.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 9,
+          statement: 'The research sample consisted of real clients of a company.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 10,
+          statement: 'The sample consisted of equal numbers of men and women.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 11,
+          statement: 'Advertising is considered a poor alternative to \'on-hold\' music.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 12,
+          statement: 'The consumer service company surveyed was playing classical music.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 13,
+          statement: 'Researchers asked subjects only to estimate the length of time they waited \'on hold\'.'
         }
       ]
     },
@@ -59,52 +146,164 @@ export const track712Reading: Track = {
       sectionNumber: 2,
       title: 'READING PASSAGE 2',
       passage: {
-        title: 'The Industrial Revolution and Tea',
-        content: `The Industrial Revolution profoundly transformed global trade patterns, and few commodities exemplify this transformation more clearly than tea. The industrial revolution, beginning in 18th-century Britain, revolutionized manufacturing processes and created unprecedented demand for exotic commodities. Tea, imported from China and later grown in British colonial territories, became a symbol of British wealth and culture. The establishment of British colonies in India and Ceylon (now Sri Lanka) created vast tea plantations that supplied Europe with affordable tea. This colonial expansion, while bringing tea to the masses, came at enormous human and environmental cost. The tea industry drove significant technological innovation. The development of steam-powered machinery revolutionized textile production, enabling vast quantities of cotton and other fabrics to be manufactured. These textiles became essential trade goods used to purchase tea from China and other Asian territories. The expansion of British tea consumption was facilitated by technological advances in transportation. The construction of railways and the development of faster shipping routes reduced transportation costs and delivery times. Steam-powered ships dramatically decreased the journey time from Asia to Europe, making tea affordable for broader segments of the British population. The afternoon tea tradition, popularized during the Victorian era, became integral to British culture. However, this cultural icon was built on global trade networks that relied on colonial exploitation and widespread labor abuses. Workers on tea plantations faced harsh conditions, low wages, and limited rights. The legacy of colonial tea production persists in contemporary global trade structures, with many tea-producing nations remaining economically dependent on tea exports. The history of tea during the Industrial Revolution illustrates how technological innovation, global trade, and colonialism intertwined to shape modern economic systems.`
+        title: 'Did tea and beer bring about industrialisation?',
+        content: `A. Alan Macfarlane thinks he could rewrite history. The professor of anthropological science at King's College, Cambridge has, like other historians, spent decades trying to understand the enigma of the Industrial Revolution. Why did this particular important event - the world-changing birth of industry - happen in Britain? And why did it happen at the end of the 18th century?
+
+B. Macfarlane compares the question to a puzzle. He claims that there were about 20 different factors and all of them needed to be present before the revolution could happen. The chief conditions are to be found in history textbooks. For industry to 'take off', there needed to be the technology and power to drive factories, large urban populations to provide cheap labour, easy transport to move goods around, an affluent middle-class willing to buy mass-produced objects, a market-driven economy, and a political system that allowed this to happen. While this was the case for England, other nations, such as Japan, Holland and France also met some of these criteria. All these factors must have been necessary but not sufficient to cause the revolution. Holland had everything except coal, while China also had many of these factors. Most historians, however, are convinced that one or two missing factors are needed to solve the puzzle.
+
+C. The missing factors, he proposes, are to be found in every kitchen cupboard. Tea and beer, two of the nation's favourite drinks, drove the revolution. Tannin, the active ingredient in tea, and hops, used in making beer, both contain antiseptic properties. This, plus the fact that both are made with boiled water, helped prevent epidemics of waterborne diseases, such as dysentery, in densely populated urban areas.
+
+D. Historians had noticed one interesting factor around the mid-18th century that required explanation. Between about 1650 and 1740, the population was static. But then there was a burst in population. The infant mortality rate halved in the space of 20 years, and this happened in both rural areas and cities, and across all classes. Four possible causes have been suggested. There could have been a sudden change in the viruses and bacteria present at that time, but this is unlikely. Was there a revolution in medical science? But this was a century before Lister introduced antiseptic surgery. Was there a change in environmental conditions? There were improvements in agriculture that wiped out malaria, but these were small gains. Sanitation did not become widespread until the 19th century. The only option left was food. But the height and weight statistics show a decline. So the food got worse. Efforts to explain this sudden reduction in child deaths appeared to draw a blank.
+
+E. This population burst seemed to happen at just the right time to provide labour for the Industrial Revolution. But why? When the Industrial Revolution started, it was economically efficient to have people crowded together forming towns and cities. But with crowded living conditions comes disease, particularly from human waste. Some research in the historical records revealed that there was a change in the incidence of waterborne disease at that time, especially dysentery. Macfarlane deduced that whatever the British were drinking must have been important in controlling disease. They drank beer and ale. For a long time, the English were protected by the strong antibacterial agent in hops, which were added to make beer last. But in the late 17th century a tax was introduced on malt. The poor turned to water and gin, and in the 1720s the mortality rate began to rise again. Then it suddenly dropped again. What was the cause?
+
+F. Macfarlane looked to Japan, which was also developing large cities about the same time, and also had no sanitation. Waterborne diseases in the Japanese population were far fewer than those in Britain. Could it be the prevalence of tea in their culture? That was when Macfarlane thought about the role of tea in Britain. The history of tea in Britain provided an extraordinary coincidence of dates. Tea was relatively expensive until Britain started direct trade with China in the early 18th century. By the 1740s, about the time that infant mortality was falling, the drink was common. Macfarlane guesses that the fact that water had to be boiled, together with the stomach-purifying properties of tea so eloquently described in Buddhist texts, meant that the breast milk provided by mothers was healthier than it had ever been. No other European nation drank tea so often as the British, which, by Macfarlane's logic, pushed the other nations out of the race for the Industrial Revolution.
+
+G. But, if tea is a factor in the puzzle, why didn't this cause an industrial revolution in Japan? Macfarlane notes that in the 17th century, Japan had large cities, high literacy rates and even a futures market. However, Japan decided against a work-based revolution, by giving up laboursaving devices, even animals, to avoid putting people out of work. Astonishingly, the nation that we now think of as one of the most technologically advanced, entered the 19th century having almost abandoned the wheel. While Britain was undergoing the Industrial Revolution, Macfarlane notes wryly, Japan was undergoing an industrious one.
+
+H. The Cambridge academic considers the mystery solved. He adds that he thinks the UN should encourage aid agencies to take tea to the world's troublespots, along with rehydration sachets and food rations.`
       },
       questions: [
         {
-          type: 'multiple-choice',
+          type: 'drag-drop-matching',
+          questionNumber: 14,
+          statement: 'Section B',
+          options: [
+            { label: 'The significance of tea drinking', value: 'i' },
+            { label: 'Possible solution to the puzzle', value: 'ii' },
+            { label: 'Industry in Holland and France', value: 'iii' },
+            { label: 'Significant population increase', value: 'iv' },
+            { label: 'The relationship between drinks and disease', value: 'v' },
+            { label: 'Gin drinking and industrialisation', value: 'vi' },
+            { label: 'Dysentery prevention in Japan and Holland', value: 'vii' },
+            { label: 'Japan\'s waterborne diseases', value: 'viii' },
+            { label: 'Preconditions necessary for Industrial Revolution', value: 'ix' },
+            { label: 'Introduction', value: 'x' }
+          ]
+        },
+        {
+          type: 'drag-drop-matching',
           questionNumber: 15,
-          question: 'The Industrial Revolution began in',
+          statement: 'Section C',
           options: [
-            { label: '17th-century Britain', value: 'A' },
-            { label: '18th-century Britain', value: 'B' },
-            { label: '19th-century Britain', value: 'C' },
-            { label: 'Colonial India', value: 'D' }
+            { label: 'The significance of tea drinking', value: 'i' },
+            { label: 'Possible solution to the puzzle', value: 'ii' },
+            { label: 'Industry in Holland and France', value: 'iii' },
+            { label: 'Significant population increase', value: 'iv' },
+            { label: 'The relationship between drinks and disease', value: 'v' },
+            { label: 'Gin drinking and industrialisation', value: 'vi' },
+            { label: 'Dysentery prevention in Japan and Holland', value: 'vii' },
+            { label: 'Japan\'s waterborne diseases', value: 'viii' },
+            { label: 'Preconditions necessary for Industrial Revolution', value: 'ix' },
+            { label: 'Introduction', value: 'x' }
+          ]
+        },
+        {
+          type: 'drag-drop-matching',
+          questionNumber: 16,
+          statement: 'Section D',
+          options: [
+            { label: 'The significance of tea drinking', value: 'i' },
+            { label: 'Possible solution to the puzzle', value: 'ii' },
+            { label: 'Industry in Holland and France', value: 'iii' },
+            { label: 'Significant population increase', value: 'iv' },
+            { label: 'The relationship between drinks and disease', value: 'v' },
+            { label: 'Gin drinking and industrialisation', value: 'vi' },
+            { label: 'Dysentery prevention in Japan and Holland', value: 'vii' },
+            { label: 'Japan\'s waterborne diseases', value: 'viii' },
+            { label: 'Preconditions necessary for Industrial Revolution', value: 'ix' },
+            { label: 'Introduction', value: 'x' }
+          ]
+        },
+        {
+          type: 'drag-drop-matching',
+          questionNumber: 17,
+          statement: 'Section E',
+          options: [
+            { label: 'The significance of tea drinking', value: 'i' },
+            { label: 'Possible solution to the puzzle', value: 'ii' },
+            { label: 'Industry in Holland and France', value: 'iii' },
+            { label: 'Significant population increase', value: 'iv' },
+            { label: 'The relationship between drinks and disease', value: 'v' },
+            { label: 'Gin drinking and industrialisation', value: 'vi' },
+            { label: 'Dysentery prevention in Japan and Holland', value: 'vii' },
+            { label: 'Japan\'s waterborne diseases', value: 'viii' },
+            { label: 'Preconditions necessary for Industrial Revolution', value: 'ix' },
+            { label: 'Introduction', value: 'x' }
+          ]
+        },
+        {
+          type: 'drag-drop-matching',
+          questionNumber: 18,
+          statement: 'Section F',
+          options: [
+            { label: 'The significance of tea drinking', value: 'i' },
+            { label: 'Possible solution to the puzzle', value: 'ii' },
+            { label: 'Industry in Holland and France', value: 'iii' },
+            { label: 'Significant population increase', value: 'iv' },
+            { label: 'The relationship between drinks and disease', value: 'v' },
+            { label: 'Gin drinking and industrialisation', value: 'vi' },
+            { label: 'Dysentery prevention in Japan and Holland', value: 'vii' },
+            { label: 'Japan\'s waterborne diseases', value: 'viii' },
+            { label: 'Preconditions necessary for Industrial Revolution', value: 'ix' },
+            { label: 'Introduction', value: 'x' }
+          ]
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 19,
+          statement: 'beer becomes expensive because of',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 20,
+          statement: 'drinking starts to become widespread',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 21,
+          statement: 'decline in urban deaths caused by',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 22,
+          statement: 'water used for tea and beer',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 23,
+          question: 'In 1740 there was a population explosion in Britain because ...',
+          options: [
+            { label: 'large numbers of people moved to live in cities.', value: 'A' },
+            { label: 'larger quantities of beer were drunk.', value: 'B' },
+            { label: 'of the health protecting qualities of beer and tea.', value: 'C' },
+            { label: 'of the Industrial Revolution.', value: 'D' }
           ]
         },
         {
           type: 'multiple-choice',
-          questionNumber: 16,
-          question: 'British colonies in tea-growing regions included',
+          questionNumber: 24,
+          question: 'According to the author, the Japanese did not industrialise because they didn\'t ...',
           options: [
-            { label: 'India and Africa', value: 'A' },
-            { label: 'India and Ceylon', value: 'B' },
-            { label: 'Asia and the Americas', value: 'C' },
-            { label: 'Australia and India', value: 'D' }
+            { label: 'like drinking beer.', value: 'A' },
+            { label: 'want animals to work.', value: 'B' },
+            { label: 'like using wheels.', value: 'C' },
+            { label: 'want unemployment.', value: 'D' }
           ]
         },
         {
-          type: 'paragraph-gap',
-          instruction: 'Complete with words from the text (MAX 2 words).',
-          paragraph: 'Technological advances in (17)... reduced costs and delivery times. (18)... made tea more affordable. The tradition of afternoon tea became integral to (19)... during the (20)...',
-          questionNumbers: [17, 18, 19, 20]
-        },
-        {
-          type: 'drag-and-drop',
-          instruction: 'Match each development with its consequence.',
-          items: [
-            { questionNumber: 21, label: 'Steam-powered machinery' },
-            { questionNumber: 22, label: 'Railway and shipping development' },
-            { questionNumber: 23, label: 'Colonial tea plantations' },
-            { questionNumber: 24, label: 'Afternoon tea tradition' }
-          ],
+          type: 'multiple-choice',
+          questionNumber: 25,
+          question: 'Macfarlane thinks he has discovered why ...',
           options: [
-            { label: 'Made tea affordable for mass population', value: 'A' },
-            { label: 'Became part of British culture', value: 'B' },
-            { label: 'Revolutionized textile production', value: 'C' },
-            { label: 'Reduced transportation costs', value: 'D' }
+            { label: 'the British drink beer and tea.', value: 'A' },
+            { label: 'industrialisation happened in Britain when it did.', value: 'B' },
+            { label: 'the Japanese did not drink beer.', value: 'C' },
+            { label: 'sanitation wasn\'t widespread until the 19th century.', value: 'D' }
           ]
         }
       ]
@@ -113,48 +312,138 @@ export const track712Reading: Track = {
       sectionNumber: 3,
       title: 'READING PASSAGE 3',
       passage: {
-        title: 'Team-Based Learning in IT Education',
-        content: `Traditional educational approaches in information technology often emphasize individual achievement and competition. However, increasingly, IT educators are recognizing the value of team-based learning approaches that better prepare students for real-world workplace environments. In professional IT settings, most significant projects involve collaborative teams of developers, designers, project managers, and other specialists. Team-based learning methodologies have been shown to improve student engagement, enhance problem-solving abilities, and develop essential soft skills including communication and teamwork. Team-based learning requires students to work collaboratively on projects, with each team member contributing specialized knowledge and skills. This approach mirrors professional IT development environments, where complex projects require diverse expertise. Students learn not only technical skills but also how to communicate effectively, resolve conflicts, and coordinate work across team members. Research has demonstrated that students who participate in team-based learning develop stronger communication skills and greater self-confidence compared to students in traditional competitive learning environments. The collaborative process helps students develop deeper understanding of technical concepts through explanation and discussion with peers. Team-based learning also exposes students to diverse perspectives and problem-solving approaches. Students working in teams encounter different viewpoints and methodologies, broadening their understanding of how technical problems can be solved. This exposure to diversity in thinking enhances creativity and innovation. However, implementing team-based learning presents challenges. Students must be taught how to work effectively in teams, as many lack prior experience in collaborative projects. Unequal effort distribution among team members, often called "free-riding," can undermine the effectiveness of team projects. Instructors must implement systems to ensure fair evaluation and prevent exploitation. Despite these challenges, team-based learning is increasingly recognized as essential preparation for IT professionals. As the IT industry continues to emphasize collaborative development practices, educational programs that incorporate team-based learning produce graduates better equipped to succeed in professional environments.`
+        title: 'TEAM-BASED LEARNING',
+        content: `With the globalisation of information technology (IT) and worldwide access to the Internet, people from all areas of learning are finding themselves using some form of information technology in the workplace. The corporate world has seen a boom in the use of IT tools, but conversely, not enough people with IT skills that can enter the workplace and be productive with minimal on-the-job training.
+
+A recent issue of the New York Times reports that many companies are looking for smart students who may have a budding interest in IT. Some companies, trying to encourage students to attend interviews, provide good salary packages and challenging work environments. For example, one American IT consulting company offers high salaries, annual bonuses, and immediate stock options to potential recruits. It also brings in 25 to 40 prospective applicants at a time for a two-day visit to the company. This time includes interviews, team exercises and social events. The idea behind the team exercises is that the applicants get to see that they will be working with other smart people doing really interesting things, rather than sitting alone writing code.
+
+In the past 10 years, employers have seen marked benefits from collaborative projects in product development. Apart from the work environment, there is also a similar body of research indicating that small team-based instruction can lead to different kinds of desirable educational results. In order to prepare IT graduates to meet these workplace requirements, colleges and universities are also beginning to include team-based educational models.
+
+One of the leaders in promoting team-based education is the American Intercontinental University (AIU), which has campuses worldwide. AIU offers programs in IT with a major portion of the curriculum based on team projects. AIU has a large body of international students and students from different educational backgrounds. This team-based learning gives the students a sense of social and technical support within the group, and allows students firsthand experience of both potential successes and of inherent problems encountered when working with others.
+
+Team-oriented instruction has not been the common mode of delivery in traditional college settings. However, since most college graduates who choose to go into an IT work environment will encounter some form of teamwork at work, it is to their advantage that they are educated using collaborative learning and that they are taught the tools needed to work with different people in achieving common goals or objectives.
+
+In team-based learning, students spend a large part of their in-class time working in permanent and heterogeneous teams. Most teams are made up of individuals with different socio-cultural backgrounds and varying skill levels. Team activities concentrate on using rather than just learning concepts, whilst student grades are a combination of overall team performance and peer evaluation of individual team members.
+
+In a team-based environment, the teacher takes on the role of a facilitator and manager of learning, instead of just providing information to passive students. The facilitator/teacher also guides the team in identifying their goals and establishing standards of team performance. Team exercises then help the students to improve their problem-solving skills by applying theory to simulated real-world situations. Working as a team allows students to adopt new roles and empowers them to control their own learning. Students in teams are taught to use each other as resources and accept the responsibility of managing tasks.
+
+Team members must also study assigned material individually to ensure their preparation for classes. There are individual assessment tests to measure if students have not only read the assigned material, but also understand the concepts of the module, and can apply them to given problems. Additional team assessment tests present a problem for discussion and require consensus, helping students learn critical communication skills. This also enables them to deal with conflicts between members before they escalate to crises. Team presentations (written or verbal) allow the team to focus and build cohesion, with team members sharing the responsibility for presenting and persuading the audience to accept their viewpoint. Feedback on how the team is functioning with task management, team dynamics and overall work is given by the facilitator. Team exercises that are application-oriented help students experience the practical application of concepts and learn from other students' perspectives.
+
+Team-based classrooms are especially beneficial in colleges with international students. Since this type of learning encourages people to listen and communicate with others, share problems, resolve personal conflicts, and manage their time and resources, it is a great environment for students who are in a new social situation. Since social interaction plays an important role during teamwork, team learning has an added advantage for students who are not comfortable in traditional classroom settings. It allows students from different cultures to understand their differences and use them productively. This type of learning environment also allows students to express themselves freely in a team context, rather than feeling singled out as when answering questions in a traditional classroom.
+
+This learning model was designed to better prepare students for today's global workplace. Students are encouraged to explore ideas together, to build communication skills and achieve superior results. It is likely that employers will increasingly seek out students with these skills as we move into the future.`
       },
       questions: [
         {
-          type: 'multiple-choice',
-          questionNumber: 25,
-          question: 'Team-based learning is particularly valuable for IT education because',
-          options: [
-            { label: 'it reduces teaching workload', value: 'A' },
-            { label: 'it mirrors professional workplace environments', value: 'B' },
-            { label: 'it is less expensive to implement', value: 'C' },
-            { label: 'it guarantees higher grades', value: 'D' }
-          ]
-        },
-        {
-          type: 'multiple-choice',
+          type: 'drag-drop-summary',
           questionNumber: 26,
-          question: 'The "free-riding" problem in team-based learning refers to',
-          options: [
-            { label: 'using public transportation', value: 'A' },
-            { label: 'unequal effort distribution among team members', value: 'B' },
-            { label: 'not attending class regularly', value: 'C' },
-            { label: 'copying other students\' work', value: 'D' }
-          ]
+          blank: 'exceeds',
+          instruction: 'Choose your answers from the box. There are more words than you will need.'
         },
         {
-          type: 'paragraph-gap',
-          instruction: 'Complete with words from the text (MAX 3 words).',
-          paragraph: 'Team-based learning develops (27)... and problem-solving abilities. Collaborative work helps students develop (28)... understanding. Exposure to diverse perspectives enhances (29)... Students must be taught (30)... to work effectively. Team-based learning produces (31)...',
-          questionNumbers: [27, 28, 29, 30, 31]
+          type: 'drag-drop-summary',
+          questionNumber: 27,
+          blank: 'current',
+          instruction: 'Choose your answers from the box. There are more words than you will need.'
+        },
+        {
+          type: 'drag-drop-summary',
+          questionNumber: 28,
+          blank: 'employers',
+          instruction: 'Choose your answers from the box. There are more words than you will need.'
+        },
+        {
+          type: 'drag-drop-summary',
+          questionNumber: 29,
+          blank: 'financial',
+          instruction: 'Choose your answers from the box. There are more words than you will need.'
+        },
+        {
+          type: 'drag-drop-summary',
+          questionNumber: 30,
+          blank: 'exercises',
+          instruction: 'Choose your answers from the box. There are more words than you will need.'
+        },
+        {
+          type: 'drag-drop-summary',
+          questionNumber: 31,
+          blank: 'candidates',
+          instruction: 'Choose your answers from the box. There are more words than you will need.'
+        },
+        {
+          type: 'drag-drop-summary',
+          questionNumber: 32,
+          blank: 'environment',
+          instruction: 'Choose your answers from the box. There are more words than you will need.'
         },
         {
           type: 'true-false-not-given',
-          instruction: 'Do the statements agree with the information?',
-          statements: [
-            { questionNumber: 32, statement: 'Traditional IT education emphasizes individual achievement.' },
-            { questionNumber: 33, statement: 'Most IT projects in professional settings are completed by individuals.' },
-            { questionNumber: 34, statement: 'Team-based learning improves communication skills development.' },
-            { questionNumber: 35, statement: 'All students naturally excel at team-based projects.' },
-            { questionNumber: 36, statement: 'The IT industry emphasizes collaborative development practices.' },
-            { questionNumber: 37, statement: 'Team-based learning eliminates the need for individual testing.' }
+          questionNumber: 33,
+          statement: 'The American Intercontinental University includes team-based learning in all its courses on all its campuses.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 34,
+          statement: 'The composition of teams is changed regularly.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 35,
+          statement: 'Theoretical problems are the most important team activity.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 36,
+          statement: 'The team members participate in assessment of other team members.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 37,
+          statement: 'International students prefer traditional classroom learning to team-based learning.'
+        },
+        {
+          type: 'drag-drop-matching',
+          questionNumber: 38,
+          statement: 'Students\' work is assessed',
+          options: [
+            { label: 'to compete with other teams as judged by the facilitator.', value: 'A' },
+            { label: 'by individual tests and exams.', value: 'B' },
+            { label: 'to see who has the strongest point of view in the group.', value: 'C' },
+            { label: 'individually, by their peers and as a team.', value: 'D' },
+            { label: 'in the development of communication skills.', value: 'E' },
+            { label: 'to practise working as a group while putting theory into practice.', value: 'F' },
+            { label: 'to assist international and non-traditional students.', value: 'G' },
+            { label: 'in getting to know new friends and colleagues.', value: 'H' }
+          ]
+        },
+        {
+          type: 'drag-drop-matching',
+          questionNumber: 39,
+          statement: 'The teams make a joint presentation',
+          options: [
+            { label: 'to compete with other teams as judged by the facilitator.', value: 'A' },
+            { label: 'by individual tests and exams.', value: 'B' },
+            { label: 'to see who has the strongest point of view in the group.', value: 'C' },
+            { label: 'individually, by their peers and as a team.', value: 'D' },
+            { label: 'in the development of communication skills.', value: 'E' },
+            { label: 'to practise working as a group while putting theory into practice.', value: 'F' },
+            { label: 'to assist international and non-traditional students.', value: 'G' },
+            { label: 'in getting to know new friends and colleagues.', value: 'H' }
+          ]
+        },
+        {
+          type: 'drag-drop-matching',
+          questionNumber: 40,
+          statement: 'The need to achieve consensus assists',
+          options: [
+            { label: 'to compete with other teams as judged by the facilitator.', value: 'A' },
+            { label: 'by individual tests and exams.', value: 'B' },
+            { label: 'to see who has the strongest point of view in the group.', value: 'C' },
+            { label: 'individually, by their peers and as a team.', value: 'D' },
+            { label: 'in the development of communication skills.', value: 'E' },
+            { label: 'to practise working as a group while putting theory into practice.', value: 'F' },
+            { label: 'to assist international and non-traditional students.', value: 'G' },
+            { label: 'in getting to know new friends and colleagues.', value: 'H' }
           ]
         }
       ]

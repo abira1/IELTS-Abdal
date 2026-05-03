@@ -1,11 +1,11 @@
-// Track: 708-M Reading
+// Track: 708-AC Reading
 import { Track } from './track1';
 
 export const track708Reading: Track = {
   id: 'track-708-reading',
-  name: '708-M Reading',
-  shortName: '708MR',
-  description: 'IELTS Reading Practice Test - Academic Reading with 3 parts and 40 questions',
+  name: '708-AC Reading',
+  shortName: '708-AC',
+  description: 'IELTS Reading Academic - 3 parts with 40 questions',
   duration: 60,
   totalQuestions: 40,
   trackType: 'reading',
@@ -15,43 +15,90 @@ export const track708Reading: Track = {
       sectionNumber: 1,
       title: 'READING PASSAGE 1',
       passage: {
-        title: 'Thailand\'s Economic Success',
-        content: `Thailand has emerged as one of Southeast Asia's most successful economies, transforming from an agricultural society to a diversified industrial nation. This remarkable development has been achieved through strategic economic policies, foreign direct investment, and a focus on manufacturing and tourism. Thailand's growth began in earnest during the 1960s when the government implemented policies aimed at industrialization. The country attracted multinational corporations seeking to establish manufacturing operations in Southeast Asia. These foreign companies brought advanced technology, management expertise, and capital to Thailand, catalyzing rapid economic growth. The textile industry became one of Thailand's primary manufacturing sectors, with numerous factories established to produce garments for export to developed nations. Over the decades, Thailand has successfully diversified its industrial base, developing strong sectors in electronics, automotive manufacturing, petrochemicals, and food processing. Tourism has also played a crucial role in Thailand's economic development. The country's natural beauty, cultural heritage, and relatively affordable prices have attracted millions of tourists annually, generating significant foreign exchange earnings. Bangkok, the capital, has developed into a major international business and tourism hub. Agriculture remains important to the Thai economy, with rice being the primary crop and Thailand maintaining its position as one of the world's leading rice exporters. However, the share of agriculture in Thailand's overall economy has declined as manufacturing and services sectors have expanded. Thailand's development model has not been without challenges. The country has experienced economic crises, most notably the 1997 Asian financial crisis, which severely impacted the Thai economy and triggered regional economic instability. Despite this setback, Thailand recovered and continued its trajectory of economic growth. More recently, Thailand faces challenges related to income inequality, education quality, and infrastructure development. Nevertheless, Thailand remains an attractive destination for foreign investment and continues to be an important economic engine in Southeast Asia.`
+        title: "Secret of Thailand's Success?",
+        content: `A. It is a question officials here in Asia are being posed more and more: Why are your economies so vibrant? Answers include young and swelling populations, decreased debt, growing cities, emerging middle-class consumer sectors, evolving markets and, of course, China's rise. Add this to that list: Women and their increasing role in Asia's economies. The idea is that the more opportunities women have, the more vibrant economies are and, consequently, the less need there is to amass a huge public debt to boost growth. It is an idea bolstered by a new survey by MasterCard International Inc., which compares the socio-economic level of women with men in Asia-Pacific nations. The gauge uses four key indicators: participation in the labour force, college education, managerial positions, and above-median income.
+
+B. Which Asian nation is leading when it comes to women's advancement? Thailand. It scored 92.3 of a possible 100, and according to MasterCard's index, 100 equals gender equality. The survey was based on interviews with 300 to 350 women in thirteen nations and national statistics. Malaysia came in second with a score of 86.2, while China came in third with 68.4. The average score in Asia was 67.7. At the bottom of the list is South Korea (45.5), followed by Indonesia (52.5), and Japan (54.5). Perhaps it is a bizarre coincidence, yet MasterCard's findings fit quite neatly with two important issues in Asia: economic leadership and debt. Thailand, Malaysia, and China are three economies widely seen as the future of Asia. Thailand's economic boom in recent years has prompted many leaders in the region to look at its growth strategy. Malaysia, which has a female central bank governor, is one of Asia's rising economic powers. China, of course, is the world's hottest economy, and one that is shaking up trade patterns and business decisions everywhere.
+
+C. Something all three economies have in common is an above-average level of female participation. What the three worst ranked economies share are severe long-term economic challenges of high levels of debt and a female workforce that is being neglected. Research in economic history is very conclusive on the role of women in economic growth and development, says Yuwa Hedrick-Wong, an economic adviser to MasterCard. The more extensive women's participation in all areas of economic activities, the higher the probability for stronger economic growth. That, Hedrick-Wong says, means societies and economies that consistently fail to fully incorporate women's ability and talent in businesses, and the workplace will suffer the consequences. Take Korea, which has been walking in place economically in recent years. Immediately following the 1997-1998 Asian financial crisis, Korea became a regional role model as growth boomed and unemployment fell. Yet a massive increase in household debt left consumers overexposed and growth slowed.
+
+D. Maybe it is just a coincidence that Korea also ranks low on measures of gender equality published by the United Nations. As of 2003, for example, it ranked below Honduras, Paraguay, Mauritius, and Ukraine in terms of women's economic and political empowerment. Utilising more of its female workforce would deepen Korea's labour pool and increase potential growth rates in the economy. The same goes for Japan. The reluctance of Asia's biggest economy to increase female participation and let more women into the executive suite exacerbates its biggest long-term challenge: a declining birth rate. In 2003, the number of children per Japanese woman fell to a record low of 1.29 versus about 2 in the early 1970s. Preliminary government statistics suggest the rate declined further in 2004. The trend is nothing short of a crisis for a highly indebted nation of 126 million that has yet to figure out how to fund the national pension system down the road. Yet Japan has been slow to realise that for many women, the decision to delay childbirth is a form of rebellion against societal expectations to have children and become housewives.
+
+E. It may be 2005, yet having children is a career-ending decision for millions of bright, ambitious, and well-educated Japanese. Until corrected, Japan's birth rate will drop and economic growth will lag. UN Secretary General Kofi Annan was absolutely right earlier this month when he said no other policy is as likely to raise economic productivity than the empowerment of women. Here, in Thailand, the government is getting some decent marks in this regard, and the economy's 6 per cent-plus growth rate may be a direct result. Thailand still has a long way to go. Yet the Bank of Thailand's deputy governor, Tarisa Watanagase, is a woman, as are seven of nine assistant governors. Then there's Jada Wattanasiritham, who runs Siam Commercial Bank Plc, Thailand's fourth-biggest lender. How many female chief executives can you name in Japan or Korea? Looked at broadly in Asia, MasterCard's survey is on to something. It is that giving women more opportunities to contribute to an economy is not just about fairness, but dollars and sense, too.`
       },
       questions: [
         {
-          type: 'drag-and-drop',
-          instruction: 'Choose the most suitable heading for each section.',
-          items: [
-            { questionNumber: 1, label: 'Section A' },
-            { questionNumber: 2, label: 'Section B' },
-            { questionNumber: 3, label: 'Section C' },
-            { questionNumber: 4, label: 'Section D' }
-          ],
-          options: [
-            { label: 'Tourism\'s Important Role', value: 'i' },
-            { label: 'Recent Challenges', value: 'ii' },
-            { label: 'Rapid Industrialization', value: 'iii' },
-            { label: 'Diverse Economy', value: 'iv' },
-            { label: 'Economic Recovery', value: 'v' }
-          ]
+          type: 'matching-paragraph',
+          questionNumber: 1,
+          statement: 'The fact that a woman runs one of Thailand\'s biggest banks',
+          instruction: 'Which paragraph (A-E) contains this information?'
         },
         {
-          type: 'paragraph-gap',
-          instruction: 'Complete with words from the text (MAX 3 words).',
-          paragraph: 'Thailand began industrialization in the (5)..., attracting (6)... corporations. The textile industry produced (7)... for export. Important sectors include (8)... agriculture. Tourism has generated (9)...',
-          questionNumbers: [5, 6, 7, 8, 9]
+          type: 'matching-paragraph',
+          questionNumber: 2,
+          statement: 'The number of countries included in the survey',
+          instruction: 'Which paragraph (A-E) contains this information?'
+        },
+        {
+          type: 'matching-paragraph',
+          questionNumber: 3,
+          statement: 'The fact that Japan\'s birth rate is falling quickly',
+          instruction: 'Which paragraph (A-E) contains this information?'
+        },
+        {
+          type: 'matching-paragraph',
+          questionNumber: 4,
+          statement: 'The criteria used to get a score for each country',
+          instruction: 'Which paragraph (A-E) contains this information?'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 5,
+          statement: 'Higher consumption in the',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 6,
+          statement: 'The scores were decided through a combination of interviews and',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 7,
+          statement: 'Higher',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 8,
+          statement: 'Japanese politicians have not yet decided how to get money for the',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
         },
         {
           type: 'true-false-not-given',
-          instruction: 'Do the statements agree with the information?',
-          statements: [
-            { questionNumber: 10, statement: 'Thailand transformed from an agricultural to an industrial society.' },
-            { questionNumber: 11, statement: 'The textile industry remains Thailand\'s largest manufacturing sector.' },
-            { questionNumber: 12, statement: 'Thailand is the world\'s largest rice exporter.' },
-            { questionNumber: 13, statement: 'Thailand was severely impacted by the 1997 Asian financial crisis.' },
-            { questionNumber: 14, statement: 'Agriculture now comprises the largest share of Thailand\'s economy.' }
-          ]
+          questionNumber: 9,
+          statement: 'Other countries are looking at the example of Thailand to see if its policies can help their economies.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 10,
+          statement: 'Higher female participation in an economy always leads to greater economic growth.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 11,
+          statement: 'Female participation in the economy is lower in Japan than in most other developed economies.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 12,
+          statement: 'Most of the Bank of Thailand\'s assistant governors are female.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 13,
+          statement: 'The writer considers \'fairness\' to be a bad reason for giving women top jobs.'
         }
       ]
     },
@@ -59,52 +106,131 @@ export const track708Reading: Track = {
       sectionNumber: 2,
       title: 'READING PASSAGE 2',
       passage: {
-        title: 'Preferred Employers',
-        content: `A survey of business school graduates has revealed important insights into what makes a company an attractive employer. The survey, conducted by a leading business education institution, asked graduates about the factors that influence their career choices and workplace preferences. The findings indicate that salary and benefits remain important considerations, but they are not the primary factors influencing career decisions. Instead, graduates place high value on company culture, leadership quality, and opportunities for professional development. Career advancement opportunities ranked highly among the factors influencing workplace choices. Graduates expressed a strong preference for companies that provide clear pathways for career progression and invest in employee development. Mentorship programs and training initiatives were particularly valued. Work-life balance emerged as another significant factor in workplace preferences. Many graduates, particularly younger employees, prioritize flexibility in work arrangements and the ability to maintain a healthy balance between professional and personal commitments. Companies offering remote work options, flexible schedules, and generous leave policies were viewed more favorably. The survey also highlighted the importance of corporate social responsibility and environmental sustainability initiatives. Graduates, especially those from younger generations, are increasingly conscious of the social and environmental impact of their employers. Companies demonstrating commitment to ethical practices, community engagement, and environmental protection were rated more highly. Innovation and the opportunity to work on challenging projects also significantly influenced career decisions. Graduates sought employers that encouraged creativity, supported new ideas, and provided opportunities to work on meaningful projects that could have a positive impact. The findings suggest that contemporary business school graduates prioritize holistic workplace benefits beyond just financial compensation. Companies aiming to attract top talent must focus on creating positive workplace cultures, supporting employee development, and demonstrating social responsibility.`
+        title: 'Patients Are a Virtue',
+        content: `A. Despite conference jeers, job cuts, and a financial crisis, health secretary Patricia Hewitt may find a reason to smile this week, as the NHS (British National Health Service) was named one of the top places to work by students. Among engineering, science, and IT students, the health service was ranked second in this year's Universum UK graduate survey of ideal employers, a leap of 54 places from last year. The annual survey, conducted in the UK since 1997, canvassed the opinions of more than 7,700 final and penultimate-year students studying for degrees in business, engineering, science, IT, and the humanities, at 39 universities, between January and March this year.
+
+B. Each student was presented with a list of 130 employers, nominated by students through a separate process, from which they selected the five they considered to be ideal employers. The Universum list is based on the frequency of an organisation being selected as an ideal employer, following a weighting process. This year, government departments and public sector organisations dominated the top spots, with the BBC ranked first among humanities, engineering, science, and IT students, retaining its place from last year, and coming third for those studying business. Among humanities students, the BBC was followed closely by the Foreign and Commonwealth Office and the Civil Service fast stream. The Cabinet Office and the Ministry of Defence were not far behind, ranked fifth and sixth respectively. As well as the NHS, engineering, science, and IT students favoured the Environment Agency, which leapt 83 places, from 86 in 2005 to number three this year. Meanwhile, business students voted accountancy giants PricewaterhouseCoopers (PwC) as their favoured employer, followed by HSBC.
+
+C. At a London awards ceremony sponsored by the Guardian, Foluke Ajayi, head of NHS careers at NHS employers, said its success this year reflected the reality of the health service, which is the third largest employer in the world and the largest in Europe. "We employ people in other clinical areas, such as health care. We employ IT managers, engineers, architects," she said, adding that the health service is no longer seen as a "second choice" career. "People recognise that they can give something back to the community, but still develop a worthwhile career."
+
+D. Sarah Churchman, director of student recruitment and diversity at PwC, said her company's success is down to a good campus presence, its commitment to invest in its employees and, with offices around the world, the chance to travel, something which just under half of the students polled said was an important factor when it came to looking for work. One of the big four accountancy firms, PwC is not into gimmicks, and it does not offer freebies but, said Churchman, it does offer "a solid foundation" for anyone wanting a career in business. "We sell our people skills, so we are interested in building skills. We're not selling something, we invest in our people," she added.
+
+E. Further down the rankings, but still with reason to celebrate, was John Lewis, which matched bumper sales this year with a leap from 111th place in 2005 to 26th among this year's humanities students. Sky found itself in 12th place, up from 104th last year, and the Environment Agency also proved popular among this student group, rising from 138th in 2005 to 7th this year. Among the business fraternity, Shell saw a reversal of fortunes, rising to 30th place after last year's 76th position. There were a few dramatic drops in the rankings. The Bank of England fell from 14th in 2005 to 27th this year among humanities students, although it retained its mid-table position among those studying business. British Airways also saw a slight dip, as did McKinsey & Co, which dropped from 11th to 22nd among business undergraduates.
+
+F. Perhaps more surprisingly, this year was the first appearance in the rankings of Teach First, a small charity launched three years ago that aims to create the "leaders of the future" by encouraging top graduates who would not normally consider a career in teaching to commit to work in "challenging" secondary schools for at least two years. The organization came straight in at number eight among humanities students and was voted 22nd by those studying engineering, science, and IT. James Darley, director of graduate recruitment at Teach First, said he was "bowled over" by the news. "We were not expecting this. We're a registered charity, only able to physically go to 15 universities."
+
+G. The scheme, based on one run in the US, has the backing of more than 80 businesses, including Deloitte and HSBC. During their two years, candidates undertake leadership training and emerge from the programme with a range of skills and experiences. "We hope in the long term they will be our ambassadors, as we call them, in politics, industry, charities, who will have done it and continue to support the educationally disadvantaged," adds Darley. This year, 260 graduates are expected to take up the Teach First challenge in schools in London and Manchester. More are expected over the coming years, as the scheme expands to Birmingham and three other cities by 2008. Of the first set of recruits to complete the programme, half have gone on to work for "some amazing companies", while the other half have chosen to stay on in their schools for a further year - 20% in leadership roles.
+
+H. While more than half of students were concerned about achieving a good work life balance, a third said they wanted a job that would challenge them. Although male students tended to focus more on the practical aspects of work, such as "building a sound financial base", women, particularly those studying for humanities degrees, had a more idealistic outlook, saying making a contribution to society was a key career goal. Almost half of all students said that paid overtime was a key part of any company compensation package. However, business students said that the most important compensation, apart from salary, was performance-related bonuses, while important considerations for humanities students were retirement plans. Working overseas also scored highly among those surveyed this year, with 45% of business students, and 44% of humanities students, listing it as a priority. Ethical considerations and corporate social responsibilities were also mentioned, with a large percentage of humanities and engineering, science and IT students saying it was a key consideration when it came to choosing an employer.`
       },
       questions: [
         {
-          type: 'multiple-choice',
+          type: 'matching-paragraph',
+          questionNumber: 14,
+          statement: 'Most popular employers for different students',
+          instruction: 'Which paragraph (A-H) best fits this heading?'
+        },
+        {
+          type: 'matching-paragraph',
           questionNumber: 15,
-          question: 'According to the survey, what is NOT the primary factor in career decisions?',
+          statement: 'Students\' expectations',
+          instruction: 'Which paragraph (A-H) best fits this heading?'
+        },
+        {
+          type: 'matching-paragraph',
+          questionNumber: 16,
+          statement: 'Give and develop with the NHS',
+          instruction: 'Which paragraph (A-H) best fits this heading?'
+        },
+        {
+          type: 'matching-paragraph',
+          questionNumber: 17,
+          statement: 'Reason for the NHS to be happy',
+          instruction: 'Which paragraph (A-H) best fits this heading?'
+        },
+        {
+          type: 'multiple-choice-multiple',
+          questionNumber: 18,
+          statement: 'In the survey, students could only rate employers on a given list.',
           options: [
-            { label: 'Company culture', value: 'A' },
-            { label: 'Salary and benefits', value: 'B' },
-            { label: 'Leadership quality', value: 'C' },
-            { label: 'Professional development', value: 'D' }
+            { label: 'TRUE', value: 'A' },
+            { label: 'FALSE', value: 'B' }
+          ]
+        },
+        {
+          type: 'multiple-choice-multiple',
+          questionNumber: 19,
+          statement: 'The Environment Agency rose the most places in this year\'s survey.',
+          options: [
+            { label: 'TRUE', value: 'A' },
+            { label: 'FALSE', value: 'B' }
+          ]
+        },
+        {
+          type: 'multiple-choice-multiple',
+          questionNumber: 20,
+          statement: 'The NHS offers a variety of careers outside health care.',
+          options: [
+            { label: 'TRUE', value: 'A' },
+            { label: 'FALSE', value: 'B' }
+          ]
+        },
+        {
+          type: 'multiple-choice-multiple',
+          questionNumber: 21,
+          statement: 'British Airways fell in popularity amongst business students.',
+          options: [
+            { label: 'TRUE', value: 'A' },
+            { label: 'FALSE', value: 'B' }
+          ]
+        },
+        {
+          type: 'multiple-choice-multiple',
+          questionNumber: 22,
+          statement: 'James Darley was surprised by his organisation\'s performance in the survey.',
+          options: [
+            { label: 'TRUE', value: 'A' },
+            { label: 'FALSE', value: 'B' }
           ]
         },
         {
           type: 'multiple-choice',
-          questionNumber: 16,
-          question: 'Career advancement opportunities ranked ___',
+          questionNumber: 23,
+          question: 'The survey covered students',
           options: [
-            { label: 'low among preferences', value: 'A' },
-            { label: 'highly among preferences', value: 'B' },
-            { label: 'equally with salary', value: 'C' },
-            { label: 'below work-life balance', value: 'D' }
+            { label: 'from all British universities.', value: 'A' },
+            { label: 'studying a variety of subjects.', value: 'B' },
+            { label: 'who were in their last year of studies only.', value: 'C' }
           ]
         },
         {
-          type: 'paragraph-gap',
-          instruction: 'Complete with words from the text (MAX 3 words).',
-          paragraph: 'Graduates value companies that provide (17)... for career progression. Work-life balance includes (18)... in work arrangements. (19)... and environmental sustainability significantly influenced preferences. Graduates seek opportunities to work on (20)... projects.',
-          questionNumbers: [17, 18, 19, 20]
+          type: 'multiple-choice',
+          questionNumber: 24,
+          question: 'The BBC',
+          options: [
+            { label: 'was first choice in most categories.', value: 'A' },
+            { label: 'was unpopular with business students.', value: 'B' },
+            { label: 'employs more graduates than most other organisations and companies.', value: 'C' }
+          ]
         },
         {
-          type: 'drag-and-drop',
-          instruction: 'Match each factor with its description.',
-          items: [
-            { questionNumber: 21, label: 'Career advancement' },
-            { questionNumber: 22, label: 'Work-life balance' },
-            { questionNumber: 23, label: 'Social responsibility' },
-            { questionNumber: 24, label: 'Innovation' }
-          ],
+          type: 'multiple-choice-multi-select',
+          questionNumber: 25,
+          statement: 'Sarah Churchman says PwC did well in the survey because it',
           options: [
-            { label: 'Flexibility and leave policies', value: 'A' },
-            { label: 'Pathways for progression', value: 'B' },
-            { label: 'Ethical practices and environmental protection', value: 'C' },
-            { label: 'Challenging projects and creativity', value: 'D' }
+            { label: 'often goes to universities to meet students.', value: 'A' },
+            { label: 'provides many scholarships for students.', value: 'B' },
+            { label: 'offers many opportunities to travel.', value: 'C' }
+          ]
+        },
+        {
+          type: 'multiple-choice-multi-select',
+          questionNumber: 26,
+          statement: 'Sarah Churchman says PwC did well in the survey because it',
+          options: [
+            { label: 'often goes to universities to meet students.', value: 'A' },
+            { label: 'provides many scholarships for students.', value: 'B' },
+            { label: 'offers many opportunities to travel.', value: 'C' }
           ]
         }
       ]
@@ -113,48 +239,122 @@ export const track708Reading: Track = {
       sectionNumber: 3,
       title: 'READING PASSAGE 3',
       passage: {
-        title: 'The Rise of Robots in the Workplace',
-        content: `Robotics and automation technology is increasingly transforming the modern workplace, revolutionizing how work is performed across numerous industries. While automation has historically been associated with manufacturing, its application has expanded significantly into service sectors, healthcare, and administrative functions. The integration of robots into the workplace presents both opportunities and challenges for businesses and workers. One of the primary benefits of workplace automation is increased productivity and efficiency. Robots can perform repetitive tasks faster and more accurately than humans, reducing production errors and increasing output. In manufacturing, automated assembly lines have dramatically improved efficiency and product quality. In warehousing and logistics, robots are being deployed to handle material sorting, packing, and transportation, significantly reducing human labor requirements for these tasks. Another advantage of automation is the creation of new job categories. While robots eliminate certain jobs, they also create demand for workers with skills in robotics programming, maintenance, and operation. These new roles often command higher salaries and require more specialized training than the positions they replace. However, workplace automation also raises concerns about job displacement and economic inequality. Workers in routine, repetitive jobs face the greatest risk of displacement as their tasks become automated. This has prompted discussions about the need for workforce retraining programs and social safety nets. Additionally, the transition to an automated workplace may exacerbate income inequality if the benefits of automation are not distributed equitably. Despite these concerns, automation is likely to continue advancing as businesses seek to improve competitiveness and efficiency. The key challenge for society is to manage this transition effectively, ensuring that the benefits of automation are shared broadly and that workers displaced by automation receive adequate support and opportunities for retraining.`
+        title: 'Rise of the Robots',
+        content: `If you are into technology, you are living in wonderful times. Things are developing in leaps and bounds, especially gadgets. Let us look at the technology that is set to break through.
+
+CELESTRON SKYSCOUT
+Backyard stargazing goes seriously hi-tech with the Celestron SkyScout, which was judged to be the Best of Innovations at the New York Consumer Electronics Show press preview event in November. It is not difficult to see why. The SkyScout is a hand-held viewing device that is capable of finding and identifying more than 6,000 celestial objects visible to the naked eye, thus transforming the night sky into your own personal planetarium. Using GPS technology and a substantial celestial database, the camcorder-sized SkyScout enables stargazers to point the device at any visible object in the sky, press a button, and then listen to a commentary. For the truly celestially challenged, if you want to view a star or planet but do not have a clue which bit of the heavens to look in, do not despair; the SkyScout's "locate" feature will guide you to it using illuminated arrows in the viewfinder.
+
+NOKIA N91
+This amazing mobile jukebox is due out early in 2006. Nokia's N91 looks set to be in a class of its own as a multimedia mobile phone. It will play music, take photos, surf the web and download videos, store contact details, and generally organise your life. The robust little phone, resplendent in its stainless steel case, is the first Nokia to be equipped with a hard drive (4Gb), which means that it can store up to 3,000 songs. The N91, which has a hi-fi quality headset and remote control, supports a wide range of digital music formats, including MP3, Real, WAV, and WMA. It uses wireless technology to allow users to find and buy music from the operator's music store. You can also drag and drop music from your PC to the N91 and manage and share playlists. If you can find the time, you can get on the blower, too.
+
+SEIKO SPECTRUM E-PAPER WATCH
+The Seiko Spectrum is no ordinary wristwatch. At first glance, it is an attractive and futuristic bracelet-style watch. Look closer, however, and you will notice that its display is unlike any you have seen before. Rather than the usual LCD screen, the display is made of "e-paper" - from the electronic paper pioneers E Ink Corp - and shows a constantly changing mosaic pattern along with the time. Because e-paper is so flexible and thin, it allows the display to curve round the wrist along with the watch band - something conventional liquid-crystal displays cannot do, as they have to be flat. Seiko says the e-paper display not only produces far better contrast than an LCD screen, but requires no power to retain an image, so the batteries last longer. Seiko is releasing only 500 of the watches next month, priced at about £1,250 - so you'd better lose no time.
+
+HIGH-DEFINITION TV
+HDTV, already available in the United States, Japan, and Australia, will hit the UK in 2006. When you watch a programme filmed in the HD format, you will see a much sharper, clearer and more vibrant image. This is due partly to the way a programme is filmed, but also to the high-definition TV set itself, which uses either 720 or 1,080 visible rows of pixels (depending on which format the individual HDTV uses) to display images, compared to the 576 rows of pixels used in current sets.
+
+ELECTROLUX TRILOBITE 2.0 ROBOT VACUUM CLEANER
+Next time you are expecting visitors, do not bother to vacuum first - wait until they arrive, and then entertain them with this little gadget. The Electrolux Trilobite 2.0 is a robotic vacuum cleaner that navigates its way around your floors using ultrasound, just like a bat. It pings out ultrasound vibrations at surfaces to create a map of the room, which it remembers for future cleaning assignments. The Trilobite has no problem avoiding collision with things placed on the floor. Special magnetic strips are placed in doorways, near stairs and other openings. These act as a wall, keeping the Trilobite in the room. You can also programme it to glide round when you're at work or after you've gone to bed. When Electrolux introduced the original Trilobite in 2001, it was voted among the 100 most innovative designs (though whether the judges were dedicated couch potatoes, and thus biased, we were not able to discover). The name comes from the hard-shelled sea creature from the Paleozoic era (between 250 million and 560 million years ago) that roamed the ocean floor feeding on particles and small animals.
+
+HONDA ASIMO ROBOT
+Need an extra pair of hands around the office? Look no further; this month, the Honda Motor Company showcased its second-generation humanoid robot, Asimo. The machine has come a long way since its first incarnation five years ago. The 1.3 metre-tall droid is now capable of performing a variety of office tasks, including reception duties, serving drinks and acting as an information guide, as well as making deliveries. Using multiple sensors, Asimo has the ability to recognise the surrounding environment and interact with people using integrated circuit tags. It can walk and run at a fair pace, and push a cart. Honda plans to start using Asimo's receptionist functions at its Wako Building in Japan early in 2006, and it is hoped it will become available for leasing afterwards. It could soon be pushing a cart at an office near you.`
       },
       questions: [
         {
           type: 'multiple-choice',
-          questionNumber: 25,
-          question: 'Historically, automation has been most associated with',
+          questionNumber: 27,
+          question: 'The Celestron SkyScout can',
           options: [
-            { label: 'healthcare', value: 'A' },
-            { label: 'service sectors', value: 'B' },
-            { label: 'manufacturing', value: 'C' },
-            { label: 'administrative functions', value: 'D' }
+            { label: 'tell you information about the stars.', value: 'A' },
+            { label: 'tell you where in the world you are.', value: 'B' },
+            { label: 'find objects in the sky that are not normally visible.', value: 'C' }
           ]
         },
         {
           type: 'multiple-choice',
-          questionNumber: 26,
-          question: 'Robots in warehousing primarily handle',
+          questionNumber: 28,
+          question: 'The Seiko Spectrum e-paper watch',
           options: [
-            { label: 'quality control', value: 'A' },
-            { label: 'customer service', value: 'B' },
-            { label: 'material sorting, packing, and transportation', value: 'C' },
-            { label: 'product design', value: 'D' }
+            { label: 'cannot be bent.', value: 'A' },
+            { label: 'can be used for surfing the Internet.', value: 'B' },
+            { label: 'is being produced as a limited edition.', value: 'C' }
           ]
         },
         {
-          type: 'paragraph-gap',
-          instruction: 'Complete with words from the text (MAX 3 words).',
-          paragraph: 'Robots perform tasks (27)... and (28)... than humans. Automation creates (29)... in robotics. Workers in (30)... jobs face the greatest displacement risk. Society must ensure (31)... of automation benefits.',
-          questionNumbers: [27, 28, 29, 30, 31]
+          type: 'multiple-choice',
+          questionNumber: 29,
+          question: 'The Electrolux Trilobite 2.0 robot vacuum cleaner',
+          options: [
+            { label: 'asks permission before moving from room to room.', value: 'A' },
+            { label: 'uses lasers to help it avoid objects.', value: 'B' },
+            { label: 'is programmable.', value: 'C' }
+          ]
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 30,
+          question: 'The Honda Asimo robot',
+          options: [
+            { label: 'has two pairs of hands.', value: 'A' },
+            { label: 'uses lasers to help it recognise its surroundings.', value: 'B' },
+            { label: 'can run.', value: 'C' }
+          ]
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 31,
+          statement: 'The SkyScout uses GPS and',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 32,
+          statement: 'The Seiko Spectrum does not need batteries to power the',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 33,
+          statement: 'HDTV uses more',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 34,
+          statement: 'The Trilobite 2.0 could be used to',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 35,
+          statement: 'Asimo first appeared',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
         },
         {
           type: 'true-false-not-given',
-          instruction: 'Do the statements agree with the information?',
-          statements: [
-            { questionNumber: 32, statement: 'Robots reduce production errors in manufacturing.' },
-            { questionNumber: 33, statement: 'All new jobs created by automation pay lower salaries.' },
-            { questionNumber: 34, statement: 'Routine jobs are at greater risk of automation than specialized positions.' },
-            { questionNumber: 35, statement: 'The transition to automation will inevitably increase economic inequality.' },
-            { questionNumber: 36, statement: 'Automation is expected to continue advancing in the future.' }
-          ]
+          questionNumber: 36,
+          statement: 'The Nokia N91 is strong.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 37,
+          statement: 'E-paper can be torn easily.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 38,
+          statement: 'HDTV is filmed differently to conventional TV.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 39,
+          statement: 'The Trilobite 2.0 looks just like the original design.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 40,
+          statement: 'Asimo is available for export.'
         }
       ]
     }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { studentService } from '../../services/studentService';
 import { Batch } from '../../services/batchService';
-import { X, Copy, Check, Mail, FileText } from 'lucide-react';
+import { X, Copy, Check, Mail, FileText, ArrowLeft } from 'lucide-react';
 import { generateStudentCredentialEmail } from '../../utils/emailTemplate';
 import { PrintableStudentRegistration } from '../PrintableStudentRegistration';
 
@@ -153,58 +153,58 @@ export function AddStudentModal({ onClose, batches, createdBy }: AddStudentModal
     setShowPrintPreview(true);
   };
 
-  // Success Modal
+  // Success Modal - Full Screen
   if (success) {
     return (
       <div className="zen-overlay" onClick={onClose}>
-        <div className="zen-modal !max-w-md" onClick={e => e.stopPropagation()}>
-          <div className="p-6 md:p-8 text-center">
-            <div className="w-16 h-16 bg-emerald-50 rounded-zen flex items-center justify-center mx-auto mb-5">
-              <Check className="w-8 h-8 text-emerald-600" />
+        <div className="fixed inset-0 bg-white rounded-none flex flex-col items-center justify-center p-4 sm:p-6" onClick={e => e.stopPropagation()}>
+          <div className="w-full max-w-md text-center">
+            <div className="w-20 h-20 bg-emerald-50 rounded-zen flex items-center justify-center mx-auto mb-6">
+              <Check className="w-10 h-10 text-emerald-600" />
             </div>
-            <h3 className="text-xl font-bold text-midnight-800 mb-2">
+            <h3 className="text-2xl sm:text-3xl font-bold text-midnight-800 mb-2">
               Student Created!
             </h3>
-            <p className="text-slate-500 text-sm mb-6">
+            <p className="text-slate-500 text-sm sm:text-base mb-8">
               Save these credentials and provide them to the student.
             </p>
 
-            <div className="bg-forest-50 border border-forest-100 rounded-2xl p-5 mb-5 text-left">
-              <div className="mb-3">
-                <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-1">Student ID</p>
-                <p className="text-lg font-mono font-bold text-midnight-800">{success.studentId}</p>
+            <div className="bg-forest-50 border border-forest-100 rounded-2xl p-6 mb-6 text-left">
+              <div className="mb-4">
+                <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-2">Student ID</p>
+                <p className="text-xl sm:text-2xl font-mono font-bold text-midnight-800 break-all">{success.studentId}</p>
               </div>
               <div>
-                <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-1">Password</p>
-                <p className="text-lg font-mono font-bold text-midnight-800">{success.password}</p>
+                <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-2">Password</p>
+                <p className="text-xl sm:text-2xl font-mono font-bold text-midnight-800 break-all">{success.password}</p>
               </div>
             </div>
 
-            <div className="bg-orange-50 border border-orange-100 rounded-2xl p-3 mb-5">
-              <p className="text-xs text-orange-700 font-semibold">
+            <div className="bg-orange-50 border border-orange-100 rounded-2xl p-4 mb-8">
+              <p className="text-xs sm:text-sm text-orange-700 font-semibold">
                 ⚠️ This password will not be shown again. Save it now.
               </p>
             </div>
 
-            <div className="flex flex-col gap-2">
-              <div className="flex gap-2">
+            <div className="flex flex-col gap-2.5 w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 <button
                   onClick={handleCopyCredentials}
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-forest-600 text-white text-sm font-semibold rounded-2xl hover:bg-forest-500 transition-colors"
+                  className="flex items-center justify-center gap-2 px-4 py-3 bg-forest-600 text-white text-sm font-semibold rounded-2xl hover:bg-forest-500 transition-colors"
                   data-testid="copy-credentials-btn"
                 >
                   {copied ? <><Check className="w-4 h-4" /> Copied!</> : <><Copy className="w-4 h-4" /> Copy</>}
                 </button>
                 <button
                   onClick={handlePrintDocument}
-                  className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-midnight-800 text-white text-sm font-semibold rounded-2xl hover:bg-midnight-700 transition-colors"
+                  className="flex items-center justify-center gap-2 px-4 py-3 bg-midnight-800 text-white text-sm font-semibold rounded-2xl hover:bg-midnight-700 transition-colors"
                 >
                   <FileText className="w-4 h-4" /> Print
                 </button>
               </div>
               <button
                 onClick={handleCopyHTMLEmail}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 text-white text-sm font-semibold rounded-2xl hover:bg-blue-500 transition-colors"
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white text-sm font-semibold rounded-2xl hover:bg-blue-500 transition-colors"
                 data-testid="copy-html-email-btn"
               >
                 {copiedEmail ? <><Check className="w-4 h-4" /> Copied!</> : <><Mail className="w-4 h-4" /> Copy HTML Email</>}
@@ -213,9 +213,9 @@ export function AddStudentModal({ onClose, batches, createdBy }: AddStudentModal
 
             <button
               onClick={onClose}
-              className="w-full mt-3 btn-ghost"
+              className="w-full mt-6 btn-ghost text-base"
             >
-              Close
+              Close & Return to Dashboard
             </button>
           </div>
         </div>
@@ -244,19 +244,21 @@ export function AddStudentModal({ onClose, batches, createdBy }: AddStudentModal
   // Form Modal
   return (
     <div className="zen-overlay" onClick={onClose}>
-      <div className="zen-modal !max-w-md" onClick={e => e.stopPropagation()}>
-        <div className="sticky top-0 bg-white border-b border-slate-100 px-6 md:px-8 py-5 flex items-center justify-between rounded-t-zen">
-          <h3 className="text-lg font-bold text-midnight-800">Add New Student</h3>
+      <div className="fixed inset-0 bg-white rounded-none flex flex-col" onClick={e => e.stopPropagation()}>
+        <div className="sticky top-0 bg-white border-b border-slate-100 px-4 md:px-8 py-4 flex items-center justify-between z-10 shadow-sm">
+          <h3 className="text-xl md:text-2xl font-bold text-midnight-800">Add New Student</h3>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-slate-50 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 hover:bg-slate-100 rounded-lg transition-colors font-semibold text-slate-700"
           >
-            <X className="w-5 h-5 text-slate-500" />
+            <ArrowLeft className="w-5 h-5" />
+            <span className="hidden sm:inline">Back to Dashboard</span>
+            <span className="sm:hidden">Back</span>
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-6 md:p-8">
-          <div className="space-y-4">
+        <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto max-h-[calc(100vh-80px)]">
+          <div className="p-4 md:p-8 max-w-4xl mx-auto w-full space-y-4">
             {/* Name */}
             <div>
               <label className="zen-label">
@@ -305,8 +307,8 @@ export function AddStudentModal({ onClose, batches, createdBy }: AddStudentModal
               {errors.mobile && <p className="text-red-500 text-xs mt-1 ml-1 font-medium">{errors.mobile}</p>}
             </div>
 
-            {/* Batch & Status - 2 col */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Batch & Status - Responsive Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="zen-label">
                   Batch <span className="text-red-500">*</span>
@@ -348,10 +350,10 @@ export function AddStudentModal({ onClose, batches, createdBy }: AddStudentModal
             </div>
 
             {/* Fee Section */}
-            <div className="border-t border-slate-100 pt-4 mt-2">
+            <div className="border-t border-slate-100 pt-5 mt-4">
               <p className="zen-label !text-base !mb-4">Fee Information</p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-4">
                 <div>
                   <label className="zen-label !text-xs">Total Fee</label>
                   <input
@@ -397,25 +399,25 @@ export function AddStudentModal({ onClose, batches, createdBy }: AddStudentModal
                 <strong>Note:</strong> Student ID and password will be auto-generated after submission.
               </p>
             </div>
-          </div>
 
-          {/* Actions */}
-          <div className="flex flex-col sm:flex-row gap-3 mt-6">
-            <button
-              type="button"
-              onClick={onClose}
-              className="flex-1 btn-ghost"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="flex-1 btn-forest disabled:opacity-50 disabled:cursor-not-allowed"
-              data-testid="submit-student-btn"
-            >
-              {isSubmitting ? 'Creating...' : 'Create Student'}
-            </button>
+            {/* Actions */}
+            <div className="flex flex-col sm:flex-row gap-3 mt-8 pt-6 border-t border-slate-100">
+              <button
+                type="button"
+                onClick={onClose}
+                className="flex-1 btn-ghost text-base py-3"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="flex-1 btn-forest disabled:opacity-50 disabled:cursor-not-allowed text-base py-3"
+                data-testid="submit-student-btn"
+              >
+                {isSubmitting ? 'Creating...' : 'Create Student'}
+              </button>
+            </div>
           </div>
         </form>
       </div>

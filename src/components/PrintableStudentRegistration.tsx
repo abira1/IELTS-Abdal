@@ -170,12 +170,12 @@ export const PrintableStudentRegistration: React.FC<PrintableStudentRegistration
             <div className="flex items-center gap-5">
               <img
                 src="/abdal-ielts-academy-logo.png"
-                alt="Abdal IELTS Academy"
+                alt="IELTS Abdal"
                 className="h-24 w-24 object-contain print-logo"
               />
               <div>
                 <h1 className="text-4xl font-bold text-gray-900 uppercase tracking-wide print-title">
-                  Abdal IELTS Academy
+                  IELTS Abdal
                 </h1>
                 <p className="text-lg text-gray-700 font-semibold print-subtitle mt-1">
                   Student Registration Document
@@ -284,26 +284,69 @@ export const PrintableStudentRegistration: React.FC<PrintableStudentRegistration
           {(studentData.totalFee !== undefined || studentData.paid !== undefined || studentData.due !== undefined) && (
             <div className="mb-6">
               <h2 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-400 uppercase">
-                Fee Information
+                📊 Fee Information & Payment Summary
               </h2>
-              <div className="bg-green-50 p-4 rounded border border-green-300">
-                <div className="grid grid-cols-3 gap-4 text-base">
-                  <div>
-                    <p className="text-sm text-gray-600 font-semibold mb-1">Total Fee</p>
-                    <p className="font-bold text-gray-900">৳{studentData.totalFee?.toLocaleString() || '0'}</p>
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-5 rounded border-2 border-green-300 shadow-sm">
+                {/* Fee Summary Grid */}
+                <div className="grid grid-cols-3 gap-4 mb-5">
+                  {/* Total Fee Box */}
+                  <div className="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                    <div className="text-center">
+                      <p className="text-xs font-bold text-gray-600 mb-2 uppercase tracking-wide">💰 Total Fee</p>
+                      <p className="text-3xl font-bold text-gray-900">৳{studentData.totalFee?.toLocaleString() || '0'}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-600 font-semibold mb-1">Paid</p>
-                    <p className="font-bold text-green-600">৳{studentData.paid?.toLocaleString() || '0'}</p>
+
+                  {/* Paid Amount Box */}
+                  <div className="bg-green-100 p-4 rounded-lg border-2 border-green-400 shadow-sm">
+                    <div className="text-center">
+                      <p className="text-xs font-bold text-green-700 mb-2 uppercase tracking-wide">✅ Paid Amount</p>
+                      <p className="text-3xl font-bold text-green-700">৳{studentData.paid?.toLocaleString() || '0'}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-600 font-semibold mb-1">Due</p>
-                    <p className="font-bold text-red-600">৳{studentData.due?.toLocaleString() || '0'}</p>
+
+                  {/* Due Amount Box */}
+                  <div className={`p-4 rounded-lg border-2 shadow-sm ${(studentData.due || 0) <= 0 ? 'bg-emerald-100 border-emerald-400' : 'bg-red-100 border-red-400'}`}>
+                    <div className="text-center">
+                      <p className={`text-xs font-bold mb-2 uppercase tracking-wide ${(studentData.due || 0) <= 0 ? 'text-emerald-700' : 'text-red-700'}`}>
+                        {(studentData.due || 0) <= 0 ? '✓ Fully Paid' : '⚠️ Due Amount'}
+                      </p>
+                      <p className={`text-3xl font-bold ${(studentData.due || 0) <= 0 ? 'text-emerald-700' : 'text-red-700'}`}>
+                        ৳{studentData.due?.toLocaleString() || '0'}
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="mt-3 pt-3 border-t border-green-200">
-                  <p className="text-sm text-gray-700">
-                    <strong>Note:</strong> Please ensure all dues are cleared before the exam date. Contact the office for payment options.
+
+                {/* Payment Progress Bar */}
+                <div className="mb-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <p className="text-xs font-bold text-gray-700">Payment Collection Progress</p>
+                    <p className="text-xs font-bold text-gray-900">
+                      {studentData.totalFee ? Math.round((studentData.paid / studentData.totalFee) * 100) : 0}%
+                    </p>
+                  </div>
+                  <div className="w-full bg-gray-300 rounded-full h-3">
+                    <div 
+                      className={`h-3 rounded-full transition-all ${(studentData.due || 0) <= 0 ? 'bg-emerald-600' : 'bg-blue-600'}`}
+                      style={{ width: `${studentData.totalFee ? Math.min((studentData.paid / studentData.totalFee) * 100, 100) : 0}%` }}
+                    />
+                  </div>
+                </div>
+
+                {/* Payment Status Alert */}
+                <div className={`p-3 rounded-lg border-l-4 ${(studentData.due || 0) <= 0 ? 'bg-emerald-50 border-l-emerald-600' : 'bg-amber-50 border-l-amber-600'}`}>
+                  <p className={`text-sm font-semibold ${(studentData.due || 0) <= 0 ? 'text-emerald-800' : 'text-amber-800'}`}>
+                    {(studentData.due || 0) <= 0 
+                      ? '✅ Payment Complete - Thank you for full payment!' 
+                      : `⚠️ Outstanding Balance - Please clear dues of ৳${studentData.due?.toLocaleString() || '0'}`
+                    }
+                  </p>
+                  <p className="text-xs text-gray-700 mt-1">
+                    {(studentData.due || 0) <= 0 
+                      ? 'Your account is fully paid. You are eligible to appear in all exams.'
+                      : 'Ensure payment is made before the exam date. Contact office for payment options.'
+                    }
                   </p>
                 </div>
               </div>
@@ -318,15 +361,11 @@ export const PrintableStudentRegistration: React.FC<PrintableStudentRegistration
             <div className="bg-gray-50 p-4 rounded border border-gray-300">
               {/* Bento Grid Layout */}
               <div className="grid grid-cols-3 gap-3 text-base">
-                {/* Left Column - Branches (Stacked) */}
+                {/* Left Column - Main Branch */}
                 <div className="col-span-1 flex flex-col gap-3">
-                  <div className="bg-white p-3 rounded-lg border border-gray-300 shadow-sm">
-                    <p className="font-bold text-gray-900 mb-2">Main Branch</p>
-                    <p className="text-gray-700 text-sm">R.B. Complex, 6th Floor, East Zindabazar, Sylhet</p>
-                  </div>
-                  <div className="bg-white p-3 rounded-lg border border-gray-300 shadow-sm">
-                    <p className="font-bold text-gray-900 mb-2">Jalalpur Branch</p>
-                    <p className="text-gray-700 text-sm">Mosahid Plaza, 2nd Floor, Jalalpur Bazaar, College Road</p>
+                  <div className="bg-white p-3 rounded-lg border border-gray-300 shadow-sm h-full flex flex-col justify-center">
+                    <p className="font-bold text-gray-900 mb-2">📍 Main Branch</p>
+                    <p className="text-gray-700 text-sm">Millennium Shopping Complex, Lift-7, Zindabazar, Sylhet</p>
                   </div>
                 </div>
 
@@ -365,7 +404,7 @@ export const PrintableStudentRegistration: React.FC<PrintableStudentRegistration
           {/* About Section - Condensed */}
           <div className="mb-6">
             <h2 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-400 uppercase">
-              About Abdal IELTS Academy
+              About IELTS Abdal
             </h2>
             <div className="bg-gray-50 p-4 rounded border border-gray-300">
               <p className="text-base text-gray-800 leading-relaxed">
@@ -378,12 +417,12 @@ export const PrintableStudentRegistration: React.FC<PrintableStudentRegistration
 
           {/* Footer */}
           <div className="mt-6 text-center text-sm text-gray-700 border-t border-gray-900 pt-4">
-            <p className="font-semibold">Official Registration Document - Abdal IELTS Academy</p>
+              <p className="font-semibold">Official Registration Document - IELTS Abdal</p>
             <p className="text-gray-600 mt-2">
               Generated: {new Date().toLocaleString()} | CONFIDENTIAL - Keep this document secure
             </p>
             <p className="text-gray-600 mt-2">
-              © {new Date().getFullYear()} Abdal IELTS Academy. All rights reserved.
+              © {new Date().getFullYear()} IELTS Abdal. All rights reserved.
             </p>
           </div>
         </div>

@@ -14,7 +14,9 @@ import {
   Copy,
   Check,
   BarChart3,
-  Mail as MailIcon
+  Mail as MailIcon,
+  DollarSign,
+  TrendingUp
 } from 'lucide-react';
 import { generateStudentCredentialEmail } from '../../utils/emailTemplate';
 import { AppLayout } from '../../components/layout/AppLayout';
@@ -325,6 +327,39 @@ export function StudentProfilePage() {
             </div>
           </div>
         )}
+
+        {/* Fees Section */}
+        <div className="mt-5 pt-5 border-t border-slate-100">
+          <div className="flex items-center gap-2 mb-4">
+            <DollarSign className="w-4 h-4 text-slate-400" />
+            <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">Fees Information</p>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="bg-slate-50 rounded-xl p-3 border border-slate-200">
+              <p className="text-xs font-medium text-slate-500 mb-1">Total Fees</p>
+              <p className="text-lg font-bold text-midnight-800">₨{(student.totalFee || 0).toLocaleString()}</p>
+            </div>
+            <div className="bg-emerald-50 rounded-xl p-3 border border-emerald-200">
+              <p className="text-xs font-medium text-emerald-600 mb-1">Already Paid</p>
+              <p className="text-lg font-bold text-emerald-700">₨{(student.paid || 0).toLocaleString()}</p>
+            </div>
+            <div className={`rounded-xl p-3 border ${(student.due || 0) <= 0 ? 'bg-emerald-50 border-emerald-200' : 'bg-red-50 border-red-200'}`}>
+              <p className={`text-xs font-medium mb-1 ${(student.due || 0) <= 0 ? 'text-emerald-600' : 'text-red-600'}`}>Due</p>
+              <p className={`text-lg font-bold ${(student.due || 0) <= 0 ? 'text-emerald-700' : 'text-red-700'}`}>
+                ₨{(student.due || 0).toLocaleString()}
+              </p>
+            </div>
+          </div>
+          <div className="mt-3 w-full bg-slate-200 rounded-full h-2">
+            <div 
+              className="bg-forest-600 h-2 rounded-full transition-all"
+              style={{ width: `${student.totalFee ? Math.min((student.paid / student.totalFee) * 100, 100) : 0}%` }}
+            />
+          </div>
+          <p className="text-xs text-slate-500 mt-2">
+            {student.totalFee ? Math.round((student.paid / student.totalFee) * 100) : 0}% of fees collected
+          </p>
+        </div>
 
         {/* Action Buttons */}
         <div className="flex flex-wrap gap-2 mt-6 pt-5 border-t border-slate-100">

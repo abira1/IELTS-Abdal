@@ -25,7 +25,7 @@ interface SidebarProps {
   onTabChange?: (tab: string) => void;
 }
 
-const LOGO_URL = 'https://i.postimg.cc/G3Gjq60p/IELTS-ABDAL-LOGO-PNG.png';
+const LOGO_URL = 'https://i.postimg.cc/KjT16m5R/logo.png';
 
 const adminLinks = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, path: '/admin/dashboard' },
@@ -108,17 +108,15 @@ export function Sidebar({ isOpen, onClose, role, activeTab, onTabChange }: Sideb
         `}
       >
         {/* Logo Area */}
-        <div className="px-6 pt-6 pb-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <img
-              src={LOGO_URL}
-              alt="Abdal IELTS Academy"
-              className="h-10 w-auto object-contain"
-            />
-          </div>
+        <div className="px-6 pt-6 pb-4 flex items-center justify-center relative">
+          <img
+            src={LOGO_URL}
+            alt="IELTS Abdal"
+            className="h-12 w-auto object-contain"
+          />
           <button
             onClick={onClose}
-            className="lg:hidden p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+            className="lg:hidden absolute right-4 p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>

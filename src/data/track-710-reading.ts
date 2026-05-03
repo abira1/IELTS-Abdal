@@ -1,11 +1,11 @@
-// Track: 710-M Reading
+// Track: 710-AC Reading
 import { Track } from './track1';
 
 export const track710Reading: Track = {
   id: 'track-710-reading',
-  name: '710-M Reading',
-  shortName: '710MR',
-  description: 'IELTS Reading Practice Test - Academic Reading with 3 parts and 40 questions',
+  name: '710-AC Reading',
+  shortName: '710-AC',
+  description: 'IELTS Reading Academic - 3 parts with 40 questions',
   duration: 60,
   totalQuestions: 40,
   trackType: 'reading',
@@ -15,42 +15,127 @@ export const track710Reading: Track = {
       sectionNumber: 1,
       title: 'READING PASSAGE 1',
       passage: {
-        title: 'Frogwatch: Monitoring Amphibian Populations',
-        content: `Amphibians, including frogs, toads, and salamanders, are among the most sensitive indicators of environmental health. These creatures depend on both aquatic and terrestrial environments and are particularly vulnerable to pollution, habitat loss, and climate change. In recent decades, amphibian populations worldwide have experienced dramatic declines, prompting scientists and conservation organizations to develop monitoring programs. Frogwatch is a citizen science initiative that engages members of the public in monitoring frog populations. Volunteers record frog calls during breeding season, contributing data to a centralized database. The program has been implemented in various countries including Australia, the United States, and Europe. Frogwatch volunteers use standardized protocols to identify frog species based on their distinctive calls. Each frog species produces a unique call pattern, allowing trained volunteers to identify species without requiring visual confirmation. This acoustic monitoring method is particularly valuable in wetland habitats where visual observation can be difficult. The data collected through Frogwatch programs provides valuable insights into population trends and the distribution of frog species. Changes in frog populations can indicate broader environmental changes, making this information crucial for conservation efforts. Declining frog populations may signal deteriorating environmental conditions, including water pollution, habitat degradation, or climate-related changes. The program also raises public awareness about amphibians and their ecological importance. By participating in Frogwatch, volunteers develop a deeper understanding of local ecosystems and become advocates for amphibian conservation. This increased public engagement has contributed to policy discussions and conservation initiatives in various regions. Despite the value of citizen science programs like Frogwatch, they face challenges related to data quality, volunteer training, and program sustainability. Ensuring consistent data collection methods and maintaining volunteer engagement over time remain ongoing concerns for program administrators.`
+        title: 'Frogwatch',
+        content: `Frogwatch, a remarkable success story started in Western Australia, is the brainchild of Dr. Ken Aplin. His work, as the curator of reptiles and frogs in the Western Australian Museum, invoked long field trips and he wondered if a community-based frog-monitoring network could help him keep track of frogs. Through such a network, ordinary untrained members of the community could learn about frog habitats, observe the numbers and kinds of frogs in their local area, and report this information to the museum.
+
+Launched in 1995, Frogwatch recently gained its 3221st member, and many people say that this is the best thing the museum has ever done. Each participant receives a 'Frogwatch Kit' - a regular newsletter, an audio tape of frog calls and identification sheets. Recently, Frogwatch membership increased dramatically when a mysterious parasitic fungus disease began attacking frogs nationwide. Although research is yet incomplete, scientists suspect the fungus originated overseas, perhaps in South America, where frogs have died in catastrophic numbers from a fungus disease genetically similar to the Australian organism.
+
+Researchers in Western Australia needed to know how widespread the infection was in the state's frog populations. So Aplin sent an 'F-file' (frog fungus facts) alert to Frogwatch members, requesting their help. He asked them to deliver him dead or dying frogs. More than 2,000 frogs have now been examined, half from the museum's existing collection. Aplin once thought the fungus had arrived in Western Australia in only the past year or two, but tests now suggest it has been there since the late 1980s.
+
+Frogwatch has proved to be the perfect link to the public and Aplin has become a total convert to community participation. He's now aiming for a network of 15,000 Frogwatch members as the museum can't afford to use professional resources to monitor frog populations. Much of the frog habitat is on private land, and without community support, monitoring the frogs would be impossible.
+
+Not everyone is convinced by the 'feelgood' popularity of Frogwatch. While Aplin believes even tiny backyard ponds can help to significantly improve frog numbers, Dr. Dale Roberts isn't so sure. A senior zoology lecturer at the University of WA, Roberts agrees the program has tapped into the public's enthusiasm for frogs, but he warns that strong public awareness does not amount to sound science.
+
+He argues that getting the public to send in pages of observations is a good thing, but giving these reports credibility may not be valid scientifically. In addition, he's not convinced that Frogwatch's alarmist message about the danger of fungal infection is valid either. In Western Australia, for example, there was a long summer and very late drenching rains, that year, following two equally dry years. So, he argues, there are other things that might have precipitated the deaths. He questions what could be done about it anyway. If it's already widespread, it may not be worth the cost and effort of doing anything about it. Even if it's causing high death rates, he says he can still find every frog species found over the past ten years in the south-west of Australia.
+
+Roberts argues that Western Australia is different. Unlike most other states, species are still being discovered there; the disappearances of frog types in Queensland and New South Wales, are not occurring in Western Australia, although three south-west species are on the endangered list. Roberts believes that no amount of garden ponds in Perth will help those species, which live in isolated habitats targeted for development.
+
+Aplin's response is that increasing the number of frog-friendly habitats is important for the very reason that many Western Australian frog species are found in small, highly restricted locations. He argues that pesticide-free gardens and ponds can offer a greater chance of survival to animals battling habitat disturbance, environmental pollutants, climatic variations, and now fungal disease. Aplin's opinion is that they should use the precautionary principle in cases where they don't yet know enough about the situation. Usually diseases sort themselves out naturally and some frog fauna will co-evolve with the fungus. Given time some balance may be restored, but in the shorter term, they are seeing negative impacts.
+
+The nationwide spread of the chytrid fungus is being mapped by Dr. Rick Speare, a specialist in amphibian disease at James Cook University. Speare also tests the accuracy of Aplin's fungus diagnoses and says Frogwatch is 'an amazing and under-acknowledged system ... the best program in Australia for harnessing public interest in frog biology... There are a lot of eyes out there looking for dead or sick frogs, beyond the power of any biologist to collect.'
+
+Aplin argues that they should never underestimate the importance of having a community base, especially when governments want to cut research funds. 'People can protest in ways that a handful of scientists hiding in a laboratory can't do. For just about every environmental problem, community involvement is fundamental.' Furthermore, Frogwatch is proving to be a social phenomenon as much as anything else. It seems ordinary people know that frogs are a measure of the environment's health.`
       },
       questions: [
         {
-          type: 'drag-and-drop',
-          instruction: 'Choose the most suitable heading for each section.',
-          items: [
-            { questionNumber: 1, label: 'Section A' },
-            { questionNumber: 2, label: 'Section B' },
-            { questionNumber: 3, label: 'Section C' },
-            { questionNumber: 4, label: 'Section D' }
-          ],
-          options: [
-            { label: 'Population Decline Indicators', value: 'i' },
-            { label: 'Public Awareness and Engagement', value: 'ii' },
-            { label: 'Acoustic Monitoring Methods', value: 'iii' },
-            { label: 'Program Challenges and Sustainability', value: 'iv' },
-            { label: 'Data Collection and Analysis', value: 'v' }
-          ]
-        },
-        {
-          type: 'paragraph-gap',
-          instruction: 'Complete with words from the text (MAX 3 words).',
-          paragraph: 'Amphibians depend on (5)... and (6)... environments. Frogwatch volunteers record (7)... during breeding season. Frog species can be identified by their (8)... Declining frog populations indicate (9)...',
-          questionNumbers: [5, 6, 7, 8, 9]
+          type: 'true-false-not-given',
+          questionNumber: 1,
+          statement: 'Frogwatch members need a basic level of scientific training.'
         },
         {
           type: 'true-false-not-given',
-          instruction: 'Do the statements agree with the information?',
-          statements: [
-            { questionNumber: 10, statement: 'Amphibians are sensitive indicators of environmental health.' },
-            { questionNumber: 11, statement: 'Frogwatch is only implemented in Australia.' },
-            { questionNumber: 12, statement: 'Visual observation is the primary monitoring method used by Frogwatch.' },
-            { questionNumber: 13, statement: 'Frogwatch data helps track frog population trends.' },
-            { questionNumber: 14, statement: 'Volunteer engagement is not a concern for Frogwatch programs.' }
+          questionNumber: 2,
+          statement: 'All Frogwatch members live in Western Australia.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 3,
+          statement: 'Frogwatch has proved that frogs are disappearing because of a fungus.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 4,
+          statement: 'Scientists in WA have examined about two thousand frogs collected by Frogwatch.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 5,
+          statement: 'The frog fungus disease has been in Western Australia for more than ten years.'
+        },
+        {
+          type: 'true-false-not-given',
+          questionNumber: 6,
+          statement: 'New species of frogs have been found in Western Australia recently.'
+        },
+        {
+          type: 'dropdown',
+          questionNumber: 7,
+          statement: 'Although the involvement of large numbers of people is encouraging, this does not guarantee scientifically valid data.',
+          options: [
+            { label: 'Dr. Aplin', value: 'A' },
+            { label: 'Dr. Roberts', value: 'B' },
+            { label: 'Dr. Speare', value: 'C' }
+          ]
+        },
+        {
+          type: 'dropdown',
+          questionNumber: 8,
+          statement: 'The development of frog-friendly backyards will help to conserve frog species.',
+          options: [
+            { label: 'Dr. Aplin', value: 'A' },
+            { label: 'Dr. Roberts', value: 'B' },
+            { label: 'Dr. Speare', value: 'C' }
+          ]
+        },
+        {
+          type: 'dropdown',
+          questionNumber: 9,
+          statement: 'Although it is possible that frogs will adapt to fungal and other problems in the long term, we should take precautions in case this does not occur.',
+          options: [
+            { label: 'Dr. Aplin', value: 'A' },
+            { label: 'Dr. Roberts', value: 'B' },
+            { label: 'Dr. Speare', value: 'C' }
+          ]
+        },
+        {
+          type: 'dropdown',
+          questionNumber: 10,
+          statement: 'As there may be many other explanations for recent frog deaths, it is not worth spending a great deal of time and money studying this fungus.',
+          options: [
+            { label: 'Dr. Aplin', value: 'A' },
+            { label: 'Dr. Roberts', value: 'B' },
+            { label: 'Dr. Speare', value: 'C' }
+          ]
+        },
+        {
+          type: 'dropdown',
+          questionNumber: 11,
+          statement: 'Because of the unique geography of Western Australia, most frog species in this State are not in danger of extinction.',
+          options: [
+            { label: 'Dr. Aplin', value: 'A' },
+            { label: 'Dr. Roberts', value: 'B' },
+            { label: 'Dr. Speare', value: 'C' }
+          ]
+        },
+        {
+          type: 'dropdown',
+          questionNumber: 12,
+          statement: 'Frogwatch has greater potential for frog observation than is possible by the scientific community.',
+          options: [
+            { label: 'Dr. Aplin', value: 'A' },
+            { label: 'Dr. Roberts', value: 'B' },
+            { label: 'Dr. Speare', value: 'C' }
+          ]
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 13,
+          question: 'The main purpose of Frogwatch is ...',
+          options: [
+            { label: 'for people to collect and deliver dead or dying frogs to scientists.', value: 'A' },
+            { label: 'for people to observe and collect information about frog populations for scientists.', value: 'B' },
+            { label: 'for people to allow scientists onto their private land to look at frog habitats.', value: 'C' },
+            { label: 'for people to set up ponds in their gardens as habitat for frogs.', value: 'D' }
           ]
         }
       ]
@@ -59,52 +144,192 @@ export const track710Reading: Track = {
       sectionNumber: 2,
       title: 'READING PASSAGE 2',
       passage: {
-        title: 'Understanding Hypnotism',
-        content: `Hypnotism, also known as hypnosis, is a state of focused attention and heightened suggestibility in which a person is guided by a hypnotist toward specific thoughts, feelings, or behaviors. Despite popular misconceptions perpetuated by media depictions, hypnosis is not a form of sleep or loss of consciousness. Rather, individuals under hypnosis remain conscious and aware, though their focus is narrowed and their critical judgment may be temporarily suspended. The history of hypnotism dates back centuries, with various forms of trance induction practiced in ancient cultures. Modern hypnotism emerged in the late 18th century with Franz Anton Mesmer, who developed "mesmerism," a precursor to contemporary hypnotherapy. Mesmer believed that illnesses resulted from imbalances in a universal magnetic force, and that hypnotic induction could restore balance. While Mesmer's theories about magnetic forces were ultimately discredited, his techniques influenced the development of modern hypnotherapy. Contemporary hypnotherapists use hypnosis to treat various psychological and psychosomatic conditions, including anxiety, phobias, chronic pain, and smoking cessation. Research has demonstrated that hypnotherapy can be effective for certain conditions, particularly when combined with other therapeutic approaches. The mechanisms underlying hypnosis remain not fully understood, though research suggests involvement of specific brain regions and neurotransmitter systems. Hypnosis works by inducing a state of focused attention where the conscious, critical mind is less active, allowing suggestions to reach the subconscious mind more directly. Despite the potential therapeutic benefits, hypnotherapy should not be considered a substitute for conventional medical or psychological treatment. Individuals should seek hypnotherapy only from qualified professionals and in conjunction with appropriate medical care.`
+        title: 'Just relax ...',
+        content: `A. Hypnosis is an intriguing and fascinating process. A trance-like mental state is induced in one person by another, who appears to have the power to command that person to obey instructions without question. Hypnotic experiences were described by the ancient Egyptians and Greeks, whilst references to deep sleep and anaesthesia have been found in the Bible and in the Jewish Talmud. In the mid-1700s, Franz Mesmer, an Austrian physician, developed his theory of 'animal magnetism', which was the belief that the cause of disease was the 'improper distribution of invisible magnetic fluids'. Mesmer used water tubs and magnetic wands to direct these supposed fluids to his patients. In 1784, a French commission studied Mesmer's claims, and concluded that these 'cures' were only imagined by the patients. However, people continued to believe in this process of 'mesmerism' and it was soon realised that successful results could be achieved, but without the need for magnets and water.
+
+B. The term hypnotism was first used by James Braid, a British physician who studied suggestion and hypnosis in the mid-1800s. He demonstrated that hypnosis differed from sleep, that it was a physiological response and not the result of secret powers. During this same period, James Esdaile, a Scottish doctor working in India, used hypnotism instead of anaesthetic in over 200 major surgical operations, including leg amputations. Later that century, a French neurologist, Jean Charcot, successfully experimented with hypnosis in his clinic for nervous disorders.
+
+C. Since then, scientists have shown that the state of hypnosis is a natural human behaviour, which can affect psychological, social and/or physical experiences. The effects of hypnotism depend on the ability, willingness and motivation of the person being hypnotised. Although hypnosis has been compared to dreaming and sleepwalking, it is not actually related to sleep. It involves a more active and intense mental concentration of the person being hypnotised. Hypnotised people can talk, write, and walk about and they are usually fully aware of what is being said and done.
+
+D. There are various techniques used to induce hypnosis. The best-known is a series of simple suggestions repeated continuously in the same tone of voice. The subject is instructed to focus their attention on an object or fixed point, while being told to relax, breathe deeply, and allow the eyelids to grow heavy and close. As the person responds, their state of attention changes, and this altered state often leads to other changes. For example, the person may experience different levels of awareness, consciousness, imagination, memory and reasoning or become more responsive to suggestions. Additional phenomena may be produced or eliminated such as blushing, sweating, paralysis, muscle tension or anaesthesia. Although these changes can occur with hypnosis, none of these experiences is unique to it. People who are very responsive to hypnosis are also more responsive to suggestions when they are not hypnotised. This responsiveness increases during hypnotism. This explains why hypnosis takes only a few seconds for some, whilst other people cannot be easily hypnotised.
+
+E. It is a common misunderstanding that hypnotists are able to force people to perform criminal or any other acts against their will. In fact, subjects can resist suggestions, and they retain their ability to distinguish right from wrong. This misunderstanding is often the result of public performances where subjects perform ridiculous or highly embarrassing actions at the command of the hypnotist. These people are usually instructed not to recall their behaviour after re-emerging from the hypnotic state, so it appears that they were powerless while hypnotised. The point to remember, however, is that these individuals chose to participate, and the success of hypnotism depends on the willingness of a person to be hypnotised.
+
+F. Interestingly, there are different levels of hypnosis achievable. Thus deep hypnosis can be induced to allow anaesthesia for surgery, childbirth or dentistry. This contrasts to a lighter state of hypnosis, which deeply relaxes the patient who will then follow simple directions. This latter state may be used to treat mental health problems, as it allows patients to feel calm while simultaneously thinking about distressing feelings or painful memories. Thus patients can learn new responses to situations or come up with solutions to problems. This can help recovery from psychological conditions such as anxiety, depression or phobias. Sometimes, after traumatic incidents, memory of the events may be blocked. For example, some soldiers develop amnesia [loss of memory] as a result of their experiences during wartime. Through hypnosis these repressed memories can be retrieved and treated. A variation of this treatment involves age regression, when the hypnotist takes the patient back to a specific age. In this way patients may remember events and feelings from that time, which may be affecting their current well-being.
+
+G. Physicians also have made use of the ability of a hypnotised person to remain in a given position for long periods of time. In one case, doctors had to graft skin onto a patient's badly damaged foot. First, skin from the person's abdomen was grafted onto his arm; then the graft was transferred to his foot. With hypnosis, the patient held his arm tightly in position over his abdomen for three weeks, then over his foot for four weeks. Even though these positions were unusual, the patient at no time felt uncomfortable!
+
+H. Hypnosis occasionally has been used with witnesses and victims of crime to enable people to remember important clues, such as a criminal's physical appearance or other significant details that might help to solve a crime. However, as people can both lie and make mistakes while hypnotised, the use of hypnotism in legal situations can cause serious problems. Also hypnosis cannot make a person divulge secret information if they don't want to. This was confirmed by the Council on Scientific Affairs of the American Medical Association, which, in 1985 reported that memories refreshed through hypnosis may include inaccurate information, false memories, and confabulation (fact and fantasy combined).`
       },
       questions: [
         {
-          type: 'multiple-choice',
+          type: 'drag-drop-matching',
+          questionNumber: 14,
+          statement: 'Section B',
+          options: [
+            { label: 'Use of hypnotism in criminal cases', value: 'i' },
+            { label: 'The normality of hypnotised subjects\' behaviour', value: 'ii' },
+            { label: 'Early medical experiments with hypnotism', value: 'iii' },
+            { label: 'Early association of hypnosis with psychology', value: 'iv' },
+            { label: 'Dangers of hypnotism', value: 'v' },
+            { label: 'How to hypnotise', value: 'vi' },
+            { label: 'Hypnosis and free will', value: 'vii' },
+            { label: 'Difference between mesmerism and hypnotism', value: 'viii' },
+            { label: 'Therapeutic uses of hypnosis', value: 'ix' },
+            { label: 'Origins of hypnosis', value: 'x' }
+          ]
+        },
+        {
+          type: 'drag-drop-matching',
           questionNumber: 15,
-          question: 'Hypnosis is best described as',
+          statement: 'Section C',
           options: [
-            { label: 'a form of sleep', value: 'A' },
-            { label: 'a state of focused attention and heightened suggestibility', value: 'B' },
-            { label: 'loss of consciousness', value: 'C' },
-            { label: 'unconscious mind control', value: 'D' }
+            { label: 'Use of hypnotism in criminal cases', value: 'i' },
+            { label: 'The normality of hypnotised subjects\' behaviour', value: 'ii' },
+            { label: 'Early medical experiments with hypnotism', value: 'iii' },
+            { label: 'Early association of hypnosis with psychology', value: 'iv' },
+            { label: 'Dangers of hypnotism', value: 'v' },
+            { label: 'How to hypnotise', value: 'vi' },
+            { label: 'Hypnosis and free will', value: 'vii' },
+            { label: 'Difference between mesmerism and hypnotism', value: 'viii' },
+            { label: 'Therapeutic uses of hypnosis', value: 'ix' },
+            { label: 'Origins of hypnosis', value: 'x' }
+          ]
+        },
+        {
+          type: 'drag-drop-matching',
+          questionNumber: 16,
+          statement: 'Section D',
+          options: [
+            { label: 'Use of hypnotism in criminal cases', value: 'i' },
+            { label: 'The normality of hypnotised subjects\' behaviour', value: 'ii' },
+            { label: 'Early medical experiments with hypnotism', value: 'iii' },
+            { label: 'Early association of hypnosis with psychology', value: 'iv' },
+            { label: 'Dangers of hypnotism', value: 'v' },
+            { label: 'How to hypnotise', value: 'vi' },
+            { label: 'Hypnosis and free will', value: 'vii' },
+            { label: 'Difference between mesmerism and hypnotism', value: 'viii' },
+            { label: 'Therapeutic uses of hypnosis', value: 'ix' },
+            { label: 'Origins of hypnosis', value: 'x' }
+          ]
+        },
+        {
+          type: 'drag-drop-matching',
+          questionNumber: 17,
+          statement: 'Section E',
+          options: [
+            { label: 'Use of hypnotism in criminal cases', value: 'i' },
+            { label: 'The normality of hypnotised subjects\' behaviour', value: 'ii' },
+            { label: 'Early medical experiments with hypnotism', value: 'iii' },
+            { label: 'Early association of hypnosis with psychology', value: 'iv' },
+            { label: 'Dangers of hypnotism', value: 'v' },
+            { label: 'How to hypnotise', value: 'vi' },
+            { label: 'Hypnosis and free will', value: 'vii' },
+            { label: 'Difference between mesmerism and hypnotism', value: 'viii' },
+            { label: 'Therapeutic uses of hypnosis', value: 'ix' },
+            { label: 'Origins of hypnosis', value: 'x' }
+          ]
+        },
+        {
+          type: 'drag-drop-matching',
+          questionNumber: 18,
+          statement: 'Section F',
+          options: [
+            { label: 'Use of hypnotism in criminal cases', value: 'i' },
+            { label: 'The normality of hypnotised subjects\' behaviour', value: 'ii' },
+            { label: 'Early medical experiments with hypnotism', value: 'iii' },
+            { label: 'Early association of hypnosis with psychology', value: 'iv' },
+            { label: 'Dangers of hypnotism', value: 'v' },
+            { label: 'How to hypnotise', value: 'vi' },
+            { label: 'Hypnosis and free will', value: 'vii' },
+            { label: 'Difference between mesmerism and hypnotism', value: 'viii' },
+            { label: 'Therapeutic uses of hypnosis', value: 'ix' },
+            { label: 'Origins of hypnosis', value: 'x' }
+          ]
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 19,
+          statement: 'References to hypnotism can be found in both the Talmud and the',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 20,
+          statement: 'Even when Mesmer\'s were not used, successful results occurred without them',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 21,
+          statement: 'Braid identified hypnosis as a natural response, rather than magical or mystical',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 22,
+          statement: 'Successful hypnosis requires the subject\'s active',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 23,
+          statement: 'Consequently subjects can speak or move around and are of their surroundings',
+          instruction: 'Complete using NO MORE THAN THREE WORDS from the passage.'
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 24,
+          question: 'In order to induce hypnosis, the hypnotist will ...',
+          options: [
+            { label: 'encourage the person to relax using a repetitively even tone of voice.', value: 'A' },
+            { label: 'say a specific set of words in a special tone of voice.', value: 'B' },
+            { label: 'say any words but in a particular tone of voice.', value: 'C' },
+            { label: 'encourage the person to relax while focussing on a slowly moving object.', value: 'D' }
           ]
         },
         {
           type: 'multiple-choice',
-          questionNumber: 16,
-          question: 'Franz Anton Mesmer believed illnesses resulted from',
+          questionNumber: 25,
+          question: 'Hypnotised subjects can be instructed to ...',
           options: [
-            { label: 'bacterial infections', value: 'A' },
-            { label: 'imbalances in a universal magnetic force', value: 'B' },
-            { label: 'poor diet and exercise', value: 'C' },
-            { label: 'psychological trauma', value: 'D' }
+            { label: 'do something they have previously said is against their wishes.', value: 'A' },
+            { label: 'demonstrate physical strength they would normally not have.', value: 'B' },
+            { label: 'reveal confidential information against their will.', value: 'C' },
+            { label: 'do something that they would not normally be opposed to doing.', value: 'D' }
           ]
         },
         {
-          type: 'paragraph-gap',
-          instruction: 'Complete with words from the text (MAX 2 words).',
-          paragraph: 'During hypnosis, a person\'s (17)... is narrowed. Mesmer developed (18)..., a precursor to modern hypnotherapy. Contemporary hypnotherapists treat conditions including (19)... and smoking cessation. Hypnotherapy works by reducing (20)...',
-          questionNumbers: [17, 18, 19, 20]
+          type: 'multiple-choice',
+          questionNumber: 26,
+          question: 'Past events are recalled under hypnosis ...',
+          options: [
+            { label: 'to entertain the hypnotist.', value: 'A' },
+            { label: 'to allow subjects to reassess them without distress.', value: 'B' },
+            { label: 'to help the subjects improve their memories.', value: 'C' },
+            { label: 'to make the subject feel younger.', value: 'D' }
+          ]
         },
         {
-          type: 'drag-and-drop',
-          instruction: 'Match each concept with its description.',
-          items: [
-            { questionNumber: 21, label: 'Hypnosis state' },
-            { questionNumber: 22, label: 'Mesmerism' },
-            { questionNumber: 23, label: 'Hypnotherapy applications' },
-            { questionNumber: 24, label: 'Important caution' }
-          ],
+          type: 'multiple-choice',
+          questionNumber: 27,
+          question: 'After surgery, hypnosis may be used ...',
           options: [
-            { label: 'Not a substitute for medical treatment', value: 'A' },
-            { label: 'Focused attention with suspended judgment', value: 'B' },
-            { label: 'Franz Mesmer\'s technique', value: 'C' },
-            { label: 'Anxiety, phobias, chronic pain', value: 'D' }
+            { label: 'to make drugs unnecessary.', value: 'A' },
+            { label: 'to keep the patient mobile.', value: 'B' },
+            { label: 'to make the patient forget to move.', value: 'C' },
+            { label: 'to minimise patient\'s discomfort while immobile.', value: 'D' }
+          ]
+        },
+        {
+          type: 'multiple-choice',
+          questionNumber: 28,
+          question: 'The American Medical Association reported that ...',
+          options: [
+            { label: 'people lie when giving evidence under hypnosis.', value: 'A' },
+            { label: 'people should be hypnotised before giving evidence.', value: 'B' },
+            { label: 'evidence given when hypnotised may be unreliable.', value: 'C' },
+            { label: 'secret evidence can be obtained through hypnosis.', value: 'D' }
           ]
         }
       ]
@@ -113,47 +338,118 @@ export const track710Reading: Track = {
       sectionNumber: 3,
       title: 'READING PASSAGE 3',
       passage: {
-        title: 'Children and Sport',
-        content: `Physical activity and participation in sports play crucial roles in children's healthy development. Beyond the obvious physical benefits, sports participation contributes to psychological well-being, social development, and academic performance. Research has consistently demonstrated that children who engage in regular physical activity perform better academically and exhibit improved behavioral outcomes compared to sedentary peers. The psychological benefits of sports participation in children are well-documented. Sports provide opportunities for children to build confidence, develop resilience, and learn coping skills. Competitive sports, in particular, can help children develop mental toughness and learn to handle success and failure appropriately. Team sports foster social skills and cooperation, teaching children to work collaboratively toward common goals. The cardiovascular and musculoskeletal benefits of sports participation are significant. Regular physical activity during childhood establishes healthy habits that often persist into adulthood. Early involvement in sports has been associated with reduced rates of obesity, cardiovascular disease, and type 2 diabetes in later life. Despite the well-established benefits of sports, children's participation rates in organized sports have declined in many developed nations. Factors contributing to this decline include increasing academic pressures, cost of sports programs, and attraction of sedentary activities such as video games and social media. Additionally, concerns about sports injuries and overuse injuries in young athletes have prompted more conservative approaches to youth sports. However, experts advocate for maintaining children's participation in sports while implementing injury prevention strategies. A balance between competitive and recreational sports, appropriate coaching, and emphasis on enjoyment rather than excessive pressure to win can minimize injury risks while maximizing benefits. Physical education programs in schools remain important mechanisms for ensuring all children access basic physical activity opportunities, regardless of their ability or socioeconomic status.`
+        title: 'Kids and Sport',
+        content: `Two Italian psychologists, Vincenzo Marte and Giovanni Notarnicola, describe the traditional spontaneous practice of sport by children - climbing trees, riding a bicycle along quiet roads, racing their friends across the fields - as an activity of freedom, a special activity of discovery and learning. In the case of free sporting activity, the child's time is given up entirely to the activity, as can be seen in the endless games of football young children play, which may then be followed by bicycle races and/or a swim in the river, for example.
+
+Today, however, children's discovery of sport has become very different. It is often parents who take their children, when they are very young, to the swimming pool or to the sports grounds or sports halls. Children's first experience of sport thus takes place as an organised activity, which they see as organisation of their free time. By organising sport for children, and often deciding for them, we unfortunately create an imbalance preventing them from managing their own play/sports time, thus denying them an opportunity of autonomy and independence as was possible in the past.
+
+A first possible reason for the imbalance in the practice of sport by children is therefore linked to the urban society we live in today. We need not regret the past; it is rather a question of knowing how to recreate this freedom in our towns and in the country, where sport is increasingly based on organised leisure activities. Doing one sport is now the rule in clubs. Sports grounds are often on the outskirts of cities, and are overcrowded and invariably enclosed, while recreational areas such as parks or hard-packed surfaces, are very few and far between. How can we find the balance of a varied and spontaneous relationship to sport under such conditions?
+
+Some interesting answers have already been suggested, which take into account the need to recreate this freedom. Marte and Notarnicola have shown that children who have experienced such freedom were considered by sports trainers to be more capable when they joined organised sport aged 12-13. Their study concluded that no formal training, no matter how early in life it took place, could replace these first experiences.
+
+Measures which would reverse this imbalance include: increasing the number of sports facilities which encourage self-organisation by the children, and also setting up unstructured playing areas with little in the way of equipment. Areas where street sport can be practised need to be established and sports clubs which offer multidisciplinary sports training should be supported. Children should be offered pre-school activity where they can discover different sports.
+
+For children, sport remains a special kind of discovery and learning, no matter how much adults limit and control the practice of early intensive training. Here is the second example of imbalance in children's sport. Today, sport is practised with early intensive training from the youngest possible age. Sometimes this is even before the age of six and is usually one specific sport within an organised framework. When adult-style competitions are introduced at an early age, the conditions which encourage a balanced development of children through sport are no longer respected.
+
+Today, early intensive training is much more widely on offer. Many sports organisations claim that they are forced to do this type of training because of what is called 'the golden age' to acquire the physical skills. It is considered unthinkable for a young skater or gymnast to miss this period, because if they did so, they would fall so far behind the best, that they could never hope to catch up. Faced with this demand for early ability, it is important that a safety net is put in place to maximise the benefits and minimise the disadvantages of such intensive training.
+
+Why do very young children give up sport? The most common reason for leaving a sport is to change to another sport, which in itself is no bad thing. However, children may leave a sport because they believe that they have received too much criticism and too many negative assessments. We know that young children, up to the age of eleven or twelve, cannot assess their own level of competence. They believe that if they are making an effort, then this in itself is a sign of their competence. We also know that young children are particularly sensitive to criticism from adults or peers. Trainers must therefore pay particular attention to this and avoid excessive criticism. They should also avoid any strategies that discriminate against the child: for example in team sports, naming first choice players and reserves. It should be remembered that primary school children's main desire is to have fun and socialise. The desire to improve and become a good competitor will develop later. This brief example shows that knowledge of child development is indispensable for those who take care of children at this age. It is up to trainers, sports doctors and psychologists to implement the measures necessary to limit this excessive early practice of sport by children.
+
+A third source of imbalance which threatens children and sport is parental attitudes. The American psychologist, Rainer Martens, emphasises that, 'too often children's joy of sports is destroyed by adults who want glory through victory.' Several studies have shown that parental pressure is high on the list of reasons why children leave sport. The presence of mothers and fathers can prevent children from considering sport as their own, where they can learn to master technical difficulties, manage interpersonal relations, and experience success and failure. As Martens highlights, 'adults are solely to blame if joy and sadness become synonymous, to a child, with victory or defeat.'
+
+If the children make the decisions, this ensures that they enjoy being a child in sport, and are relaxed with their development as human beings. We need only observe the activity in a school playground, where games are organised on an improvised playing field, to understand that children show genetic traces of the hunter instinct, which naturally leads them to physical activity. Sport is included as something they want, and which they identify both as a means of release and as a form of self-expression. By acting as a route to self-discovery, sport gives children both the opportunity to know their limits, and to acquire tools which will allow them to surpass them. Playing sport is a source of learning, progress and pleasure; an additional way of enriching life.`
       },
       questions: [
         {
+          type: 'table-gap',
+          questionNumber: 29,
+          statement: 'Marte & Notarnicola define the spontaneous sporting games of children as activities of',
+          instruction: 'Complete using NO MORE THAN TWO WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 30,
+          statement: 'Because today sport is often decided and by parents, children lose their autonomy',
+          instruction: 'Complete using NO MORE THAN TWO WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 31,
+          statement: 'A first imbalance occurs because are out of the city and often crowded',
+          instruction: 'Complete using NO MORE THAN TWO WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 32,
+          statement: 'The second imbalance occurs because they start early training very young',
+          instruction: 'Complete using NO MORE THAN TWO WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 33,
+          statement: 'They participate in only specific activity',
+          instruction: 'Complete using NO MORE THAN TWO WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 34,
+          statement: 'Children often give up a sport because of negative',
+          instruction: 'Complete using NO MORE THAN TWO WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 35,
+          statement: 'Young children should have at sporting activities',
+          instruction: 'Complete using NO MORE THAN TWO WORDS from the passage.'
+        },
+        {
+          type: 'table-gap',
+          questionNumber: 36,
+          statement: 'Parents exert on children to win rather than to enjoy sport',
+          instruction: 'Complete using NO MORE THAN TWO WORDS from the passage.'
+        },
+        {
           type: 'multiple-choice',
-          questionNumber: 25,
-          question: 'According to the passage, children who engage in regular physical activity',
+          questionNumber: 37,
+          question: 'Children\'s expression of this \'freedom\' is important because ...',
           options: [
-            { label: 'perform worse academically', value: 'A' },
-            { label: 'perform better academically', value: 'B' },
-            { label: 'show no academic difference', value: 'C' },
-            { label: 'always become professional athletes', value: 'D' }
+            { label: 'it allows them to be lazy.', value: 'A' },
+            { label: 'it means they can learn to swim and ride a bike.', value: 'B' },
+            { label: 'it puts them in charge of what they do and when they do it.', value: 'C' },
+            { label: 'it relieves the parents from transporting their children to sports.', value: 'D' }
           ]
         },
         {
           type: 'multiple-choice',
-          questionNumber: 26,
-          question: 'Team sports primarily help develop',
+          questionNumber: 38,
+          question: 'Ways of allowing children to develop this \'freedom\' include ...',
           options: [
-            { label: 'individual athletic skills only', value: 'A' },
-            { label: 'social skills and cooperation', value: 'B' },
-            { label: 'academic knowledge', value: 'C' },
-            { label: 'artistic abilities', value: 'D' }
+            { label: 'making transport to sports clubs free.', value: 'A' },
+            { label: 'offering a range of different sports in each sports club.', value: 'B' },
+            { label: 'offering sporting tuition to pre-school children.', value: 'C' },
+            { label: 'making children play outside regularly.', value: 'D' }
           ]
         },
         {
-          type: 'paragraph-gap',
-          instruction: 'Complete with words from the text (MAX 3 words).',
-          paragraph: 'Sports help children develop (27)... and resilience. Regular activity reduces risks of (28)..., cardiovascular disease, and type 2 diabetes. Factors reducing sports participation include (29)... and video games. Experts recommend (30)... coaching and emphasis on enjoyment. Physical education programs ensure (31)...',
-          questionNumbers: [27, 28, 29, 30, 31]
+          type: 'multiple-choice',
+          questionNumber: 39,
+          question: 'To encourage young children to continue with sport, we should give them ...',
+          options: [
+            { label: 'accurate feedback about their ability at sport.', value: 'A' },
+            { label: 'experience of failure as well as success.', value: 'B' },
+            { label: 'experience of being reserves as well as first choice team members.', value: 'C' },
+            { label: 'the opportunity to mix socially with their peers at sport.', value: 'D' }
+          ]
         },
         {
-          type: 'true-false-not-given',
-          instruction: 'Do the statements agree with the information?',
-          statements: [
-            { questionNumber: 32, statement: 'Sports participation only provides physical benefits.' },
-            { questionNumber: 33, statement: 'Children\'s sports participation rates have increased in developed nations.' },
-            { questionNumber: 34, statement: 'Sedentary activities like video games contribute to declining sports participation.' },
-            { questionNumber: 35, statement: 'School physical education programs are important for all children.' },
-            { questionNumber: 36, statement: 'Pressure to win should be the primary focus of youth sports.' }
+          type: 'multiple-choice',
+          questionNumber: 40,
+          question: 'The author believes that ...',
+          options: [
+            { label: 'children\'s sport should not be organised by adults.', value: 'A' },
+            { label: 'playing sport is an important part of children\'s development.', value: 'B' },
+            { label: 'children need to learn that sport is about losing as well as winning.', value: 'C' },
+            { label: 'children can be psychologically and physiologically damaged by sport.', value: 'D' }
           ]
         }
       ]
